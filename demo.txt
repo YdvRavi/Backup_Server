@@ -4,5 +4,4 @@ hey this is new demo file for understanding git functions.
 i have deleted this line. 
 this line is added after upload project. 
 Its worng line - : now this is final addition.
-Now i will fecth this data on slack.
-5 mint baad check karna ye line aayegi, khud.
+two lines are deleted. And new line added.
