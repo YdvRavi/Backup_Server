@@ -1,0 +1,5 @@
+hey this is new demo file for understanding git functions.
+my name is yadav ravi
+i have added this line. 
+this is 4th line
+this line , some text is deleted.
