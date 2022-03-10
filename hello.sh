@@ -2,7 +2,7 @@
 
 declare -A map
 
-map["origin"]="delDSL_Backup_Server"
+map["original"]="delDSL_Backup_Server"
 
 git init
 git checkout -b Master

@@ -1,6 +1,7 @@
 hey this is new demo file for understanding git functions.
-my name is yadav ravi
+my name is yadav
 i have added this line. 
 this is 4th line
 this line , some text is deleted.
 nhi aa raha bhai txt.
+aa ja yaar.
