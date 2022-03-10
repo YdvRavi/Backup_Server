@@ -1,4 +1,4 @@
-
+this is my first line.
 no one checking this file guys.
 hey this is new demo file for understanding git functions.
 
@@ -9,6 +9,3 @@ this line is added after upload project.
 Its worng line - : now this is final addition.
 
 Now i will fecth this data on slack.
-
-
-abhi bacha hua h bhai work.
