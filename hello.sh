@@ -2,7 +2,7 @@
 
 declare -A map
 
-map["origin"]="Backup_Server"
+map["Ravi"]="Backup_Server"
 
 git init
 git checkout -b master
