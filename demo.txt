@@ -1,5 +1,5 @@
 hey this is new demo file for understanding git functions.
 
-i have added this line. 
+i have deleted this line. 
 
 this line is added after upload project over github.
