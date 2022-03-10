@@ -11,6 +11,6 @@ git commit -m "Changed_Config"
 
 for i in "${!map[@]}"
 do
-	git remote add $i git@github.com:YdvRavi/${map[$i]}.git
-	git push -u $i master
+        git remote add $i git@github.com:YdvRavi/${map[$i]}.git
+        git push -u $i master
 done
