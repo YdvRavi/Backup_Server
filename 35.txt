@@ -1,0 +1,332 @@
+##CONFIG##
+
+It will take a long time if the content you search is too much or the string  you input is too long, you can press CTRL_C to break
+[Active: H801MCUD1; Standby: --]
+[Patch Info: SPH101]
+[MA5600V800R018: 5600]
+#
+[sysmode]
+  <sysmode>
+ switch adsl mode to rfc2662 vdsl mode to tr129
+ xpon mode switch-to profile-mode
+ voice-spec set vag-num 8
+ voice-spec set sip-account-num 2048
+ protocol support h248
+ system ex-mode backup
+ router mode basic
+#
+[global-config]
+  <global-config>
+ sysname PARAS_DEW
+ terminal user name buildrun_new_password root *j$1b$|IoQ2Ul$9+$/UP.L_X)mL}*
+5QKvIwC#PK&=J3iWt!m0>(RD\-v-$* 7 0000:00:00:00:00:00 2019:10:14:14:51:34 root 1 first-login-info 0 "-----"
+ terminal user name buildrun_new_password deldsl *~pc$1b$N*Y0YNoJ&/$;@hTN(~
+IW-BAtf5YbP@Zz\Nq(;$Sa@{`{7$V&&:!$* 0 2019:05:30:13:59:50 2019:10:14:14:50:51 
+root 2 first-login-info 0 "-----"
+ terminal user name buildrun_new_password deldsl1 *g$1b$'+/07Li!;/$|#Dw9]p`NF)} aM5=jf<7y1jEITbi<@gYyU)-oou)$* 0 2022:01:29:21:16:39 2022:01:29:21:16:39 root 3 first-login-info 0 "1"
+ terminal user name history_password root *j$1b$auLjV<:/sP$h#KT='!>2DF2_O$-MFw>:4DY<>H*^Y%)X3JD<ZmD$* *j$1b$N!`FG&sAs9$n%O+0[#Tk;mRg]P!3'm516]3*uEfK~GJ2}~(,C{&$*
+ terminal user name history_password deldsl *~pc$1b$/PVB$JUrpA$,zi)3{%FI=|'Nz'b(kIPt!\;HXaO8FMW;M'F&1[#$* *~pc$1b$&0LQPV-aj:$ChB#=SVolHU<$x@%&p/1b9'NOV]vr<N*]
+S2QPAT!$*
+ dba-profile add profile-id 11 profile-name "ONT_Voice" type3 assure 1024 max 
+1024
+ dba-profile add profile-id 12 profile-name "ONT_Data" type4 max 102400
+ ont wan-profile profile-id 0 profile-name "wan-profile_0"
+  nat enable
+  quit
+ ont policy-route-profile profile-id 0 profile-name "policy-route-profile_0"
+  policy-route 0 port-based eth 1 wlan 1 wan 3
+  quit
+ gpon ont home-gateway config-method omci
+ ont-srvprofile gpon profile-id 100 profile-name "ONT"
+  ont-port pots adaptive 32 eth adaptive 8 catv adaptive 8
+  commit
+ ont-lineprofile gpon profile-id 0 profile-name "line-profile_default_0"
+  tcont 0 dba-profile-id 2
+  tcont 1 dba-profile-id 0
+  commit
+  quit
+ ont-lineprofile gpon profile-id 200 profile-name "ONT_Data_Voice"
+  tcont 1 dba-profile-id 12
+  tcont 2 dba-profile-id 11
+  gem add 1 eth tcont 1
+  gem add 2 eth tcont 2
+  gem add 3 eth tcont 2
+  gem add 4 eth tcont 1
+  gem add 5 eth tcont 1
+  gem mapping 1 0 vlan 700
+  gem mapping 1 1 vlan 608
+  gem mapping 2 0 vlan 701
+  gem mapping 3 0 vlan 500
+  gem mapping 4 0 vlan 400
+  gem mapping 5 0 vlan 100
+  commit
+  quit
+#
+[device-config]
+  <device-config>
+ board add 0/0 H807GPBH
+ board add 0/4 H801MPWD
+#
+[public-config]
+  <public-config>
+ monitor uplink-port traffic port 0/2/0
+ monitor uplink-port traffic port 0/2/1
+ monitor uplink-port traffic port 0/2/2
+ monitor uplink-port traffic port 0/2/3
+ timezone GMT+ 05:30
+ snmp-agent local-engineid 000007DB032841C6052FEAF0
+ snmp-agent community write %#%#n$1*CfYG|BZzR3N#;utWR]hA1I-nO<R*[u.#!Uh/4ya]:`~/.GYi=cQH,Qc2%#%#
+ snmp-agent community read %#%#MZY#/<U~v3!.T\7;*BHYVyp4@+1+rSrwU;*y*F'9Bx|u%C=
+IRS!fYl/AF<9P%#%#
+#
+[vlan-config]
+  <vlan-config>
+ vlan 100 smart
+ vlan 400 smart
+ vlan 500 smart
+ vlan 608 smart
+ vlan 700 to 701 smart
+ port vlan 100 0/2 0
+ port vlan 100 0/2 1
+ port vlan 100 0/2 2
+ port vlan 400 0/2 0
+ port vlan 400 0/2 1
+ port vlan 400 0/2 2
+ port vlan 500 0/2 0
+ port vlan 500 0/2 2
+ port vlan 608 0/2 0
+ port vlan 608 0/2 1
+ port vlan 608 0/2 2
+ port vlan 700 to 701 0/2 0
+ port vlan 700 to 701 0/2 2
+#
+[mcu]
+  <mcu-0/2>
+interface mcu 0/2
+ speed 0 1000
+ speed 1 1000
+ mdi 2 normal
+ speed 2 1000
+ speed 3 1000
+#
+[gpon]
+  <gpon-0/0>
+ interface gpon 0/0
+ port 0 ont-auto-find enable
+ port 1 ont-auto-find enable
+ port 2 ont-auto-find enable
+ port 3 ont-auto-find enable
+ port 4 ont-auto-find enable
+ port 5 ont-auto-find enable
+ port 6 ont-auto-find enable
+ port 7 ont-auto-find enable
+ ont add 0 0 sn-auth "48575443AC717C9E" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "291013"
+ ont add 0 1 sn-auth "48575443ACE07FA3" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "291016_Manjeet"
+ ont add 0 2 sn-auth "48575443D6A4EB9F" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "291020_Latesh"
+ ont add 0 3 sn-auth "48575443ACE086A3" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "291024_Deepesh"
+ ont add 0 4 sn-auth "48575443872C30A5" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "291030_SANDEEP"
+ ont add 1 0 sn-auth "48575443AC6EE59E" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "291002"
+ ont add 1 1 sn-auth "48575443E4BC814A" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "291001&291002"
+ ont add 1 2 sn-auth "48575443A294EEA3" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "291021_Samir"
+ ont add 1 3 sn-auth "48575443D6A67E9F" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "291015_Ishu_A_1803"
+ ont add 2 0 sn-auth "48575443AC6FD09E" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "291005"
+ ont add 3 1 sn-auth "48575443ACE076A3" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "291025_Priyanka"
+ ont add 4 0 sn-auth "48575443D6AB239F" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "291017_Satyendra_B1707"
+ ont add 4 1 sn-auth "4857544361200391" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "291014_Pushkar_B802"
+ ont add 4 2 sn-auth "48575443D6ABA89F" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "291018_Rajeev_B_1408"
+ ont add 4 3 sn-auth "48575443D6ABA59F" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "291019_Aaron"
+ ont add 4 4 sn-auth "48575443D6A75B9F" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "291022_Bharat_B1207"
+ ont add 4 5 sn-auth "48575443D6ABBD9F" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "291023_Ashok_B707"
+ ont add 4 6 sn-auth "48575443872A22A5" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "291029_SATYENDER_B801"
+ ont add 5 0 sn-auth "48575443AC6EE49E" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "291008_Gurjeet_C1904"
+ ont add 5 1 sn-auth "48575443E4BCB44A" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "291026_Satpal"
+ ont add 5 2 sn-auth "4857544391DEB69F" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "291027_DARSHAN"
+ ont add 5 3 sn-auth "48575443AC70529E" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "291006"
+ ont add 5 4 sn-auth "485754430110F220" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "291230_Rahul"
+ ont add 5 5 sn-auth "4857544301107370" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "291031_SUNNY_C1205"
+ ont add 5 6 sn-auth "4857544332340CA6" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "291032_Pankaj"
+ ont add 6 0 sn-auth "4857544391DF279F" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "651002"
+ ont add 6 1 sn-auth "48575443E4CB2E4A" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "656003_Electronic_Room"
+ ont add 6 2 sn-auth "4857544391DEBD9F" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "651006_Conscient"
+ ont add 6 3 sn-auth "4857544388A2C1A5" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "651007_RAJIVE_BG63"
+ ont add 6 4 sn-auth "48575443872B46A5" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "651008_JUBILENT"
+ ont add 6 5 sn-auth "48575443ACE8C7A3" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "651009_Admiring"
+ ont add 6 6 sn-auth "48575443D6B02F9F" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "651010_MARSHA_AG01_AG04"
+ ont add 6 7 sn-auth "48575443D6A7999F" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "651011_Neeru_CF57"
+ ont add 6 8 sn-auth "485754433879C69D" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "651014"
+ ont add 6 9 sn-auth "48575443D6A6529F" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "651012_ADVANCE"
+ ont add 6 10 sn-auth "485754430110F510" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "656013_CRM_Office"
+ ont add 6 11 sn-auth "48575443010B990C" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "651013_CRM_Office"
+ ont add 6 12 sn-auth "48575443D6A8FD9F" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "651016_PROPERTY_1221"
+#
+[emu-config]
+  <emu-config>
+ emu add 0 fan 0 1  "H831FCBB"
+ emu add 1 h801pmu 0 0  "H801PMUB"
+#
+[bbs-config]
+  <bbs-config>
+ service-port 0 vlan 400 gpon 0/0/1 ont 0 gemport 4 multi-service user-vlan 400 tag-transform translate
+ service-port 1 vlan 500 gpon 0/0/1 ont 0 gemport 3 multi-service user-vlan 500 tag-transform translate
+ service-port 4 vlan 608 gpon 0/0/0 ont 0 gemport 1 multi-service user-vlan 608 tag-transform translate
+ service-port 6 vlan 608 gpon 0/0/2 ont 0 gemport 1 multi-service user-vlan 608 tag-transform translate
+ service-port 7 vlan 608 gpon 0/0/1 ont 1 gemport 1 multi-service user-vlan 608 tag-transform translate
+ service-port 8 vlan 500 gpon 0/0/1 ont 1 gemport 3 multi-service user-vlan 500 tag-transform translate
+ service-port 9 vlan 400 gpon 0/0/1 ont 1 gemport 4 multi-service user-vlan 400 tag-transform translate
+ service-port 13 vlan 608 gpon 0/0/1 ont 3 gemport 1 multi-service user-vlan 608 tag-transform translate
+ service-port 15 vlan 500 gpon 0/0/1 ont 3 gemport 3 multi-service user-vlan 500 tag-transform translate
+ service-port 19 vlan 608 gpon 0/0/4 ont 0 gemport 1 multi-service user-vlan 608 tag-transform translate
+ service-port 20 vlan 500 gpon 0/0/4 ont 0 gemport 3 multi-service user-vlan 500 tag-transform translate
+ service-port 21 vlan 608 gpon 0/0/4 ont 2 gemport 1 multi-service user-vlan 608 tag-transform translate
+ service-port 22 vlan 500 gpon 0/0/4 ont 2 gemport 3 multi-service user-vlan 500 tag-transform translate
+ service-port 23 vlan 608 gpon 0/0/4 ont 3 gemport 1 multi-service user-vlan 608 tag-transform translate
+ service-port 24 vlan 500 gpon 0/0/4 ont 3 gemport 2 multi-service user-vlan 500 tag-transform translate
+ service-port 25 vlan 608 gpon 0/0/0 ont 2 gemport 1 multi-service user-vlan 608 tag-transform translate
+ service-port 26 vlan 500 gpon 0/0/0 ont 2 gemport 3 multi-service user-vlan 500 tag-transform translate
+ service-port 31 vlan 608 gpon 0/0/5 ont 0 gemport 1 multi-service user-vlan 608 tag-transform translate
+ service-port 32 vlan 500 gpon 0/0/5 ont 0 gemport 2 multi-service user-vlan 500 tag-transform translate
+ service-port 33 vlan 608 gpon 0/0/1 ont 2 gemport 1 multi-service user-vlan 608 tag-transform translate
+ service-port 34 vlan 500 gpon 0/0/1 ont 2 gemport 3 multi-service user-vlan 500 tag-transform translate
+ service-port 36 vlan 608 gpon 0/0/4 ont 4 gemport 1 multi-service user-vlan 608 tag-transform translate
+ service-port 37 vlan 500 gpon 0/0/4 ont 4 gemport 3 multi-service user-vlan 500 tag-transform translate
+ service-port 38 vlan 608 gpon 0/0/4 ont 5 gemport 1 multi-service user-vlan 608 tag-transform translate
+ service-port 39 vlan 500 gpon 0/0/4 ont 5 gemport 3 multi-service user-vlan 500 tag-transform translate
+ service-port 40 vlan 608 gpon 0/0/3 ont 1 gemport 1 multi-service user-vlan 608 tag-transform translate
+ service-port 41 vlan 500 gpon 0/0/3 ont 1 gemport 3 multi-service user-vlan 500 tag-transform translate
+ service-port 42 vlan 608 gpon 0/0/0 ont 3 gemport 1 multi-service user-vlan 608 tag-transform translate
+ service-port 43 vlan 500 gpon 0/0/0 ont 3 gemport 3 multi-service user-vlan 500 tag-transform translate
+ service-port 44 vlan 608 gpon 0/0/0 ont 1 gemport 1 multi-service user-vlan 608 tag-transform translate
+ service-port 45 vlan 500 gpon 0/0/0 ont 1 gemport 3 multi-service user-vlan 500 tag-transform translate
+ service-port 46 vlan 608 gpon 0/0/5 ont 1 gemport 1 multi-service user-vlan 608 tag-transform translate
+ service-port 48 vlan 500 gpon 0/0/5 ont 1 gemport 3 multi-service user-vlan 500 tag-transform translate
+ service-port 49 vlan 608 gpon 0/0/6 ont 0 gemport 1 multi-service user-vlan 608 tag-transform translate
+ service-port 50 vlan 500 gpon 0/0/6 ont 1 gemport 3 multi-service user-vlan 500 tag-transform translate
+ service-port 51 vlan 608 gpon 0/0/6 ont 1 gemport 1 multi-service user-vlan 608 tag-transform translate
+ service-port 52 vlan 608 gpon 0/0/5 ont 2 gemport 1 multi-service user-vlan 608 tag-transform translate
+ service-port 53 vlan 500 gpon 0/0/5 ont 2 gemport 3 multi-service user-vlan 500 tag-transform translate
+ service-port 54 vlan 608 gpon 0/0/4 ont 1 gemport 1 multi-service user-vlan 608 tag-transform translate
+ service-port 55 vlan 500 gpon 0/0/4 ont 1 gemport 3 multi-service user-vlan 500 tag-transform translate
+ service-port 57 vlan 500 gpon 0/0/5 ont 3 gemport 3 multi-service user-vlan 500 tag-transform translate
+ service-port 58 vlan 608 gpon 0/0/5 ont 3 gemport 1 multi-service user-vlan 608 tag-transform translate
+ service-port 59 vlan 608 gpon 0/0/6 ont 2 gemport 1 multi-service user-vlan 608 tag-transform translate
+ service-port 60 vlan 500 gpon 0/0/6 ont 2 gemport 2 multi-service user-vlan 500 tag-transform translate
+ service-port 61 vlan 608 gpon 0/0/4 ont 6 gemport 1 multi-service user-vlan 608 tag-transform translate
+ service-port 62 vlan 500 gpon 0/0/4 ont 6 gemport 3 multi-service user-vlan 500 tag-transform translate
+ service-port 63 vlan 608 gpon 0/0/6 ont 3 gemport 1 multi-service user-vlan 608 tag-transform translate
+ service-port 65 vlan 608 gpon 0/0/6 ont 5 gemport 1 multi-service user-vlan 608 tag-transform translate
+ service-port 66 vlan 608 gpon 0/0/6 ont 6 gemport 1 multi-service user-vlan 608 tag-transform translate
+ service-port 67 vlan 608 gpon 0/0/6 ont 7 gemport 1 multi-service user-vlan 608 tag-transform translate
+ service-port 70 vlan 100 gpon 0/0/6 ont 7 gemport 5 multi-service user-vlan 100 tag-transform translate
+ service-port 71 vlan 400 gpon 0/0/5 ont 4 gemport 4 multi-service user-vlan 400 tag-transform translate
+ service-port 74 vlan 608 gpon 0/0/6 ont 9 gemport 1 multi-service user-vlan 608 tag-transform translate
+ service-port 76 vlan 100 gpon 0/0/6 ont 9 gemport 5 multi-service user-vlan 100 tag-transform translate
+ service-port 77 vlan 100 gpon 0/0/6 ont 10 gemport 5 multi-service user-vlan 
+100 tag-transform translate
+ service-port 78 vlan 608 gpon 0/0/6 ont 11 gemport 1 multi-service user-vlan 
+608 tag-transform translate
+ service-port 79 vlan 100 gpon 0/0/6 ont 11 gemport 5 multi-service user-vlan 
+100 tag-transform translate
+ service-port 80 vlan 400 gpon 0/0/0 ont 4 gemport 4 multi-service user-vlan 400 tag-transform translate
+ service-port 81 vlan 500 gpon 0/0/0 ont 4 gemport 3 multi-service user-vlan 500 tag-transform translate
+ service-port 82 vlan 608 gpon 0/0/5 ont 5 gemport 1 multi-service user-vlan 608 tag-transform translate
+ service-port 83 vlan 500 gpon 0/0/5 ont 5 gemport 3 multi-service user-vlan 500 tag-transform translate
+ service-port 84 vlan 400 gpon 0/0/5 ont 5 gemport 4 multi-service user-vlan 400 tag-transform translate
+ service-port 89 vlan 608 gpon 0/0/6 ont 4 gemport 1 multi-service user-vlan 608 tag-transform translate
+ service-port 90 vlan 608 gpon 0/0/6 ont 8 gemport 1 multi-service user-vlan 608 tag-transform translate
+ service-port 91 vlan 500 gpon 0/0/6 ont 8 gemport 3 multi-service user-vlan 500 tag-transform translate
+ service-port 92 vlan 500 gpon 0/0/6 ont 6 gemport 2 multi-service user-vlan 500 tag-transform translate
+ service-port 93 vlan 500 gpon 0/0/5 ont 6 gemport 2 multi-service user-vlan 500 tag-transform translate
+ service-port 94 vlan 608 gpon 0/0/5 ont 6 gemport 1 multi-service user-vlan 608 tag-transform translate
+ service-port 95 vlan 100 gpon 0/0/5 ont 6 gemport 5 multi-service user-vlan 100 tag-transform translate
+ service-port 96 vlan 608 gpon 0/0/6 ont 12 gemport 1 multi-service user-vlan 
+608 tag-transform translate
+ service-port 97 vlan 500 gpon 0/0/6 ont 12 gemport 3 multi-service user-vlan 
+500 tag-transform translate
+#
+[config]
+  <config>
+ mpls label start 8192
+#
+[prevlanif]
+  <prevlanif>
+ interface vlanif1
+ interface vlanif400
+#
+[vlanif]
+  <vlanif1>
+interface vlanif1
+ ip address 172.30.82.155 255.255.255.224
+#
+  <vlanif400>
+interface vlanif400
+#
+[meth]
+  <meth0>
+interface meth0
+ ip address 10.11.104.2 255.255.255.0
+#
+[null]
+  <null0>
+interface null0
+#
+[aaa]
+  <aaa>
+aaa
+ authentication-scheme "default"
+ #
+ authorization-scheme "default"
+ #
+ accounting-scheme "default"
+ #
+ domain "default"
+ #
+#
+[post-system]
+  <post-system>
+ip route-static 0.0.0.0 0.0.0.0 172.30.82.129
+ ssh user root authentication-type password
+ ssh user deldsl authentication-type password
+ ssh user deldsl1 authentication-type password
+#
+return
+
+##ENDOF_CONFIG##
+

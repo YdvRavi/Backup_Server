@@ -1,0 +1,4381 @@
+##CONFIG##
+
+R_CORE1###
+##MILL#R_CORE1###terminal length 0
+##MILL#R_CORE1###
+Building configuration...
+
+Current configuration : 107496 bytes
+!
+! Last configuration change at 14:57:50 UTC Thu Mar 10 2022
+!
+version 15.5
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service password-encryption
+no platform punt-keepalive disable-kernel-core
+!
+hostname ##MILL#R_CORE1##
+!
+boot-start-marker
+boot-end-marker
+!
+!
+vrf definition Mgmt-intf
+ !
+ address-family ipv4
+ exit-address-family
+ !
+ address-family ipv6
+ exit-address-family
+!
+vrf definition TATA_TEST
+ rd 23872:2
+ !
+ address-family ipv4
+ exit-address-family
+ !
+ address-family ipv6
+ exit-address-family
+!
+enable password 7 0000000A075419232F205F7C58495546
+!
+no aaa new-model
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+
+
+no ip bootp server
+ip name-server 203.110.80.232 203.110.80.233 4.2.2.2
+
+!
+!
+!
+ipv6 unicast-routing
+ipv6 dhcp pool ipv6_c1
+!
+!
+!
+!
+!
+!
+!
+!
+subscriber templating
+multilink bundle-name authenticated
+license udi pid ASR1001-X sn JAE201004K1
+!
+!
+!
+redundancy
+ mode none
+!
+!
+!
+lldp run
+!
+policy-map 10_Mbps
+ class class-default
+  police 10240000 1920000 3840000 conform-action transmit  exceed-action drop 
+policy-map 100_Mbps
+ class class-default
+  police 102400000 19200000 38400000 conform-action transmit  exceed-action drop 
+policy-map 120_Mbps
+ class class-default
+  police 125829000 23592960 47185920 conform-action transmit  exceed-action drop 
+policy-map 200_Mbps
+ class class-default
+  police 204800000 38400000 76800000 conform-action transmit  exceed-action drop 
+policy-map 20_Mbps
+ class class-default
+  police 20480000 3840000 7680000 conform-action transmit  exceed-action drop 
+policy-map 3_Mbps
+ class class-default
+  police 3072000 576000 1152000 conform-action transmit  exceed-action drop 
+policy-map 1_Mbps
+ class class-default
+  police 1024000 192000 384000 conform-action transmit  exceed-action drop 
+policy-map 50_Mbps
+ class class-default
+  police 51200000 9600000 19200000 conform-action transmit  exceed-action drop 
+policy-map 60_Mbps
+ class class-default
+  police 61440000 11520000 23040000 conform-action transmit  exceed-action drop 
+policy-map 35_Mbps
+ class class-default
+  police 35840000 6720000 13440000 conform-action transmit  exceed-action drop 
+policy-map 300_Mbps
+ class class-default
+  police 307200000 57600000 115200000 conform-action transmit  exceed-action drop 
+policy-map 2_Mbps
+ class class-default
+  police 2048000 384000 768000 conform-action transmit  exceed-action drop 
+policy-map 14_Mbps
+ class class-default
+  police 14336000 2688000 5376000 conform-action transmit  exceed-action drop 
+policy-map 4_Mbps
+ class class-default
+  police 4096000 768000 1536000 conform-action transmit  exceed-action drop 
+policy-map 55_Mbps
+ class class-default
+  police 56320000 10560000 21120000 conform-action transmit  exceed-action drop 
+policy-map 6_Mbps
+ class class-default
+  police 6144000 1152000 2304000 conform-action transmit  exceed-action drop 
+policy-map 45_Mbps
+ class class-default
+  police 46080000 8640000 17280000 conform-action transmit  exceed-action drop 
+policy-map 22_Mbps
+ class class-default
+  police 22528000 4224000 8448000 conform-action transmit  exceed-action drop 
+policy-map 155_Mbps
+ class class-default
+  police 158720000 29760000 59520000 conform-action transmit  exceed-action drop 
+policy-map 38_Mbps
+ class class-default
+  police 38912000 7296000 14592000 conform-action transmit  exceed-action drop 
+policy-map 11_Mbps
+ class class-default
+  police 11264000 2112000 4224000 conform-action transmit  exceed-action drop 
+policy-map 5_Mbps
+ class class-default
+  police 5120000 960000 1920000 conform-action transmit  exceed-action drop 
+policy-map 30_Mbps
+ class class-default
+  police 30720000 5760000 11520000 conform-action transmit  exceed-action drop 
+policy-map 70_Mbps
+ class class-default
+  police 71680000 13440000 26880000 conform-action transmit  exceed-action drop 
+policy-map 26_Mbps
+ class class-default
+  police 26624000 4992000 9984000 conform-action transmit  exceed-action drop 
+policy-map 75_Mbps
+ class class-default
+  police 76800000 15360000 30720000 conform-action transmit  exceed-action drop 
+policy-map 15_Mbps
+ class class-default
+  police 15360000 2880000 5760000 conform-action transmit  exceed-action drop 
+policy-map 18_Mbps
+ class class-default
+  police 18432000 3456000 6912000 conform-action transmit  exceed-action drop 
+policy-map 80_Mbps
+ class class-default
+  police 81920000 15360000 30720000 conform-action transmit  exceed-action drop 
+policy-map 25_Mbps
+ class class-default
+  police 25600000 4800000 9600000 conform-action transmit  exceed-action drop 
+policy-map 7_MBPS
+ class class-default
+  police 7468000 1344000 2688000 conform-action transmit  exceed-action drop 
+policy-map 12_Mbps
+ class class-default
+  police 12288000 2304000 4608000 conform-action transmit  exceed-action drop 
+policy-map 16_Mbps
+ class class-default
+  police 16384000 3072000 6144000 conform-action transmit  exceed-action drop 
+policy-map 28_Mbps
+ class class-default
+  police 28672000 5376000 10752000 conform-action transmit  exceed-action drop 
+policy-map 8_Mbps
+ class class-default
+  police 8192000 1536000 3072000 conform-action transmit  exceed-action drop 
+policy-map 40_Mbps
+ class class-default
+  police 40960000 7680000 15360000 conform-action transmit  exceed-action drop 
+policy-map 150_Mbps
+ class class-default
+  police 153600000 28800000 57600000 conform-action transmit  exceed-action drop 
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ description ##CORE1#LOOPBACK##
+ ip address 203.110.80.194 255.255.255.255
+ ip ospf 20 area 0
+!
+interface Loopback101
+ no ip address
+!
+interface Loopback3000
+ description ##FOR TATA_NEW_LINK_TESTING##
+ vrf forwarding TATA_TEST
+ no ip address
+ ipv6 address 2404:A200:0:8::10/64
+ ipv6 enable
+!
+interface TenGigabitEthernet0/0/0
+ no ip address
+ shutdown
+!
+interface TenGigabitEthernet0/0/1
+ no ip address
+ shutdown
+!
+interface GigabitEthernet0/0/0
+ no ip address
+ ip ospf 20 area 0
+ negotiation auto
+ ipv6 enable
+ arp timeout 5
+!
+interface GigabitEthernet0/0/0.217
+ shutdown
+!
+interface GigabitEthernet0/0/1
+ description ##MILL#R_MIKROTIK#BB_80.80##
+ ip address 172.30.80.9 255.255.255.248
+ no ip proxy-arp
+ ip ospf 20 area 0
+ negotiation auto
+ arp timeout 60
+!
+interface GigabitEthernet0/0/1.209
+ arp timeout 60
+!
+interface GigabitEthernet0/0/1.215
+ arp timeout 60
+!
+interface GigabitEthernet0/0/2
+ description ##MILL#R_MIKROTIK#BB80.70##
+ ip address 203.110.80.49 255.255.255.252
+ ip ospf 20 area 0
+ negotiation auto
+ ipv6 address 2404:A200:0:2::9/126
+ ipv6 enable
+ arp timeout 5
+!
+interface GigabitEthernet0/0/3
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet0/0/3.1
+ encapsulation dot1Q 1 native
+ arp timeout 5
+!
+interface GigabitEthernet0/0/3.2
+ encapsulation dot1Q 2
+ shutdown
+ ipv6 enable
+ ipv6 nd other-config-flag
+ arp timeout 5
+!
+interface GigabitEthernet0/0/3.3
+ encapsulation dot1Q 3
+!
+interface GigabitEthernet0/0/3.4
+ encapsulation dot1Q 4
+ shutdown
+ arp timeout 5
+!
+interface GigabitEthernet0/0/3.5
+ encapsulation dot1Q 5
+ shutdown
+ arp timeout 5
+!
+interface GigabitEthernet0/0/3.6
+ encapsulation dot1Q 6
+ arp timeout 5
+!
+interface GigabitEthernet0/0/3.7
+ encapsulation dot1Q 7
+ arp timeout 5
+!
+interface GigabitEthernet0/0/3.8
+ bandwidth 2048
+ encapsulation dot1Q 8
+ shutdown
+ arp timeout 5
+!
+interface GigabitEthernet0/0/3.9
+ shutdown
+!
+interface GigabitEthernet0/0/3.10
+ encapsulation dot1Q 10
+ shutdown
+ arp timeout 5
+!
+interface GigabitEthernet0/0/3.11
+ encapsulation dot1Q 11
+ shutdown
+ arp timeout 5
+!
+interface GigabitEthernet0/0/3.12
+ encapsulation dot1Q 12
+ arp timeout 5
+!
+interface GigabitEthernet0/0/3.13
+ shutdown
+!
+interface GigabitEthernet0/0/3.14
+ arp timeout 5
+!
+interface GigabitEthernet0/0/3.15
+ encapsulation dot1Q 15
+ shutdown
+ arp timeout 5
+!
+interface GigabitEthernet0/0/3.16
+ encapsulation dot1Q 16
+ arp timeout 5
+!
+interface GigabitEthernet0/0/3.17
+!
+interface GigabitEthernet0/0/3.18
+ encapsulation dot1Q 18
+ arp timeout 5
+!
+interface GigabitEthernet0/0/3.19
+ encapsulation dot1Q 19
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ arp timeout 5
+!
+interface GigabitEthernet0/0/3.20
+ encapsulation dot1Q 20
+ shutdown
+ arp timeout 5
+!
+interface GigabitEthernet0/0/3.21
+ encapsulation dot1Q 21
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+!
+interface GigabitEthernet0/0/3.22
+ encapsulation dot1Q 22
+ ipv6 enable
+ ipv6 eigrp 20
+ arp timeout 5
+!
+interface GigabitEthernet0/0/3.34
+ encapsulation dot1Q 34
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ arp timeout 5
+!
+interface GigabitEthernet0/0/3.41
+ shutdown
+!
+interface GigabitEthernet0/0/3.47
+ encapsulation dot1Q 47
+ arp timeout 5
+!
+interface GigabitEthernet0/0/3.400
+ encapsulation dot1Q 400
+ shutdown
+ arp timeout 5
+!
+interface GigabitEthernet0/0/3.700
+!
+interface GigabitEthernet0/0/3.800
+ encapsulation dot1Q 800
+ shutdown
+ arp timeout 5
+!
+interface GigabitEthernet0/0/4
+ description ##MILL#MAIN_RING#SW87.19##
+ no ip address
+ negotiation auto
+!
+interface GigabitEthernet0/0/4.1
+ encapsulation dot1Q 1 native
+ ip address 172.30.82.97 255.255.255.224 secondary
+ ip address 172.30.82.1 255.255.255.224 secondary
+ ip address 172.30.87.17 255.255.255.240
+!
+interface GigabitEthernet0/0/4.2
+!
+interface GigabitEthernet0/0/4.3
+ description ##MILL#DSLAM_MILL##
+ encapsulation dot1Q 3
+ ip address 203.110.87.49 255.255.255.248
+ arp timeout 5
+!
+interface GigabitEthernet0/0/4.4
+!
+interface GigabitEthernet0/0/4.5
+!
+interface GigabitEthernet0/0/4.6
+ encapsulation dot1Q 6
+ arp timeout 5
+!
+interface GigabitEthernet0/0/4.7
+!
+interface GigabitEthernet0/0/4.8
+!
+interface GigabitEthernet0/0/4.9
+!
+interface GigabitEthernet0/0/4.10
+!
+interface GigabitEthernet0/0/4.11
+!
+interface GigabitEthernet0/0/4.12
+!
+interface GigabitEthernet0/0/4.13
+!
+interface GigabitEthernet0/0/4.14
+!
+interface GigabitEthernet0/0/4.15
+!
+interface GigabitEthernet0/0/4.16
+!
+interface GigabitEthernet0/0/4.17
+!
+interface GigabitEthernet0/0/4.18
+!
+interface GigabitEthernet0/0/4.19
+!
+interface GigabitEthernet0/0/4.20
+!
+interface GigabitEthernet0/0/4.21
+!
+interface GigabitEthernet0/0/4.22
+!
+interface GigabitEthernet0/0/4.23
+!
+interface GigabitEthernet0/0/4.24
+!
+interface GigabitEthernet0/0/4.25
+!
+interface GigabitEthernet0/0/4.26
+!
+interface GigabitEthernet0/0/4.27
+!
+interface GigabitEthernet0/0/4.28
+!
+interface GigabitEthernet0/0/4.29
+!
+interface GigabitEthernet0/0/4.30
+!
+interface GigabitEthernet0/0/4.31
+!
+interface GigabitEthernet0/0/4.32
+!
+interface GigabitEthernet0/0/4.33
+!
+interface GigabitEthernet0/0/4.34
+!
+interface GigabitEthernet0/0/4.35
+!
+interface GigabitEthernet0/0/4.36
+!
+interface GigabitEthernet0/0/4.37
+!
+interface GigabitEthernet0/0/4.38
+!
+interface GigabitEthernet0/0/4.39
+!
+interface GigabitEthernet0/0/4.40
+!
+interface GigabitEthernet0/0/4.41
+!
+interface GigabitEthernet0/0/4.42
+!
+interface GigabitEthernet0/0/4.43
+!
+interface GigabitEthernet0/0/4.44
+ encapsulation dot1Q 44
+ shutdown
+!
+interface GigabitEthernet0/0/4.45
+!
+interface GigabitEthernet0/0/4.46
+!
+interface GigabitEthernet0/0/4.47
+!
+interface GigabitEthernet0/0/4.48
+!
+interface GigabitEthernet0/0/4.49
+!
+interface GigabitEthernet0/0/4.50
+!
+interface GigabitEthernet0/0/4.51
+!
+interface GigabitEthernet0/0/4.52
+!
+interface GigabitEthernet0/0/4.53
+!
+interface GigabitEthernet0/0/4.54
+!
+interface GigabitEthernet0/0/4.55
+!
+interface GigabitEthernet0/0/4.56
+!
+interface GigabitEthernet0/0/4.57
+!
+interface GigabitEthernet0/0/4.58
+!
+interface GigabitEthernet0/0/4.59
+!
+interface GigabitEthernet0/0/4.60
+!
+interface GigabitEthernet0/0/4.61
+!
+interface GigabitEthernet0/0/4.62
+!
+interface GigabitEthernet0/0/4.63
+!
+interface GigabitEthernet0/0/4.64
+!
+interface GigabitEthernet0/0/4.65
+!
+interface GigabitEthernet0/0/4.66
+!
+interface GigabitEthernet0/0/4.67
+!
+interface GigabitEthernet0/0/4.68
+!
+interface GigabitEthernet0/0/4.69
+!
+interface GigabitEthernet0/0/4.70
+!
+interface GigabitEthernet0/0/4.71
+!
+interface GigabitEthernet0/0/4.72
+!
+interface GigabitEthernet0/0/4.73
+!
+interface GigabitEthernet0/0/4.74
+!
+interface GigabitEthernet0/0/4.75
+!
+interface GigabitEthernet0/0/4.76
+!
+interface GigabitEthernet0/0/4.77
+!
+interface GigabitEthernet0/0/4.78
+!
+interface GigabitEthernet0/0/4.79
+!
+interface GigabitEthernet0/0/4.80
+!
+interface GigabitEthernet0/0/4.81
+!
+interface GigabitEthernet0/0/4.82
+!
+interface GigabitEthernet0/0/4.83
+!
+interface GigabitEthernet0/0/4.84
+!
+interface GigabitEthernet0/0/4.85
+!
+interface GigabitEthernet0/0/4.86
+!
+interface GigabitEthernet0/0/4.87
+!
+interface GigabitEthernet0/0/4.88
+!
+interface GigabitEthernet0/0/4.89
+!
+interface GigabitEthernet0/0/4.90
+!
+interface GigabitEthernet0/0/4.91
+!
+interface GigabitEthernet0/0/4.92
+!
+interface GigabitEthernet0/0/4.93
+!
+interface GigabitEthernet0/0/4.94
+!
+interface GigabitEthernet0/0/4.95
+!
+interface GigabitEthernet0/0/4.96
+!
+interface GigabitEthernet0/0/4.97
+!
+interface GigabitEthernet0/0/4.98
+!
+interface GigabitEthernet0/0/4.99
+!
+interface GigabitEthernet0/0/4.100
+ encapsulation dot1Q 100
+!
+interface GigabitEthernet0/0/4.101
+!
+interface GigabitEthernet0/0/4.102
+!
+interface GigabitEthernet0/0/4.103
+!
+interface GigabitEthernet0/0/4.104
+!
+interface GigabitEthernet0/0/4.105
+!
+interface GigabitEthernet0/0/4.106
+!
+interface GigabitEthernet0/0/4.107
+!
+interface GigabitEthernet0/0/4.108
+!
+interface GigabitEthernet0/0/4.109
+!
+interface GigabitEthernet0/0/4.110
+!
+interface GigabitEthernet0/0/4.111
+!
+interface GigabitEthernet0/0/4.112
+!
+interface GigabitEthernet0/0/4.113
+!
+interface GigabitEthernet0/0/4.114
+!
+interface GigabitEthernet0/0/4.115
+!
+interface GigabitEthernet0/0/4.116
+!
+interface GigabitEthernet0/0/4.117
+!
+interface GigabitEthernet0/0/4.118
+!
+interface GigabitEthernet0/0/4.119
+!
+interface GigabitEthernet0/0/4.120
+!
+interface GigabitEthernet0/0/4.121
+!
+interface GigabitEthernet0/0/4.122
+!
+interface GigabitEthernet0/0/4.123
+!
+interface GigabitEthernet0/0/4.124
+!
+interface GigabitEthernet0/0/4.125
+!
+interface GigabitEthernet0/0/4.126
+!
+interface GigabitEthernet0/0/4.127
+!
+interface GigabitEthernet0/0/4.128
+!
+interface GigabitEthernet0/0/4.129
+!
+interface GigabitEthernet0/0/4.130
+!
+interface GigabitEthernet0/0/4.131
+!
+interface GigabitEthernet0/0/4.132
+!
+interface GigabitEthernet0/0/4.133
+!
+interface GigabitEthernet0/0/4.134
+!
+interface GigabitEthernet0/0/4.135
+!
+interface GigabitEthernet0/0/4.136
+!
+interface GigabitEthernet0/0/4.137
+!
+interface GigabitEthernet0/0/4.138
+!
+interface GigabitEthernet0/0/4.139
+!
+interface GigabitEthernet0/0/4.140
+!
+interface GigabitEthernet0/0/4.141
+!
+interface GigabitEthernet0/0/4.142
+!
+interface GigabitEthernet0/0/4.143
+!
+interface GigabitEthernet0/0/4.144
+!
+interface GigabitEthernet0/0/4.145
+!
+interface GigabitEthernet0/0/4.146
+!
+interface GigabitEthernet0/0/4.147
+!
+interface GigabitEthernet0/0/4.148
+!
+interface GigabitEthernet0/0/4.149
+!
+interface GigabitEthernet0/0/4.150
+!
+interface GigabitEthernet0/0/4.151
+!
+interface GigabitEthernet0/0/4.152
+!
+interface GigabitEthernet0/0/4.153
+!
+interface GigabitEthernet0/0/4.154
+!
+interface GigabitEthernet0/0/4.155
+!
+interface GigabitEthernet0/0/4.156
+!
+interface GigabitEthernet0/0/4.157
+!
+interface GigabitEthernet0/0/4.158
+!
+interface GigabitEthernet0/0/4.159
+!
+interface GigabitEthernet0/0/4.160
+!
+interface GigabitEthernet0/0/4.161
+!
+interface GigabitEthernet0/0/4.162
+!
+interface GigabitEthernet0/0/4.163
+!
+interface GigabitEthernet0/0/4.164
+!
+interface GigabitEthernet0/0/4.165
+!
+interface GigabitEthernet0/0/4.166
+!
+interface GigabitEthernet0/0/4.167
+!
+interface GigabitEthernet0/0/4.168
+!
+interface GigabitEthernet0/0/4.169
+!
+interface GigabitEthernet0/0/4.170
+!
+interface GigabitEthernet0/0/4.171
+!
+interface GigabitEthernet0/0/4.172
+!
+interface GigabitEthernet0/0/4.173
+!
+interface GigabitEthernet0/0/4.174
+!
+interface GigabitEthernet0/0/4.175
+!
+interface GigabitEthernet0/0/4.176
+!
+interface GigabitEthernet0/0/4.177
+!
+interface GigabitEthernet0/0/4.178
+!
+interface GigabitEthernet0/0/4.179
+!
+interface GigabitEthernet0/0/4.180
+!
+interface GigabitEthernet0/0/4.181
+!
+interface GigabitEthernet0/0/4.182
+!
+interface GigabitEthernet0/0/4.183
+!
+interface GigabitEthernet0/0/4.184
+!
+interface GigabitEthernet0/0/4.185
+!
+interface GigabitEthernet0/0/4.186
+!
+interface GigabitEthernet0/0/4.187
+!
+interface GigabitEthernet0/0/4.188
+!
+interface GigabitEthernet0/0/4.189
+!
+interface GigabitEthernet0/0/4.190
+!
+interface GigabitEthernet0/0/4.191
+!
+interface GigabitEthernet0/0/4.192
+!
+interface GigabitEthernet0/0/4.193
+!
+interface GigabitEthernet0/0/4.194
+!
+interface GigabitEthernet0/0/4.195
+!
+interface GigabitEthernet0/0/4.196
+!
+interface GigabitEthernet0/0/4.197
+!
+interface GigabitEthernet0/0/4.198
+!
+interface GigabitEthernet0/0/4.199
+ description MRTG_SERVER
+ encapsulation dot1Q 199
+ ip address 203.110.80.65 255.255.255.252
+ shutdown
+ service-policy input 20_Mbps
+ service-policy output 20_Mbps
+!
+interface GigabitEthernet0/0/4.200
+ encapsulation dot1Q 200
+ ip access-group VOIP in
+ ip access-group VOIP out
+ service-policy input 30_Mbps
+ service-policy output 30_Mbps
+!
+interface GigabitEthernet0/0/4.201
+ encapsulation dot1Q 201
+!
+interface GigabitEthernet0/0/4.210
+ description ##Krisumi Corporation Pvt Ltd#251259#100Mb##
+ encapsulation dot1Q 210
+ ip address 203.110.91.225 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ service-policy input 100_Mbps
+ service-policy output 100_Mbps
+!
+interface GigabitEthernet0/0/4.211
+ description ##Naresh Chaudhry#161064#50Mb#Mill##
+ encapsulation dot1Q 211
+ ip address 203.110.83.117 255.255.255.252
+ ip access-group VOIP in
+ ip access-group VOIP out
+ service-policy input 50_Mbps
+ service-policy output 50_Mbps
+!
+interface GigabitEthernet0/0/4.212
+ description ##Niksun India Pvt Ltd#111282#5MB#Mill##
+ encapsulation dot1Q 212
+ ip address 203.110.90.57 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ service-policy input 5_Mbps
+ service-policy output 5_Mbps
+!
+interface GigabitEthernet0/0/4.213
+ description ##National Collateral Management#111367#20Mb##
+ encapsulation dot1Q 213
+ ip address 203.110.93.49 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ service-policy input 20_Mbps
+ service-policy output 20_Mbps
+!
+interface GigabitEthernet0/0/4.214
+ description ##ACI Eduabroads Pvt Ltd#111380#15Mbps##  
+ encapsulation dot1Q 214
+ ip address 203.110.81.153 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 15_Mbps
+ service-policy output 15_Mbps
+!
+interface GigabitEthernet0/0/4.215
+ description ##Hanlim Engineering And Construction#111395#10Mb##
+ encapsulation dot1Q 215
+ ip address 203.110.90.17 255.255.255.252
+ arp timeout 5
+ service-policy input 12_Mbps
+ service-policy output 12_Mbps
+!
+interface GigabitEthernet0/0/4.216
+ description ##TARGETONE INNOVATIONS PRIVATE LIMITED#111332#50Mb#Mill##
+ encapsulation dot1Q 216
+ ip address 103.242.225.241 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ service-policy input 50_Mbps
+ service-policy output 50_Mbps
+!
+interface GigabitEthernet0/0/4.217
+ description ##Mayank Sharma#111385#15Mb##
+ encapsulation dot1Q 217
+ ip address 203.110.90.161 255.255.255.252
+ ip access-group VOIP in
+ ip access-group VOIP out
+ service-policy input 15_Mbps
+ service-policy output 15_Mbps
+!
+interface GigabitEthernet0/0/4.218
+ description ##ICL Management & Trading India Pvt Ltd#111408#100Mb##
+ encapsulation dot1Q 218
+ ip address 203.110.85.9 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ service-policy input 10_Mbps
+ service-policy output 10_Mbps
+!
+interface GigabitEthernet0/0/4.219
+ description ##Mayank Sharma#111389#10Mb##
+ encapsulation dot1Q 219
+ ip address 203.110.88.181 255.255.255.252
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 10_Mbps
+ service-policy output 10_Mbps
+!
+interface GigabitEthernet0/0/4.220
+ description ##Jusda India Supply Chain Management#111413#50Mb##
+ encapsulation dot1Q 220
+ ip address 203.110.84.177 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ service-policy input 50_Mbps
+ service-policy output 50_Mbps
+!
+interface GigabitEthernet0/0/4.227
+!
+interface GigabitEthernet0/0/4.240
+ description ##Lal Lahiri & Salhotra#111035#50Mb#Mill##
+ encapsulation dot1Q 240
+ ip address 203.110.91.137 255.255.255.248
+ service-policy input 50_Mbps
+ service-policy output 50_Mbps
+!
+interface GigabitEthernet0/0/4.241
+ description ##Kristan Auto#111306#20Mb##
+ encapsulation dot1Q 241
+ ip address 203.110.84.225 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+ service-policy input 20_Mbps
+ service-policy output 20_Mbps
+!
+interface GigabitEthernet0/0/4.242
+ description ##Amit Rathi#111349#20Mb##
+ encapsulation dot1Q 242
+ ip address 203.110.85.97 255.255.255.252
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+ service-policy input 20_Mbps
+ service-policy output 20_Mbps
+!
+interface GigabitEthernet0/0/4.250
+ encapsulation dot1Q 250
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+!
+interface GigabitEthernet0/0/4.260
+ description ##ALTF SPACES PRIVATE LIMITED#111401#25Mb#Mill##
+ encapsulation dot1Q 260
+ ip address 203.110.90.249 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ service-policy input 25_Mbps
+ service-policy output 25_Mbps
+!
+interface GigabitEthernet0/0/4.261
+ description ##Radicles Softwares Pvt Ltd#111187#10MB#Mill##
+ encapsulation dot1Q 261
+ ip address 203.110.81.249 255.255.255.252
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 10_Mbps
+ service-policy output 10_Mbps
+!
+interface GigabitEthernet0/0/4.262
+ description ##Enkay India Rubber Company Pvt Ltd#111307#50Mb##
+ encapsulation dot1Q 262
+ ip address 203.110.84.105 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ service-policy input 50_Mbps
+ service-policy output 50_Mbps
+!
+interface GigabitEthernet0/0/4.263
+ description ##PALLIA TRANS LOGISTICS PVT LTD#111372#50Mb#MILL#                                                         
+ encapsulation dot1Q 263
+ ip address 103.242.225.41 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ service-policy input 50_Mbps
+ service-policy output 50_Mbps
+!
+interface GigabitEthernet0/0/4.264
+ description ##Prime Scholars International School#251155#20Mb##
+ encapsulation dot1Q 264
+ ip address 103.242.225.129 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ service-policy input 20_Mbps
+ service-policy output 20_Mbps
+!
+interface GigabitEthernet0/0/4.265
+ description ##Gurugram Global Heights School#501050#20Mb##
+ encapsulation dot1Q 265
+ ip address 103.242.225.137 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ service-policy input 20_Mbps
+ service-policy output 20_Mbps
+!
+interface GigabitEthernet0/0/4.266
+ description ##Vatika Hotels Pvt Ltd#111416#6Mb##
+ encapsulation dot1Q 266
+ ip address 203.110.83.193 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ service-policy input 6_Mbps
+ service-policy output 6_Mbps
+!
+interface GigabitEthernet0/0/4.270
+ description ##TRUVIC CONSULTING PRIVATE LIMITED#111375#10Mb#Mill##
+ encapsulation dot1Q 270
+ ip address 203.110.93.137 255.255.255.248
+ service-policy input 10_Mbps
+ service-policy output 10_Mbps
+!
+interface GigabitEthernet0/0/4.271
+ description ##Vikram#111388#30Mb##
+ encapsulation dot1Q 271
+ ip address 203.110.81.213 255.255.255.252
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 30_Mbps
+ service-policy output 30_Mbps
+!
+interface GigabitEthernet0/0/4.272
+ encapsulation dot1Q 272
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+!
+interface GigabitEthernet0/0/4.280
+ description ##Dhwani Rural#111402#50Mb#Mill##
+ encapsulation dot1Q 280
+ ip address 203.110.85.129 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ service-policy input 50_Mbps
+ service-policy output 50_Mbps
+!
+interface GigabitEthernet0/0/4.281
+ description ##Skipper Seil Ltd#111190#30Mb#Mill##
+ encapsulation dot1Q 281
+ ip address 203.110.81.41 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ service-policy input 30_Mbps
+ service-policy output 30_Mbps
+!
+interface GigabitEthernet0/0/4.282
+ description ##A A S FLIGHT SOLUTIONS#131379#10Mb#UV##
+ encapsulation dot1Q 282
+ ip address 203.110.85.145 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+ service-policy input 10_Mbps
+ service-policy output 10_Mbps
+!
+interface GigabitEthernet0/0/4.283
+ description ##Mayank Sharma#111409#15Mb##                                                                                                  
+ encapsulation dot1Q 283
+ ip address 203.110.85.233 255.255.255.252
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+ service-policy input 15_Mbps
+ service-policy output 15_Mbps
+!
+interface GigabitEthernet0/0/4.284
+ description ##The Sagar School#111010#1Mb##SUSPENDED##
+ encapsulation dot1Q 284
+ ip address 203.110.91.161 255.255.255.248
+ shutdown
+ service-policy input 1_Mbps
+ service-policy output 1_Mbps
+!
+interface GigabitEthernet0/0/4.290
+ description ##Konnexions Broadcast#111265#50Mb##
+ encapsulation dot1Q 290
+ ip address 203.110.91.129 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ service-policy input 50_Mbps
+ service-policy output 50_Mbps
+!
+interface GigabitEthernet0/0/4.291
+ description ##OLD_DATA ICL_Fertilizers_India_Pvt_Ltd#111260#100Mb##
+ encapsulation dot1Q 291
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 100_Mbps
+ service-policy output 100_Mbps
+!
+interface GigabitEthernet0/0/4.292
+ encapsulation dot1Q 292
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+!
+interface GigabitEthernet0/0/4.293
+ encapsulation dot1Q 293
+ shutdown
+!
+interface GigabitEthernet0/0/4.294
+ description ##ICL Fertilizers India Pvt Ltd#111353#20MB#Mill##
+ encapsulation dot1Q 294
+ ip address 203.110.83.113 255.255.255.252
+ ip access-group VOIP in
+ ip access-group VOIP out
+ service-policy input 20_Mbps
+ service-policy output 20_Mbps
+!
+interface GigabitEthernet0/0/4.295
+ encapsulation dot1Q 295
+ shutdown
+!
+interface GigabitEthernet0/0/4.300
+ description ##PALTECH COOLING TOWERS#111381#15Mb##
+ encapsulation dot1Q 300
+ ip address 203.110.91.221 255.255.255.252
+ ip access-group VOIP in
+ ip access-group VOIP out
+ service-policy input 15_Mbps
+ service-policy output 15_Mbps
+!
+interface GigabitEthernet0/0/4.301
+ description ##Vashi Electricals Pvt Ltd#131326#10Mb#Mill##
+ encapsulation dot1Q 301
+ ip address 203.110.91.17 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+ service-policy input 10_Mbps
+ service-policy output 10_Mbps
+!
+interface GigabitEthernet0/0/4.302
+ description ##Remfry & Sagar.#111086#40MB#Mill##
+ encapsulation dot1Q 302
+ ip address 203.110.85.33 255.255.255.248
+ service-policy input 40_Mbps
+ service-policy output 40_Mbps
+!
+interface GigabitEthernet0/0/4.303
+ encapsulation dot1Q 303
+ ip access-group VOIP in
+ ip access-group VOIP out
+!
+interface GigabitEthernet0/0/4.304
+ encapsulation dot1Q 304
+!
+interface GigabitEthernet0/0/4.305
+ description ##Reservedfor_HERITAGE_BB##
+ encapsulation dot1Q 305
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+!
+interface GigabitEthernet0/0/4.310
+ description ##Grant Thornton Advisory Pvt Ltd#111057+111128#300Mb#Mill## 
+ encapsulation dot1Q 310
+ ip address 203.110.87.177 255.255.255.252
+ ip access-group VOIP in
+ ip access-group VOIP out
+ ip ospf 20 area 3
+ ip ospf cost 20
+ service-policy input 300_Mbps
+ service-policy output 300_Mbps
+!
+interface GigabitEthernet0/0/4.311
+ encapsulation dot1Q 311
+!
+interface GigabitEthernet0/0/4.312
+ encapsulation dot1Q 312
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 15_Mbps
+ service-policy output 15_Mbps
+!
+interface GigabitEthernet0/0/4.313
+ encapsulation dot1Q 313
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+!
+interface GigabitEthernet0/0/4.314
+ encapsulation dot1Q 314
+ ip access-group VOIP in
+ ip access-group VOIP out
+!
+interface GigabitEthernet0/0/4.315
+ description ##Sagacious Research Pvt Ltd#111315#50Mb#Mill##
+ encapsulation dot1Q 315
+ ip address 203.110.84.121 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ service-policy input 50_Mbps
+ service-policy output 50_Mbps
+!
+interface GigabitEthernet0/0/4.316
+ encapsulation dot1Q 316
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+!
+interface GigabitEthernet0/0/4.321
+ description ##Quadient Solutions India Pvt Ltd#111034#10MB#Mill#
+ encapsulation dot1Q 321
+ ip address 203.110.84.17 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ service-policy input 10_Mbps
+ service-policy output 10_Mbps
+!
+interface GigabitEthernet0/0/4.322
+ description ##Minda Industries Ltd#111246#50Mb##
+ encapsulation dot1Q 322
+ ip address 203.110.85.121 255.255.255.248
+ service-policy input 50_Mbps
+ service-policy output 50_Mbps
+!
+interface GigabitEthernet0/0/4.323
+ description ##Adlift Marketing Pvt Ltd#111198#50Mb#Mill##
+ encapsulation dot1Q 323
+ ip address 203.110.93.149 255.255.255.252
+ ip access-group VOIP in
+ ip access-group VOIP out
+ service-policy input 50_Mbps
+ service-policy output 50_Mbps
+!
+interface GigabitEthernet0/0/4.324
+ encapsulation dot1Q 324
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+!
+interface GigabitEthernet0/0/4.325
+ description ##Nodwin Gaming Pvt Ltd#111324#155Mb##
+ encapsulation dot1Q 325
+ ip address 203.110.90.241 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ service-policy input 155_Mbps
+ service-policy output 155_Mbps
+!
+interface GigabitEthernet0/0/4.326
+ encapsulation dot1Q 326
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 200_Mbps
+ service-policy output 200_Mbps
+!
+interface GigabitEthernet0/0/4.327
+ description ##Heritage Primary School##111347#150Mb##
+ encapsulation dot1Q 327
+ ip address 203.110.91.49 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ service-policy input 150_Mbps
+ service-policy output 150_Mbps
+!
+interface GigabitEthernet0/0/4.328
+ description ##Damanjeet Singh#111360#20Mb##
+ encapsulation dot1Q 328
+ ip address 203.110.91.105 255.255.255.252
+ ip access-group VOIP in
+ ip access-group VOIP out
+ service-policy input 20_Mbps
+ service-policy output 20_Mbps
+!
+interface GigabitEthernet0/0/4.330
+ description ##Triumph Infocomm#131214#10Mb##
+ encapsulation dot1Q 330
+ ip address 203.110.84.173 255.255.255.252
+ shutdown
+ service-policy input 10_Mbps
+ service-policy output 10_Mbps
+!
+interface GigabitEthernet0/0/4.331
+ description ##Grant Thornton Advisory Pvt Ltd#111057+111128#300Mb#Mill## 
+ encapsulation dot1Q 331
+ ip address 203.110.80.125 255.255.255.252
+ ip access-group VOIP in
+ ip access-group VOIP out
+ ip ospf 20 area 3
+ service-policy input 300_Mbps
+ service-policy output 300_Mbps
+!
+interface GigabitEthernet0/0/4.332
+ description ##Connaissant Consultancy Services#111399#30Mb#Mill##
+ encapsulation dot1Q 332
+ ip address 203.110.88.233 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ service-policy input 30_Mbps
+ service-policy output 30_Mbps
+!
+interface GigabitEthernet0/0/4.333
+ description ##Just 4 Kids Services Pvt Ltd#111183#50Mb#Mill##
+ encapsulation dot1Q 333
+ ip address 203.110.81.97 255.255.255.252
+ ip access-group VOIP in
+ ip access-group VOIP out
+ service-policy input 50_Mbps
+ service-policy output 50_Mbps
+!
+interface GigabitEthernet0/0/4.334
+ description ##India For You Holidays Pvt ltd#111112#100Mb#Mill##
+ encapsulation dot1Q 334
+ ip address 203.110.84.57 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 100_Mbps
+ service-policy output 100_Mbps
+!
+interface GigabitEthernet0/0/4.335
+ description ##Syenergy Environics Ltd#111270#50Mb#Mill##
+ encapsulation dot1Q 335
+ ip address 203.110.90.65 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ service-policy input 50_Mbps
+ service-policy output 50_Mbps
+!
+interface GigabitEthernet0/0/4.336
+ description ##Gold Souk Infrastructure Pvt Ltd#111376#30Mb#Mill##
+ encapsulation dot1Q 336
+ ip address 203.110.90.177 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ service-policy input 30_Mbps
+ service-policy output 30_Mbps
+!
+interface GigabitEthernet0/0/4.337
+ encapsulation dot1Q 337
+ shutdown
+!
+interface GigabitEthernet0/0/4.338
+ description ##Satkar Travels Pvt Ltd#111387#15Mb#Mill##
+ encapsulation dot1Q 338
+ ip address 103.242.225.233 255.255.255.252
+ service-policy input 15_Mbps
+ service-policy output 15_Mbps
+!
+interface GigabitEthernet0/0/4.340
+ description ##Apparel Export Promotion Council#111137#50MB#Mill##
+ encapsulation dot1Q 340
+ ip address 203.110.91.97 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ service-policy input 50_Mbps
+ service-policy output 50_Mbps
+!
+interface GigabitEthernet0/0/4.341
+ description ##Seven N Consulting Pvt. Ltd.#111215#10Mb#Mill##
+ encapsulation dot1Q 341
+ ip address 203.110.90.165 255.255.255.252
+ ip access-group VOIP in
+ ip access-group VOIP out
+ service-policy input 10_Mbps
+ service-policy output 10_Mbps
+!
+interface GigabitEthernet0/0/4.342
+ description ##Arm Digital Media Pvt Ltd#111269#20MB#Mill##
+ encapsulation dot1Q 342
+ ip address 203.110.90.97 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+ service-policy input 20_Mbps
+ service-policy output 20_Mbps
+!
+interface GigabitEthernet0/0/4.343
+ description ##VMD_CAD#111043#15MB##
+ encapsulation dot1Q 343
+ ip address 203.110.85.217 255.255.255.252 secondary
+ ip address 203.110.85.221 255.255.255.252 secondary
+ ip address 203.110.85.209 255.255.255.248
+ arp timeout 5
+ service-policy input 15_Mbps
+ service-policy output 15_Mbps
+!
+interface GigabitEthernet0/0/4.344
+ description ##SECUREL YNKX NETWORKS#111373#30Mb#Mill##
+ encapsulation dot1Q 344
+ ip address 203.110.93.81 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+ service-policy input 30_Mbps
+ service-policy output 30_Mbps
+!
+interface GigabitEthernet0/0/4.345
+ description ##The_Pllazio_Hotel#111297#15Mb#Demo##
+ encapsulation dot1Q 345
+ ip address 203.110.91.241 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ arp timeout 5
+ service-policy input 15_Mbps
+ service-policy output 15_Mbps
+!
+interface GigabitEthernet0/0/4.346
+ description ##Seven N Consulting Pvt. Ltd#111234#50Mb#Mill##
+ encapsulation dot1Q 346
+ ip address 203.110.85.65 255.255.255.248
+ service-policy input 50_Mbps
+ service-policy output 50_Mbps
+!
+interface GigabitEthernet0/0/4.347
+ description ##SECUREL YNKX NETWORKS#111368#50Mb#Mill##
+ encapsulation dot1Q 347
+ ip address 203.110.91.73 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ service-policy input 50_Mbps
+ service-policy output 50_Mbps
+!
+interface GigabitEthernet0/0/4.348
+ description ##Arvind Medicare Pvt ltd#111109#10MB#Mill##
+ encapsulation dot1Q 348
+ ip address 203.110.84.217 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ service-policy input 10_Mbps
+ service-policy output 10_Mbps
+!
+interface GigabitEthernet0/0/4.349
+ encapsulation dot1Q 349
+ shutdown
+ arp timeout 5
+!
+interface GigabitEthernet0/0/4.350
+ description ##AZCOM Infosolution India Pvt Ltd#111218#25MB#Mill##
+ encapsulation dot1Q 350
+ ip address 203.110.90.193 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ service-policy input 25_Mbps
+ service-policy output 25_Mbps
+!
+interface GigabitEthernet0/0/4.351
+ description ##AZCOM Infosolution India Pvt Ltd#111219#5MB#Mill##
+ encapsulation dot1Q 351
+ ip address 203.110.90.173 255.255.255.252
+ service-policy input 5_Mbps
+ service-policy output 5_Mbps
+!
+interface GigabitEthernet0/0/4.352
+ description ##Techroutes Network Pvt. Ltd#111330#10MB#Mill##
+ encapsulation dot1Q 352
+ ip address 103.242.225.89 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ service-policy input 10_Mbps
+ service-policy output 10_Mbps
+!
+interface GigabitEthernet0/0/4.353
+ encapsulation dot1Q 353
+ arp timeout 5
+!
+interface GigabitEthernet0/0/4.354
+ encapsulation dot1Q 354
+ arp timeout 5
+ service-policy output 20_Mbps
+!
+interface GigabitEthernet0/0/4.360
+ description ##Easyrewardz Software Services Pvt Ltd (EasyTech)#111274#25Mb#MILL##
+ encapsulation dot1Q 360
+ ip address 203.110.87.245 255.255.255.252
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+ service-policy input 25_Mbps
+ service-policy output 25_Mbps
+!
+interface GigabitEthernet0/0/4.400
+ description ##H_MAX#INTERNET_VLAN##
+ encapsulation dot1Q 400
+!
+interface GigabitEthernet0/0/4.401
+ encapsulation dot1Q 401
+ shutdown
+!
+interface GigabitEthernet0/0/4.402
+ shutdown
+!
+interface GigabitEthernet0/0/4.403
+ encapsulation dot1Q 403
+ shutdown
+ service-policy input 100_Mbps
+ service-policy output 100_Mbps
+!
+interface GigabitEthernet0/0/4.404
+ encapsulation dot1Q 404
+ shutdown
+ service-policy input 10_Mbps
+ service-policy output 10_Mbps
+!
+interface GigabitEthernet0/0/4.405
+ encapsulation dot1Q 405
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 14_Mbps
+ service-policy output 14_Mbps
+!
+interface GigabitEthernet0/0/4.406
+ shutdown
+!
+interface GigabitEthernet0/0/4.407
+ encapsulation dot1Q 407
+ shutdown
+ service-policy input 11_Mbps
+ service-policy output 11_Mbps
+!
+interface GigabitEthernet0/0/4.408
+ encapsulation dot1Q 408
+ shutdown
+!
+interface GigabitEthernet0/0/4.409
+ encapsulation dot1Q 409
+ shutdown
+ service-policy input 40_Mbps
+ service-policy output 40_Mbps
+!
+interface GigabitEthernet0/0/4.410
+ encapsulation dot1Q 410
+ shutdown
+ service-policy input 14_Mbps
+ service-policy output 14_Mbps
+!
+interface GigabitEthernet0/0/4.411
+ encapsulation dot1Q 411
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 25_Mbps
+ service-policy output 25_Mbps
+!
+interface GigabitEthernet0/0/4.412
+ encapsulation dot1Q 412
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 10_Mbps
+ service-policy output 10_Mbps
+!
+interface GigabitEthernet0/0/4.413
+ encapsulation dot1Q 413
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 50_Mbps
+ service-policy output 50_Mbps
+!
+interface GigabitEthernet0/0/4.414
+ encapsulation dot1Q 414
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 40_Mbps
+ service-policy output 40_Mbps
+!
+interface GigabitEthernet0/0/4.415
+ encapsulation dot1Q 415
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 10_Mbps
+ service-policy output 10_Mbps
+!
+interface GigabitEthernet0/0/4.416
+ encapsulation dot1Q 416
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 15_Mbps
+ service-policy output 15_Mbps
+!
+interface GigabitEthernet0/0/4.417
+ encapsulation dot1Q 417
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 10_Mbps
+ service-policy output 10_Mbps
+!
+interface GigabitEthernet0/0/4.418
+ encapsulation dot1Q 418
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 15_Mbps
+ service-policy output 15_Mbps
+!
+interface GigabitEthernet0/0/4.419
+ description ##Mubea Automotive Components India Pvt Ltd#111326#05MB#UV##
+ encapsulation dot1Q 419
+ ip address 203.110.83.209 255.255.255.252
+ service-policy input 5_Mbps
+ service-policy output 5_Mbps
+!
+interface GigabitEthernet0/0/4.420
+ description ##Ankur Chauhary#111311#15Mb#Mill#
+ encapsulation dot1Q 420
+ ip address 203.110.91.145 255.255.255.252
+ ip access-group VOIP in
+ ip access-group VOIP out
+ service-policy input 15_Mbps
+ service-policy output 15_Mbps
+!
+interface GigabitEthernet0/0/4.421
+ encapsulation dot1Q 421
+ shutdown
+!
+interface GigabitEthernet0/0/4.422
+ encapsulation dot1Q 422
+ shutdown
+ service-policy input 30_Mbps
+ service-policy output 30_Mbps
+!
+interface GigabitEthernet0/0/4.423
+ encapsulation dot1Q 423
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 10_Mbps
+ service-policy output 10_Mbps
+!
+interface GigabitEthernet0/0/4.424
+ encapsulation dot1Q 424
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 30_Mbps
+ service-policy output 30_Mbps
+!
+interface GigabitEthernet0/0/4.425
+ encapsulation dot1Q 425
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 20_Mbps
+ service-policy output 20_Mbps
+!
+interface GigabitEthernet0/0/4.426
+ encapsulation dot1Q 426
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 25_Mbps
+ service-policy output 25_Mbps
+!
+interface GigabitEthernet0/0/4.427
+ encapsulation dot1Q 427
+ shutdown
+ service-policy input 4_Mbps
+ service-policy output 4_Mbps
+!
+interface GigabitEthernet0/0/4.428
+ encapsulation dot1Q 428
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 10_Mbps
+ service-policy output 10_Mbps
+!
+interface GigabitEthernet0/0/4.429
+ encapsulation dot1Q 429
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 15_Mbps
+ service-policy output 15_Mbps
+!
+interface GigabitEthernet0/0/4.430
+ encapsulation dot1Q 430
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 30_Mbps
+ service-policy output 30_Mbps
+!
+interface GigabitEthernet0/0/4.431
+ encapsulation dot1Q 431
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 30_Mbps
+ service-policy output 30_Mbps
+!
+interface GigabitEthernet0/0/4.432
+ encapsulation dot1Q 432
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 20_Mbps
+ service-policy output 20_Mbps
+!
+interface GigabitEthernet0/0/4.433
+ encapsulation dot1Q 433
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 16_Mbps
+ service-policy output 16_Mbps
+!
+interface GigabitEthernet0/0/4.434
+ encapsulation dot1Q 434
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 10_Mbps
+ service-policy output 10_Mbps
+!
+interface GigabitEthernet0/0/4.435
+ encapsulation dot1Q 435
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 4_Mbps
+ service-policy output 4_Mbps
+!
+interface GigabitEthernet0/0/4.436
+ encapsulation dot1Q 436
+ shutdown
+!
+interface GigabitEthernet0/0/4.437
+ encapsulation dot1Q 437
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 15_Mbps
+ service-policy output 15_Mbps
+!
+interface GigabitEthernet0/0/4.438
+ encapsulation dot1Q 438
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 5_Mbps
+ service-policy output 5_Mbps
+!
+interface GigabitEthernet0/0/4.439
+ encapsulation dot1Q 439
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 20_Mbps
+ service-policy output 20_Mbps
+!
+interface GigabitEthernet0/0/4.440
+ encapsulation dot1Q 440
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 30_Mbps
+ service-policy output 30_Mbps
+!
+interface GigabitEthernet0/0/4.441
+ encapsulation dot1Q 441
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 60_Mbps
+ service-policy output 60_Mbps
+!
+interface GigabitEthernet0/0/4.442
+ encapsulation dot1Q 442
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 10_Mbps
+ service-policy output 10_Mbps
+!
+interface GigabitEthernet0/0/4.443
+ encapsulation dot1Q 443
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 20_Mbps
+ service-policy output 20_Mbps
+!
+interface GigabitEthernet0/0/4.444
+ encapsulation dot1Q 444
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 5_Mbps
+ service-policy output 5_Mbps
+!
+interface GigabitEthernet0/0/4.445
+ encapsulation dot1Q 445
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 2_Mbps
+ service-policy output 2_Mbps
+!
+interface GigabitEthernet0/0/4.446
+ encapsulation dot1Q 446
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 10_Mbps
+ service-policy output 10_Mbps
+!
+interface GigabitEthernet0/0/4.447
+ encapsulation dot1Q 447
+ shutdown
+ service-policy input 100_Mbps
+ service-policy output 100_Mbps
+!
+interface GigabitEthernet0/0/4.448
+ encapsulation dot1Q 448
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 10_Mbps
+ service-policy output 10_Mbps
+!
+interface GigabitEthernet0/0/4.449
+ encapsulation dot1Q 449
+ shutdown
+ service-policy input 20_Mbps
+ service-policy output 20_Mbps
+!
+interface GigabitEthernet0/0/4.450
+ encapsulation dot1Q 450
+ shutdown
+ service-policy input 10_Mbps
+ service-policy output 10_Mbps
+!
+interface GigabitEthernet0/0/4.451
+ encapsulation dot1Q 451
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 5_Mbps
+ service-policy output 5_Mbps
+!
+interface GigabitEthernet0/0/4.452
+ encapsulation dot1Q 452
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 10_Mbps
+ service-policy output 10_Mbps
+!
+interface GigabitEthernet0/0/4.453
+ encapsulation dot1Q 453
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 20_Mbps
+ service-policy output 20_Mbps
+!
+interface GigabitEthernet0/0/4.454
+ encapsulation dot1Q 454
+ shutdown
+ service-policy input 20_Mbps
+ service-policy output 20_Mbps
+!
+interface GigabitEthernet0/0/4.455
+ encapsulation dot1Q 455
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 10_Mbps
+ service-policy output 10_Mbps
+!
+interface GigabitEthernet0/0/4.456
+ shutdown
+!
+interface GigabitEthernet0/0/4.457
+ shutdown
+!
+interface GigabitEthernet0/0/4.458
+ shutdown
+!
+interface GigabitEthernet0/0/4.459
+ shutdown
+!
+interface GigabitEthernet0/0/4.460
+ shutdown
+!
+interface GigabitEthernet0/0/4.461
+ shutdown
+!
+interface GigabitEthernet0/0/4.462
+ shutdown
+!
+interface GigabitEthernet0/0/4.463
+ shutdown
+!
+interface GigabitEthernet0/0/4.464
+ shutdown
+!
+interface GigabitEthernet0/0/4.465
+ shutdown
+!
+interface GigabitEthernet0/0/4.466
+ shutdown
+!
+interface GigabitEthernet0/0/4.467
+ shutdown
+!
+interface GigabitEthernet0/0/4.468
+ shutdown
+!
+interface GigabitEthernet0/0/4.469
+ shutdown
+!
+interface GigabitEthernet0/0/4.470
+ shutdown
+!
+interface GigabitEthernet0/0/4.471
+ shutdown
+!
+interface GigabitEthernet0/0/4.472
+ shutdown
+!
+interface GigabitEthernet0/0/4.473
+ shutdown
+!
+interface GigabitEthernet0/0/4.474
+ shutdown
+!
+interface GigabitEthernet0/0/4.475
+ shutdown
+!
+interface GigabitEthernet0/0/4.476
+ shutdown
+!
+interface GigabitEthernet0/0/4.477
+ shutdown
+!
+interface GigabitEthernet0/0/4.478
+ shutdown
+!
+interface GigabitEthernet0/0/4.479
+ shutdown
+!
+interface GigabitEthernet0/0/4.480
+ shutdown
+!
+interface GigabitEthernet0/0/4.481
+ shutdown
+!
+interface GigabitEthernet0/0/4.482
+ shutdown
+!
+interface GigabitEthernet0/0/4.483
+ shutdown
+!
+interface GigabitEthernet0/0/4.484
+ shutdown
+!
+interface GigabitEthernet0/0/4.485
+ shutdown
+!
+interface GigabitEthernet0/0/4.486
+ shutdown
+!
+interface GigabitEthernet0/0/4.487
+ shutdown
+!
+interface GigabitEthernet0/0/4.488
+ shutdown
+!
+interface GigabitEthernet0/0/4.489
+ shutdown
+!
+interface GigabitEthernet0/0/4.490
+ shutdown
+!
+interface GigabitEthernet0/0/4.491
+ shutdown
+!
+interface GigabitEthernet0/0/4.492
+ shutdown
+!
+interface GigabitEthernet0/0/4.493
+ shutdown
+!
+interface GigabitEthernet0/0/4.494
+ shutdown
+!
+interface GigabitEthernet0/0/4.495
+ shutdown
+!
+interface GigabitEthernet0/0/4.496
+ shutdown
+!
+interface GigabitEthernet0/0/4.497
+ shutdown
+!
+interface GigabitEthernet0/0/4.498
+ shutdown
+!
+interface GigabitEthernet0/0/4.499
+ shutdown
+!
+interface GigabitEthernet0/0/4.500
+ description ##H_Max#Voice##
+ encapsulation dot1Q 500
+ ip address 10.0.0.4 255.255.0.0
+!
+interface GigabitEthernet0/0/4.501
+ encapsulation dot1Q 501
+ shutdown
+ service-policy input 15_Mbps
+ service-policy output 15_Mbps
+!
+interface GigabitEthernet0/0/4.502
+ encapsulation dot1Q 502
+ shutdown
+!
+interface GigabitEthernet0/0/4.503
+ encapsulation dot1Q 503
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 10_Mbps
+ service-policy output 10_Mbps
+!
+interface GigabitEthernet0/0/4.504
+ encapsulation dot1Q 504
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 40_Mbps
+ service-policy output 40_Mbps
+!
+interface GigabitEthernet0/0/4.505
+ encapsulation dot1Q 505
+ shutdown
+ arp timeout 5
+ service-policy input 10_Mbps
+ service-policy output 10_Mbps
+!
+interface GigabitEthernet0/0/4.506
+ encapsulation dot1Q 506
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 6_Mbps
+ service-policy output 6_Mbps
+!
+interface GigabitEthernet0/0/4.507
+ encapsulation dot1Q 507
+ shutdown
+ service-policy input 60_Mbps
+ service-policy output 60_Mbps
+!
+interface GigabitEthernet0/0/4.508
+ encapsulation dot1Q 508
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 30_Mbps
+ service-policy output 30_Mbps
+!
+interface GigabitEthernet0/0/4.509
+ encapsulation dot1Q 509
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 10_Mbps
+ service-policy output 10_Mbps
+!
+interface GigabitEthernet0/0/4.510
+ encapsulation dot1Q 510
+ shutdown
+!
+interface GigabitEthernet0/0/4.511
+ encapsulation dot1Q 511
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 30_Mbps
+ service-policy output 30_Mbps
+!
+interface GigabitEthernet0/0/4.512
+ encapsulation dot1Q 512
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 6_Mbps
+ service-policy output 6_Mbps
+!
+interface GigabitEthernet0/0/4.513
+ encapsulation dot1Q 513
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 20_Mbps
+ service-policy output 20_Mbps
+!
+interface GigabitEthernet0/0/4.514
+ encapsulation dot1Q 514
+ shutdown
+!
+interface GigabitEthernet0/0/4.515
+ encapsulation dot1Q 515
+ shutdown
+ service-policy input 30_Mbps
+ service-policy output 30_Mbps
+!
+interface GigabitEthernet0/0/4.516
+ encapsulation dot1Q 516
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 50_Mbps
+ service-policy output 50_Mbps
+!
+interface GigabitEthernet0/0/4.517
+ encapsulation dot1Q 517
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 20_Mbps
+ service-policy output 20_Mbps
+!
+interface GigabitEthernet0/0/4.518
+ encapsulation dot1Q 518
+ shutdown
+ service-policy input 10_Mbps
+ service-policy output 10_Mbps
+!
+interface GigabitEthernet0/0/4.519
+ encapsulation dot1Q 519
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 10_Mbps
+ service-policy output 10_Mbps
+!
+interface GigabitEthernet0/0/4.520
+ encapsulation dot1Q 520
+ shutdown
+ service-policy input 15_Mbps
+ service-policy output 15_Mbps
+!
+interface GigabitEthernet0/0/4.521
+ encapsulation dot1Q 521
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 10_Mbps
+ service-policy output 10_Mbps
+!
+interface GigabitEthernet0/0/4.522
+ encapsulation dot1Q 522
+ shutdown
+!
+interface GigabitEthernet0/0/4.523
+ shutdown
+!
+interface GigabitEthernet0/0/4.524
+ shutdown
+!
+interface GigabitEthernet0/0/4.525
+ shutdown
+!
+interface GigabitEthernet0/0/4.526
+ shutdown
+!
+interface GigabitEthernet0/0/4.527
+ shutdown
+!
+interface GigabitEthernet0/0/4.528
+ shutdown
+!
+interface GigabitEthernet0/0/4.529
+ shutdown
+!
+interface GigabitEthernet0/0/4.530
+ shutdown
+!
+interface GigabitEthernet0/0/4.531
+ shutdown
+!
+interface GigabitEthernet0/0/4.532
+ shutdown
+!
+interface GigabitEthernet0/0/4.533
+ shutdown
+!
+interface GigabitEthernet0/0/4.534
+ shutdown
+!
+interface GigabitEthernet0/0/4.535
+ shutdown
+!
+interface GigabitEthernet0/0/4.536
+ shutdown
+!
+interface GigabitEthernet0/0/4.537
+ shutdown
+!
+interface GigabitEthernet0/0/4.538
+ shutdown
+!
+interface GigabitEthernet0/0/4.539
+ shutdown
+!
+interface GigabitEthernet0/0/4.540
+ shutdown
+!
+interface GigabitEthernet0/0/4.541
+ shutdown
+!
+interface GigabitEthernet0/0/4.542
+ shutdown
+!
+interface GigabitEthernet0/0/4.543
+ shutdown
+!
+interface GigabitEthernet0/0/4.544
+ shutdown
+!
+interface GigabitEthernet0/0/4.545
+ shutdown
+!
+interface GigabitEthernet0/0/4.546
+ shutdown
+!
+interface GigabitEthernet0/0/4.547
+ shutdown
+!
+interface GigabitEthernet0/0/4.548
+ shutdown
+!
+interface GigabitEthernet0/0/4.549
+ shutdown
+!
+interface GigabitEthernet0/0/4.550
+ encapsulation dot1Q 550
+ shutdown
+ service-policy input 12_Mbps
+ service-policy output 12_Mbps
+!
+interface GigabitEthernet0/0/4.551
+ encapsulation dot1Q 551
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 155_Mbps
+ service-policy output 155_Mbps
+!
+interface GigabitEthernet0/0/4.552
+ encapsulation dot1Q 552
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 70_Mbps
+ service-policy output 70_Mbps
+!
+interface GigabitEthernet0/0/4.553
+ encapsulation dot1Q 553
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 100_Mbps
+ service-policy output 100_Mbps
+!
+interface GigabitEthernet0/0/4.554
+ encapsulation dot1Q 554
+ shutdown
+ service-policy input 50_Mbps
+ service-policy output 50_Mbps
+!
+interface GigabitEthernet0/0/4.555
+ encapsulation dot1Q 555
+ shutdown
+ service-policy input 50_Mbps
+ service-policy output 50_Mbps
+!
+interface GigabitEthernet0/0/4.556
+ encapsulation dot1Q 556
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 10_Mbps
+ service-policy output 10_Mbps
+!
+interface GigabitEthernet0/0/4.557
+ encapsulation dot1Q 557
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ arp timeout 5
+ service-policy input 50_Mbps
+ service-policy output 50_Mbps
+!
+interface GigabitEthernet0/0/4.558
+ encapsulation dot1Q 558
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 20_Mbps
+ service-policy output 20_Mbps
+!
+interface GigabitEthernet0/0/4.559
+ encapsulation dot1Q 559
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 100_Mbps
+ service-policy output 100_Mbps
+!
+interface GigabitEthernet0/0/4.560
+ encapsulation dot1Q 560
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 70_Mbps
+ service-policy output 70_Mbps
+!
+interface GigabitEthernet0/0/4.561
+ encapsulation dot1Q 561
+ shutdown
+ service-policy input 30_Mbps
+ service-policy output 30_Mbps
+!
+interface GigabitEthernet0/0/4.562
+ shutdown
+!
+interface GigabitEthernet0/0/4.563
+ shutdown
+!
+interface GigabitEthernet0/0/4.564
+ shutdown
+!
+interface GigabitEthernet0/0/4.565
+ shutdown
+!
+interface GigabitEthernet0/0/4.566
+ shutdown
+!
+interface GigabitEthernet0/0/4.567
+ shutdown
+!
+interface GigabitEthernet0/0/4.568
+ shutdown
+!
+interface GigabitEthernet0/0/4.569
+ shutdown
+!
+interface GigabitEthernet0/0/4.570
+ shutdown
+!
+interface GigabitEthernet0/0/4.571
+ shutdown
+!
+interface GigabitEthernet0/0/4.572
+ shutdown
+!
+interface GigabitEthernet0/0/4.573
+ shutdown
+!
+interface GigabitEthernet0/0/4.574
+ shutdown
+!
+interface GigabitEthernet0/0/4.575
+ shutdown
+!
+interface GigabitEthernet0/0/4.576
+ shutdown
+!
+interface GigabitEthernet0/0/4.577
+ shutdown
+!
+interface GigabitEthernet0/0/4.578
+ shutdown
+!
+interface GigabitEthernet0/0/4.579
+ shutdown
+!
+interface GigabitEthernet0/0/4.580
+ shutdown
+!
+interface GigabitEthernet0/0/4.581
+ description ##Satya Township Pvt Ltd#571553#10Mb#Assotech##
+ encapsulation dot1Q 581
+ ip address 203.110.83.17 255.255.255.252
+ ip access-group VOIP in
+ ip access-group VOIP out
+ service-policy input 10_Mbps
+ service-policy output 10_Mbps
+!
+interface GigabitEthernet0/0/4.582
+ shutdown
+!
+interface GigabitEthernet0/0/4.583
+ shutdown
+!
+interface GigabitEthernet0/0/4.584
+ shutdown
+!
+interface GigabitEthernet0/0/4.585
+ shutdown
+!
+interface GigabitEthernet0/0/4.586
+ shutdown
+!
+interface GigabitEthernet0/0/4.587
+ shutdown
+!
+interface GigabitEthernet0/0/4.588
+ shutdown
+!
+interface GigabitEthernet0/0/4.589
+ shutdown
+!
+interface GigabitEthernet0/0/4.590
+ shutdown
+!
+interface GigabitEthernet0/0/4.591
+ shutdown
+!
+interface GigabitEthernet0/0/4.592
+ shutdown
+!
+interface GigabitEthernet0/0/4.593
+ shutdown
+!
+interface GigabitEthernet0/0/4.594
+ shutdown
+!
+interface GigabitEthernet0/0/4.595
+ shutdown
+!
+interface GigabitEthernet0/0/4.596
+ shutdown
+!
+interface GigabitEthernet0/0/4.597
+ shutdown
+!
+interface GigabitEthernet0/0/4.598
+ shutdown
+!
+interface GigabitEthernet0/0/4.599
+ shutdown
+!
+interface GigabitEthernet0/0/4.600
+ description Brodband_of_C-4_Ring
+ encapsulation dot1Q 600
+ shutdown
+!
+interface GigabitEthernet0/0/4.601
+ description ##H-One#IPBX#Private##
+ encapsulation dot1Q 601
+ ip address 10.10.0.1 255.255.0.0
+ shutdown
+!
+interface GigabitEthernet0/0/4.604
+ encapsulation dot1Q 604
+ shutdown
+!
+interface GigabitEthernet0/0/4.613
+ encapsulation dot1Q 613
+ ip address 45.64.93.1 255.255.255.128
+ shutdown
+!
+interface GigabitEthernet0/0/4.702
+ encapsulation dot1Q 702
+ shutdown
+!
+interface GigabitEthernet0/0/4.703
+ encapsulation dot1Q 703
+ shutdown
+!
+interface GigabitEthernet0/0/4.706
+ description ##Emaar_Green#VOIP##
+ encapsulation dot1Q 706
+ ip address 10.76.0.1 255.255.0.0
+ arp timeout 30
+!
+interface GigabitEthernet0/0/4.707
+ description ##Emaar_IG#VOIP##
+ encapsulation dot1Q 707
+ ip address 10.77.0.1 255.255.0.0
+ arp timeout 60
+!
+interface GigabitEthernet0/0/4.708
+ description ##Habitate#VOIP##
+ encapsulation dot1Q 708
+ ip address 10.78.0.2 255.255.0.0
+ arp timeout 30
+!
+interface GigabitEthernet0/0/4.709
+ description ##Suncity_Avenue#VOIP#
+ encapsulation dot1Q 709
+ ip address 10.79.0.1 255.255.0.0
+ arp timeout 30
+!
+interface GigabitEthernet0/0/4.711
+ encapsulation dot1Q 711
+!
+interface GigabitEthernet0/0/4.801
+ encapsulation dot1Q 801
+!
+interface GigabitEthernet0/0/4.813
+ encapsulation dot1Q 813
+ arp timeout 30
+!
+interface GigabitEthernet0/0/4.3023
+!
+interface GigabitEthernet0/0/5
+ no ip address
+ no ip redirects
+ no ip unreachables
+ no ip proxy-arp
+ negotiation auto
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.1
+ description ##UV#MAIN_RING#SW87.130##
+ encapsulation dot1Q 1 native
+ ip address 172.30.82.65 255.255.255.224 secondary
+ ip address 172.30.82.33 255.255.255.224 secondary
+ ip address 172.30.87.129 255.255.255.240
+ arp timeout 5
+ service-policy input 20_Mbps
+ service-policy output 20_Mbps
+!
+interface GigabitEthernet0/0/5.2
+ encapsulation dot1Q 2
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.3
+ encapsulation dot1Q 3
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.4
+ encapsulation dot1Q 4
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.5
+ encapsulation dot1Q 5
+ shutdown
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.6
+ encapsulation dot1Q 6
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.7
+ shutdown
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.8
+ encapsulation dot1Q 8
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.9
+ encapsulation dot1Q 9
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.10
+ description ##A S K Solution#131366#10Mb##
+ encapsulation dot1Q 10
+ shutdown
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.11
+ description ##Open Soft#131006#5Mb#UV##
+ encapsulation dot1Q 11
+ ip address 203.110.87.249 255.255.255.252
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+ service-policy input 5_Mbps
+ service-policy output 5_Mbps
+!
+interface GigabitEthernet0/0/5.12
+ description ##Suspended Easy Tax Solutions#131445#50Mb##
+ encapsulation dot1Q 12
+ ip address 203.110.88.209 255.255.255.248
+ shutdown
+ arp timeout 5
+ service-policy input 50_Mbps
+ service-policy output 50_Mbps
+!
+interface GigabitEthernet0/0/5.13
+ description ##Nitin Singh#131367#20Mb#UV##
+ encapsulation dot1Q 13
+ ip address 203.110.93.229 255.255.255.252
+ arp timeout 5
+ service-policy input 20_Mbps
+ service-policy output 20_Mbps
+!
+interface GigabitEthernet0/0/5.14
+ description ##Ankur Dhingra#131459#20Mb#UV##
+ encapsulation dot1Q 14
+ ip address 203.110.90.81 255.255.255.252
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+ service-policy input 20_Mbps
+ service-policy output 20_Mbps
+!
+interface GigabitEthernet0/0/5.15
+ description ##Black Star#131413#30Mb#UV##
+ encapsulation dot1Q 15
+ ip address 203.110.93.169 255.255.255.248
+ arp timeout 5
+ service-policy input 30_Mbps
+ service-policy output 30_Mbps
+!
+interface GigabitEthernet0/0/5.16
+ encapsulation dot1Q 16
+ shutdown
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.17
+ description ##Shibu James#131424#20Mb#UV##
+ encapsulation dot1Q 17
+ shutdown
+ arp timeout 5
+ service-policy input 20_Mbps
+ service-policy output 20_Mbps
+!
+interface GigabitEthernet0/0/5.18
+ description ##Micronova Helios Networking Solutions Pvt Ltd#131293#100MB#UV##
+ encapsulation dot1Q 18
+ ip address 103.242.225.73 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ arp timeout 5
+ service-policy input 100_Mbps
+ service-policy output 100_Mbps
+!
+interface GigabitEthernet0/0/5.19
+ encapsulation dot1Q 19
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.20
+ description ##Suspended Pawandeep Singh#131450#20Mb##
+ encapsulation dot1Q 20
+ ip address 203.110.93.225 255.255.255.252
+ shutdown
+ arp timeout 5
+ service-policy input 20_Mbps
+ service-policy output 20_Mbps
+!
+interface GigabitEthernet0/0/5.21
+ description ##RS IT Services (Fare Destinations Pvt Ltd)#131119#8Mb#UV##
+ encapsulation dot1Q 21
+ shutdown
+ arp timeout 5
+ service-policy input 8_Mbps
+ service-policy output 8_Mbps
+!
+interface GigabitEthernet0/0/5.22
+ description ##Triumph Infocomm#131214#OLD_DATA##
+ encapsulation dot1Q 22
+ shutdown
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.23
+ encapsulation dot1Q 23
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ arp timeout 5
+ service-policy input 10_Mbps
+ service-policy output 10_Mbps
+!
+interface GigabitEthernet0/0/5.24
+ description ##IDS Rural Online Marketplace Pvt Ltd#131108#10Mb#UV##
+ encapsulation dot1Q 24
+ ip address 203.110.83.129 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+ service-policy input 10_Mbps
+ service-policy output 10_Mbps
+!
+interface GigabitEthernet0/0/5.30
+ description ##Sarjeet#131382#20MB#UV##
+ encapsulation dot1Q 30
+ ip address 103.242.225.201 255.255.255.248
+ shutdown
+ arp timeout 5
+ service-policy input 20_Mbps
+ service-policy output 20_Mbps
+!
+interface GigabitEthernet0/0/5.31
+ description ##Continuum Buying agency Pvt Ltd.#131117#40MB#UV##
+ encapsulation dot1Q 31
+ ip address 203.110.83.81 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+ service-policy input 40_Mbps
+ service-policy output 40_Mbps
+!
+interface GigabitEthernet0/0/5.32
+ description ##Ritco Logistics Pvt Ltd#131070#50Mb##
+ encapsulation dot1Q 32
+ ip address 203.110.90.25 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+ service-policy input 50_Mbps
+ service-policy output 50_Mbps
+!
+interface GigabitEthernet0/0/5.33
+ description ## Appy Bajaj #131440#20Mb#UV##
+ encapsulation dot1Q 33
+ ip address 203.110.88.113 255.255.255.252
+ arp timeout 5
+ service-policy input 20_Mbps
+ service-policy output 20_Mbps
+!
+interface GigabitEthernet0/0/5.34
+ description ##Vyas_Maulik#131417#30Mb#UV##suspended
+ encapsulation dot1Q 34
+ ip address 203.110.84.25 255.255.255.248
+ shutdown
+ arp timeout 5
+ service-policy input 30_Mbps
+ service-policy output 30_Mbps
+!
+interface GigabitEthernet0/0/5.35
+ description ##APL_LOGIS#131094#15Mb#UV##
+ encapsulation dot1Q 35
+ ip address 203.110.90.113 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+ service-policy input 15_Mbps
+ service-policy output 15_Mbps
+!
+interface GigabitEthernet0/0/5.36
+ description ##Suspended VIKAS KUMAR#131439#100Mb##
+ encapsulation dot1Q 36
+ ip address 203.110.91.149 255.255.255.252
+ shutdown
+ arp timeout 5
+ service-policy input 100_Mbps
+ service-policy output 100_Mbps
+!
+interface GigabitEthernet0/0/5.37
+ description ##Caparo#131003#2MB#UV##
+ encapsulation dot1Q 37
+ ip address 203.110.91.89 255.255.255.248
+ arp timeout 5
+ service-policy input 2_Mbps
+ service-policy output 2_Mbps
+!
+interface GigabitEthernet0/0/5.38
+ description ##Vaibhav Gupta#131358#5Mb#UV##
+ encapsulation dot1Q 38
+ ip address 203.110.90.213 255.255.255.252
+ shutdown
+ arp timeout 5
+ service-policy input 5_Mbps
+ service-policy output 5_Mbps
+!
+interface GigabitEthernet0/0/5.39
+ description ##PALLIA TRANS LOGISTICS PVT LTD#131415#20Mb#UV##
+ encapsulation dot1Q 39
+ ip address 203.110.84.41 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+ service-policy input 20_Mbps
+ service-policy output 20_Mbps
+!
+interface GigabitEthernet0/0/5.40
+ description ##Mentor E Services#131277#5Mb#UV##
+ encapsulation dot1Q 40
+ ip address 103.242.225.185 255.255.255.248
+ shutdown
+ arp timeout 5
+ service-policy input 5_Mbps
+ service-policy output 5_Mbps
+!
+interface GigabitEthernet0/0/5.41
+ description ##Suspended Easy Tax Solutions#131438#50Mb##
+ encapsulation dot1Q 41
+ ip address 203.110.87.217 255.255.255.248
+ shutdown
+ arp timeout 5
+ service-policy input 50_Mbps
+ service-policy output 50_Mbps
+!
+interface GigabitEthernet0/0/5.42
+ description ##Vital Online Experts Pvt Ltd#131312#20MB#UV##
+ encapsulation dot1Q 42
+ ip address 203.110.91.193 255.255.255.248
+ arp timeout 5
+ service-policy input 20_Mbps
+ service-policy output 20_Mbps
+!
+interface GigabitEthernet0/0/5.43
+ description ##Mobilecomm Technologies India Pvt Ltd#131182#10MB#UV##
+ encapsulation dot1Q 43
+ ip address 103.242.225.193 255.255.255.248
+ arp timeout 5
+ service-policy input 10_Mbps
+ service-policy output 10_Mbps
+!
+interface GigabitEthernet0/0/5.44
+ description ## ZAPPERS TRAVELS PRIVATE LIMITED#131441#10Mb#UV##
+ encapsulation dot1Q 44
+ ip address 203.110.88.161 255.255.255.252
+ arp timeout 5
+ service-policy input 10_Mbps
+ service-policy output 10_Mbps
+!
+interface GigabitEthernet0/0/5.45
+ encapsulation dot1Q 45
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.46
+ description ##Suspended Easy Tax Solutions#131444#100Mb##
+ encapsulation dot1Q 46
+ ip address 203.110.88.121 255.255.255.248
+ shutdown
+ arp timeout 5
+ service-policy input 100_Mbps
+ service-policy output 100_Mbps
+!
+interface GigabitEthernet0/0/5.51
+ description ##CONCIENT#121011#50Mb#GBP##
+ encapsulation dot1Q 51
+ ip address 203.110.81.17 255.255.255.248
+ arp timeout 5
+ service-policy input 50_Mbps
+ service-policy output 50_Mbps
+!
+interface GigabitEthernet0/0/5.52
+ description ##Perfetti Van Melle India Private Limited#121027#100Mb#GBP##
+ encapsulation dot1Q 52
+ ip address 203.110.80.213 255.255.255.252
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+ service-policy input 100_Mbps
+ service-policy output 100_Mbps
+!
+interface GigabitEthernet0/0/5.53
+ description ##Minda Industries Ltd#121041#20MB#GBP##
+ encapsulation dot1Q 53
+ ip address 203.110.88.241 255.255.255.252
+ arp timeout 5
+ service-policy input 20_Mbps
+ service-policy output 20_Mbps
+!
+interface GigabitEthernet0/0/5.54
+ description ##Perfetti Van Melle India Private Limited#121046#40Mb#GBP##
+ encapsulation dot1Q 54
+ ip address 203.110.87.241 255.255.255.252
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+ service-policy input 40_Mbps
+ service-policy output 40_Mbps
+!
+interface GigabitEthernet0/0/5.55
+ description ##Amrop India Pvt Ltd#121001#20MB#GBP##
+ encapsulation dot1Q 55
+ ip address 203.110.90.105 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ arp timeout 5
+ service-policy input 20_Mbps
+ service-policy output 20_Mbps
+!
+interface GigabitEthernet0/0/5.56
+ description ##SKH Metals Ltd#121025#50Mb#GBP##
+ encapsulation dot1Q 56
+ ip address 203.110.87.229 255.255.255.252
+ arp timeout 5
+ service-policy input 50_Mbps
+ service-policy output 50_Mbps
+!
+interface GigabitEthernet0/0/5.57
+ description ##Embassy of Equatorial Guinea#121039#20MB#GBP##
+ encapsulation dot1Q 57
+ ip address 203.110.88.25 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ arp timeout 5
+ service-policy input 20_Mbps
+ service-policy output 20_Mbps
+!
+interface GigabitEthernet0/0/5.58
+ description ##Fujifilm Sonosite India Pvt. Ltd#121038#40Mb#GBP##
+ encapsulation dot1Q 58
+ ip address 203.110.81.89 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+ service-policy input 40_Mbps
+ service-policy output 40_Mbps
+!
+interface GigabitEthernet0/0/5.59
+ description ##RI Network Pvt Ltd#121050#50Mb#GBP##
+ encapsulation dot1Q 59
+ ip address 203.110.88.17 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+ service-policy input 50_Mbps
+ service-policy output 50_Mbps
+!
+interface GigabitEthernet0/0/5.60
+ description ##Varma jitendra Shambhubhai#131418#100Mb##
+ encapsulation dot1Q 60
+ ip address 203.110.93.209 255.255.255.248
+ arp timeout 5
+ service-policy input 100_Mbps
+ service-policy output 100_Mbps
+!
+interface GigabitEthernet0/0/5.80
+ description ##Avantha Technologies Ltd#131432#15Mb#UV##
+ encapsulation dot1Q 80
+ ip address 203.110.90.233 255.255.255.248
+ arp timeout 5
+ service-policy input 15_Mbps
+ service-policy output 15_Mbps
+!
+interface GigabitEthernet0/0/5.100
+ description Reserved
+ encapsulation dot1Q 100
+ ip address 10.9.0.1 255.255.0.0
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.101
+ description ##NaturoHabit Private Limited#131389#60Mb#UV##
+ encapsulation dot1Q 101
+ ip address 203.110.83.121 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+ service-policy input 60_Mbps
+ service-policy output 60_Mbps
+!
+interface GigabitEthernet0/0/5.102
+ description ##Eastman Auto and Power Ltd#131449#100Mb#UV##
+ encapsulation dot1Q 102
+ ip address 203.110.90.33 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+ service-policy input 100_Mbps
+ service-policy output 100_Mbps
+!
+interface GigabitEthernet0/0/5.103
+ description ##Omnitec Systems India Pvt Ltd#131149#14Mb#UV##
+ encapsulation dot1Q 103
+ ip address 103.242.225.161 255.255.255.248
+ arp timeout 5
+ service-policy input 14_Mbps
+ service-policy output 14_Mbps
+!
+interface GigabitEthernet0/0/5.104
+ description ##Suspended Easy Tax Solutions#131448#100Mb##
+ encapsulation dot1Q 104
+ ip address 203.110.91.201 255.255.255.248
+ shutdown
+ arp timeout 5
+ service-policy input 100_Mbps
+ service-policy output 100_Mbps
+!
+interface GigabitEthernet0/0/5.105
+ description ##Jupiter Orison Pvt Ltd#131192#50Mb#UV##
+ encapsulation dot1Q 105
+ ip address 203.110.90.225 255.255.255.248
+ arp timeout 5
+ service-policy input 50_Mbps
+ service-policy output 50_Mbps
+!
+interface GigabitEthernet0/0/5.106
+ description ##P.C. Financial Services Pvt Ltd..#131341#100Mb#UV##
+ encapsulation dot1Q 106
+ ip address 203.110.83.177 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+ service-policy input 100_Mbps
+ service-policy output 100_Mbps
+!
+interface GigabitEthernet0/0/5.107
+ description ##Redical_Mind#131242#100MB#UV##
+ encapsulation dot1Q 107
+ ip address 103.242.225.169 255.255.255.248 secondary
+ ip address 203.110.85.177 255.255.255.248
+ arp timeout 5
+ service-policy input 100_Mbps
+ service-policy output 100_Mbps
+!
+interface GigabitEthernet0/0/5.108
+ description ##Fabel Services Pvt Ltd#131340#80Mb#UV##
+ encapsulation dot1Q 108
+ ip address 203.110.83.249 255.255.255.248
+ arp timeout 5
+ service-policy input 80_Mbps
+ service-policy output 80_Mbps
+!
+interface GigabitEthernet0/0/5.109
+ description ##Leva Ashvin Kumar#131308#15MB#UV##
+ encapsulation dot1Q 109
+ ip address 203.110.85.90 255.255.255.252
+ shutdown
+ arp timeout 5
+ service-policy input 15_Mbps
+ service-policy output 15_Mbps
+!
+interface GigabitEthernet0/0/5.110
+ description ##Prota-Tech India Solutions Pvt Ltd#111107#50MB#JMD##
+ encapsulation dot1Q 110
+ ip address 203.110.84.193 255.255.255.248
+ arp timeout 5
+ service-policy input 50_Mbps
+ service-policy output 50_Mbps
+!
+interface GigabitEthernet0/0/5.120
+ description ##Spaze Club Pvt Ltd.#131360#100MB#UV##
+ encapsulation dot1Q 120
+ ip address 203.110.84.233 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+ service-policy input 100_Mbps
+ service-policy output 100_Mbps
+!
+interface GigabitEthernet0/0/5.121
+ encapsulation dot1Q 121
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ arp timeout 5
+ service-policy input 100_Mbps
+ service-policy output 100_Mbps
+!
+interface GigabitEthernet0/0/5.122
+ description ##Pickrr Technologies Pvt Ltd#131446#200Mb##
+ encapsulation dot1Q 122
+ ip address 203.110.85.73 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+ service-policy input 200_Mbps
+ service-policy output 200_Mbps
+!
+interface GigabitEthernet0/0/5.123
+ description description ##Pickrr Technologies Pvt Ltd#131420#200Mb##
+ encapsulation dot1Q 123
+ ip address 203.110.88.73 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+ service-policy input 200_Mbps
+ service-policy output 200_Mbps
+!
+interface GigabitEthernet0/0/5.130
+ description ##Samsonite South Asia Pvt.Ltd#141005#10MB#JMD##
+ encapsulation dot1Q 130
+ ip address 203.110.85.105 255.255.255.252
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+ service-policy input 10_Mbps
+ service-policy output 10_Mbps
+!
+interface GigabitEthernet0/0/5.131
+ description ##Vatsal#131458#50Mb#UV##
+ encapsulation dot1Q 131
+ ip address 203.110.84.249 255.255.255.248
+ arp timeout 5
+ service-policy input 50_Mbps
+ service-policy output 50_Mbps
+!
+interface GigabitEthernet0/0/5.132
+ description ##EASTMAN AUTO & POWER LIMITED#131373#100Mb#UV##
+ encapsulation dot1Q 132
+ ip address 203.110.83.161 255.255.255.240
+ arp timeout 5
+ service-policy input 100_Mbps
+ service-policy output 100_Mbps
+!
+interface GigabitEthernet0/0/5.133
+ description ##Savi Infoservices India Pvt Ltd#111052#40Mb#UV##
+ encapsulation dot1Q 133
+ ip address 203.110.83.49 255.255.255.248
+ arp timeout 5
+ service-policy input 40_Mbps
+ service-policy output 40_Mbps
+!
+interface GigabitEthernet0/0/5.134
+ description ##Think Future Technologie#131155#30Mb#UV##
+ encapsulation dot1Q 134
+ ip address 203.110.88.201 255.255.255.248 secondary
+ ip address 203.110.83.65 255.255.255.240
+ arp timeout 5
+ service-policy input 30_Mbps
+ service-policy output 30_Mbps
+!
+interface GigabitEthernet0/0/5.135
+ description ##P N A Corpserve#131427#100Mb#UV##
+ encapsulation dot1Q 135
+ ip address 203.110.88.9 255.255.255.248
+ arp timeout 5
+ service-policy input 100_Mbps
+ service-policy output 100_Mbps
+!
+interface GigabitEthernet0/0/5.136
+ description ##Ravi Makani.#131370#20Mb#UV##
+ encapsulation dot1Q 136
+ ip address 203.110.88.117 255.255.255.252
+ shutdown
+ arp timeout 5
+ service-policy input 20_Mbps
+ service-policy output 20_Mbps
+!
+interface GigabitEthernet0/0/5.137
+ description ##Anita Shukla#131419#20Mb#UV##
+ encapsulation dot1Q 137
+ ip address 203.110.93.249 255.255.255.252
+ shutdown
+ arp timeout 5
+ service-policy input 20_Mbps
+ service-policy output 20_Mbps
+!
+interface GigabitEthernet0/0/5.138
+ description ##Vikas Kumar#131437#10Mb#UV##
+ encapsulation dot1Q 138
+ ip address 203.110.81.37 255.255.255.252
+ shutdown
+ arp timeout 5
+ service-policy input 10_Mbps
+ service-policy output 10_Mbps
+!
+interface GigabitEthernet0/0/5.139
+ description ##Nodwin_Gaming_Pvt_Ltd#111406#200Mb##"
+ encapsulation dot1Q 139
+ ip address 203.110.81.129 255.255.255.240
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+ service-policy input 200_Mbps
+ service-policy output 200_Mbps
+!
+interface GigabitEthernet0/0/5.140
+ description ##Enter 10 Television#131012#15Mb#UV##
+ encapsulation dot1Q 140
+ ip address 203.110.83.105 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+ service-policy input 15_Mbps
+ service-policy output 15_Mbps
+!
+interface GigabitEthernet0/0/5.141
+ description ##Everge Smart India Pvt Ltd#131451#100Mb#UV##
+ encapsulation dot1Q 141
+ ip address 203.110.88.69 255.255.255.252
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+ service-policy input 100_Mbps
+ service-policy output 100_Mbps
+!
+interface GigabitEthernet0/0/5.142
+ encapsulation dot1Q 142
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.143
+ encapsulation dot1Q 143
+ shutdown
+ arp timeout 5
+ service-policy input 100_Mbps
+ service-policy output 100_Mbps
+!
+interface GigabitEthernet0/0/5.144
+ description ##Heuristics Informatics Pvt Ltd#131392#10Mb##
+ encapsulation dot1Q 144
+ ip address 203.110.83.201 255.255.255.248 secondary
+ ip address 203.110.83.97 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+ service-policy input 10_Mbps
+ service-policy output 10_Mbps
+!
+interface GigabitEthernet0/0/5.145
+ description ##Kalpesh J Koshti#131368#20MB#UV##
+ encapsulation dot1Q 145
+ ip address 203.110.90.137 255.255.255.252
+ shutdown
+ arp timeout 5
+ service-policy input 20_Mbps
+ service-policy output 20_Mbps
+!
+interface GigabitEthernet0/0/5.146
+ description ##Appy Bajaj#131454#50MB#UV##
+ encapsulation dot1Q 146
+ ip address 103.242.225.253 255.255.255.252
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+ service-policy input 50_Mbps
+ service-policy output 50_Mbps
+!
+interface GigabitEthernet0/0/5.147
+ description ##BELLATOR MEDIA PRIVATE LIMITED#131434#50Mb#UV##
+ encapsulation dot1Q 147
+ ip address 203.110.93.145 255.255.255.252
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+ service-policy input 50_Mbps
+ service-policy output 50_Mbps
+!
+interface GigabitEthernet0/0/5.192
+ encapsulation dot1Q 192
+ shutdown
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.193
+ description ##Tagbin Services Pvt Ltd#131407#50Mb#UV##
+ encapsulation dot1Q 193
+ ip address 203.110.83.145 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+ service-policy input 50_Mbps
+ service-policy output 50_Mbps
+!
+interface GigabitEthernet0/0/5.200
+ description ##National Collateral Management Services Ltd#131422#20Mb##
+ encapsulation dot1Q 200
+ ip address 203.110.83.137 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+ service-policy input 20_Mbps
+ service-policy output 20_Mbps
+!
+interface GigabitEthernet0/0/5.201
+ description ##Kunal Arora#171011#20MB#Mill##
+ encapsulation dot1Q 201
+ ip address 203.110.83.73 255.255.255.252
+ shutdown
+ arp timeout 5
+ service-policy input 20_Mbps
+ service-policy output 20_Mbps
+!
+interface GigabitEthernet0/0/5.202
+ description ##Suspended Easy Tax#131385#100Mb##
+ encapsulation dot1Q 202
+ ip address 203.110.90.21 255.255.255.252
+ shutdown
+ arp timeout 5
+ service-policy input 100_Mbps
+ service-policy output 100_Mbps
+!
+interface GigabitEthernet0/0/5.203
+ description ##Suspended Easy Tax#131430#20Mb##
+ encapsulation dot1Q 203
+ ip address 203.110.85.153 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ arp timeout 5
+ service-policy input 20_Mbps
+ service-policy output 20_Mbps
+!
+interface GigabitEthernet0/0/5.204
+ description ##Suspended Easy Tax#131431#100Mb##
+ encapsulation dot1Q 204
+ ip address 203.110.91.177 255.255.255.248
+ shutdown
+ arp timeout 5
+ service-policy input 100_Mbps
+ service-policy output 100_Mbps
+!
+interface GigabitEthernet0/0/5.205
+ description ##Suspended Easy Tax Solutions#131436#30Mb##
+ encapsulation dot1Q 205
+ ip address 203.110.81.105 255.255.255.248
+ shutdown
+ arp timeout 5
+ service-policy input 30_Mbps
+ service-policy output 30_Mbps
+!
+interface GigabitEthernet0/0/5.210
+ encapsulation dot1Q 210
+ shutdown
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.211
+ encapsulation dot1Q 211
+ arp timeout 5
+ service-policy input 45_Mbps
+ service-policy output 45_Mbps
+!
+interface GigabitEthernet0/0/5.250
+ encapsulation dot1Q 250
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.251
+ encapsulation dot1Q 251
+ arp timeout 5
+ service-policy input 50_Mbps
+ service-policy output 50_Mbps
+!
+interface GigabitEthernet0/0/5.260
+ encapsulation dot1Q 260
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+ service-policy input 100_Mbps
+ service-policy output 100_Mbps
+!
+interface GigabitEthernet0/0/5.290
+ encapsulation dot1Q 290
+ arp timeout 5
+ service-policy input 10_Mbps
+ service-policy output 10_Mbps
+!
+interface GigabitEthernet0/0/5.300
+ encapsulation dot1Q 300
+ shutdown
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.301
+ encapsulation dot1Q 301
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+ service-policy input 15_Mbps
+ service-policy output 15_Mbps
+!
+interface GigabitEthernet0/0/5.302
+ encapsulation dot1Q 302
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+ service-policy input 20_Mbps
+ service-policy output 20_Mbps
+!
+interface GigabitEthernet0/0/5.303
+ encapsulation dot1Q 303
+ shutdown
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.304
+ encapsulation dot1Q 304
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.305
+ encapsulation dot1Q 305
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.310
+ encapsulation dot1Q 310
+ shutdown
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.320
+ encapsulation dot1Q 320
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+ service-policy input 14_Mbps
+ service-policy output 14_Mbps
+!
+interface GigabitEthernet0/0/5.330
+ encapsulation dot1Q 330
+ arp timeout 5
+ service-policy input 30_Mbps
+ service-policy output 30_Mbps
+!
+interface GigabitEthernet0/0/5.340
+ encapsulation dot1Q 340
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.350
+ encapsulation dot1Q 350
+ shutdown
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.351
+ encapsulation dot1Q 351
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.360
+ encapsulation dot1Q 360
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.370
+ encapsulation dot1Q 370
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.380
+ encapsulation dot1Q 380
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+ service-policy input 15_Mbps
+ service-policy output 15_Mbps
+!
+interface GigabitEthernet0/0/5.390
+ encapsulation dot1Q 390
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.400
+ shutdown
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.401
+ encapsulation dot1Q 401
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+ service-policy input 6_Mbps
+ service-policy output 6_Mbps
+!
+interface GigabitEthernet0/0/5.402
+ encapsulation dot1Q 402
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+ service-policy input 100_Mbps
+ service-policy output 100_Mbps
+!
+interface GigabitEthernet0/0/5.405
+ encapsulation dot1Q 405
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ arp timeout 5
+ service-policy input 30_Mbps
+ service-policy output 30_Mbps
+!
+interface GigabitEthernet0/0/5.406
+ encapsulation dot1Q 406
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.407
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.408
+ encapsulation dot1Q 408
+ arp timeout 5
+ service-policy input 10_Mbps
+ service-policy output 10_Mbps
+!
+interface GigabitEthernet0/0/5.409
+ encapsulation dot1Q 409
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.410
+ encapsulation dot1Q 410
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+ service-policy input 30_Mbps
+ service-policy output 30_Mbps
+!
+interface GigabitEthernet0/0/5.411
+ description ##MFB Geotech Pvt Ltd#121052#30Mb#GBP##
+ encapsulation dot1Q 411
+ ip address 203.110.83.25 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+ service-policy input 30_Mbps
+ service-policy output 30_Mbps
+!
+interface GigabitEthernet0/0/5.412
+ encapsulation dot1Q 412
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.413
+ encapsulation dot1Q 413
+ arp timeout 5
+ service-policy input 30_Mbps
+ service-policy output 30_Mbps
+!
+interface GigabitEthernet0/0/5.414
+ encapsulation dot1Q 414
+ arp timeout 5
+ service-policy input 12_Mbps
+ service-policy output 12_Mbps
+!
+interface GigabitEthernet0/0/5.415
+ encapsulation dot1Q 415
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.416
+ encapsulation dot1Q 416
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.417
+ encapsulation dot1Q 417
+ shutdown
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.418
+ encapsulation dot1Q 418
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.419
+ encapsulation dot1Q 419
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.420
+ encapsulation dot1Q 420
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.421
+ encapsulation dot1Q 421
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.422
+ encapsulation dot1Q 422
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+ service-policy input 30_Mbps
+ service-policy output 30_Mbps
+!
+interface GigabitEthernet0/0/5.423
+ encapsulation dot1Q 423
+ shutdown
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.424
+ encapsulation dot1Q 424
+ shutdown
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.425
+ encapsulation dot1Q 425
+ shutdown
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.426
+ encapsulation dot1Q 426
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.427
+ encapsulation dot1Q 427
+ arp timeout 5
+ service-policy input 10_Mbps
+ service-policy output 10_Mbps
+!
+interface GigabitEthernet0/0/5.428
+ encapsulation dot1Q 428
+ shutdown
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.429
+ encapsulation dot1Q 429
+ shutdown
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.430
+ encapsulation dot1Q 430
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.431
+ encapsulation dot1Q 431
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.432
+ encapsulation dot1Q 432
+ shutdown
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.433
+ encapsulation dot1Q 433
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.434
+ encapsulation dot1Q 434
+ shutdown
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.435
+ encapsulation dot1Q 435
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.440
+ encapsulation dot1Q 440
+ shutdown
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.500
+ shutdown
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.501
+ encapsulation dot1Q 501
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.556
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.600
+ description RESERVED_UV_BB
+ encapsulation dot1Q 600
+ ip address 203.110.95.81 255.255.255.240 secondary
+ ip address 203.110.86.65 255.255.255.224
+ shutdown
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.601
+ encapsulation dot1Q 601
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.602
+ encapsulation dot1Q 602
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.603
+ encapsulation dot1Q 603
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.604
+ encapsulation dot1Q 604
+ shutdown
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.800
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.801
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.810
+ description ##AMBIGGN#R_LAGOON#80.98#BACKUP##
+ encapsulation dot1Q 810
+ ip address 172.30.83.75 255.255.255.248
+ ip ospf 20 area 1
+ shutdown
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.811
+ description ##AMBIGGN#R_LAGOON#DDF##
+ encapsulation dot1Q 811
+ ip address 203.110.80.149 255.255.255.252
+ ip ospf 20 area 2
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.841
+ encapsulation dot1Q 841
+ ip ospf 20 area 2
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.842
+ encapsulation dot1Q 842
+ ip address 203.110.87.25 255.255.255.248
+ arp timeout 5
+!
+interface GigabitEthernet0/0/5.3000
+ encapsulation dot1Q 3000
+ shutdown
+ arp timeout 5
+!
+interface GigabitEthernet0/1/0
+ description ##MILL#WAN_BHARTI#SW80.46##
+ no ip address
+ negotiation auto
+!
+interface GigabitEthernet0/1/0.1
+ encapsulation dot1Q 1 native
+ ip address 172.30.87.1 255.255.255.240 secondary
+ ip address 203.110.80.45 255.255.255.252
+!
+interface GigabitEthernet0/1/0.213
+ encapsulation dot1Q 213
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+!
+interface GigabitEthernet0/1/0.214
+ encapsulation dot1Q 214
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 20_Mbps
+ service-policy output 20_Mbps
+!
+interface GigabitEthernet0/1/0.215
+ encapsulation dot1Q 215
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 6_Mbps
+ service-policy output 6_Mbps
+!
+interface GigabitEthernet0/1/0.216
+ encapsulation dot1Q 216
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 10_Mbps
+ service-policy output 10_Mbps
+!
+interface GigabitEthernet0/1/0.710
+ description ##AMBI_VK#R_AMBIVK#87.182#Backup##
+ encapsulation dot1Q 710
+ ip address 172.30.83.11 255.255.255.248
+ ip ospf 20 area 1
+ shutdown
+!
+interface GigabitEthernet0/1/0.711
+ description ##AMBIVK#R_LAGOON#155Mb#TATA_P2P#
+ encapsulation dot1Q 711
+ ip address 203.110.87.181 255.255.255.252
+ ip ospf 20 area 2
+ arp timeout 5
+!
+interface GigabitEthernet0/1/0.841
+ encapsulation dot1Q 841
+ ip ospf cost 20
+ shutdown
+ ipv6 enable
+!
+interface GigabitEthernet0/1/0.842
+ encapsulation dot1Q 842
+ shutdown
+!
+interface GigabitEthernet0/1/0.843
+ encapsulation dot1Q 843
+ shutdown
+!
+interface GigabitEthernet0/1/0.844
+ encapsulation dot1Q 844
+ ip ospf cost 20
+!
+interface GigabitEthernet0/1/0.845
+ encapsulation dot1Q 845
+ shutdown
+!
+interface GigabitEthernet0/1/0.846
+ encapsulation dot1Q 846
+ shutdown
+!
+interface GigabitEthernet0/1/0.847
+ encapsulation dot1Q 847
+ shutdown
+!
+interface GigabitEthernet0/1/0.848
+ encapsulation dot1Q 848
+ shutdown
+!
+interface GigabitEthernet0/1/0.849
+ encapsulation dot1Q 849
+ shutdown
+!
+interface GigabitEthernet0/1/0.850
+ encapsulation dot1Q 850
+ shutdown
+!
+interface GigabitEthernet0/1/0.928
+ description ##MILL_MAHINDRAAURA_P2P#200Mb##
+ encapsulation dot1Q 928
+!
+interface GigabitEthernet0/1/0.929
+ encapsulation dot1Q 929
+!
+interface GigabitEthernet0/1/0.946
+ description ##ML Outsourcing Services Pvt Ltd#111151#100Mb##
+ encapsulation dot1Q 946
+ ip address 203.110.93.33 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ service-policy input 100_Mbps
+ service-policy output 100_Mbps
+!
+interface GigabitEthernet0/1/0.948
+ description ##MILL_SAPPHIRE_90_P2P_BHARTI#100Mb##
+ encapsulation dot1Q 948
+ ip address 172.30.87.97 255.255.255.240
+ shutdown
+!
+interface GigabitEthernet0/1/0.949
+ description ##MILL_RAMSONS_P2P#200Mb##
+ encapsulation dot1Q 949
+ ip address 172.30.87.81 255.255.255.240
+!
+interface GigabitEthernet0/1/0.950
+ description ##Rahul Chaudhary#111135#50Mb##
+ encapsulation dot1Q 950
+ ip address 203.110.88.169 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+!
+interface GigabitEthernet0/1/0.951
+ description ##Lea Associates#111322#2MB#Bharti_P2P##
+ encapsulation dot1Q 951
+ ip address 203.110.80.245 255.255.255.252
+ ip access-group VOIP in
+ ip access-group VOIP out
+!
+interface GigabitEthernet0/1/0.952
+ description ##Heritage School VK#311001#6Mb#Bharti##
+ encapsulation dot1Q 952
+ ip address 203.110.80.157 255.255.255.252
+!
+interface GigabitEthernet0/1/0.953
+ description ##Greenfields Indus Valley#111223#20Mb##
+ encapsulation dot1Q 953
+ ip address 203.110.84.9 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ service-policy input 20_Mbps
+ service-policy output 20_Mbps
+!
+interface GigabitEthernet0/1/0.954
+ description ##Shriram Rayons#111321#8Mb##
+ encapsulation dot1Q 954
+ ip address 203.110.87.209 255.255.255.252
+ ip access-group VOIP in
+ ip access-group VOIP out
+ service-policy input 8_Mbps
+ service-policy output 8_Mbps
+!
+interface GigabitEthernet0/1/0.955
+ bandwidth 2048
+ encapsulation dot1Q 955
+!
+interface GigabitEthernet0/1/0.1000
+ encapsulation dot1Q 1000
+!
+interface GigabitEthernet0/1/0.1003
+!
+interface GigabitEthernet0/1/0.1004
+ description ##TRL Riceland Pvt Ltd#261003#20MB#BEGUMPUR##
+ encapsulation dot1Q 1004
+ ip address 203.110.93.57 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ service-policy input 20_Mbps
+ service-policy output 20_Mbps
+!
+interface GigabitEthernet0/1/0.1005
+ description ##HABITATE_FARIDABAD#SW_87.66##
+ encapsulation dot1Q 1005
+ ip address 172.30.87.65 255.255.255.240
+!
+interface GigabitEthernet0/1/0.1010
+ description ##Ambi_GGN_Bharti#155Mb##
+ encapsulation dot1Q 1010 second-dot1q 811
+ ip address 203.110.80.97 255.255.255.252
+ ip ospf 20 area 2
+ ip ospf cost 20
+ ipv6 address 2404:A200:0:2::15/126
+ ipv6 enable
+ ipv6 eigrp 20
+!
+interface GigabitEthernet0/1/0.1013
+ description ##NOIDA#NOIDA_MAXX##
+ encapsulation dot1Q 1013
+ ip address 172.30.89.1 255.255.255.0
+!
+interface GigabitEthernet0/1/0.1014
+ description ##Lalit Jain#311010#155Mb#AIRTEL_P2P##
+ encapsulation dot1Q 1014
+ ip address 203.110.88.249 255.255.255.248
+!
+interface GigabitEthernet0/1/0.928703
+ encapsulation dot1Q 928 second-dot1q 703
+!
+interface GigabitEthernet0/1/0.948210
+ encapsulation dot1Q 948 second-dot1q 210
+ shutdown
+!
+interface GigabitEthernet0/1/0.948611
+ description ##Sapphire_90#Internet##
+ encapsulation dot1Q 948 second-dot1q 611
+ ip address 103.129.0.193 255.255.255.192
+ shutdown
+!
+interface GigabitEthernet0/1/0.948711
+ description ##Sapphire_90#VOIP##
+ encapsulation dot1Q 948 second-dot1q 711
+ ip address 10.7.11.1 255.255.255.0
+ shutdown
+ arp timeout 30
+!
+interface GigabitEthernet0/1/0.948903
+ description ##CROWN PROPBUILD PRIVATE LIMITED#601021#Demo##
+ encapsulation dot1Q 948 second-dot1q 903
+ ip address 203.110.83.217 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ shutdown
+ service-policy input 10_Mbps
+ service-policy output 10_Mbps
+!
+interface GigabitEthernet0/1/0.948943
+!
+interface GigabitEthernet0/1/0.949603
+ description RAMSONS_Internet
+ encapsulation dot1Q 949 second-dot1q 603
+ ip address 103.242.227.129 255.255.255.128
+ shutdown
+!
+interface GigabitEthernet0/1/0.949703
+ description ##Ramsons#VOIP_10.73.0.0##
+ encapsulation dot1Q 949 second-dot1q 703
+ ip address 10.73.0.1 255.255.255.0
+!
+interface GigabitEthernet0/1/0.949901
+ description ##R SAI LOGISTICS INDIA PRIVATE LIMITED#581108#10Mb##
+ encapsulation dot1Q 949 second-dot1q 901
+ ip address 203.110.85.238 255.255.255.252
+ ip access-group VOIP in
+ ip access-group VOIP out
+ service-policy input 10_Mbps
+ service-policy output 10_Mbps
+!
+interface GigabitEthernet0/1/0.949902
+ description ##R SAI LOGISTICS INDIA PRIVATE LIMITED#581107#60Mb##
+ encapsulation dot1Q 949 second-dot1q 902
+ ip address 203.110.90.122 255.255.255.248
+ service-policy input 60_Mbps
+ service-policy output 60_Mbps
+!
+interface GigabitEthernet0/1/0.949903
+ description ##IDENTIFYPLUS DELIVERY SERVICES PRIVATE LIMITED#581156#40Mb##
+ encapsulation dot1Q 949 second-dot1q 903
+ ip address 203.110.84.241 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ service-policy input 40_Mbps
+ service-policy output 40_Mbps
+!
+interface GigabitEthernet0/1/0.1001001
+ description Mahipalpur
+ encapsulation dot1Q 1001 second-dot1q 1
+ ip address 172.30.87.225 255.255.255.224
+!
+interface GigabitEthernet0/1/0.1001002
+ description ##Expo Freight Pvt Ltd#321012#16MB#Mahipalpur##
+ encapsulation dot1Q 1001 second-dot1q 2
+ ip address 203.110.90.73 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ service-policy input 16_Mbps
+ service-policy output 16_Mbps
+!
+interface GigabitEthernet0/1/0.1001003
+ encapsulation dot1Q 1001 second-dot1q 3
+ shutdown
+!
+interface GigabitEthernet0/1/0.1001004
+ encapsulation dot1Q 1001 second-dot1q 4
+ ip access-group VOIP in
+ ip access-group VOIP out
+!
+interface GigabitEthernet0/1/0.1001005
+ description ##Primenet Global Ltd#321006#10MB#Mahipalpur##
+ encapsulation dot1Q 1001 second-dot1q 5
+ ip address 203.110.90.209 255.255.255.252
+ ip access-group VOIP in
+ ip access-group VOIP out
+ service-policy input 10_Mbps
+ service-policy output 10_Mbps
+!
+interface GigabitEthernet0/1/0.1001006
+ encapsulation dot1Q 1001 second-dot1q 6
+ ip access-group VOIP in
+ ip access-group VOIP out
+!
+interface GigabitEthernet0/1/0.1001007
+ description ##Hotel Shanti Palace#321009#10Mb#Mahipalpur##
+ encapsulation dot1Q 1001 second-dot1q 7
+ ip address 203.110.88.185 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ service-policy input 10_Mbps
+ service-policy output 10_Mbps
+!
+interface GigabitEthernet0/1/0.1001008
+ encapsulation dot1Q 1001 second-dot1q 8
+!
+interface GigabitEthernet0/1/0.1001800
+ encapsulation dot1Q 1001 second-dot1q 700
+ ip address 172.30.8.1 255.255.255.0
+!
+interface GigabitEthernet0/1/0.1002001
+ encapsulation dot1Q 1002 second-dot1q 1
+ shutdown
+!
+interface GigabitEthernet0/1/0.1003001
+ description Begapul_MGMT
+ encapsulation dot1Q 1003
+ ip address 172.30.87.33 255.255.255.224
+!
+interface GigabitEthernet0/1/0.1003002
+ description ##Padmini VNA Mechatronics Pvt Ltd#111201#50MB#Begumpur##
+ encapsulation dot1Q 1003 second-dot1q 2
+ ip address 203.110.81.201 255.255.255.248
+ service-policy input 50_Mbps
+ service-policy output 50_Mbps
+!
+interface GigabitEthernet0/1/0.1003003
+ encapsulation dot1Q 1003 second-dot1q 3
+ shutdown
+!
+interface GigabitEthernet0/1/0.1003004
+!
+interface GigabitEthernet0/1/0.1003005
+ description ##Snap on Tools Pvt Ltd#111211#50Mb#Begumpur##
+ encapsulation dot1Q 1003 second-dot1q 5
+ ip address 203.110.90.41 255.255.255.248
+ service-policy input 50_Mbps
+ service-policy output 50_Mbps
+!
+interface GigabitEthernet0/1/0.1003006
+ encapsulation dot1Q 1003 second-dot1q 6
+ ip access-group VOIP in
+ ip access-group VOIP out
+!
+interface GigabitEthernet0/1/0.1003007
+ description ##Norhcred Services Pvt Ltd#261007#100Mb##
+ encapsulation dot1Q 1003 second-dot1q 7
+ ip address 103.242.225.67 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ service-policy input 100_Mbps
+ service-policy output 100_Mbps
+!
+interface GigabitEthernet0/1/0.1003008
+ description ##Kingspan Jindal Pvt Ltd#261004#120Mb##
+ encapsulation dot1Q 1003 second-dot1q 8
+ ip address 103.242.225.121 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ service-policy input 120_Mbps
+ service-policy output 120_Mbps
+!
+interface GigabitEthernet0/1/0.1003009
+ description ##Lenskart Solutions Pvt Ltd#111258#30Mb#Begumpur##
+ encapsulation dot1Q 1003 second-dot1q 9
+ ip address 203.110.85.225 255.255.255.248
+ ip access-group VOIP in
+ ip access-group VOIP out
+ service-policy input 30_Mbps
+ service-policy output 30_Mbps
+!
+interface GigabitEthernet0/1/0.1010810
+ description ##AMBIGGN#R_LAGOON#80.98#BACKUP##
+ encapsulation dot1Q 1010 second-dot1q 810
+ ip address 172.30.83.67 255.255.255.248
+ ip ospf 20 area 1
+ ip ospf cost 20
+ shutdown
+!
+interface GigabitEthernet0/1/0.1012001
+ description ##WSM_PoP##Airtel_WAN#VLAN-1012##
+ encapsulation dot1Q 1012
+ ip address 203.110.80.129 255.255.255.248 secondary
+ ip address 172.30.80.1 255.255.255.248
+!
+interface GigabitEthernet0/1/0.1013651
+ encapsulation dot1Q 1013 second-dot1q 651
+ shutdown
+!
+interface GigabitEthernet0/1/0.9550710
+ encapsulation dot1Q 955 second-dot1q 710
+ ip address 172.30.83.3 255.255.255.248
+ ip ospf 20 area 1
+ shutdown
+!
+interface GigabitEthernet0/1/0.9550711
+ encapsulation dot1Q 955 second-dot1q 711
+!
+interface GigabitEthernet0/1/1
+ description MILL_SW_JUNOS_80.12
+ ip address 203.110.87.2 255.255.255.248
+ ip ospf 20 area 0
+ negotiation auto
+!
+interface GigabitEthernet0/1/2
+ no ip address
+ ip ospf 20 area 0
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet0/1/2.1
+ encapsulation dot1Q 1 native
+!
+interface GigabitEthernet0/1/2.3000
+ encapsulation dot1Q 3000
+ shutdown
+ ipv6 enable
+!
+interface GigabitEthernet0/1/3
+ description ##MILL#SW_TATA_ULINK##
+ mtu 9192
+ no ip address
+ negotiation auto
+!
+interface GigabitEthernet0/1/3.1
+ description ##MILL#SW_FOR_TATA_UPLINK#87.70##
+ encapsulation dot1Q 1 native
+ ip address 172.30.80.17 255.255.255.248 secondary
+ ip address 203.110.87.69 255.255.255.252
+!
+interface GigabitEthernet0/1/3.3000
+ description ##VSNL_UPLINK2_AS4755##
+ encapsulation dot1Q 3000
+ ip address 121.240.110.162 255.255.255.248
+ ipv6 address 2403:0:42D::92/126
+ ipv6 enable
+!
+interface GigabitEthernet0/1/4
+ description ##MILL#R_CORE#Link_2##
+ ip address 203.110.80.10 255.255.255.252
+ ip ospf 20 area 0
+ no negotiation auto
+!
+interface GigabitEthernet0
+ description MGMT_NOC
+ vrf forwarding Mgmt-intf
+ ip address 172.21.80.10 255.255.255.0
+ negotiation auto
+!
+router ospf 20
+ router-id 172.21.80.10
+ redistribute connected subnets
+ redistribute static subnets
+ default-information originate
+!
+router bgp 23872
+ no bgp enforce-first-as
+ bgp log-neighbor-changes
+ no bgp default ipv4-unicast
+ neighbor 2403:0:42D::91 remote-as 4755
+ neighbor 2403:0:42D::91 description TATA_NEW_ipv6
+ neighbor 121.240.110.161 remote-as 4755
+ neighbor 121.240.110.161 description VSNL_UPLINK2
+ neighbor 203.110.80.167 remote-as 23872
+ neighbor 203.110.80.167 description core1_deldsl_lg
+ neighbor 203.110.80.167 update-source Loopback0
+ neighbor 203.110.80.193 remote-as 23872
+ neighbor 203.110.80.193 description deldsl_core
+ neighbor 203.110.80.193 update-source Loopback0
+ neighbor 203.110.80.195 remote-as 23872
+ neighbor 203.110.80.195 description core1_mikrotik
+ neighbor 203.110.80.196 remote-as 23872
+ neighbor 203.110.80.196 description core1_mikrotik2
+ neighbor 203.110.80.197 remote-as 23872
+ neighbor 203.110.80.197 description MILL#JUNOS
+ neighbor 219.65.112.141 remote-as 4755
+ neighbor 219.65.112.141 description VSNL_UPLINK
+ !
+ address-family ipv4
+  network 45.64.92.0 mask 255.255.252.0
+  network 103.129.0.0 mask 255.255.254.0
+  network 103.129.0.0 mask 255.255.255.0
+  network 103.129.1.0 mask 255.255.255.0
+  network 103.142.18.0 mask 255.255.255.0
+  network 103.242.224.0 mask 255.255.252.0
+  network 203.110.80.0 mask 255.255.240.0
+  network 203.110.91.10 mask 255.255.255.255 route-map blackhole_AIRTEL
+  neighbor 121.240.110.161 activate
+  neighbor 121.240.110.161 prefix-list VSNL_NEW out
+  neighbor 203.110.80.167 activate
+  neighbor 203.110.80.193 activate
+  neighbor 203.110.80.195 activate
+  neighbor 203.110.80.196 activate
+  neighbor 203.110.80.197 activate
+ exit-address-family
+ !
+ address-family ipv6
+  neighbor 2403:0:42D::91 activate
+  neighbor 2403:0:42D::91 prefix-list VSNL_NEW_IPV6 out
+ exit-address-family
+!
+ip forward-protocol nd
+!
+ip bgp-community new-format
+ip ftp username admin
+ip ftp password 7 141317070817262D3038
+no ip http server
+ip route 45.64.92.0 255.255.252.0 Null0
+ip route 45.64.92.0 255.255.255.0 Null0
+ip route 45.64.93.0 255.255.255.0 Null0
+ip route 45.64.94.0 255.255.255.0 Null0
+ip route 45.64.95.0 255.255.255.0 Null0
+ip route 103.129.0.0 255.255.254.0 Null0
+ip route 103.142.18.0 255.255.255.0 Null0
+ip route 103.242.224.0 255.255.252.0 Null0
+ip route 103.242.224.0 255.255.255.0 Null0
+ip route 103.242.225.0 255.255.255.0 Null0 254
+ip route 103.242.226.0 255.255.255.0 Null0
+ip route 103.242.227.0 255.255.255.0 Null0
+ip route 192.237.37.70 255.255.255.255 121.240.110.161
+ip route 203.110.80.0 255.255.240.0 Null0
+ip route 203.110.80.0 255.255.255.0 Null0
+ip route 203.110.81.0 255.255.255.0 Null0
+ip route 203.110.81.56 255.255.255.248 203.110.87.230 name SKH
+ip route 203.110.81.160 255.255.255.248 203.110.87.242 name Perfetti_40MB
+ip route 203.110.81.224 255.255.255.248 203.110.80.214 name Perfetti
+ip route 203.110.82.0 255.255.255.0 Null0
+ip route 203.110.83.0 255.255.255.0 Null0
+ip route 203.110.83.40 255.255.255.248 203.110.87.246 name easyrewards
+ip route 203.110.83.224 255.255.255.248 203.110.87.250 name OST
+ip route 203.110.84.0 255.255.255.0 Null0
+ip route 203.110.85.0 255.255.255.0 Null0
+ip route 203.110.86.0 255.255.255.0 Null0
+ip route 203.110.87.0 255.255.255.0 Null0
+ip route 203.110.88.0 255.255.255.0 Null0
+ip route 203.110.88.80 255.255.255.248 203.110.80.246 10 name LEA
+ip route 203.110.88.96 255.255.255.248 203.110.87.210 name SHRIRAM-RAYONS-311036
+ip route 203.110.88.112 255.255.255.248 203.110.87.46 name China
+ip route 203.110.89.0 255.255.255.0 Null0
+ip route 203.110.90.0 255.255.255.0 Null0
+ip route 203.110.91.0 255.255.255.0 Null0
+ip route 203.110.91.10 255.255.255.255 Null0
+ip route 203.110.92.0 255.255.255.0 Null0 248
+ip route 203.110.93.0 255.255.255.0 Null0
+ip route 203.110.94.0 255.255.255.0 Null0 248
+ip route 203.110.95.0 255.255.255.0 Null0
+ip route vrf Mgmt-intf 192.168.10.0 255.255.255.0 172.21.80.1 name MGMT_NOC
+!
+ip access-list extended DNSBLOCK
+ deny   udp any any eq domain
+ permit ip any any
+ip access-list extended Umanager
+ permit tcp 203.110.80.160 0.0.0.15 host 203.110.80.187 eq 3389
+ permit tcp host 203.110.80.250 host 203.110.80.187 eq 3389
+ deny   tcp any host 203.110.80.187 eq 3389
+ permit ip any host 203.110.80.187
+ permit ip 203.110.80.0 0.0.0.255 host 203.110.80.186
+ permit ip 203.110.82.0 0.0.0.255 host 203.110.80.186
+ permit ip 203.110.87.0 0.0.0.255 host 203.110.80.186
+ permit ip 172.16.0.0 0.0.15.255 host 203.110.80.186
+ permit ip 10.0.0.0 0.255.255.255 host 203.110.80.186
+ permit ip 203.110.80.0 0.0.0.255 host 203.110.80.188
+ permit ip 203.110.81.128 0.0.0.7 host 203.110.80.188
+ permit ip any host 203.110.80.188
+ip access-list extended VOIP
+ deny   udp any any eq 1719
+ deny   udp any any eq 1718
+ deny   udp any any eq 1720
+ deny   udp any any eq 5060
+ permit ip any any
+ip access-list extended WEB
+ deny   ip host 116.31.123.24 any
+ deny   ip any host 116.31.123.24
+ permit tcp 203.110.80.160 0.0.0.15 host 203.110.80.250 eq 3389
+ permit tcp host 203.110.80.187 host 203.110.80.250 eq 3389
+ deny   tcp any host 203.110.80.250 eq 3389
+ permit ip any any
+!
+!
+ip prefix-list VSNL_NEW seq 83 permit 203.110.83.0/24
+ip prefix-list VSNL_NEW seq 84 permit 203.110.84.0/24
+ip prefix-list VSNL_NEW seq 85 permit 203.110.85.0/24
+ip prefix-list VSNL_NEW seq 93 permit 203.110.93.0/24
+ip prefix-list VSNL_NEW seq 129 permit 103.129.0.0/23
+ip prefix-list VSNL_NEW seq 200 permit 203.110.80.0/20
+ip prefix-list VSNL_NEW seq 226 permit 103.242.226.0/24
+ip prefix-list VSNL_NEW seq 300 permit 103.242.224.0/22
+ip prefix-list VSNL_NEW seq 400 permit 45.64.92.0/22
+logging trap debugging
+logging host 203.110.80.167
+access-list 20 remark SNMP
+access-list 20 permit 203.110.80.160 0.0.0.15
+access-list 20 permit 203.110.80.184 0.0.0.7
+access-list 20 permit 172.21.80.0 0.0.0.255
+access-list 20 permit 192.168.10.0 0.0.0.255
+access-list 20 permit 203.110.80.8 0.0.0.3
+access-list 20 permit 203.110.80.64 0.0.0.3
+access-list 21 remark TELNET
+access-list 21 permit 203.110.80.160 0.0.0.15
+access-list 21 permit 172.21.80.0 0.0.0.255
+access-list 21 permit 192.168.10.0 0.0.0.255
+access-list 21 permit 203.110.80.8 0.0.0.3
+access-list 106 remark VMD
+access-list 106 permit ip 203.110.85.208 0.0.0.7 any
+access-list 106 permit ip any 203.110.85.208 0.0.0.7
+access-list 107 remark VMD2
+access-list 107 permit ip 203.110.85.216 0.0.0.7 any
+access-list 107 permit ip any 203.110.85.216 0.0.0.7
+ipv6 route vrf TATA_TEST 2404:A200::/48 Null0
+ipv6 route 2404:A200:5:A::/64 2404:A200:0:3::12
+ipv6 route vrf TATA_TEST 2404:A200::/32 Null0
+ipv6 route ::/0 2404:A200:0:2::1
+ipv6 router eigrp 20
+ eigrp router-id 203.110.80.10
+ redistribute static
+ redistribute connected
+!
+!
+!
+ipv6 prefix-list VSNL_NEW_IPV6 seq 100 permit 2404:A200::/48
+ipv6 prefix-list VSNL_NEW_IPV6 seq 200 permit 2404:A200::/32
+route-map blackhole_AIRTEL permit 10
+ set community 65299:9498
+!
+route-map blackhole_TATA permit 20
+!
+snmp-server community deldsl RO 20
+snmp-server community public RO 20
+snmp ifmib ifindex persist
+!
+!
+control-plane
+!
+!
+line con 0
+ stopbits 1
+line aux 0
+ stopbits 1
+line vty 0 4
+ access-class 21 in
+ password 7 104A0C150618002E2C05391975786364
+ login
+line vty 5
+ access-class 21 in vrf-also
+
+##ENDOF_CONFIG##
+

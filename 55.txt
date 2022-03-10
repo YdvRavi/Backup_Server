@@ -1,0 +1,243 @@
+##CONFIG##
+
+MAHI#MAIN_RING#SW87.227### 
+##MAHI#MAIN_RING#SW87.227### 
+  Building configuration...
+
+  Current configuration: 
+
+no spanning-tree 10 edge-port 
+no spanning-tree 28 edge-port 
+no remote-management 1 service ssh  
+vlan 1 
+  name 1 
+  normal "" 
+  fixed 1-28 
+  forbidden "" 
+  untagged 1-27 
+  ip address default-management 172.30.87.227 255.255.255.224 
+  ip address default-gateway 172.30.87.225 
+exit 
+vlan 2 
+  name 2 
+  normal 2-25,27 
+  fixed 1,26,28 
+  forbidden "" 
+  untagged 1 
+exit 
+vlan 5 
+  name 5 
+  normal 1-2,4-24,27 
+  fixed 3,25-26,28 
+  forbidden "" 
+  untagged 3,25 
+exit 
+vlan 7 
+  name 7 
+  normal 1-9,11-23,25,27 
+  fixed 10,24,26,28 
+  forbidden "" 
+  untagged "" 
+exit 
+vlan 8 
+  name 8 
+  normal 1-25,27 
+  fixed 26,28 
+  forbidden "" 
+  untagged "" 
+exit 
+vlan 701 
+  name 701 
+  normal 1-25,27 
+  fixed 26,28 
+  forbidden "" 
+  untagged "" 
+exit 
+vlan 702 
+  name 702 
+  normal 1-25,27 
+  fixed 26,28 
+  forbidden "" 
+  untagged "" 
+  ip address 172.30.70.2 255.255.255.0 
+  ip address default-gateway 172.30.70.1 
+exit 
+vlan 801 
+  name 801 
+  normal 1-25 
+  fixed 26-28 
+  forbidden "" 
+  untagged 27 
+  ip address 172.30.8.2 255.255.255.0 
+  ip address default-gateway 172.30.8.1 
+exit 
+interface port-channel 1  
+  name "##Expo freight#321012#16Mb##" 
+  pvid 2 
+  ingress-check 
+  broadcast-limit 
+  broadcast-limit 500 
+  multicast-limit 
+  multicast-limit 500 
+  dlf-limit 
+  dlf-limit 500 
+  storm-control shutdown 
+  loopguard 
+exit 
+interface port-channel 2  
+  inactive 
+  pvid 4 
+  ingress-check 
+  loopguard 
+exit 
+interface port-channel 3  
+  name "##Primenet Global Ltd#321006#6Mb##" 
+  pvid 5 
+  ingress-check 
+  bandwidth-limit cir 10240 
+  bandwidth-limit cir 
+  bandwidth-limit pir 10240 
+  bandwidth-limit pir 
+  bandwidth-limit egress 10240 
+  bandwidth-limit egress 
+  broadcast-limit 
+  broadcast-limit 500 
+  multicast-limit 
+  multicast-limit 500 
+  dlf-limit 
+  dlf-limit 500 
+  storm-control shutdown 
+  loopguard 
+exit 
+interface port-channel 4  
+  name Free 
+  loopguard 
+exit 
+interface port-channel 5  
+  name free 
+  inactive 
+  loopguard 
+exit 
+interface port-channel 6  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 7  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 8  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 9  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 10  
+  name "##MAHI#Hotel Shanti Place#87.226##" 
+  loopguard 
+exit 
+interface port-channel 11  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 12  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 13  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 14  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 15  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 16  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 17  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 18  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 19  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 20  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 21  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 22  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 23  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 24  
+  inactive 
+exit 
+interface port-channel 25  
+  inactive 
+  pvid 5 
+  ingress-check 
+exit 
+interface port-channel 26  
+  inactive 
+exit 
+interface port-channel 27  
+  inactive 
+  pvid 801 
+exit 
+interface port-channel 28  
+  name ##MILL#WAN_BHARTI#SW80.46## 
+exit 
+spanning-tree 
+spanning-tree priority 16384 
+spanning-tree 10 
+spanning-tree 28 
+hostname ##MAHI#MAIN_RING#SW87.227## 
+time timezone 500 
+timesync server 203.110.80.66 
+timesync ntp 
+storm-control 
+bandwidth-control 
+snmp-server get-community deldsl 
+snmp-server set-community "" 
+snmp-server trap-community "" 
+snmp-server contact "Neeraj Saxena" location "Mahipalpur New Delhi" 
+remote-management 2 
+remote-management 3 
+remote-management 5 
+remote-management 1 start-addr 203.110.80.161 end-addr 203.110.80.174 service telnet ftp http icmp snmp https  
+remote-management 2 start-addr 203.110.80.184 end-addr 203.110.80.188 service icmp snmp  
+remote-management 3 start-addr 172.30.87.225 end-addr 172.30.87.254 service telnet ftp http icmp snmp https  
+remote-management 5 start-addr 203.110.80.64 end-addr 203.110.80.67 service icmp snmp  
+syslog 
+syslog type system 
+syslog type interface 
+syslog type switch 
+syslog type aaa 
+syslog type ip 
+syslog type commands 
+syslog server 203.110.80.167 level 7 
+terminal length 0
+
+##ENDOF_CONFIG##
+

@@ -1,0 +1,299 @@
+##CONFIG##
+
+!LanSwitch BuildRun(Saturn Platform)
+enable
+configure terminal
+![VLAN]
+interface range ethernet 1/2
+switchport mode access
+exit
+interface range ethernet 1/1
+switchport mode trunk
+exit
+vlan 101,436,451,455,602,607,702
+exit
+![DEVICE]
+interface gpon 0/1
+exit
+interface gpon 0/2
+exit
+interface gpon 0/3
+exit
+interface gpon 0/4
+exit
+interface gpon 0/5
+exit
+interface gpon 0/6
+exit
+interface gpon 0/7
+exit
+interface gpon 0/8
+exit
+interface ethernet 1/1
+description ##C4#MAIN_RING#SW82.227#UNITECH_VISTA##
+switchport trunk allowed vlan 101,436,451,455,602,607,702
+exit
+interface ethernet 1/2
+exit
+interface ethernet 1/3
+exit
+interface ethernet 1/4
+exit
+interface ethernet 2/1
+exit
+interface ethernet 2/2
+exit
+![OAM]
+service password-encryption
+username admin privilege 15 password 7 bf18ebb3
+screen-rows per-page 0
+hostname ##UNITECH_VISTA_OLT#82.239##
+![IGMP_SNOOPING]
+igmp-snooping
+![SNMP]
+snmp-server name ##UNITECH_VISTA_OLT#82.239##
+snmp-server community deldsl ro permit view iso
+![IF]
+interface vlan-interface 1 
+ip address 172.30.82.239 255.255.255.224 
+exit 
+interface meth-interface 0 
+ip address 192.168.100.1 255.255.255.0 
+exit 
+![STATIC_ROUTE]
+ip route 0.0.0.0 0.0.0.0 172.30.82.225
+![deploy-profile-vlan]
+deploy profile vlan
+aim 1 name Internet
+translate old-vlan 101 new-vlan 101
+translate old-vlan 607 new-vlan 607
+translate old-vlan 602 new-vlan 602
+translate old-vlan 451 new-vlan 451
+translate old-vlan 455 new-vlan 455
+translate old-vlan 436 new-vlan 436
+active
+aim 2 name VOIP
+translate old-vlan 702 new-vlan 702
+active
+exit
+![deploy-profile-dba]
+deploy profile dba
+aim 1 name GIG_NET
+type 4 max 1024000
+active
+aim 2 name MEGA_VOIP
+type 1 fix 2048
+active
+exit
+![deploy-profile-line]
+deploy profile line
+aim 1 name DATA
+device type c30-423
+tcont 1 profile dba 1
+tcont 2 profile dba 2
+gemport 1 tcont 1 vlan-profile 1
+gemport 2 tcont 2 vlan-profile 2
+mapping 1 vlan 101 gemport 1
+mapping 2 vlan 607 gemport 1
+mapping 3 vlan 602 gemport 1
+mapping 4 vlan 702 gemport 2
+mapping 5 vlan 455 gemport 1
+mapping 6 vlan 436 gemport 1
+active
+aim 2 name SYROTECH
+device type c40-218
+tcont 1 profile dba 1
+tcont 2 profile dba 2
+gemport 1 tcont 1 vlan-profile 1
+gemport 2 tcont 2 vlan-profile 2
+mapping 1 vlan 101 gemport 1
+mapping 2 vlan 702 gemport 2
+mapping 3 vlan 451 gemport 1
+active
+aim 3 name Huawei
+device type d10-423
+tcont 1 profile dba 1
+tcont 2 profile dba 2
+gemport 1 tcont 1 vlan-profile 1
+gemport 2 tcont 2 vlan-profile 2
+mapping 1 vlan 602 gemport 1
+mapping 2 vlan 702 gemport 2
+active
+aim 4 name Huawei_Single
+device type t10-423
+tcont 1 profile dba 1
+tcont 2 profile dba 2
+gemport 1 tcont 1 vlan-profile 1
+gemport 2 tcont 2 vlan-profile 2
+mapping 1 vlan 602 gemport 1
+mapping 2 vlan 702 gemport 2
+active
+exit
+![deploy-profile-unique]
+deploy profile unique
+aim 0/1/1
+active
+aim 0/1/2
+active
+aim 0/1/5
+active
+aim 0/1/6
+active
+aim 0/1/7
+active
+aim 0/1/8 name 561024_Himanshu_T9A_601
+active
+aim 0/1/9 name 561027_Parmar_A09_602
+active
+aim 0/2/1
+active
+aim 0/2/3
+local protocol-port-80 enable mode forward
+active
+aim 0/2/4
+active
+aim 0/2/5
+active
+aim 0/2/7 name 561025_Vikas
+active
+aim 0/2/8 name 561017_Ankit_A11_1001
+active
+aim 0/2/9
+active
+aim 0/3/1
+active
+aim 0/3/2 name 561019_Miral_A10_302
+active
+aim 0/3/3
+active
+aim 0/3/4
+active
+aim 0/3/5 name 561013_Prem_A10_604
+active
+aim 0/3/7 name 561018_AnuDeep
+active
+aim 0/3/9
+active
+aim 0/3/12
+active
+aim 0/4/2 name 561011_Naresh
+active
+aim 0/4/3
+local protocol-port-80 enable mode forward
+active
+aim 0/4/4
+active
+aim 0/4/5
+active
+aim 0/4/6
+active
+aim 0/5/1
+local protocol-port-80 enable mode forward
+active
+exit
+![deploy-profile-rule]
+deploy profile rule
+aim 0/1/1 name 561004_Ajay
+permit sn string-hex GNXS-010b9e3e line 1 default line 1
+active
+aim 0/1/2 name 561003_Reagan
+permit sn string-hex GNXS-010b47c2 line 1 default line 1
+active
+aim 0/1/3 name 561006_Mahima
+permit sn string-hex HWTC-d6a8e59f line 3 default line 3
+active
+aim 0/1/4 name 561005_Sandeep
+permit sn string-hex HWTC-d6a91c9f line 1 default line 1
+active
+aim 0/1/5 name Tower9_Gate_91000
+permit sn string-hex GPON-00acc5f4 line 2 default line 2
+active
+aim 0/1/6 name Prashant_561016
+permit sn string-hex GNXS-0110e6f0 line 1 default line 1
+active
+aim 0/1/7 name 561021_Gautam
+permit sn string-hex GNXS-011e6fa0 line 1 default line 1
+active
+aim 0/1/8 name 561024_Himanshu_T9A_601
+permit sn string-hex GNXS-61200183 line 1 default line 1
+active
+aim 0/1/9 name 561027_Parmar_A09_602
+permit sn string-hex GNXS-01106730 line 1 default line 1
+active
+aim 0/2/1 name Parijat_561002
+permit sn string-hex GNXS-010b402e line 1 default line 1
+active
+aim 0/2/2 name Tower11_Gate_111000
+permit sn string-hex GPON-00acc10e line 2 default line 2
+active
+aim 0/2/4 name 561012_Tridibesh
+permit sn string-hex GNXS-0110ed60 line 1 default line 1
+active
+aim 0/2/5 name 561015_Amit
+permit sn string-hex GNXS-0110d3d0 line 1 default line 1
+active
+aim 0/2/7 name 561025_Vikas
+permit sn string-hex GNXS-011f24c0 line 1 default line 1
+active
+aim 0/2/8 name 561017_Ankit_A11_1001
+permit sn string-hex GNXS-011e6df0 line 1 default line 1
+active
+aim 0/2/9 name 561029_Nayak.
+permit sn string-hex GNXS-61200055 line 1 default line 1
+active
+aim 0/3/1 name 561001_Neha
+permit sn string-hex GNXS-0104117b line 1 default line 1
+active
+aim 0/3/2 name 561019_Miral_A10_302
+permit sn string-hex GNXS-011069c0 line 1 default line 1
+active
+aim 0/3/4 name 561010_Ankit
+permit sn string-hex GNXS-01107ed0 line 1 default line 1
+active
+aim 0/3/5 name 561013_Prem_A10_604
+permit sn string-hex GNXS-0110ecb0 line 1 default line 1
+active
+aim 0/3/6 name 561028_Prachurya_A10_701
+permit sn string-hex GNXS-612006d3 line 1 default line 1
+active
+aim 0/3/7 name 561018_AnuDeep
+permit sn string-hex GNXS-011e6540 line 1 default line 1
+active
+aim 0/3/8 name 561030_Prashant_F1004
+permit sn string-hex HWTC-872b83a5 line 1 default line 1
+active
+aim 0/3/9 name 561020_Meera
+permit sn string-hex GNXS-011e6ac0 line 1 default line 1
+active
+aim 0/3/10 name Tower_A10
+permit sn string-hex GPON-00c39fc5 line 2 default line 2
+active
+aim 0/3/12 name 561014_Kush
+permit sn string-hex HWTC-88a0aaa5 line 3 default line 3
+active
+aim 0/4/1 name Main_Gate_1000
+permit sn string-hex GPON-00d93eaa line 2 default line 2
+active
+aim 0/4/3 name 151153_Prompet
+permit sn string-hex GPON-00acc150 line 2 default line 2
+active
+aim 0/4/4 name 151160_Roshni
+permit sn string-hex GNXS-01106800 line 1 default line 1
+active
+aim 0/4/5 name 561022_Rajasthan
+permit sn string-hex GNXS-011f0190 line 1 default line 1
+active
+aim 0/4/6 name 561026_Lavish
+permit sn string-hex GNXS-011f2ce0 line 1 default line 1
+active
+aim 0/4/8 name 561011_naresh
+permit sn string-hex GNXS-01107ae0 line 1 default line 1
+active
+exit
+exit
+![gpon-device]
+ont-find interface gpon 0/1-0/8
+ont-find list-age
+
+##ENDOF_CONFIG##
+

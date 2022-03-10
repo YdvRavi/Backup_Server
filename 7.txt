@@ -1,0 +1,134 @@
+##CONFIG##
+
+MILL#RING_4#Vatika Hotels Pvt Ltd Triangle#SW82.104### 
+##MILL#RING_4#Vatika Hotels Pvt Ltd Triangle#SW82.104### 
+  Building configuration...
+
+  Current configuration: 
+
+no spanning-tree 9 edge-port 
+no spanning-tree 10 edge-port 
+no mrstp interface 9 edge-port 
+no mrstp interface 10 edge-port 
+no mstp interface port-channel 9 edge-port 
+no mstp interface port-channel 10 edge-port 
+no lldp 
+vlan 1 
+  name 1 
+  normal 1-8 
+  fixed 9-10 
+  forbidden "" 
+  untagged 9-10 
+  ip address default-management 172.30.82.104 255.255.255.224 
+  ip address default-gateway 172.30.82.97 
+exit 
+vlan 266 
+  name 266 
+  normal 2-8 
+  fixed 1,9-10 
+  forbidden "" 
+  untagged 1 
+exit 
+interface port-channel 1  
+  name "##Vatika Hotels Pvt Ltd#111416#6Mb##" 
+  pvid 266 
+  ingress-check 
+  bandwidth-limit cir 8192 
+  bandwidth-limit cir 
+  bandwidth-limit pir 8192 
+  bandwidth-limit pir 
+  bandwidth-limit egress 8192 
+  bandwidth-limit egress 
+  broadcast-limit 
+  broadcast-limit 500 
+  multicast-limit 
+  multicast-limit 500 
+  dlf-limit 
+  dlf-limit 500 
+  loopguard 
+exit 
+interface port-channel 2  
+  inactive 
+  broadcast-limit 1 
+  multicast-limit 1 
+  dlf-limit 1 
+  mirror 
+  loopguard 
+exit 
+interface port-channel 3  
+  inactive 
+  broadcast-limit 1 
+  multicast-limit 1 
+  dlf-limit 1 
+  loopguard 
+exit 
+interface port-channel 4  
+  inactive 
+  broadcast-limit 1 
+  multicast-limit 1 
+  dlf-limit 1 
+  loopguard 
+exit 
+interface port-channel 5  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 6  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 7  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 8  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 9  
+  name "##MILL#RING_4#ALTF SPACES PRIVATE LIMITED#SW82.26##" 
+  vlan-trunking 
+  broadcast-limit 
+  broadcast-limit 1000 
+  multicast-limit 
+  multicast-limit 1000 
+  dlf-limit 
+  dlf-limit 1000 
+exit 
+interface port-channel 10  
+  name ##MILL#MAIN_RING#SW87.19## 
+  vlan-trunking 
+  broadcast-limit 
+  broadcast-limit 1000 
+  multicast-limit 
+  multicast-limit 1000 
+  dlf-limit 
+  dlf-limit 1000 
+exit 
+mirror-port 5 
+mirror-port 
+spanning-tree 
+spanning-tree priority 24576 
+spanning-tree 9 
+spanning-tree 10 
+hostname "##MILL#RING_4#Vatika Hotels Pvt Ltd Triangle#SW82.104##" 
+time timezone 500 
+timesync server 203.110.80.66 
+timesync ntp 
+storm-control 
+bandwidth-control 
+loopguard 
+snmp-server get-community deldsl 
+snmp-server set-community "" 
+snmp-server trap-community "" 
+snmp-server location "MG Road" 
+service-control http 80 30 
+remote-management 2 
+remote-management 3 
+remote-management 4 
+remote-management 1 start-addr 203.110.80.161 end-addr 203.110.80.174 service telnet ftp http icmp snmp ssh https  
+remote-management 2 start-addr 172.30.82.1 end-addr 172.30.82.254 service telnet ftp http icmp snmp ssh https  
+remote-management 3 start-addr 203.110.80.184 end-addr 203.110.80.188 service icmp snmp
+
+##ENDOF_CONFIG##
+

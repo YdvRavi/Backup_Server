@@ -1,0 +1,181 @@
+##CONFIG##
+
+!Software Version V200R011C10SPC600
+#
+sysname ##RESIDENCE#MAIN_RING#SW82.143#MILL##
+#
+vlan batch 2 to 4094
+#
+stp mode rstp
+stp instance 0 root primary
+stp pathcost-standard legacy
+#
+authentication-profile name default_authen_profile
+authentication-profile name dot1x_authen_profile
+authentication-profile name mac_authen_profile
+authentication-profile name portal_authen_profile
+authentication-profile name dot1xmac_authen_profile
+authentication-profile name multi_authen_profile
+#
+telnet server enable
+#
+radius-server template default
+#
+pki realm default
+ certificate-check none
+#
+acl number 2001
+ rule 5 permit source 203.110.80.160 0.0.0.15
+ rule 10 permit source 172.30.82.129 0.0.0.32
+#
+free-rule-template name default_free_rule
+#
+portal-access-profile name portal_access_profile
+#
+aaa
+ authentication-scheme default
+ authentication-scheme radius
+  authentication-mode radius
+ authorization-scheme default
+ accounting-scheme default
+ local-aaa-user password policy administrator 
+  password history record number 0
+  password expire 0
+ domain default
+  authentication-scheme radius
+  radius-server default
+ domain default_admin
+  authentication-scheme default
+ local-user admin password irreversible-cipher $1a$k6%vY>rA7-$]h8X!IWq{B//8;@zu%9VB0#3PHbbh,%:]k#CM4=A$
+ local-user admin privilege level 15
+ local-user admin service-type telnet terminal ssh http
+#
+ntp-service server disable
+ntp-service ipv6 server disable
+ntp-service authentication enable
+ntp-service unicast-server 203.110.80.66
+#
+interface Vlanif1
+ ip address 172.30.82.143 255.255.255.224
+#
+interface Vlanif708
+#
+interface GigabitEthernet0/0/1
+ description ##MILL#R_MIKROTIK#80.70##
+ port link-type trunk
+ port trunk allow-pass vlan 2 to 4094
+ stp disable
+ undo lldp enable
+#
+interface GigabitEthernet0/0/2
+ description ##BHARTI#SW_87.4##Saphhire##
+ port link-type trunk
+ port trunk allow-pass vlan 210 262 611 711
+ storm-control broadcast min-rate 1000 max-rate 2000
+ storm-control multicast min-rate 1000 max-rate 2000
+ storm-control unicast min-rate 1000 max-rate 2000
+ storm-control interval 30
+ storm-control action block
+#
+interface GigabitEthernet0/0/3
+ description ##C4#MAIN_RING#SW82.238#MILL##
+ port link-type trunk
+ port trunk allow-pass vlan 2 to 4094
+ stp edged-port enable
+ stp instance 0 cost 50
+ undo lldp enable
+#
+interface GigabitEthernet0/0/4
+ description ##MILL#R_CORE#80.9##
+ port link-type trunk
+ port trunk allow-pass vlan 2
+#
+interface GigabitEthernet0/0/5
+ port link-type trunk
+ port trunk allow-pass vlan 2 to 4094
+#
+interface GigabitEthernet0/0/6
+ port link-type trunk
+ port trunk allow-pass vlan 2 to 4094
+#
+interface GigabitEthernet0/0/7
+ port link-type trunk
+ port trunk allow-pass vlan 2 to 4094
+#
+interface GigabitEthernet0/0/8
+ description ##RESIDENCE#MAIN_RING#SW82.131#PARAS_RF##
+ port link-type trunk
+ port trunk allow-pass vlan 2 to 4094
+ stp instance 0 cost 4
+ storm-control broadcast min-rate 1000 max-rate 2000
+ storm-control multicast min-rate 1000 max-rate 1500
+ storm-control unicast min-rate 1000 max-rate 2000
+ storm-control interval 30
+ storm-control action block
+#
+interface GigabitEthernet0/0/9
+ description ##RESIDENCE#MAIN_RING#SW82.153#Suncity##
+ port link-type trunk
+ port trunk allow-pass vlan 2 to 4094
+ stp instance 0 cost 4
+ storm-control broadcast min-rate 1000 max-rate 2000
+ storm-control multicast min-rate 1000 max-rate 1500
+ storm-control unicast min-rate 1000 max-rate 2000
+ storm-control interval 30
+ storm-control action block
+#
+interface GigabitEthernet0/0/10
+ description ##residence#main_ring#sw82.130#enkay##
+ port link-type trunk
+ port trunk allow-pass vlan 2 to 4094
+ stp instance 0 cost 4
+ storm-control broadcast min-rate 1000 max-rate 2000
+ storm-control multicast min-rate 1000 max-rate 1500
+ storm-control unicast min-rate 1000 max-rate 2000
+ storm-control interval 30
+ storm-control action block
+#
+interface GigabitEthernet0/0/11
+ description ##RESIDENCE#MAIN_RING#SW82.149#UV_POP##
+ port link-type trunk
+ port trunk allow-pass vlan 2 to 4094
+ stp instance 0 cost 4
+ storm-control broadcast min-rate 1000 max-rate 2000
+ storm-control multicast min-rate 1000 max-rate 1500
+ storm-control unicast min-rate 1000 max-rate 2000
+ storm-control interval 30
+ storm-control action block
+#
+interface GigabitEthernet0/0/12
+ shutdown
+ port link-type trunk
+ port trunk allow-pass vlan 2 to 4094
+ stp instance 0 cost 4
+#
+interface NULL0
+#
+ip route-static 0.0.0.0 0.0.0.0 172.30.82.129
+#
+snmp-agent
+snmp-agent local-engineid 800007DB0324166D7A547F
+snmp-agent community read cipher %^%#6)r5H;sFNO[6y{UZ%^8P|z<IS{#<(~gko"W|UAlJ"@Ym-<eF'1PU@XBT"qL@h*0y%=*n&8+7Sk0jUk<#%^%#
+snmp-agent sys-info version v2c
+undo snmp-agent sys-info version v3
+#
+user-interface maximum-vty 14
+user-interface con 0
+ authentication-mode aaa
+user-interface vty 0 13
+ acl 2001 inbound
+ authentication-mode aaa
+ protocol inbound telnet
+user-interface vty 16 20
+#
+dot1x-access-profile name dot1x_access_profile
+#
+mac-access-profile name mac_access_profile
+#
+return
+
+##ENDOF_CONFIG##
+

@@ -1,0 +1,286 @@
+##CONFIG##
+
+!LanSwitch BuildRun(ZyXEL Platform)
+enable
+configure terminal
+![VLAN]
+interface range ethernet 0/0/11 to ethernet 0/0/12 ethernet 0/0/17 ethernet 0/
+0/21
+switchport mode access
+exit
+interface range ethernet 0/0/1 ethernet 0/0/23 to ethernet 0/0/28
+switchport mode trunk
+exit
+vlan 2-1000
+exit
+![DEVICE]
+interface ethernet 0/0/1
+description ##C4#MAIN_RING#OLT85.60#VTC##
+switchport trunk allowed vlan 2-4094
+storm-control broadcast 32000000
+exit
+interface ethernet 0/0/2
+description ##RawPower#VTC_POP##
+exit
+interface ethernet 0/0/3
+exit
+interface ethernet 0/0/4
+description ##BILLING_SERVER##
+exit
+interface ethernet 0/0/5
+exit
+interface ethernet 0/0/6
+exit
+interface ethernet 0/0/7
+exit
+interface ethernet 0/0/8
+exit
+interface ethernet 0/0/9
+exit
+interface ethernet 0/0/10
+exit
+interface ethernet 0/0/11
+description ##SubscriptMediaServicesPvt.Ltd##151077#30Mb##
+speed 1000
+duplex full
+switchport default vlan 101
+exit
+interface ethernet 0/0/12
+description ##VIRUS_POSITIVE#151102#30Mb##
+speed 100
+duplex full
+switchport default vlan 431
+exit
+interface ethernet 0/0/13
+exit
+interface ethernet 0/0/14
+exit
+interface ethernet 0/0/15
+exit
+interface ethernet 0/0/16
+exit
+interface ethernet 0/0/17
+description ##Umesh_Chaudhary#151159#20Mb##
+speed 100
+duplex full
+switchport default vlan 101
+exit
+interface ethernet 0/0/18
+exit
+interface ethernet 0/0/19
+exit
+interface ethernet 0/0/20
+exit
+interface ethernet 0/0/21
+description ##USG_BORAL#151091#20Mb##
+speed 100
+duplex full
+switchport default vlan 425
+exit
+interface ethernet 0/0/22
+exit
+interface ethernet 0/0/23
+description ##C4#MAIN_RING#SW82.226#JMD_MEGA##Under
+switchport trunk allowed vlan 2-4094
+storm-control broadcast 1000
+storm-control unicast 1500
+storm-control multicast 1500
+exit
+interface ethernet 0/0/24
+description ##C4#MAIN_RING#SW82.227#UNITECH_VISTA##
+speed 1000
+duplex full
+switchport trunk allowed vlan 2-4094
+storm-control broadcast 10000
+storm-control unicast 1500
+storm-control multicast 1500
+exit
+interface ethernet 0/0/25
+description ##C4#MAIN_RING#SW82.226#JMD_MEGA##
+switchport trunk allowed vlan 2-4094
+exit
+interface ethernet 0/0/26
+description ##C4#MAIN_RING#SW82.229#VPP_Backup##
+speed 1000
+switchport trunk allowed vlan 2-4094
+storm-control broadcast 1000
+storm-control unicast 1500
+storm-control multicast 1500
+exit
+interface ethernet 0/0/27
+switchport trunk allowed vlan 2-4094
+exit
+interface ethernet 0/0/28
+description ##C4#MAIN_RING#SW82.229#VPP_Main##
+speed 1000
+switchport trunk allowed vlan 2-4094
+storm-control broadcast 1000
+storm-control unicast 1500
+storm-control multicast 1500
+exit
+no alarm all-packets
+![OAM]
+no login-access-list snmp 0.0.0.0 255.255.255.255
+no login-access-list web 0.0.0.0 255.255.255.255
+no login-access-list telnet 0.0.0.0 255.255.255.255
+no login-access-list ssh 0.0.0.0 255.255.255.255
+login-access-list snmp 192.168.1.0 0.0.0.7
+login-access-list snmp 203.110.80.160 0.0.0.15
+login-access-list snmp 203.110.87.128 0.0.0.15
+login-access-list web 192.168.1.0 0.0.0.7
+login-access-list web 203.110.80.160 0.0.0.15
+login-access-list web 203.110.87.128 0.0.0.15
+login-access-list telnet 192.168.1.0 0.0.0.7
+login-access-list telnet 203.110.80.160 0.0.0.15
+login-access-list telnet 203.110.87.128 0.0.0.15
+username admin privilege 15 password 0 ckng@#&%)PD
+screen-rows per-page 0
+hostname ##C4#MAIN_RING#SW82.228#VTC###
+http enable
+![STP]
+interface ethernet 0/0/1
+spanning-tree cost 19
+exit
+interface ethernet 0/0/2
+spanning-tree cost 19
+exit
+interface ethernet 0/0/3
+spanning-tree cost 19
+exit
+interface ethernet 0/0/4
+spanning-tree cost 19
+exit
+interface ethernet 0/0/5
+spanning-tree cost 19
+exit
+interface ethernet 0/0/6
+spanning-tree cost 19
+exit
+interface ethernet 0/0/7
+spanning-tree cost 19
+exit
+interface ethernet 0/0/8
+spanning-tree cost 19
+exit
+interface ethernet 0/0/9
+spanning-tree cost 19
+exit
+interface ethernet 0/0/10
+spanning-tree cost 19
+exit
+interface ethernet 0/0/11
+spanning-tree cost 19
+exit
+interface ethernet 0/0/12
+spanning-tree cost 19
+exit
+interface ethernet 0/0/13
+spanning-tree cost 19
+exit
+interface ethernet 0/0/14
+spanning-tree cost 19
+exit
+interface ethernet 0/0/15
+spanning-tree cost 19
+exit
+interface ethernet 0/0/16
+spanning-tree cost 19
+exit
+interface ethernet 0/0/17
+spanning-tree cost 19
+exit
+interface ethernet 0/0/18
+spanning-tree cost 19
+exit
+interface ethernet 0/0/19
+spanning-tree cost 19
+exit
+interface ethernet 0/0/20
+spanning-tree cost 19
+exit
+interface ethernet 0/0/21
+spanning-tree cost 19
+exit
+interface ethernet 0/0/22
+spanning-tree cost 19
+exit
+interface ethernet 0/0/23
+spanning-tree cost 19
+exit
+interface ethernet 0/0/24
+spanning-tree cost 19
+exit
+interface ethernet 0/0/25
+spanning-tree cost 19
+exit
+interface ethernet 0/0/26
+spanning-tree cost 19
+exit
+interface ethernet 0/0/27
+spanning-tree cost 19
+exit
+interface ethernet 0/0/28
+spanning-tree cost 19
+exit
+![SNMP]
+snmp-server contact 9910495862
+snmp-server location "B2 JMD Megapolis"
+snmp-server name ##C4#MAIN_RING#SW82.228#VTC###
+snmp-server community deldsl rw permit view iso
+snmp-server host 203.110.80.167 version 2c  udp-port 162 notify-type bridge gb
+n gbnsavecfg interfaces rmon snmp
+snmp-server enable traps bridge gbn gbnsavecfg interfaces rmon snmp
+![IF]
+interface vlan-interface 1 
+ip address 172.30.82.228 255.255.255.224 
+exit 
+![STATIC_ROUTE]
+ip route 0.0.0.0 0.0.0.0 172.30.82.225
+![SYSLOG]
+logging 203.110.80.167
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module sys
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module oam
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module device
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module link_aggregation
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module mirror
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module stp
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module mstp
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module vlan
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module garp
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module igmp
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module igmp_snooping
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module mld_snooping
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module port_isolation
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module qacl
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module if
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module static_route
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module arp
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module dhcp
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module ippool
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module route_common
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module rip
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module ospf
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module bgp
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module vrrp
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module snmp
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module dhcpsnooping
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module eaps
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module erps
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module udld
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module efm
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module flink
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module mlink
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module cfm
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module urpf
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module pppoeia
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module bfd
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module ndp
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module radvd
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module tacacs+
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module anti-attack
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module pmp
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module sflow
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module rmon
+
+##ENDOF_CONFIG##
+

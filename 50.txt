@@ -1,0 +1,874 @@
+##CONFIG##
+
+!LanSwitch BuildRun(ZyXEL Platform)
+enable
+configure terminal
+![VLAN]
+interface range ethernet 0/0/2
+switchport mode access
+exit
+interface range ethernet 0/0/1 ethernet 0/0/3 to ethernet 0/0/28
+switchport mode trunk
+exit
+vlan 2
+description RING
+exit
+vlan 12
+description vlan12
+exit
+vlan 100
+description 100
+exit
+vlan 101
+description 101
+exit
+vlan 102
+description USGBoral
+exit
+vlan 103
+description VatikaSec49
+exit
+vlan 104
+description Pareena
+exit
+vlan 105
+description Fashion
+exit
+vlan 106
+description Vatikasec49(6MB
+exit
+vlan 107
+description VatikaQSR
+exit
+vlan 108
+description Virus(20mb)
+exit
+vlan 109
+description "VIRUS (10MB)"
+exit
+vlan 110
+description JAARVISTECH
+exit
+vlan 111
+description SUBSCRIPT
+exit
+vlan 112
+description UMESH
+exit
+vlan 113
+description Virus
+exit
+vlan 116
+description 116
+exit
+vlan 201
+description GFK
+exit
+vlan 202
+description "JAKOB (35MB)"
+exit
+vlan 203
+description GROZ
+exit
+vlan 204
+description CONSUS
+exit
+vlan 206
+description "JAKOB (5MB)"
+exit
+vlan 207
+description "VATIKA ENVIRO"
+exit
+vlan 213
+description "ADM AGRO"
+exit
+vlan 214
+description "ASV EUROP"
+exit
+vlan 241
+description Test
+exit
+vlan 300
+description "Rajeev Anand verma"
+exit
+vlan 301
+description "HERTAGE SCHOOL"
+exit
+vlan 302
+description ArvindMedi
+exit
+vlan 303
+description ConcientFootball
+exit
+vlan 304
+description SpecialChild
+exit
+vlan 307
+description "AR MERITIME"
+exit
+vlan 308
+description "SECURAL (LEMON)"
+exit
+vlan 309
+description Teat
+exit
+vlan 350
+description H-ONE
+exit
+vlan 403
+description MOBISHASHTRA
+exit
+vlan 405
+description "PROTECH BIO"
+exit
+vlan 406
+description CIGMA
+exit
+vlan 407
+description "MB INFO"
+exit
+vlan 408
+description "Isecure W.O 15 Mbps"
+exit
+vlan 409
+description "ONION MOBI"
+exit
+vlan 410
+description TANISHA
+exit
+vlan 411
+description ETHICALL
+exit
+vlan 412
+description OMG
+exit
+vlan 414
+description "QUOTIENT FOUR"
+exit
+vlan 415
+description "FORE REPRESENT"
+exit
+vlan 416
+description "SHAT SHAT"
+exit
+vlan 417
+description GENESIS
+exit
+vlan 418
+description OANADA
+exit
+vlan 419
+description 419
+exit
+vlan 421
+description SOLVEDA
+exit
+vlan 422
+description "TRANS AMERICA"
+exit
+vlan 423
+description DEEPIKA
+exit
+vlan 424
+description VIVRTTA
+exit
+vlan 426
+description Shyam
+exit
+vlan 457
+description "Inside Aviation"
+exit
+vlan 500
+description 500
+exit
+vlan 501
+description "GLOBAL TRAVELTECH"
+exit
+vlan 502
+description "Logwin Air"
+exit
+vlan 503
+description RNA
+exit
+vlan 504
+description MACCAFERI
+exit
+vlan 505
+description TECHNICO
+exit
+vlan 506
+description Reliance
+exit
+vlan 507
+description "PLS LAWYERS"
+exit
+vlan 508
+description "RISHI ANAND"
+exit
+vlan 509
+description 509
+exit
+vlan 510
+description APPOLLO
+exit
+vlan 511
+description Reliance
+exit
+vlan 512
+description CRON
+exit
+vlan 557
+description Cias
+exit
+vlan 558
+description Demo
+exit
+vlan 600
+description Broadband
+exit
+vlan 604
+description PURI
+exit
+vlan 605
+description 605
+exit
+vlan 610
+description 610
+exit
+vlan 611
+description I_saphhire90
+exit
+vlan 613
+description lotus
+exit
+vlan 711
+description saphhire90
+exit
+vlan 800
+description LotusFacility
+exit
+vlan 999
+description Bogus_Vlan
+exit
+vlan 3-11,13-99,114-115,117-200,205,208-212,215-240,242-299,305-306,310-349,35
+1-402,404,413,420,425,427-456,
+exit
+vlan 458-499,513-556,559-599,601-603,606-609,612,702-703,706-709,801,803,813
+exit
+![DEVICE]
+errdisable detect cause arp
+errdisable detect cause bpdu
+errdisable detect cause igmp
+errdisable detect cause arp action rate-limitation
+errdisable detect cause bpdu action rate-limitation
+errdisable detect cause igmp action rate-limitation
+errdisable auto-recovery cause arp
+errdisable auto-recovery cause bpdu
+errdisable auto-recovery cause igmp
+interface ethernet 0/0/1
+description ##mill#bharti_wan#sw87.4##
+switchport trunk allowed vlan 2-209,211-213,215-261,266-269,271-300,302-325,32
+7-399,401-524,526-580,582-603,605,610,612,614-705,710,
+switchport trunk allowed vlan 712-799,801-812,814-4094
+no ingress filtering
+storm-control broadcast 10000
+storm-control unicast 15000
+storm-control multicast 15000
+errdisable detect cause arp
+errdisable detect cause bpdu
+errdisable detect cause igmp
+errdisable auto-recovery cause arp
+errdisable auto-recovery cause bpdu
+errdisable auto-recovery cause igmp
+exit
+interface ethernet 0/0/2
+description ##MILL#IPBX_MILL##IPBX87.116##
+switchport default vlan 601
+no ingress filtering
+storm-control broadcast 1000
+storm-control unicast 1500
+storm-control multicast 1500
+errdisable detect cause arp
+errdisable detect cause bpdu
+errdisable detect cause igmp
+errdisable auto-recovery cause arp
+errdisable auto-recovery cause bpdu
+errdisable auto-recovery cause igmp
+exit
+interface ethernet 0/0/3
+description ##residence#main_ring#sw82.143#mill##
+switchport trunk allowed vlan 100,210,262,264-265,301,326,400,421,500,580-581,
+601,604,606-609,611,613,706-709,711,800,813
+no ingress filtering
+storm-control broadcast 10000
+storm-control unicast 10000
+storm-control multicast 10000
+errdisable detect cause arp
+errdisable detect cause bpdu
+errdisable detect cause igmp
+errdisable auto-recovery cause arp
+errdisable auto-recovery cause bpdu
+errdisable auto-recovery cause igmp
+exit
+interface ethernet 0/0/4
+description ##MILL#R_CORE##
+switchport trunk allowed vlan 2-209,211-264,266-325,327-580,582-612,614-4094
+no ingress filtering
+storm-control broadcast 10000
+storm-control unicast 10000
+storm-control multicast 10000
+errdisable detect cause arp
+errdisable detect cause bpdu
+errdisable detect cause igmp
+errdisable auto-recovery cause arp
+errdisable auto-recovery cause bpdu
+errdisable auto-recovery cause igmp
+exit
+interface ethernet 0/0/5
+description ##MILL#MAIN_RING#SW87.19##
+switchport trunk allowed vlan 2-325,327-418,420-701,703-799,801-4094
+no ingress filtering
+storm-control broadcast 1000
+storm-control unicast 1500
+storm-control multicast 1500
+errdisable detect cause arp
+errdisable detect cause bpdu
+errdisable detect cause igmp
+errdisable auto-recovery cause arp
+errdisable auto-recovery cause bpdu
+errdisable auto-recovery cause igmp
+exit
+interface ethernet 0/0/6
+description ##C4#MAIN_RING#SW82.231#Heritage##
+switchport trunk allowed vlan 2-209,211-264,266-325,327-580,582-610,612,614-71
+0,712-799,801-4094
+no ingress filtering
+storm-control broadcast 10000
+storm-control unicast 1500
+storm-control multicast 1500
+errdisable detect cause arp
+errdisable detect cause bpdu
+errdisable detect cause igmp
+errdisable auto-recovery cause arp
+errdisable auto-recovery cause bpdu
+errdisable auto-recovery cause igmp
+exit
+interface ethernet 0/0/7
+description ##C4#MAIN_RING#SW82.234#AARDEE_CITY#B##
+speed 1000
+duplex full
+switchport trunk allowed vlan 2-209,211-264,266-325,327-524,526-580,582-603,60
+5-610,612,614-710,712-799,801-4094
+no ingress filtering
+storm-control broadcast 1000
+storm-control unicast 1500
+storm-control multicast 1500
+errdisable detect cause arp
+errdisable detect cause bpdu
+errdisable detect cause igmp
+errdisable auto-recovery cause arp
+errdisable auto-recovery cause bpdu
+errdisable auto-recovery cause igmp
+exit
+interface ethernet 0/0/8
+description "##C4#RING_2#Rajeev Anand Verma#SW85.109#P10##"
+speed 1000
+duplex full
+switchport trunk allowed vlan 2-209,211-264,266-325,327-418,420-524,526-580,58
+2-603,605-610,612,614-710,712-799,801-4094
+no ingress filtering
+storm-control broadcast 1000
+storm-control unicast 1500
+storm-control multicast 1500
+errdisable detect cause arp
+errdisable detect cause bpdu
+errdisable detect cause igmp
+errdisable auto-recovery cause arp
+errdisable auto-recovery cause bpdu
+errdisable auto-recovery cause igmp
+exit
+interface ethernet 0/0/9
+description "##C4#RING_2#Rajeev Anand Verma#SW85.109#P9##"
+speed 1000
+duplex full
+switchport trunk allowed vlan 116,271,300-301,305
+no ingress filtering
+storm-control broadcast 1000
+storm-control unicast 1500
+storm-control multicast 1500
+errdisable detect cause arp
+errdisable detect cause bpdu
+errdisable detect cause igmp
+errdisable auto-recovery cause arp
+errdisable auto-recovery cause bpdu
+errdisable auto-recovery cause igmp
+exit
+interface ethernet 0/0/10
+shutdown
+switchport trunk allowed vlan 2-209,211-264,266-325,327-418,420-524,526-580,58
+2-603,605-610,612,614-710,712-799,801-4094
+no ingress filtering
+storm-control broadcast 1000
+storm-control unicast 1500
+storm-control multicast 1500
+errdisable detect cause arp
+errdisable detect cause bpdu
+errdisable detect cause igmp
+errdisable auto-recovery cause arp
+errdisable auto-recovery cause bpdu
+errdisable auto-recovery cause igmp
+exit
+interface ethernet 0/0/11
+no ingress filtering
+storm-control broadcast 1000
+storm-control unicast 1500
+storm-control multicast 1500
+errdisable detect cause arp
+errdisable detect cause bpdu
+errdisable detect cause igmp
+errdisable auto-recovery cause arp
+errdisable auto-recovery cause bpdu
+errdisable auto-recovery cause igmp
+exit
+interface ethernet 0/0/12
+switchport trunk allowed vlan 2-209,211-264,266-325,327-418,420-524,526-580,58
+2-603,605-610,612,614-710,712-799,801-4094
+no ingress filtering
+storm-control broadcast 1000
+storm-control unicast 1500
+storm-control multicast 1500
+errdisable detect cause arp
+errdisable detect cause bpdu
+errdisable detect cause igmp
+errdisable auto-recovery cause arp
+errdisable auto-recovery cause bpdu
+errdisable auto-recovery cause igmp
+exit
+interface ethernet 0/0/13
+description Testing
+no ingress filtering
+storm-control broadcast 1000
+storm-control unicast 1500
+storm-control multicast 1500
+errdisable detect cause arp
+errdisable detect cause bpdu
+errdisable detect cause igmp
+errdisable auto-recovery cause arp
+errdisable auto-recovery cause bpdu
+errdisable auto-recovery cause igmp
+exit
+interface ethernet 0/0/14
+speed 100
+duplex full
+switchport trunk allowed vlan 525,605
+no ingress filtering
+storm-control broadcast 1000
+storm-control unicast 1500
+storm-control multicast 1500
+errdisable detect cause arp
+errdisable detect cause bpdu
+errdisable detect cause igmp
+errdisable auto-recovery cause arp
+errdisable auto-recovery cause bpdu
+errdisable auto-recovery cause igmp
+exit
+interface ethernet 0/0/15
+switchport trunk allowed vlan 2-209,211-264,266-325,327-418,420-580,582-603,60
+5-610,612,614-710,712-799,801-4094
+no ingress filtering
+storm-control broadcast 1000
+storm-control unicast 1500
+storm-control multicast 1500
+errdisable detect cause arp
+errdisable detect cause bpdu
+errdisable detect cause igmp
+errdisable auto-recovery cause arp
+errdisable auto-recovery cause bpdu
+errdisable auto-recovery cause igmp
+exit
+interface ethernet 0/0/16
+switchport trunk allowed vlan 2-209,211-264,266-325,327-418,420-580,582-603,60
+5-610,612,614-710,712-799,801-4094
+no ingress filtering
+storm-control broadcast 1000
+storm-control unicast 1500
+storm-control multicast 1500
+errdisable detect cause arp
+errdisable detect cause bpdu
+errdisable detect cause igmp
+errdisable auto-recovery cause arp
+errdisable auto-recovery cause bpdu
+errdisable auto-recovery cause igmp
+exit
+interface ethernet 0/0/17
+switchport trunk allowed vlan 2-209,211-264,266-325,327-418,420-580,582-603,60
+5-610,612,614-710,712-799,801-4094
+no ingress filtering
+storm-control broadcast 1000
+storm-control unicast 1500
+storm-control multicast 1500
+errdisable detect cause arp
+errdisable detect cause bpdu
+errdisable detect cause igmp
+errdisable auto-recovery cause arp
+errdisable auto-recovery cause bpdu
+errdisable auto-recovery cause igmp
+exit
+interface ethernet 0/0/18
+switchport trunk allowed vlan 2-209,211-264,266-325,327-418,420-580,582-603,60
+5-610,612,614-710,712-799,801-4094
+no ingress filtering
+storm-control broadcast 1000
+storm-control unicast 1500
+storm-control multicast 1500
+errdisable detect cause arp
+errdisable detect cause bpdu
+errdisable detect cause igmp
+errdisable auto-recovery cause arp
+errdisable auto-recovery cause bpdu
+errdisable auto-recovery cause igmp
+exit
+interface ethernet 0/0/19
+speed 1000
+duplex full
+switchport trunk allowed vlan 2-209,211-264,266-325,327-580,582-603,605-610,61
+2,614-710,712-799,801-4094
+no ingress filtering
+storm-control broadcast 1000
+storm-control unicast 1500
+storm-control multicast 1500
+errdisable detect cause arp
+errdisable detect cause bpdu
+errdisable detect cause igmp
+errdisable auto-recovery cause arp
+errdisable auto-recovery cause bpdu
+errdisable auto-recovery cause igmp
+exit
+interface ethernet 0/0/20
+description ##C4#MAIN_RING#SW82.237#Sunvision##
+speed 1000
+duplex full
+switchport trunk allowed vlan 2-209,211-264,266-325,327-580,582-610,612,614-71
+0,712-799,801-4094
+no ingress filtering
+storm-control broadcast 10000
+storm-control unicast 1500
+storm-control multicast 1500
+errdisable detect cause arp
+errdisable detect cause bpdu
+errdisable detect cause igmp
+errdisable auto-recovery cause arp
+errdisable auto-recovery cause bpdu
+errdisable auto-recovery cause igmp
+exit
+interface ethernet 0/0/21
+description ##C4#MAIN_RING#SW82.240#JMD_MEGA##
+speed 1000
+duplex full
+switchport trunk allowed vlan 2-209,211-264,266-325,327-580,582-610,612,614-71
+0,712-799,801-4094
+no ingress filtering
+storm-control broadcast 10000
+storm-control unicast 1500
+storm-control multicast 1500
+errdisable detect cause arp
+errdisable detect cause bpdu
+errdisable detect cause igmp
+errdisable auto-recovery cause arp
+errdisable auto-recovery cause bpdu
+errdisable auto-recovery cause igmp
+exit
+interface ethernet 0/0/22
+shutdown
+speed 1000
+duplex full
+switchport trunk allowed vlan 2-209,211-264,266-325,327-580,582-610,612,614-71
+0,712-799,801-4094
+no ingress filtering
+storm-control broadcast 10000
+storm-control unicast 1500
+storm-control multicast 1500
+errdisable detect cause arp
+errdisable detect cause bpdu
+errdisable detect cause igmp
+errdisable auto-recovery cause arp
+errdisable auto-recovery cause bpdu
+errdisable auto-recovery cause igmp
+exit
+interface ethernet 0/0/23
+description ##C4#MAIN_RING#SW82.234#AARDEE_CITY##
+switchport trunk allowed vlan 2-209,211-264,266-325,327-580,582-603,605-610,61
+2,614-710,712-799,801-4094
+no ingress filtering
+storm-control broadcast 10000
+storm-control unicast 1500
+storm-control multicast 1500
+errdisable detect cause arp
+errdisable detect cause bpdu
+errdisable detect cause igmp
+errdisable auto-recovery cause arp
+errdisable auto-recovery cause bpdu
+errdisable auto-recovery cause igmp
+exit
+interface ethernet 0/0/24
+switchport trunk allowed vlan 4,100,214,262-264,270,301,400,500,525,604,606-60
+9,706-709,813
+no ingress filtering
+storm-control broadcast 1000
+storm-control unicast 1500
+storm-control multicast 1500
+errdisable detect cause arp
+errdisable detect cause bpdu
+errdisable detect cause igmp
+errdisable auto-recovery cause arp
+errdisable auto-recovery cause bpdu
+errdisable auto-recovery cause igmp
+exit
+interface ethernet 0/0/25
+switchport trunk allowed vlan 2-209,211-264,266-325,327-418,420-580,582-603,60
+5-610,612,614-710,712-799,801-4094
+no ingress filtering
+storm-control broadcast 1000
+storm-control unicast 1500
+storm-control multicast 1500
+errdisable detect cause arp
+errdisable detect cause bpdu
+errdisable detect cause igmp
+errdisable auto-recovery cause arp
+errdisable auto-recovery cause bpdu
+errdisable auto-recovery cause igmp
+exit
+interface ethernet 0/0/26
+speed 1000
+switchport trunk allowed vlan 2-209,211-264,266-325,327-418,420-580,582-603,60
+5-610,612,614-710,712-799,801-4094
+no ingress filtering
+storm-control broadcast 1000
+storm-control unicast 1500
+storm-control multicast 1500
+errdisable detect cause arp
+errdisable detect cause bpdu
+errdisable detect cause igmp
+errdisable auto-recovery cause arp
+errdisable auto-recovery cause bpdu
+errdisable auto-recovery cause igmp
+exit
+interface ethernet 0/0/27
+description MILL_R_JUNOS
+switchport trunk allowed vlan 2-209,211-264,266-580,582-610,612,614-710,712-79
+9,801-4094
+no ingress filtering
+storm-control broadcast 1000
+storm-control unicast 1500
+storm-control multicast 1500
+errdisable detect cause arp
+errdisable detect cause bpdu
+errdisable detect cause igmp
+errdisable auto-recovery cause arp
+errdisable auto-recovery cause bpdu
+errdisable auto-recovery cause igmp
+exit
+interface ethernet 0/0/28
+description ##MILL#R_MIKROTIK_80.70#BB_Int4##
+switchport trunk allowed vlan 3,6,101,200,305,400-401,506,600,602,604-610,612-
+613,803
+no ingress filtering
+storm-control unicast 49984
+storm-control multicast 49984
+errdisable detect cause arp
+errdisable detect cause bpdu
+errdisable detect cause igmp
+errdisable auto-recovery cause arp
+errdisable auto-recovery cause bpdu
+errdisable auto-recovery cause igmp
+exit
+shutdown-control-recover mode automatic
+no alarm all-packets
+![OAM]
+no login-access-list snmp 0.0.0.0 255.255.255.255
+no login-access-list web 0.0.0.0 255.255.255.255
+no login-access-list telnet 0.0.0.0 255.255.255.255
+no login-access-list ssh 0.0.0.0 255.255.255.255
+login-access-list snmp 203.110.80.64 0.0.0.3
+login-access-list snmp 203.110.80.160 0.0.0.15
+login-access-list snmp 203.110.80.184 0.0.0.7
+login-access-list web 203.110.80.160 0.0.0.15
+login-access-list telnet 203.110.80.160 0.0.0.15
+username admin privilege 15 password 0 ckng@#&%)PD
+screen-rows per-page 0
+hostname ##C4#MAIN_RING#SW82.238#MILL##
+http enable
+![STP]
+spanning-tree priority 8192
+spanning-tree remote-loop-detect interface ethernet 0/0/1
+interface ethernet 0/0/1
+spanning-tree cost 19
+exit
+interface ethernet 0/0/2
+no spanning-tree
+spanning-tree cost 4
+exit
+interface ethernet 0/0/3
+no spanning-tree
+spanning-tree cost 4
+exit
+interface ethernet 0/0/4
+no spanning-tree
+spanning-tree cost 4
+spanning-tree portfast
+exit
+interface ethernet 0/0/5
+no spanning-tree
+spanning-tree cost 4
+exit
+interface ethernet 0/0/6
+spanning-tree cost 4
+exit
+interface ethernet 0/0/7
+spanning-tree cost 4
+exit
+interface ethernet 0/0/8
+spanning-tree cost 4
+exit
+interface ethernet 0/0/9
+spanning-tree cost 4
+exit
+interface ethernet 0/0/10
+spanning-tree cost 4
+exit
+interface ethernet 0/0/11
+spanning-tree cost 4
+exit
+interface ethernet 0/0/12
+spanning-tree cost 4
+exit
+interface ethernet 0/0/13
+spanning-tree cost 4
+exit
+interface ethernet 0/0/14
+spanning-tree cost 4
+exit
+interface ethernet 0/0/15
+spanning-tree cost 4
+exit
+interface ethernet 0/0/16
+spanning-tree cost 4
+exit
+interface ethernet 0/0/17
+spanning-tree cost 4
+exit
+interface ethernet 0/0/18
+spanning-tree cost 4
+exit
+interface ethernet 0/0/19
+spanning-tree cost 4
+exit
+interface ethernet 0/0/20
+spanning-tree cost 4
+exit
+interface ethernet 0/0/21
+spanning-tree cost 4
+exit
+interface ethernet 0/0/22
+spanning-tree cost 4
+exit
+interface ethernet 0/0/23
+spanning-tree cost 4
+exit
+interface ethernet 0/0/24
+no spanning-tree
+spanning-tree cost 4
+exit
+interface ethernet 0/0/25
+spanning-tree cost 4
+exit
+interface ethernet 0/0/26
+spanning-tree cost 4
+exit
+interface ethernet 0/0/27
+no spanning-tree
+spanning-tree cost 4
+exit
+interface ethernet 0/0/28
+no spanning-tree
+spanning-tree cost 4
+exit
+![SNMP]
+snmp-server name ##C4#MAIN_RING#SW82.238#MILL##
+snmp-server community deldsl ro permit view iso
+![IF]
+interface vlan-interface 1 
+ip address 172.30.82.238 255.255.255.224 
+ip address 192.168.4.2 255.255.255.248 
+exit 
+![STATIC_ROUTE]
+ip route 0.0.0.0 0.0.0.0 172.30.82.225
+ip route 0.0.0.0 0.0.0.0 192.168.4.1
+![SYSLOG]
+logging 203.110.80.167
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module sys
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module oam
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module device
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module link_aggregation
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module mirror
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module stp
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module mstp
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module vlan
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module garp
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module igmp
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module igmp_snooping
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module mld_snooping
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module port_isolation
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module qacl
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module if
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module static_route
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module arp
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module dhcp
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module ippool
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module route_common
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module rip
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module ospf
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module bgp
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module vrrp
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module snmp
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module dot1x
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module radius
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module zymnt
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module sntpc
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module syslog
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module cmdline
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module softdog
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module srm
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module pim
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module ssh
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module mailalarm
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module ospfv3
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module lldp
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module dhcpsnooping
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module eaps
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module erps
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module udld
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module efm
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module flink
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module mlink
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module cfm
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module urpf
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module pppoeia
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module bfd
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module ndp
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module radvd
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module tacacs+
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module dhcpv6snooping
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module remote_mirror
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module stack
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module port-security
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module mac-security
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module icmp4
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module web-buildrun
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module anti-attack
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module pmp
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module sflow
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module rmon
+
+##ENDOF_CONFIG##
+

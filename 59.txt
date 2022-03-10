@@ -1,0 +1,552 @@
+##CONFIG##
+
+C4#MAIN_RING#SW82.229#VPP### 
+##C4#MAIN_RING#SW82.229#VPP### 
+  Building configuration...
+
+  Current configuration: 
+
+no spanning-tree 18 edge-port 
+no spanning-tree 19 edge-port 
+no spanning-tree 25 edge-port 
+no spanning-tree 26 edge-port 
+no spanning-tree 27 edge-port 
+no spanning-tree 28 edge-port 
+vlan 1 
+  name 1 
+  normal 1-17,20-21 
+  fixed 18-19,22-28 
+  forbidden "" 
+  untagged 18-19,22-28 
+  ip address default-management 172.30.82.229 255.255.255.224 
+  ip address default-gateway 172.30.82.225 
+exit 
+vlan 45 
+  name 445 
+  normal 1-8,10-23 
+  fixed 9,24-28 
+  forbidden "" 
+  untagged 9 
+exit 
+vlan 200 
+  name 200 
+  normal 1-2,4-5,9-14,16-24 
+  fixed 3,6-8,15,25-28 
+  forbidden "" 
+  untagged 3,6-8,15 
+exit 
+vlan 201 
+  name 201 
+  normal 1-2,4-24 
+  fixed 3,25-28 
+  forbidden "" 
+  untagged 3 
+exit 
+vlan 214 
+  name 214 
+  normal 1-11,13-24 
+  fixed 12,25-28 
+  forbidden "" 
+  untagged 12 
+exit 
+vlan 426 
+  name 426 
+  normal 1-17,19-24 
+  fixed 18,25-28 
+  forbidden "" 
+  untagged "" 
+exit 
+vlan 427 
+  name Pareena 
+  normal 1-24 
+  fixed 25-28 
+  forbidden "" 
+  untagged "" 
+exit 
+vlan 429 
+  name 429 
+  normal 1-9,11-24 
+  fixed 10,25-28 
+  forbidden "" 
+  untagged 10 
+exit 
+vlan 432 
+  name 432 
+  normal 1,3-24 
+  fixed 2,25-28 
+  forbidden "" 
+  untagged 2 
+exit 
+vlan 435 
+  name 435 
+  normal 1-17,20-24 
+  fixed 18-19,25-28 
+  forbidden "" 
+  untagged "" 
+exit 
+vlan 441 
+  name 441 
+  normal 1-3,5-24 
+  fixed 4,25-28 
+  forbidden "" 
+  untagged 4 
+exit 
+vlan 442 
+  name 442 
+  normal 1-16,18-24 
+  fixed 17,25-28 
+  forbidden "" 
+  untagged 17 
+exit 
+vlan 443 
+  name 443 
+  normal 1-24 
+  fixed 25-28 
+  forbidden "" 
+  untagged "" 
+exit 
+vlan 444 
+  name 444 
+  normal 1-4,6-24 
+  fixed 5,25-28 
+  forbidden "" 
+  untagged 5 
+exit 
+vlan 445 
+  name 445 
+  normal 1-23 
+  fixed 24-28 
+  forbidden "" 
+  untagged "" 
+exit 
+vlan 446 
+  name 446 
+  normal 1-12,14-24 
+  fixed 13,25-28 
+  forbidden "" 
+  untagged 13 
+exit 
+vlan 448 
+  name 448 
+  normal 1-8,10-24 
+  fixed 9,25-28 
+  forbidden "" 
+  untagged 9 
+exit 
+vlan 450 
+  name 450 
+  normal 2-24 
+  fixed 1,25-28 
+  forbidden "" 
+  untagged 1 
+exit 
+vlan 456 
+  name 456 
+  normal 1-11,13-24 
+  fixed 12,25-28 
+  forbidden "" 
+  untagged 12 
+exit 
+vlan 457 
+  name Inside 
+  normal 1-24 
+  fixed 25-28 
+  forbidden "" 
+  untagged "" 
+exit 
+vlan 500 
+  name 500 
+  normal 1-6,9-24 
+  fixed 7-8,25-28 
+  forbidden "" 
+  untagged 7-8 
+exit 
+interface port-channel 1  
+  name "##Billing Server#VPP##" 
+  pvid 450 
+  ingress-check 
+  broadcast-limit 
+  broadcast-limit 500 
+  multicast-limit 
+  multicast-limit 500 
+  dlf-limit 
+  dlf-limit 500 
+  storm-control shutdown 
+  loopguard 
+exit 
+interface port-channel 2  
+  name "##Windlas Biotech Pvt Ltd#211020#20Mb##" 
+  pvid 432 
+  ingress-check 
+  bandwidth-limit cir 20480 
+  bandwidth-limit cir 
+  bandwidth-limit pir 20480 
+  bandwidth-limit pir 
+  bandwidth-limit egress 20480 
+  bandwidth-limit egress 
+  broadcast-limit 
+  broadcast-limit 500 
+  multicast-limit 
+  multicast-limit 500 
+  dlf-limit 
+  dlf-limit 500 
+  storm-control shutdown 
+  loopguard 
+exit 
+interface port-channel 3  
+  name "##Rohlig India Pvt Ltd#211019#BB100Mb##" 
+  pvid 200 
+  ingress-check 
+  bandwidth-limit cir 100000 
+  bandwidth-limit cir 
+  bandwidth-limit pir 100000 
+  bandwidth-limit pir 
+  bandwidth-limit egress 100000 
+  bandwidth-limit egress 
+  broadcast-limit 
+  broadcast-limit 500 
+  multicast-limit 
+  multicast-limit 500 
+  dlf-limit 
+  dlf-limit 500 
+  storm-control shutdown 
+  loopguard 
+exit 
+interface port-channel 4  
+  name "##Jakob and Partners India Pvt Ltd#211010#60Mb##" 
+  pvid 441 
+  ingress-check 
+  bandwidth-limit cir 61440 
+  bandwidth-limit cir 
+  bandwidth-limit pir 61440 
+  bandwidth-limit pir 
+  bandwidth-limit egress 61440 
+  bandwidth-limit egress 
+  broadcast-limit 500 
+  multicast-limit 500 
+  dlf-limit 500 
+  loopguard 
+exit 
+interface port-channel 5  
+  name "##Jakob and Partners India Pvt Ltd#211009#5Mb##" 
+  pvid 444 
+  ingress-check 
+  broadcast-limit 
+  broadcast-limit 500 
+  multicast-limit 
+  multicast-limit 500 
+  dlf-limit 
+  dlf-limit 500 
+  storm-control shutdown 
+  loopguard 
+exit 
+interface port-channel 6  
+  name "##Dilo India Pvt Ltd#211016#BB75Mb##" 
+  pvid 200 
+  ingress-check 
+  bandwidth-limit cir 76800 
+  bandwidth-limit cir 
+  bandwidth-limit pir 76800 
+  bandwidth-limit pir 
+  bandwidth-limit egress 76800 
+  bandwidth-limit egress 
+  broadcast-limit 
+  broadcast-limit 500 
+  multicast-limit 
+  multicast-limit 500 
+  dlf-limit 
+  dlf-limit 500 
+  storm-control shutdown 
+  loopguard 
+exit 
+interface port-channel 7  
+  name Faulty 
+  inactive 
+  bandwidth-limit cir 30720 
+  bandwidth-limit cir 
+  bandwidth-limit pir 30720 
+  bandwidth-limit pir 
+  bandwidth-limit egress 30720 
+  bandwidth-limit egress 
+  broadcast-limit 500 
+  multicast-limit 500 
+  dlf-limit 500 
+  loopguard 
+exit 
+interface port-channel 8  
+  name "##Vatika Professional Point_Facility#211003#BB30Mb##" 
+  pvid 200 
+  ingress-check 
+  bandwidth-limit cir 
+  broadcast-limit 
+  broadcast-limit 500 
+  multicast-limit 
+  multicast-limit 500 
+  dlf-limit 
+  dlf-limit 500 
+  storm-control shutdown 
+  loopguard 
+exit 
+interface port-channel 9  
+  name "##Nextra Communications Pvt Ltd#211022#20Mb##" 
+  pvid 448 
+  ingress-check 
+  bandwidth-limit cir 25600 
+  bandwidth-limit cir 
+  bandwidth-limit pir 25600 
+  bandwidth-limit pir 
+  bandwidth-limit egress 25600 
+  broadcast-limit 
+  broadcast-limit 500 
+  multicast-limit 
+  multicast-limit 500 
+  dlf-limit 500 
+  storm-control shutdown 
+  loopguard 
+exit 
+interface port-channel 10  
+  name ##Vizva_Consultancy_services#211059#50Mb## 
+  pvid 429 
+  ingress-check 
+  broadcast-limit 
+  broadcast-limit 500 
+  multicast-limit 
+  multicast-limit 500 
+  dlf-limit 
+  dlf-limit 500 
+  storm-control shutdown 
+  loopguard 
+exit 
+interface port-channel 11  
+  inactive 
+  bandwidth-limit cir 20480 
+  bandwidth-limit cir 
+  bandwidth-limit pir 20480 
+  bandwidth-limit pir 
+  bandwidth-limit egress 20480 
+  bandwidth-limit egress 
+  broadcast-limit 
+  broadcast-limit 500 
+  multicast-limit 
+  multicast-limit 500 
+  dlf-limit 
+  dlf-limit 500 
+  loopguard 
+exit 
+interface port-channel 12  
+  inactive 
+  bandwidth-limit cir 20480 
+  bandwidth-limit cir 
+  bandwidth-limit pir 20480 
+  bandwidth-limit pir 
+  bandwidth-limit egress 20480 
+  bandwidth-limit egress 
+  broadcast-limit 
+  broadcast-limit 500 
+  multicast-limit 
+  multicast-limit 500 
+  dlf-limit 
+  dlf-limit 500 
+  storm-control shutdown 
+  loopguard 
+exit 
+interface port-channel 13  
+  name "##ADM Agro Industries India Pvt Ltd#211008#10Mb##" 
+  pvid 446 
+  ingress-check 
+  broadcast-limit 
+  broadcast-limit 500 
+  multicast-limit 
+  multicast-limit 500 
+  dlf-limit 
+  dlf-limit 500 
+  storm-control shutdown 
+  loopguard 
+exit 
+interface port-channel 14  
+  name Faulty 
+  inactive 
+  ingress-check 
+  broadcast-limit 
+  broadcast-limit 500 
+  multicast-limit 
+  multicast-limit 500 
+  dlf-limit 
+  dlf-limit 500 
+  storm-control shutdown 
+  loopguard 
+exit 
+interface port-channel 15  
+  name "##Quovadis Travels Pvt Ltd#211015#BB100Mb##" 
+  pvid 200 
+  ingress-check 
+  broadcast-limit 
+  broadcast-limit 500 
+  multicast-limit 
+  multicast-limit 500 
+  dlf-limit 
+  dlf-limit 500 
+  storm-control shutdown 
+  loopguard 
+exit 
+interface port-channel 16  
+  inactive 
+  ingress-check 
+  broadcast-limit 
+  broadcast-limit 500 
+  multicast-limit 
+  multicast-limit 500 
+  dlf-limit 
+  dlf-limit 500 
+  storm-control shutdown 
+  loopguard 
+exit 
+interface port-channel 17  
+  name "##The Paras World School India#211017#10Mb##" 
+  pvid 442 
+  ingress-check 
+  bandwidth-limit cir 10240 
+  bandwidth-limit cir 
+  bandwidth-limit pir 10240 
+  bandwidth-limit pir 
+  bandwidth-limit egress 10240 
+  bandwidth-limit egress 
+  broadcast-limit 500 
+  multicast-limit 500 
+  dlf-limit 500 
+  loopguard 
+exit 
+interface port-channel 18  
+  name ##C4#MAIN_RING#Vatika_Sec-49#SW82.235## 
+  vlan-trunking 
+  broadcast-limit 
+  broadcast-limit 10000 
+  multicast-limit 
+  multicast-limit 10000 
+  dlf-limit 
+  dlf-limit 10000 
+exit 
+interface port-channel 19  
+  name ##C4#MAIN_RING#Vatika_Sec-49#SW82.235## 
+  vlan-trunking 
+  broadcast-limit 
+  broadcast-limit 10000 
+  multicast-limit 
+  multicast-limit 10000 
+  dlf-limit 
+  dlf-limit 10000 
+exit 
+interface port-channel 20  
+  name Raw_Power_VPP 
+  loopguard 
+exit 
+interface port-channel 21  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 22  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 23  
+  vlan-trunking 
+exit 
+interface port-channel 24  
+  inactive 
+  vlan-trunking 
+exit 
+interface port-channel 25  
+  name ##C4#MAIN_RING#SW82.243#VPP# 
+  vlan-trunking 
+  broadcast-limit 
+  broadcast-limit 10000 
+  multicast-limit 
+  multicast-limit 1500 
+  dlf-limit 
+  dlf-limit 1500 
+exit 
+interface port-channel 26  
+  name ##C4#MAIN_RING#SW82.228#VTC_Backup## 
+  speed-duplex 1000-full 
+  vlan-trunking 
+  broadcast-limit 
+  broadcast-limit 15000 
+  multicast-limit 
+  multicast-limit 1500 
+  dlf-limit 
+  dlf-limit 1500 
+exit 
+interface port-channel 27  
+  name ##C4#MAIN_RING#SW82.230#SUCCESS## 
+  speed-duplex 1000-full 
+  vlan-trunking 
+  broadcast-limit 
+  broadcast-limit 10000 
+  multicast-limit 
+  multicast-limit 1500 
+  dlf-limit 
+  dlf-limit 1500 
+exit 
+interface port-channel 28  
+  name ##C4#MAIN_RING#SW82.228#VTC_Main## 
+  speed-duplex 1000-full 
+  vlan-trunking 
+  broadcast-limit 
+  broadcast-limit 10000 
+  multicast-limit 
+  multicast-limit 1500 
+  dlf-limit 
+  dlf-limit 1500 
+exit 
+spanning-tree 
+spanning-tree priority 24576 
+spanning-tree 18 
+spanning-tree 19 
+spanning-tree 25 
+spanning-tree 26 
+spanning-tree 27 
+spanning-tree 28 
+spanning-tree 18 path-cost 300 
+spanning-tree 23 path-cost 50 
+spanning-tree 24 path-cost 50 
+spanning-tree 26 path-cost 40 
+spanning-tree 27 path-cost 19 
+hostname ##C4#MAIN_RING#SW82.229#VPP## 
+timesync server 203.110.80.66 
+timesync ntp 
+storm-control 
+bandwidth-control 
+loopguard 
+snmp-server get-community deldsl 
+snmp-server set-community deldsl 
+snmp-server trap-community deldsl 
+snmp-server contact "Ashish Kumar" location VPP 
+remote-management 2 
+remote-management 3 
+remote-management 5 
+remote-management 1 start-addr 203.110.80.161 end-addr 203.110.80.174 service telnet ftp http icmp snmp ssh https  
+remote-management 2 start-addr 203.110.80.184 end-addr 203.110.80.190 service telnet http icmp snmp  
+remote-management 3 start-addr 203.110.82.225 end-addr 203.110.82.238 service telnet ftp http icmp snmp ssh https  
+remote-management 5 start-addr 203.110.80.64 end-addr 203.110.80.67 service icmp snmp  
+syslog 
+syslog type system 
+syslog type interface 
+syslog type switch 
+syslog type aaa 
+syslog type ip 
+syslog type commands 
+syslog server 203.110.80.167 level 7 
+errdisable recovery 
+errdisable recovery cause loopguard 
+errdisable recovery cause ARP 
+errdisable recovery cause BPDU 
+errdisable recovery cause IGMP 
+errdisable recovery cause stormcontrol 
+errdisable recovery cause portsecurity 
+errdisable detect cause ARP 
+errdisable detect cause BPDU 
+errdisable detect cause IGMP 
+terminal length 0
+
+##ENDOF_CONFIG##
+

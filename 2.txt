@@ -1,0 +1,121 @@
+##CONFIG##
+
+MILL#RING_1#Nodwin Gaming Pvt Ltd#SW82.102## 
+##MILL#RING_1#Nodwin Gaming Pvt Ltd#SW82.102## 
+  Building configuration...
+
+  Current configuration: 
+
+vlan 1 
+  name 1 
+  normal 1-8 
+  fixed 9-10 
+  forbidden "" 
+  untagged 1-10 
+  ip address default-management 172.30.82.102 255.255.255.224 
+  ip address default-gateway 172.30.82.97 
+exit 
+vlan 325 
+  name 325 
+  normal 3-8 
+  fixed 1-2,9-10 
+  forbidden "" 
+  untagged 1-2 
+exit 
+interface port-channel 1  
+  name "##Nodwin Gaming Pvt Ltd#111324#155Mb##" 
+  pvid 325 
+  ingress-check 
+  bandwidth-limit ingress 317440 
+  bandwidth-limit ingress 
+  bandwidth-limit egress 317440 
+  bandwidth-limit egress 
+  broadcast-limit 
+  broadcast-limit 1000 
+  multicast-limit 
+  multicast-limit 1000 
+  dlf-limit 
+  dlf-limit 1000 
+  loopguard 
+exit 
+interface port-channel 2  
+  inactive 
+  pvid 325 
+  ingress-check 
+  loopguard 
+exit 
+interface port-channel 3  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 4  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 5  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 6  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 7  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 8  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 9  
+  name "##MILL#RING_1#Rahul Chaudhary & Partners (laal lahiri)#SW82.16##" 
+  vlan-trunking 
+  broadcast-limit 
+  broadcast-limit 10000 
+  multicast-limit 
+  multicast-limit 10000 
+  dlf-limit 
+  dlf-limit 10000 
+exit 
+interface port-channel 10  
+  name ##MILL#MAIN_RING#SW87.19## 
+  speed-duplex 1000-full 
+  vlan-trunking 
+  broadcast-limit 
+  broadcast-limit 10000 
+  multicast-limit 
+  multicast-limit 10000 
+  dlf-limit 
+  dlf-limit 10000 
+exit 
+spanning-tree 
+spanning-tree priority 24576 
+spanning-tree 9 
+spanning-tree 10 
+spanning-tree 1 edge-port 
+spanning-tree 2 edge-port 
+spanning-tree 3 edge-port 
+spanning-tree 4 edge-port 
+spanning-tree 5 edge-port 
+spanning-tree 6 edge-port 
+spanning-tree 7 edge-port 
+spanning-tree 8 edge-port 
+hostname "##MILL#RING_1#Nodwin Gaming Pvt Ltd#SW82.102#" 
+timesync server 203.110.80.66 
+timesync ntp 
+bandwidth-control 
+loopguard 
+snmp-server get-community deldsl 
+snmp-server set-community "" 
+snmp-server trap-community "" 
+snmp-server location "Sector 31" 
+remote-management 2 
+remote-management 3 
+remote-management 4 
+remote-management 1 start-addr 203.110.80.161 end-addr 203.110.80.174 service telnet ftp http icmp snmp ssh https  
+remote-management 2 start-addr 172.30.82.97 end-addr 172.30.82.128 service http icmp snmp  
+remote-management 3 start-addr 203.110.80.64 end-addr 203.110.80.67 service icmp snmp
+
+##ENDOF_CONFIG##
+

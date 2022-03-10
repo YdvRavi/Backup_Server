@@ -1,0 +1,2313 @@
+##CONFIG##
+
+## Last commit: 2022-03-10 15:59:54 UTC by deldsl
+version 17.4R1.16;
+system {
+    host-name MILL_R_JUNOS;
+    management-instance;
+    root-authentication {
+        encrypted-password "$6$BNdPctVQ$Sw9ITL4D78FjSjAvxZbllN.YaWwX4ibVbNBOHBn0WUTc3ZvFMYctS21RHj16HNedkgGZ9RKEkkmWIWYMW/Ozd1"; ## SECRET-DATA
+    }
+    login {
+        class noc_team {
+            idle-timeout 5;
+            permissions all;
+        }
+        user amar {
+            uid 2020;
+            class noc_team;
+            authentication {
+                encrypted-password "$6$SJzL6..j$3.PHqbjckDHo7.lS095wywrUvW71Z5vKLSpbeW9I6ERR.Wbg3HStPEB5UI8TN.6jZ7P10m7DDYXRhmzyTWRLL."; ## SECRET-DATA
+            }
+        }
+        user deldsl {
+            uid 2002;
+            class noc_team;
+            authentication {
+                encrypted-password "$6$F8BX5dJ1$Nd.d99nXWJkJXIf66TIi5qMSljqAKKgUVngtGV.5pAvzHB6/BUj4h1Q7j/1y/m2bklQf8G9e.ZoX27EfLLLUE."; ## SECRET-DATA
+            }
+        }
+    }
+    services {
+        telnet {
+            connection-limit 20;
+        }
+    }
+    syslog {
+        user * {
+            any emergency;
+        }
+        host 203.110.80.167 {
+            any info;
+        }
+        file messages {
+            any notice;
+            authorization info;
+        }
+        file interactive-commands {
+            interactive-commands any;
+        }
+    }
+}
+chassis {
+    fpc 0 {
+        pic 0 {
+            port 0 {
+                speed 10g;
+            }
+            port 1 {
+                speed 10g;
+            }
+            port 2 {
+                speed 10g;
+            }
+        }
+        pic 1 {
+            port 0 {
+                speed 10g;
+            }
+            port 1 {
+                speed 10g;
+            }
+            port 2 {
+                speed 10g;
+            }
+        }
+    }
+}
+interfaces {
+    xe-0/0/0 {
+        description "##MILL#SW_JUNOS#80.12#40G##";
+    }
+    xe-0/0/0:0 {
+        description "##MILL#R_CORE_CORE1##";
+        vlan-tagging;
+        unit 1110 {
+            vlan-id 1110;
+            family inet {
+                mtu 1500;
+                address 203.110.87.1/29;
+            }
+        }
+    }
+    xe-0/0/0:1 {
+        description "#To_Junos_SW#80.12##";
+        flexible-vlan-tagging;
+        native-vlan-id 1;
+        unit 1 {
+            vlan-id 1;
+            family inet;
+        }
+        unit 2110 {
+            description "##PEERING#EXTREME_49378#1G##";
+            vlan-id 2110;
+            family inet {
+                no-redirects;
+            }
+        }
+        unit 2111 {
+            description "##SERVER#SPEED_TEST#80.54##";
+            vlan-id 2111;
+            family inet {
+                address 203.110.80.53/30;
+            }
+        }
+        unit 2112 {
+            description "##PEERING#EXTREME_SIFY#3Gb##";
+            vlan-id 2112;
+            family inet {
+                no-redirects;
+                address 172.30.80.33/29;
+                address 45.120.248.101/24;
+            }
+        }
+    }
+    xe-0/0/1 {
+        description "##MILL#DOWN_LINK#40G-4X10G##";
+    }
+    xe-0/0/1:0 {
+        unit 0 {
+            description "##MILL#R_MIKROTIK#BB80.70##";
+            family inet {
+                address 203.110.80.81/30;
+            }
+        }
+    }
+    xe-0/0/1:1 {
+        unit 0 {
+            description "##MILL#R_MIKROTIK#BB80.74##";
+            family inet {
+                address 203.110.80.73/30;
+            }
+        }
+    }
+    xe-0/1/0 {
+        description "##c4#main_ring#sw82.238#mill##";
+        flexible-vlan-tagging;
+        native-vlan-id 1;
+        unit 1 {
+            vlan-id 1;
+            family inet;
+        }
+        unit 3 {
+            disable;
+            description MIILL_ESSEL;
+            vlan-id 3;
+            family inet {
+                address 203.110.86.1/28;
+                address 203.110.86.17/28;
+                address 103.242.224.33/28;
+            }
+        }
+        unit 12 {
+            vlan-id 12;
+        }
+        unit 101 {
+            disable;
+            description VTC;
+            vlan-id 101;
+            family inet {
+                address 203.110.95.97/27;
+            }
+        }
+        unit 200 {
+            disable;
+            description VPP;
+            vlan-id 200;
+            family inet {
+                address 203.110.89.33/27;
+            }
+        }
+        unit 291 {
+            description "##ICL_Fertilizers_India_Pvt_Ltd#111260#100Mb##";
+            vlan-id 291;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 100_Mbps;
+                    output 100_Mbps;
+                }
+                address 203.110.85.41/29;
+            }
+        }
+        unit 301 {
+            description "##Mahindra_Homes#201065#15Mb##";
+            vlan-id 301;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 15_Mbps;
+                    output 15_Mbps;
+                }
+                address 203.110.90.217/29;
+            }
+        }
+        unit 305 {
+            disable;
+            description Heritage_Ullawas;
+            vlan-id 305;
+            family inet {
+                address 103.242.224.49/29;
+                address 203.110.86.57/29;
+                address 203.110.95.145/28;
+            }
+        }
+        unit 315 {
+            disable;
+            description "##Sagacious_Research_Pvt_Ltd#111315#50Mb#Mill##";
+            vlan-id 315;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 50_Mbps;
+                    output 50_Mbps;
+                }
+                address 203.110.84.121/29;
+            }
+        }
+        unit 326 {
+            vlan-id 326;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 200_Mbps;
+                    output 200_Mbps;
+                }
+            }
+        }
+        unit 334 {
+            description "##India_For_You_Holiday_Pvt_Ltd#111112#7Mb##";
+            vlan-id 334;
+            family inet {
+                policer {
+                    input 7_Mbps;
+                    output 7_Mbps;
+                }
+                address 203.110.84.57/29;
+            }
+        }
+        unit 345 {
+            disable;
+            description "##The_Pllazio_Hotel#111297#15+100MBPS#Demo##";
+            vlan-id 345;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 15_Mbps;
+                    output 15_Mbps;
+                }
+                address 203.110.91.241/29;
+            }
+        }
+        unit 346 {
+            vlan-id 346;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 60_Mbps;
+                    output 60_Mbps;
+                }
+            }
+        }
+        unit 347 {
+            disable;
+            vlan-id 347;
+            family inet;
+        }
+        unit 400 {
+            disable;
+            description "H-MAX#Internet_Backup";
+            vlan-id 400;
+            family inet {
+                address 103.142.18.1/25;
+            }
+        }
+        unit 401 {
+            disable;
+            description "##JMD_MEGAPOLIS_DSLAM##";
+            vlan-id 401;
+            family inet {
+                address 203.110.86.33/28;
+                address 203.110.89.97/27;
+                address 203.110.89.193/26;
+                address 203.110.94.161/27;
+                address 203.110.95.129/27;
+            }
+        }
+        unit 403 {
+            description "##OMG_Network_India_Pvt_Ltd#181061#100Mb##";
+            vlan-id 403;
+            family inet {
+                policer {
+                    input 100_Mbps;
+                    output 100_Mbps;
+                }
+                address 203.110.84.137/29;
+            }
+        }
+        unit 404 {
+            description "##Indira_Gandhi_Eye_Hospital#201041#10Mb##";
+            vlan-id 404;
+            family inet {
+                policer {
+                    input 10_Mbps;
+                    output 10_Mbps;
+                }
+                address 203.110.90.49/29;
+            }
+        }
+        unit 405 {
+            description "##Oanda_India_Pvt_Ltd#181059#14MB##";
+            vlan-id 405;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 14_Mbps;
+                    output 14_Mbps;
+                }
+                address 103.242.225.97/29;
+            }
+        }
+        unit 406 {
+            vlan-id 406;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+            }
+        }
+        unit 407 {
+            description "##MB_Informatics_Pvt_Ltd#181008#11MB##";
+            vlan-id 407;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 11_Mbps;
+                    output 11_Mbps;
+                }
+                address 203.110.91.233/29;
+            }
+        }
+        unit 408 {
+            description "##Heritage_Xperiential_Learning_School#201072#75Mb##";
+            vlan-id 408;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 75_Mbps;
+                    output 75_Mbps;
+                }
+                address 203.110.90.89/29;
+            }
+        }
+        unit 409 {
+            description "##Investoxpert_Advisors_Pvt_Ltd#181087#10Mb##";
+            vlan-id 409;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 10_Mbps;
+                    output 10_Mbps;
+                }
+                address 203.110.91.109/30;
+            }
+        }
+        unit 410 {
+            description "##Tanisha_Systems_Pvt_Ltd#181014#50Mb##";
+            vlan-id 410;
+            family inet {
+                policer {
+                    input 50_Mbps;
+                    output 50_Mbps;
+                }
+                address 203.110.91.249/29;
+            }
+        }
+        unit 411 {
+            disable;
+            description "##Ethicalhat_Cyber_Security_Pvt_Ltd#181050#25MB##";
+            vlan-id 411;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 5_Mbps;
+                    output 5_Mbps;
+                }
+                address 203.110.90.201/29;
+            }
+        }
+        unit 412 {
+            disable;
+            description "##Qed_Productions_Pvt_Ltd#181080#10Mb##";
+            vlan-id 412;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 10_Mbps;
+                    output 10_Mbps;
+                }
+                address 103.242.225.249/30;
+            }
+        }
+        unit 413 {
+            description "##nextra_Communications_Pvt_Ltd#181085#10Mb##";
+            vlan-id 413;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 10_Mbps;
+                    output 10_Mbps;
+                }
+                address 203.110.93.129/29;
+            }
+        }
+        unit 414 {
+            description "##SMART_INVESTORS#181093#5Mb##";
+            vlan-id 414;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 5_Mbps;
+                    output 5_Mbps;
+                }
+                address 203.110.87.193/30;
+            }
+        }
+        unit 415 {
+            description "##Trendsutra_Client_Services_Pvt_Ltd#181078#10Mb##";
+            vlan-id 415;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 10_Mbps;
+                    output 10_Mbps;
+                }
+                address 203.110.85.109/30;
+            }
+        }
+        unit 416 {
+            description "##AAFT_ELEARN_PVT_LTD#201084#50Mb##";
+            vlan-id 416;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 50_Mbps;
+                    output 50_Mbps;
+                }
+                address 203.110.81.241/29;
+            }
+        }
+        unit 417 {
+            description "##Magnum_Maintenance_Services_Pvt_Ltd#201079#50Mb##";
+            vlan-id 417;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 50_Mbps;
+                    output 50_Mbps;
+                }
+                address 203.110.88.45/30;
+            }
+        }
+        unit 418 {
+            description "##MOBISHASTRA_TECHNOLOGIES_PVT_LTD#181052#30Mb##";
+            vlan-id 418;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 30_Mbps;
+                    output 30_Mbps;
+                }
+                address 203.110.93.177/30;
+            }
+        }
+        unit 419 {
+            description "##EVEREST_BUSINESS_ADVISORY_INDIA_PVT_LTD#181083#100Mb##";
+            vlan-id 419;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 100_Mbps;
+                    output 100_Mbps;
+                }
+                address 203.110.93.73/29;
+            }
+        }
+        unit 420 {
+            vlan-id 420;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+            }
+        }
+        unit 421 {
+            description "##Solveda_Software_India_Pvt_Ltd#111077#125MB##";
+            vlan-id 421;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 25_Mbps;
+                    output 25_Mbps;
+                }
+                address 203.110.85.49/29;
+            }
+        }
+        unit 422 {
+            description "##Trans_American_Information_System_Pvt_Ltd#181043#30MB##";
+            vlan-id 422;
+            family inet {
+                policer {
+                    input 30_Mbps;
+                    output 30_Mbps;
+                }
+                address 203.110.81.85/30;
+            }
+        }
+        unit 423 {
+            disable;
+            description "##Global_IT_Network#181084#30Mb##";
+            vlan-id 423;
+            family inet {
+                policer {
+                    input 30_Mbps;
+                    output 30_Mbps;
+                }
+                address 203.110.81.209/30;
+            }
+        }
+        unit 424 {
+            description "##Intello_Labs_Pvt_Ltd#201032#30Mb##";
+            vlan-id 424;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 30_Mbps;
+                    output 30_Mbps;
+                }
+                address 203.110.93.201/29;
+            }
+        }
+        unit 425 {
+            description "##USG_Boral_Building_Products_Pvt_Ltd#151091#20MB##";
+            vlan-id 425;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 20_Mbps;
+                    output 20_Mbps;
+                }
+                address 203.110.93.121/29;
+            }
+        }
+        unit 426 {
+            description "##DCSPLUS_TRAVEL_TECHNOLOGIES_INDIA_PRIVATE_LIMITED#201081#20Mb##";
+            vlan-id 426;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 20_Mbps;
+                    output 20_Mbps;
+                }
+                address 203.110.88.157/30;
+            }
+        }
+        unit 427 {
+            description "##Pareena_Infrastructures_Pvt_Ltd#151034#8MB##";
+            vlan-id 427;
+            family inet {
+                policer {
+                    input 8_Mbps;
+                    output 8_Mbps;
+                }
+                address 203.110.83.241/29;
+            }
+        }
+        unit 428 {
+            description "##KCC_Buildcon_Pvt_Ltd#271004#15Mb##";
+            vlan-id 428;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 15_Mbps;
+                    output 15_Mbps;
+                }
+                address 203.110.85.193/29;
+            }
+        }
+        unit 429 {
+            description "##Vizva_Consultancy_services#211059#50Mb##";
+            vlan-id 429;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 50_Mbps;
+                    output 50_Mbps;
+                }
+                address 203.110.91.41/29;
+            }
+        }
+        unit 430 {
+            disable;
+            vlan-id 430;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+            }
+        }
+        unit 431 {
+            description "##Virus_Positive_Technologies#151102#30MB##";
+            vlan-id 431;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 30_Mbps;
+                    output 30_Mbps;
+                }
+                address 103.242.225.217/29;
+            }
+        }
+        unit 432 {
+            description "##Windlas_Biotech_Pvt_Ltd#211020#20MB##";
+            vlan-id 432;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 20_Mbps;
+                    output 20_Mbps;
+                }
+                address 203.110.91.185/29;
+            }
+        }
+        unit 433 {
+            description "##Square_Yards_Consulting_Pvt_Ltd#201074#50Mb##";
+            vlan-id 433;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 50_Mbps;
+                    output 50_Mbps;
+                }
+                address 203.110.93.185/29;
+            }
+        }
+        unit 434 {
+            description "##Ardee_City_Mall#281000#10MB##";
+            vlan-id 434;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 10_Mbps;
+                    output 10_Mbps;
+                }
+                address 203.110.91.61/30;
+            }
+        }
+        unit 435 {
+            description "##Vatika_Hotels_Pvt_Ltd_VBC#151135#20Mb##";
+            vlan-id 435;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 20_Mbps;
+                    output 20_Mbps;
+                }
+                address 203.110.84.201/29;
+            }
+        }
+        unit 436 {
+            description "#Lavish_Buildmart#561026#20Mb##";
+            vlan-id 436;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 20_Mbps;
+                    output 20_Mbps;
+                }
+                address 103.242.225.229/30;
+            }
+        }
+        unit 437 {
+            description "##Nextra_Communications_Pvt_Ltd#201061#30Mb##";
+            vlan-id 437;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 30_Mbps;
+                    output 30_Mbps;
+                }
+                address 103.242.225.81/29;
+            }
+        }
+        unit 438 {
+            description "##R SAI LOGISTICS INDIA PRIVATE LIMITED#151178#30Mb##;";
+            vlan-id 438;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 30_Mbps;
+                    output 30_Mbps;
+                }
+                address 203.110.93.9/29;
+            }
+        }
+        unit 439 {
+            description "##Technopak_Advisors_Pvt_Ltd#201049#50Mb##";
+            vlan-id 439;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 50_Mbps;
+                    output 50_Mbps;
+                }
+                address 203.110.85.57/29;
+            }
+        }
+        unit 440 {
+            description "##Ardee_Mall_Maintenance_GF#281030#30Mb##";
+            vlan-id 440;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 30_Mbps;
+                    output 30_Mbps;
+                }
+                address 203.110.91.25/29;
+            }
+        }
+        unit 441 {
+            description "##Jakob_and_Partners_India_Pvt_Ltd#211010#60MB##";
+            vlan-id 441;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 60_Mbps;
+                    output 60_Mbps;
+                }
+                address 203.110.85.241/29;
+            }
+        }
+        unit 442 {
+            description "##The_Paras_World_School_India#211017#10MB##";
+            vlan-id 442;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 10_Mbps;
+                    output 10_Mbps;
+                }
+                address 203.110.84.49/29;
+            }
+        }
+        unit 443 {
+            description "##Minda_Industries_Ltd#181091#50Mb##";
+            vlan-id 443;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 50_Mbps;
+                    output 50_Mbps;
+                }
+                address 203.110.91.169/29;
+            }
+        }
+        unit 444 {
+            description "##Jakob_and_Partners_India_Pvt_Ltd#211009#5MB##";
+            vlan-id 444;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 5_Mbps;
+                    output 5_Mbps;
+                }
+                address 203.110.85.249/29;
+            }
+        }
+        unit 445 {
+            disable;
+            description "##Naveen_Kumar#151169#20MB##";
+            vlan-id 445;
+            family inet {
+                policer {
+                    input 20_Mbps;
+                    output 20_Mbps;
+                }
+                address 203.110.81.185/29;
+            }
+        }
+        unit 446 {
+            description "##ADM_Agro_Industries_India_Pvt_Ltd#211008#10MB##";
+            vlan-id 446;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 10_Mbps;
+                    output 10_Mbps;
+                }
+                address 203.110.93.65/29;
+            }
+        }
+        unit 447 {
+            description "##Heritage_School#201004#350Mb##";
+            vlan-id 447;
+            family inet {
+                policer {
+                    input 350_Mbps;
+                    output 350_Mbps;
+                }
+                address 203.110.85.25/29;
+            }
+        }
+        unit 448 {
+            description "##Nextra_Communications_Pvt_Ltd#211022#20Mb##";
+            vlan-id 448;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 22_Mbps;
+                    output 22_Mbps;
+                }
+                address 203.110.81.193/29;
+            }
+        }
+        unit 449 {
+            description "##Concient_Football#201003#30Mb##";
+            vlan-id 449;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 30_Mbps;
+                    output 30_Mbps;
+                }
+                address 203.110.85.185/29;
+            }
+        }
+        unit 450 {
+            description Billing-Server;
+            vlan-id 450;
+            family inet {
+                policer {
+                    input 20_Mbps;
+                    output 20_Mbps;
+                }
+                address 203.110.85.21/30;
+            }
+        }
+        unit 451 {
+            description "##Prompt_Engineering_Pvt_Ltd#151153#5Mb##";
+            vlan-id 451;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 5_Mbps;
+                    output 5_Mbps;
+                }
+                address 203.110.91.217/30;
+            }
+        }
+        unit 452 {
+            description "##Apollo_Hospitals_Enterprise_Ltd#201080#100Mb##";
+            vlan-id 452;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 100_Mbps;
+                    output 100_Mbps;
+                }
+                address 203.110.84.185/29;
+            }
+        }
+        unit 453 {
+            description "##Olive_Realcon_Pvt_Ltd#101348#40Mb##";
+            vlan-id 453;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 40_Mbps;
+                    output 40_Mbps;
+                }
+                address 203.110.93.25/29;
+            }
+        }
+        unit 454 {
+            description "##YUM_RESTAURANTS_INDIA_PVT_LTD#101398#150Mb##";
+            vlan-id 454;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 155_Mbps;
+                    output 155_Mbps;
+                }
+                address 103.242.225.9/29;
+            }
+        }
+        unit 455 {
+            description "##Roshni_Builders_Pvt_Ltd#151160#10Mb##";
+            vlan-id 455;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 10_Mbps;
+                    output 10_Mbps;
+                }
+                address 203.110.85.113/30;
+            }
+        }
+        unit 456 {
+            description "##Cine_Square_Media_Works#521012#5Mb##";
+            vlan-id 456;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 5_Mbps;
+                    output 5_Mbps;
+                }
+                address 203.110.93.105/30;
+            }
+        }
+        unit 457 {
+            description "##Insight_Aviation_India_LLP#211058#10Mb##";
+            vlan-id 457;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 10_Mbps;
+                    output 10_Mbps;
+                }
+                address 203.110.93.157/30;
+            }
+        }
+        unit 458 {
+            description "##Nextra_Communications_Pvt_Ltd#181094#50Mb##";
+            vlan-id 458;
+            family inet {
+                policer {
+                    input 50_Mbps;
+                    output 50_Mbps;
+                }
+                address 103.242.225.145/30;
+            }
+        }
+        unit 459 {
+            description "##Max_Realtech_Pvt_Ltd#201073#25Mb##";
+            vlan-id 459;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 25_Mbps;
+                    output 25_Mbps;
+                }
+                address 203.110.91.57/30;
+            }
+        }
+        unit 460 {
+            description "##Nextra_Communication_Pvt_Ltd#201082#50Mb##";
+            vlan-id 460;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 50_Mbps;
+                    output 50_Mbps;
+                }
+                address 203.110.81.177/29;
+            }
+        }
+        unit 501 {
+            disable;
+            description "##Global_Traveltech_Pvt_Ltd#221002#15Mb##";
+            vlan-id 501;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 15_Mbps;
+                    output 15_Mbps;
+                }
+                address 203.110.81.65/29;
+            }
+        }
+        unit 502 {
+            description "##Logwin_Air_and_Ocean_India_Pvt_Ltd#201057#10Mb##";
+            vlan-id 502;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 10_Mbps;
+                    output 10_Mbps;
+                }
+                address 203.110.84.129/29;
+            }
+        }
+        unit 503 {
+            description "##RELIANCE_DIGITAL_PLATFORM_n_PROJECT_SERVICES_LIMITED#281036#5Mb##";
+            vlan-id 503;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 5_Mbps;
+                    output 5_Mbps;
+                }
+                address 103.242.225.237/30;
+            }
+        }
+        unit 504 {
+            vlan-id 504;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+            }
+        }
+        unit 506 {
+            disable;
+            vlan-id 506;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+            }
+        }
+        unit 507 {
+            description "##PLS_LAWYERS_PVT_LTD#221032#100Mb##";
+            vlan-id 507;
+            family inet {
+                policer {
+                    input 100_Mbps;
+                    output 100_Mbps;
+                }
+                address 103.242.225.57/29;
+            }
+        }
+        unit 510 {
+            description "##Shiroki_Automotive_India_Pvt_Ltd#221078#6Mb##;";
+            vlan-id 510;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 6_Mbps;
+                    output 6_Mbps;
+                }
+                address 103.242.225.225/30;
+            }
+        }
+        unit 511 {
+            description "##RELIANCE_MOBILITY_LIMITED#221088#10Mb##";
+            vlan-id 511;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 10_Mbps;
+                    output 10_Mbps;
+                }
+                address 203.110.88.41/30;
+            }
+        }
+        unit 512 {
+            description "##RNA_IP_ATTORNEYS#221011#50Mb##";
+            vlan-id 512;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 50_Mbps;
+                    output 50_Mbps;
+                }
+                address 203.110.90.141/30;
+            }
+        }
+        unit 513 {
+            description "#Blue_Rock_Sourcing_Solution_India_Pvt_Ltd#221024#35Mb##";
+            vlan-id 513;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 35_Mbps;
+                    output 35_Mbps;
+                }
+                address 203.110.90.145/30;
+            }
+        }
+        unit 514 {
+            description "#Vibhoor_Chaudhary#111264#30Mb##";
+            vlan-id 514;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 30_Mbps;
+                    output 30_Mbps;
+                }
+                address 203.110.83.77/30;
+            }
+        }
+        unit 516 {
+            vlan-id 516;
+            family inet;
+        }
+        unit 519 {
+            description "##Marche_Retail_Pvt_Ltd#281103#10Mb##";
+            vlan-id 519;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 10_Mbps;
+                    output 10_Mbps;
+                }
+                address 203.110.85.117/30;
+            }
+        }
+        unit 520 {
+            vlan-id 520;
+            family inet;
+        }
+        unit 521 {
+            description "##ACPL_Systems_Pvt_Ltd#151164#10Mb##";
+            vlan-id 521;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 10_Mbps;
+                    output 10_Mbps;
+                }
+                address 203.110.93.161/29;
+            }
+        }
+        unit 522 {
+            description "##Deepak_Rajpal#201020#15Mb##";
+            vlan-id 522;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 15_Mbps;
+                    output 15_Mbps;
+                }
+                address 203.110.81.81/30;
+            }
+        }
+        unit 523 {
+            description "##Tekku_Samurai#221085#15Mb##";
+            vlan-id 523;
+            family inet {
+                policer {
+                    input 15_Mbps;
+                    output 15_Mbps;
+                }
+                address 103.242.225.113/29;
+            }
+        }
+        unit 524 {
+            description "##RELIANCE PROJECTS & PROPERTY MANAGEMENT SERVICES#101399#100Mb##";
+            vlan-id 524;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 100_Mbps;
+                    output 100_Mbps;
+                }
+                address 203.110.81.217/29;
+            }
+        }
+        unit 525 {
+            description "##RELIANCE_PROJECTS_PROPERTY_MANAGEMENT_SERVICES#101400#10Mb##";
+            vlan-id 525;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 10_Mbps;
+                    output 10_Mbps;
+                }
+                address 203.110.88.177/30;
+            }
+        }
+        unit 526 {
+            description "##Reliance_Retail_Limited#101402#10Mb##;";
+            vlan-id 526;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 15_Mbps;
+                    output 15_Mbps;
+                }
+                address 203.110.81.53/30;
+            }
+        }
+        unit 550 {
+            description "##The_Special_Child_Trust#201002#20Mb##";
+            vlan-id 550;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 20_Mbps;
+                    output 20_Mbps;
+                }
+                address 203.110.84.113/29;
+            }
+        }
+        unit 552 {
+            description "##SECUREL_YNKX_NETWORKS#201019#70Mb##";
+            vlan-id 552;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 70_Mbps;
+                    output 70_Mbps;
+                }
+                address 103.242.225.17/28;
+            }
+        }
+        unit 553 {
+            description "##Xebia_IT_Architects_India_Pvt_Ltd#201034#100Mb##";
+            vlan-id 553;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 100_Mbps;
+                    output 100_Mbps;
+                }
+                address 203.110.84.65/27;
+            }
+        }
+        unit 554 {
+            description "##1ICT_India_Pvt_Ltd#201042#65Mb##";
+            vlan-id 554;
+            family inet {
+                policer {
+                    input 65_Mbps;
+                    output 65_Mbps;
+                }
+                address 203.110.84.209/29;
+            }
+        }
+        unit 555 {
+            description "##Square_Dotcom#201046#100Mb_Demo##";
+            vlan-id 555;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 100_Mbps;
+                    output 100_Mbps;
+                }
+                address 203.110.93.17/29;
+            }
+        }
+        unit 556 {
+            description "#Choice_Hospitality_India_Pvt_Ltd#201078#10Mb##";
+            vlan-id 556;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 10_Mbps;
+                    output 10_Mbps;
+                }
+                address 203.110.90.169/30;
+            }
+        }
+        unit 557 {
+            description "##Cians_Analytics#201044#50Mb##";
+            vlan-id 557;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 50_Mbps;
+                    output 50_Mbps;
+                }
+                address 203.110.93.89/29;
+            }
+        }
+        unit 558 {
+            description "##A_B_GRAIN_SPIRITS_PVT_LTD#201083#50Mb##";
+            vlan-id 558;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 50_Mbps;
+                    output 50_Mbps;
+                }
+                address 203.110.81.113/29;
+            }
+        }
+        unit 560 {
+            description "##Amplus_Management_Services_Pvt_Ltd#211055#70Mb##";
+            vlan-id 560;
+            family inet {
+                filter {
+                    input VOIP;
+                    output VOIP;
+                }
+                policer {
+                    input 70_Mbps;
+                    output 70_Mbps;
+                }
+                address 203.110.81.233/29;
+            }
+        }
+        unit 561 {
+            description "##OPK_E_SERVICES_PVT_LTD#201050#30Mb##";
+            vlan-id 561;
+            family inet {
+                policer {
+                    input 30_Mbps;
+                    output 30_Mbps;
+                }
+                address 203.110.90.153/29;
+            }
+        }
+        unit 580 {
+            description "##Shammi_Kapoor#621005#50Mb##BB";
+            vlan-id 580;
+            family inet {
+                policer {
+                    input 50_Mbps;
+                    output 50_Mbps;
+                }
+                address 203.110.84.33/29;
+            }
+        }
+        unit 600 {
+            disable;
+            description "H1_BPTP#BB";
+            vlan-id 600;
+            family inet {
+                address 203.110.92.1/24;
+                address 103.242.224.1/27;
+            }
+        }
+        unit 601 {
+            description "##PRIVATE#MILL_IPBX##";
+            vlan-id 601;
+            family inet {
+                address 10.10.0.1/16;
+            }
+        }
+        unit 602 {
+            disable;
+            description Unitech_Vista;
+            vlan-id 602;
+            family inet {
+                address 103.129.0.129/26;
+            }
+        }
+        unit 604 {
+            disable;
+            description Aura_Puri;
+            vlan-id 604;
+            family inet {
+                address 103.142.18.129/25;
+            }
+        }
+        unit 605 {
+            disable;
+            description BAANI;
+            vlan-id 605;
+            family inet {
+                address 103.242.226.1/26;
+            }
+        }
+        unit 606 {
+            disable;
+            description Green_Impe;
+            vlan-id 606;
+            family inet {
+                address 103.242.226.129/25;
+            }
+        }
+        unit 608 {
+            disable;
+            description Paras_habitate;
+            vlan-id 608;
+            family inet {
+                address 103.129.0.1/25;
+                address 103.242.226.65/26;
+                address 45.64.93.129/25;
+            }
+        }
+        unit 609 {
+            description Suncity;
+            vlan-id 609;
+            family inet {
+                address 103.129.1.1/24;
+                address 103.242.227.1/25;
+            }
+        }
+        unit 612 {
+            disable;
+            description C4_Success;
+            vlan-id 612;
+            family inet {
+                address 103.242.224.65/27;
+                address 203.110.95.161/27;
+            }
+        }
+        unit 702 {
+            description "##UNITECH_VISTA#VOIP##";
+            vlan-id 702;
+            family inet {
+                address 10.72.0.1/16;
+            }
+        }
+    }
+    xe-0/1/1 {
+        description "##UPLINK#AIRTEL_9498#1.5Gig##";
+        unit 0 {
+            description "##UPLINK#AIRTEL_9498#1.5Gig##";
+            family inet {
+                address 182.74.144.114/30;
+            }
+        }
+    }
+    em3 {
+        unit 0;
+    }
+    em4 {
+        unit 0;
+    }
+    fxp0 {
+        unit 0 {
+            family inet {
+                filter {
+                    input local_acl;
+                }
+                address 172.21.80.11/24;
+            }
+        }
+    }
+    lo0 {
+        unit 0 {
+            family inet {
+                filter {
+                    input local_acl;
+                }
+                address 203.110.80.197/32;
+            }
+        }
+    }
+}
+snmp {
+    community deldsl;
+    routing-instance-access;
+}
+routing-options {
+    static {
+        route 203.110.80.0/20 {
+            discard;
+            preference 225;
+        }
+        route 203.110.80.0/24 {
+            discard;
+            preference 225;
+        }
+        route 103.242.224.0/22 {
+            discard;
+            preference 225;
+        }
+        route 103.129.0.0/23 {
+            discard;
+            preference 225;
+        }
+        route 103.142.18.0/24 {
+            discard;
+            preference 225;
+        }
+        route 103.242.224.0/24 {
+            discard;
+            preference 225;
+        }
+        route 103.242.225.0/24 {
+            discard;
+            preference 225;
+        }
+        route 103.242.226.0/24 {
+            discard;
+            preference 225;
+        }
+        route 103.242.227.0/24 {
+            discard;
+            preference 225;
+        }
+        route 203.110.81.0/24 {
+            discard;
+            preference 225;
+        }
+        route 203.110.82.0/24 {
+            discard;
+            preference 225;
+        }
+        route 203.110.83.0/24 {
+            discard;
+            preference 225;
+        }
+        route 203.110.84.0/24 {
+            discard;
+            preference 225;
+        }
+        route 203.110.85.0/24 {
+            discard;
+            preference 225;
+        }
+        route 203.110.86.0/24 {
+            discard;
+            preference 225;
+        }
+        route 203.110.87.0/24 {
+            discard;
+            preference 225;
+        }
+        route 203.110.88.0/24 {
+            discard;
+            preference 225;
+        }
+        route 203.110.89.0/24 {
+            discard;
+            preference 225;
+        }
+        route 203.110.90.0/24 {
+            discard;
+            preference 225;
+        }
+        route 203.110.91.0/24 {
+            discard;
+            preference 225;
+        }
+        route 203.110.92.0/24 {
+            discard;
+            preference 225;
+        }
+        route 203.110.93.0/24 {
+            discard;
+            preference 225;
+        }
+        route 203.110.94.0/24 {
+            discard;
+            preference 225;
+        }
+        route 203.110.95.0/24 {
+            discard;
+            preference 225;
+        }
+        route 103.129.0.0/24 {
+            discard;
+            preference 225;
+        }
+        route 103.129.1.0/24 {
+            discard;
+            preference 225;
+        }
+        route 45.64.92.0/22 {
+            discard;
+            preference 225;
+        }
+        route 45.64.92.0/24 {
+            discard;
+            preference 225;
+        }
+        route 45.64.93.0/24 {
+            discard;
+            preference 225;
+        }
+        route 45.64.94.0/24 {
+            discard;
+            preference 225;
+        }
+        route 45.64.95.0/24 {
+            discard;
+            preference 225;
+        }
+        route 203.125.101.225/32 next-hop 182.74.144.113;
+    }
+    router-id 203.110.80.197;
+    autonomous-system 23872;
+}
+protocols {
+    bgp {
+        local-address 203.110.80.197;
+        group ibgp {
+            type internal;
+            neighbor 203.110.80.194 {
+                peer-as 23872;
+            }
+            neighbor 203.110.80.193 {
+                description to-Core;
+                peer-as 23872;
+            }
+            neighbor 203.110.80.195 {
+                description IBGP-to-BRAS;
+                peer-as 23872;
+            }
+            neighbor 203.110.80.167 {
+                description pfsense;
+                peer-as 23872;
+            }
+            neighbor 203.110.80.196 {
+                peer-as 23872;
+            }
+        }
+        group AIRTEL {
+            type external;
+            description AIRTEL_UPLINK_AS9498;
+            preference 20;
+            export AIRTEL_BGP_EXPORT;
+            neighbor 182.74.144.113 {
+                local-address 182.74.144.114;
+                peer-as 9498;
+            }
+        }
+        group PEERING {
+            type external;
+            description PEERING_EXTREME;
+            preference 20;
+            export PEERING_EXTREME_EXPORT;
+            neighbor 45.120.248.240 {
+                local-address 45.120.248.101;
+                peer-as 49378;
+            }
+            neighbor 45.120.248.200 {
+                local-address 45.120.248.101;
+                peer-as 49378;
+            }
+            neighbor 45.120.248.44 {
+                description FACEBOOK_1;
+                local-address 45.120.248.101;
+                peer-as 32934;
+            }
+            neighbor 45.120.248.45 {
+                description FACEBOOK_2;
+                local-address 45.120.248.101;
+                peer-as 32934;
+            }
+            neighbor 45.120.248.28 {
+                description NETFLIX_1;
+                local-address 45.120.248.101;
+                peer-as 2906;
+            }
+            neighbor 45.120.248.16 {
+                description NETFLIX_2;
+                local-address 45.120.248.101;
+                peer-as 2906;
+            }
+            neighbor 45.120.248.14 {
+                description AMAZON_1;
+                local-address 45.120.248.101;
+                peer-as 16509;
+            }
+            neighbor 45.120.248.15 {
+                description AMAZON_2;
+                local-address 45.120.248.101;
+                peer-as 16509;
+            }
+            neighbor 45.120.248.13 {
+                description MICROSOFT;
+                local-address 45.120.248.101;
+                peer-as 8075;
+            }
+            neighbor 45.120.248.11 {
+                description AKAMAI;
+                local-address 45.120.248.101;
+                peer-as 20940;
+            }
+            neighbor 45.120.248.12 {
+                description LIMELIGHT;
+                local-address 45.120.248.101;
+                peer-as 55429;
+            }
+        }
+    }
+    ospf {
+        export exportstatic;
+        area 0.0.0.0 {
+            interface xe-0/0/0:0.1110;
+            interface xe-0/0/1:0.0;
+            interface xe-0/0/1:1.0;
+        }
+    }
+}
+policy-options {
+    policy-statement AIRTEL_BGP_EXPORT {
+        term BGP_ROUTE {
+            from {
+                route-filter 103.242.224.0/22 exact;
+                route-filter 45.64.92.0/22 exact;
+                route-filter 103.129.0.0/23 exact;
+                route-filter 103.142.18.0/24 exact;
+                route-filter 203.110.80.0/20 exact;
+                route-filter 102.242.224.0/24 exact;
+                route-filter 103.129.0.0/24 exact;
+                route-filter 103.129.1.0/24 exact;
+                route-filter 103.242.227.0/24 exact;
+            }
+            then accept;
+        }
+        term BGP_ROUTE_DENY {
+            then reject;
+        }
+    }
+    policy-statement PEERING_EXTREME_EXPORT {
+        term BGP_ROUTES {
+            from {
+                route-filter 203.110.82.0/24 exact;
+                route-filter 203.110.87.0/24 exact;
+                route-filter 203.110.85.0/24 exact;
+                route-filter 203.110.84.0/24 exact;
+                route-filter 203.110.81.0/24 exact;
+                route-filter 203.110.88.0/24 exact;
+                route-filter 203.110.91.0/24 exact;
+                route-filter 203.110.93.0/24 exact;
+                route-filter 103.242.225.0/24 exact;
+                route-filter 203.110.90.0/24 exact;
+                route-filter 45.64.93.0/24 exact;
+                route-filter 103.129.0.0/24 exact;
+                route-filter 103.242.226.0/24 exact;
+                route-filter 103.142.18.0/24 exact;
+                route-filter 203.110.83.0/24 exact;
+                route-filter 203.110.86.0/24 exact;
+                route-filter 203.110.92.0/24 exact;
+                route-filter 103.242.224.0/24 exact;
+                route-filter 103.242.227.0/24 exact;
+                route-filter 103.129.1.0/24 exact;
+                route-filter 203.110.95.0/24 exact;
+                route-filter 203.110.94.0/24 exact;
+                route-filter 203.110.89.0/24 exact;
+            }
+            then accept;
+        }
+        term BGP_ROUTES_DENY {
+            then reject;
+        }
+    }
+    policy-statement exportstatic {
+        term exportstatic {
+            from protocol [ static local direct ];
+            then accept;
+        }
+        term ospf_default_originate {
+            from {
+                route-filter 0.0.0.0/0 exact;
+            }
+            then accept;
+        }
+    }
+}
+firewall {
+    family inet {
+        filter local_acl {
+            term terminal_access {
+                from {
+                    source-address {
+                        203.110.80.160/28;
+                        192.168.10.0/24;
+                    }
+                    protocol tcp;
+                    port [ ssh telnet ];
+                    interface fxp0.0;
+                }
+                then accept;
+            }
+            term terminal_access_denied {
+                from {
+                    protocol tcp;
+                    port [ ssh telnet ];
+                }
+                then {
+                    log;
+                    reject;
+                }
+            }
+            term default_term {
+                then accept;
+            }
+        }
+    }
+    policer 100_Mbps {
+        if-exceeding {
+            bandwidth-limit 110m;
+            burst-size-limit 512k;
+        }
+        then discard;
+    }
+    policer 50_Mbps {
+        if-exceeding {
+            bandwidth-limit 55m;
+            burst-size-limit 512k;
+        }
+        then discard;
+    }
+    policer 10_Mbps {
+        if-exceeding {
+            bandwidth-limit 10m;
+            burst-size-limit 512k;
+        }
+        then discard;
+    }
+    policer 20_Mbps {
+        if-exceeding {
+            bandwidth-limit 20m;
+            burst-size-limit 512k;
+        }
+        then discard;
+    }
+    policer 30_Mbps {
+        if-exceeding {
+            bandwidth-limit 30m;
+            burst-size-limit 512k;
+        }
+        then discard;
+    }
+    policer 200_Mbps {
+        if-exceeding {
+            bandwidth-limit 200m;
+            burst-size-limit 512k;
+        }
+        then discard;
+    }
+    policer 3_Mbps {
+        if-exceeding {
+            bandwidth-limit 3m;
+            burst-size-limit 512k;
+        }
+        then discard;
+    }
+    policer 1_Mbps {
+        if-exceeding {
+            bandwidth-limit 1m;
+            burst-size-limit 512k;
+        }
+        then discard;
+    }
+    policer 60_Mbps {
+        if-exceeding {
+            bandwidth-limit 60m;
+            burst-size-limit 512k;
+        }
+        then discard;
+    }
+    policer 35_Mbps {
+        if-exceeding {
+            bandwidth-limit 35m;
+            burst-size-limit 512k;
+        }
+        then discard;
+    }
+    policer 2_Mbps {
+        if-exceeding {
+            bandwidth-limit 2m;
+            burst-size-limit 512k;
+        }
+        then discard;
+    }
+    policer 14_Mbps {
+        if-exceeding {
+            bandwidth-limit 14m;
+            burst-size-limit 512k;
+        }
+        then discard;
+    }
+    policer 4_Mbps {
+        if-exceeding {
+            bandwidth-limit 4m;
+            burst-size-limit 512k;
+        }
+        then discard;
+    }
+    policer 6_Mbps {
+        if-exceeding {
+            bandwidth-limit 6m;
+            burst-size-limit 512k;
+        }
+        then discard;
+    }
+    policer 45_Mbps {
+        if-exceeding {
+            bandwidth-limit 45m;
+            burst-size-limit 512k;
+        }
+        then discard;
+    }
+    policer 22_Mbps {
+        if-exceeding {
+            bandwidth-limit 22m;
+            burst-size-limit 512k;
+        }
+        then discard;
+    }
+    policer 155_Mbps {
+        if-exceeding {
+            bandwidth-limit 155m;
+            burst-size-limit 512k;
+        }
+        then discard;
+    }
+    policer 38_Mbps {
+        if-exceeding {
+            bandwidth-limit 38m;
+            burst-size-limit 512k;
+        }
+        then discard;
+    }
+    policer 11_Mbps {
+        if-exceeding {
+            bandwidth-limit 11m;
+            burst-size-limit 512k;
+        }
+        then discard;
+    }
+    policer 5_Mbps {
+        if-exceeding {
+            bandwidth-limit 5m;
+            burst-size-limit 512k;
+        }
+        then discard;
+    }
+    policer 70_Mbps {
+        if-exceeding {
+            bandwidth-limit 70m;
+            burst-size-limit 512k;
+        }
+        then discard;
+    }
+    policer 26_Mbps {
+        if-exceeding {
+            bandwidth-limit 26m;
+            burst-size-limit 512k;
+        }
+        then discard;
+    }
+    policer 15_Mbps {
+        if-exceeding {
+            bandwidth-limit 15m;
+            burst-size-limit 512k;
+        }
+        then discard;
+    }
+    policer 18_Mbps {
+        if-exceeding {
+            bandwidth-limit 18m;
+            burst-size-limit 512k;
+        }
+        then discard;
+    }
+    policer 80_Mbps {
+        if-exceeding {
+            bandwidth-limit 80m;
+            burst-size-limit 512k;
+        }
+        then discard;
+    }
+    policer 25_Mbps {
+        if-exceeding {
+            bandwidth-limit 25m;
+            burst-size-limit 512k;
+        }
+        then discard;
+    }
+    policer 7_Mbps {
+        if-exceeding {
+            bandwidth-limit 7m;
+            burst-size-limit 512k;
+        }
+        then discard;
+    }
+    policer 12_Mbps {
+        if-exceeding {
+            bandwidth-limit 12m;
+            burst-size-limit 512k;
+        }
+        then discard;
+    }
+    policer 16_Mbps {
+        if-exceeding {
+            bandwidth-limit 16m;
+            burst-size-limit 512k;
+        }
+        then discard;
+    }
+    policer 28_Mbps {
+        if-exceeding {
+            bandwidth-limit 28m;
+            burst-size-limit 512k;
+        }
+        then discard;
+    }
+    policer 8_Mbps {
+        if-exceeding {
+            bandwidth-limit 8m;
+            burst-size-limit 512k;
+        }
+        then discard;
+    }
+    policer 40_Mbps {
+        if-exceeding {
+            bandwidth-limit 40m;
+            burst-size-limit 512k;
+        }
+        then discard;
+    }
+    policer 150_Mbps {
+        if-exceeding {
+            bandwidth-limit 150m;
+            burst-size-limit 512k;
+        }
+        then discard;
+    }
+    policer 120_Mbps {
+        if-exceeding {
+            bandwidth-limit 120m;
+            burst-size-limit 512k;
+        }
+        then discard;
+    }
+    policer 65_Mbps {
+        if-exceeding {
+            bandwidth-limit 65m;
+            burst-size-limit 512k;
+        }
+        then discard;
+    }
+    policer 300_Mbps {
+        if-exceeding {
+            bandwidth-limit 350m;
+            burst-size-limit 512k;
+        }
+        then discard;
+    }
+    policer 400_Mbps {
+        if-exceeding {
+            bandwidth-limit 400m;
+            burst-size-limit 512k;
+        }
+        then discard;
+    }
+    policer 75_Mbps {
+        if-exceeding {
+            bandwidth-limit 76m;
+            burst-size-limit 512k;
+        }
+        then discard;
+    }
+    policer 250_Mbps {
+        if-exceeding {
+            bandwidth-limit 250m;
+            burst-size-limit 512k;
+        }
+        then discard;
+    }
+    policer 350_Mbps {
+        if-exceeding {
+            bandwidth-limit 370m;
+            burst-size-limit 512k;
+        }
+        then discard;
+    }
+    policer 125_Mbps {
+        if-exceeding {
+            bandwidth-limit 130m;
+            burst-size-limit 512k;
+        }
+        then discard;
+    }
+    filter VOIP {
+        term T1 {
+            from {
+                port [ 1718 1719 1720 5060 ];
+            }
+            then {
+                discard;
+            }
+        }
+        term T2 {
+            then accept;
+        }
+    }
+}
+routing-instances {
+    mgmt_junos {
+        routing-options {
+            static {
+                route 192.168.10.0/24 next-hop 172.21.80.1;
+            }
+        }
+    }
+}
+applications {
+    application telnet {
+        inactivity-timeout 60;
+
+##ENDOF_CONFIG##
+

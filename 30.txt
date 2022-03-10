@@ -1,0 +1,787 @@
+##CONFIG##
+
+!LanSwitch BuildRun(Saturn Platform)
+enable
+configure terminal
+![VLAN]
+interface range ethernet 1/1
+switchport mode trunk
+exit
+vlan 604
+description LOTUS_HOMZ_INTERNET
+exit
+vlan 613
+description LOTUS_HOMZ_INTERNET
+exit
+vlan 800
+description LOTUS_HOMZ_PREPAID_METER
+exit
+vlan 813
+description LOTUS_HOMZ_VOIP
+exit
+![DEVICE]
+interface gpon 0/1
+exit
+interface gpon 0/2
+exit
+interface gpon 0/3
+exit
+interface gpon 0/4
+exit
+interface gpon 0/5
+exit
+interface gpon 0/6
+exit
+interface gpon 0/7
+exit
+interface gpon 0/8
+exit
+interface gpon 0/9
+exit
+interface gpon 0/10
+exit
+interface gpon 0/11
+exit
+interface gpon 0/12
+exit
+interface gpon 0/13
+exit
+interface gpon 0/14
+exit
+interface gpon 0/15
+exit
+interface gpon 0/16
+exit
+interface ethernet 1/1
+description ##residence#main_ring#sw82.156#lotus_homz##
+switchport trunk allowed vlan 604,613,800,813
+exit
+interface ethernet 1/2
+exit
+interface ethernet 1/3
+exit
+interface ethernet 1/4
+exit
+interface ethernet 2/1
+exit
+interface ethernet 2/2
+exit
+![PON-SWITCH]
+vlan 800
+pon-switch
+exit
+![OAM]
+username admin privilege 15 password 0 deldsl@nlclsl
+screen-rows per-page 0
+hostname ##OLT#LOTUS_HOMZ#82.158##
+![SNMP]
+snmp-server name ##OLT#LOTUS_HOMZ#82.158##
+snmp-server community deldsl ro permit view iso
+snmp-server host 203.110.80.165 version 2c deldsl udp-port 162 notify-type bri
+dge gbn gbnsavecfg interfaces rmon snmp
+snmp-server enable traps bridge gbn gbnsavecfg interfaces rmon snmp
+![IF]
+interface vlan-interface 1 
+ip address 172.30.82.158 255.255.255.224 
+exit 
+interface vlan-interface 800 
+exit 
+interface meth-interface 0 
+ip address 192.168.100.1 255.255.255.0 
+exit 
+![STATIC_ROUTE]
+ip route 0.0.0.0 0.0.0.0 172.30.82.129
+![deploy-profile-vlan]
+deploy profile vlan
+aim 1 name INTERNET
+translate old-vlan 604 new-vlan 604
+translate old-vlan 613 new-vlan 613
+active
+aim 2 name VOIP
+translate old-vlan 800 new-vlan 800
+translate old-vlan 813 new-vlan 813
+active
+exit
+![deploy-profile-dba]
+deploy profile dba
+aim 1 name GIG_NET
+type 4 max 1024000
+active
+aim 2 name MEGA_VOIP
+type 1 fix 2048
+active
+exit
+![deploy-profile-line]
+deploy profile line
+aim 1 name DATA_ONT
+device type c30-423
+tcont 1 profile dba 1
+tcont 2 profile dba 2
+gemport 1 tcont 1 vlan-profile 1
+gemport 2 tcont 2 vlan-profile 2
+mapping 1 vlan 604 gemport 1
+mapping 2 vlan 813 gemport 2
+mapping 3 vlan 613 gemport 1
+mapping 4 vlan 800 gemport 2
+active
+aim 4 name Huawei_Single
+device type t10-423
+tcont 1 profile dba 1
+tcont 2 profile dba 2
+gemport 1 tcont 1 vlan-profile 1
+gemport 2 tcont 2 vlan-profile 2
+mapping 1 vlan 604 gemport 1
+mapping 2 vlan 813 gemport 2
+mapping 3 vlan 613 gemport 1
+mapping 4 vlan 800 gemport 2
+active
+exit
+![deploy-profile-unique]
+deploy profile unique
+aim 0/1/3
+active
+aim 0/1/9
+active
+aim 0/1/10
+active
+aim 0/1/13
+local protocol-port-80 enable mode forward
+active
+aim 0/2/2
+active
+aim 0/2/3
+active
+aim 0/2/4
+local wan 1 mode static ip-address 10.83.0.99 mask 255.255.0.0 gateway 10.83.0
+.1 vlan 813 1
+local protocol-port-80 enable mode forward
+active
+aim 0/2/5
+local protocol-port-80 enable mode forward
+active
+aim 0/2/6
+active
+aim 0/2/7
+active
+aim 0/2/8
+active
+aim 0/2/9
+local protocol-port-80 enable mode forward
+active
+aim 0/2/10
+active
+aim 0/3/7
+active
+aim 0/3/8
+active
+aim 0/3/10 name 641009_Mayank_C303
+local protocol-port-80 enable mode forward
+active
+aim 0/4/1
+active
+aim 0/4/5 name 641018_Sanjukta_D108
+local protocol-port-80 enable mode forward
+active
+aim 0/4/7
+active
+aim 0/4/8
+local protocol-port-80 enable mode forward
+active
+aim 0/4/10
+active
+aim 0/5/3 name 641074_Saroj_302
+local protocol-port-80 enable mode forward
+active
+aim 0/5/5
+local protocol-port-80 enable mode forward
+active
+aim 0/5/6
+local protocol-port-80 enable mode forward
+active
+aim 0/5/7
+active
+aim 0/5/8
+local protocol-port-80 enable
+active
+aim 0/6/3
+active
+aim 0/6/5
+active
+aim 0/6/8
+local protocol-port-80 enable mode forward
+active
+aim 0/7/2
+active
+aim 0/7/3
+active
+aim 0/7/4
+active
+aim 0/7/5
+active
+aim 0/8/5
+active
+aim 0/8/11 name 641156_Avinash_F807
+active
+aim 0/9/3
+active
+aim 0/9/4
+local protocol-port-80 enable mode forward
+active
+aim 0/10/1
+active
+aim 0/10/2
+active
+aim 0/10/3
+active
+aim 0/10/5
+local protocol-port-80 enable mode forward
+active
+aim 0/10/9 name 641153_Adarsh_G801
+active
+aim 0/11/1 name 646050_Gurpreet_1501
+active
+aim 0/11/2 name 641065_Anil
+active
+aim 0/11/3
+active
+aim 0/12/1
+active
+aim 0/12/3
+active
+aim 0/12/6
+local mode forward
+active
+aim 0/12/7
+local protocol-port-80 enable mode forward
+active
+aim 0/12/11
+active
+aim 0/13/2
+active
+aim 0/13/3
+local protocol-port-80 enable mode forward
+active
+aim 0/13/6
+active
+aim 0/14/1
+active
+aim 0/14/2
+active
+aim 0/14/3
+active
+aim 0/15/2
+active
+aim 0/15/3
+active
+aim 0/15/10
+active
+aim 0/16/1
+active
+aim 0/16/2
+active
+aim 0/16/3
+local protocol-port-80 enable mode forward
+active
+aim 0/16/6
+local protocol-port-80 enable mode forward
+active
+aim 0/16/7
+local protocol-port-80 enable mode forward
+active
+exit
+![deploy-profile-rule]
+deploy profile rule
+aim 0/1/2 name 641007_Birendra_A_102
+permit sn string-hex HWTC-88a178a5 line 1 default line 1
+active
+aim 0/1/3 name 641034_Santosh_A204
+permit sn string-hex GNXS-011f25e0 line 1 default line 1
+active
+aim 0/1/4 name 646002_MainGate
+permit sn string-hex HWTC-e4bc0a4a line 1 default line 1
+active
+aim 0/1/5 name 641020_Towe_A_Meter
+permit sn string-hex HWTC-e4ca844a line 1 default line 1
+active
+aim 0/1/6 name 641020_Towe_J_Meter
+permit sn string-hex HWTC-e4d2f34a line 1 default line 1
+active
+aim 0/1/7 name 641020_Towe_D_Meter
+permit sn string-hex HWTC-e4c59a4a line 1 default line 1
+active
+aim 0/1/8 name 641020_Towe_C_Meter
+permit sn string-hex HWTC-e4d2054a line 1 default line 1
+active
+aim 0/1/9 name 641020_Towe_K_Meter
+permit sn string-hex HWTC-e4cfe54a line 1 default line 1
+active
+aim 0/1/10 name 641020_Towe_E_Meter
+permit sn string-hex HWTC-7c28cd9a line 1 default line 1
+active
+aim 0/1/11 name 641020_Towe_G_Meter
+permit sn string-hex HWTC-e4c4464a line 1 default line 1
+active
+aim 0/1/12 name 641020_Towe_F_Meter
+permit sn string-hex HWTC-e4c3cf4a line 1 default line 1
+active
+aim 0/1/13 name 646002_KCC_EXT_1002_1003
+permit sn string-hex HWTC-e4d15b4a line 1 default line 1
+active
+aim 0/1/14 name 641115_Shubhashish_A704
+permit sn string-hex HWTC-872893a5 line 1 default line 1
+active
+aim 0/1/15 name fakir_641008
+permit sn string-hex HWTC-323df4a6 line 1 default line 1
+active
+aim 0/1/16 name 641146_Simran
+permit sn string-hex HWTC-d6a7829f line 1 default line 1
+active
+aim 0/1/17 name 641142_masuam
+permit sn string-hex HWTC-323defa6 line 1 default line 1
+active
+aim 0/1/18 name 641143_punit
+permit sn string-hex HWTC-872c01a5 line 1 default line 1
+active
+aim 0/1/19 name 641149_Akshay_A501
+permit sn string-hex HWTC-e4c8974a line 1 default line 1
+active
+aim 0/1/20 name 641159_Shatabdi_A202
+permit sn string-hex HWTC-11a66ea6 line 1 default line 1
+active
+aim 0/2/1 name 641002_KCC_T_B
+permit sn string-hex HWTC-8727a4a5 line 1 default line 1
+active
+aim 0/2/2 name 641037_Mahinder
+permit sn string-hex GNXS-6120018a line 1 default line 1
+active
+aim 0/2/3 name 641044_Sunny_A305
+permit sn string-hex GNXS-612001c3 line 1 default line 1
+active
+aim 0/2/4 name 641049_Khushbu_A507
+permit sn string-hex GNXS-6120009e line 1 default line 1
+active
+aim 0/2/5 name 641121_Harvender
+permit sn string-hex HWTC-720e429d line 1 default line 1
+active
+aim 0/2/6 name 641020_Towe_B_Meter
+permit sn string-hex HWTC-e4cc0b4a line 1 default line 1
+active
+aim 0/2/7 name 641060_Bikram
+permit sn string-hex GNXS-612000c1 line 1 default line 1
+active
+aim 0/2/8 name 641062_Samarth_A805
+permit sn string-hex GNXS-61200131 line 1 default line 1
+active
+aim 0/2/9 name 641057_Lotus_Realtech
+permit sn string-hex GNXS-6120006b line 1 default line 1
+active
+aim 0/2/10 name 641078_Rohan
+permit sn string-hex GNXS-01106fe0 line 1 default line 1
+active
+aim 0/2/11 name 641057_Meter
+permit sn string-hex HWTC-3159849d line 1 default line 1
+active
+aim 0/2/12 name 641098_Himanshu_A706
+permit sn string-hex HWTC-872b61a5 line 1 default line 1
+active
+aim 0/2/13 name 641150_shamiksha
+permit sn string-hex HWTC-d6ac009f line 1 default line 1
+active
+aim 0/3/1 name 641017_Agrima
+permit sn string-hex HWTC-88a072a5 line 1 default line 1
+active
+aim 0/3/2 name 641066_Saurabh_C306
+permit sn string-hex GNXS-61200f25 line 1 default line 1
+active
+aim 0/3/3 name 641073_Disha_C502
+permit sn string-hex GNXS-61200235 line 1 default line 1
+active
+aim 0/3/4 name 641127_Rahul_C203
+permit sn string-hex HWTC-323a33a6 line 1 default line 1
+active
+aim 0/3/5 name 646020
+permit sn string-hex HWTC-e4d2054a line 1 default line 1
+active
+aim 0/3/7 name 641068_Jobin
+permit sn string-hex GNXS-61200b8c line 1 default line 1
+active
+aim 0/3/8 name 641087_Nadeem
+permit sn string-hex GNXS-61200225 line 1 default line 1
+active
+aim 0/3/9 name 641107_suman
+permit sn string-hex HWTC-872ae0a5 line 1 default line 1
+active
+aim 0/3/10 name 641009_Mayank_C303
+permit sn string-hex HWTC-323ba8a6 line 1 default line 1
+active
+aim 0/4/1 name 641032
+permit sn string-hex HWTC-e51fca9f line 1 default line 1
+active
+aim 0/4/2 name 641033
+permit sn string-hex HWTC-88a0b7a5 line 1 default line 1
+active
+aim 0/4/3 name 641005
+permit sn string-hex HWTC-acdf7da3 line 1 default line 1
+active
+aim 0/4/4 name 641019
+permit sn string-hex HWTC-967dd2a4 line 1 default line 1
+active
+aim 0/4/5 name 641018_Sanjukta_D108
+permit sn string-hex HWTC-32359aa6 line 1 default line 1
+active
+aim 0/4/6 name 641013_Stuti_D704
+permit sn string-hex HWTC-d6a8719f line 1 default line 1
+active
+aim 0/4/7 name 641039_Mamta
+permit sn string-hex GNXS-612000b4 line 1 default line 1
+active
+aim 0/4/8 name 641063_Alok_D803
+permit sn string-hex GNXS-61200184 line 1 default line 1
+active
+aim 0/4/9 name 641086_Mudit
+permit sn string-hex GNXS-6120021d line 1 default line 1
+active
+aim 0/4/10 name 641102_Kulbir_C506
+permit sn string-hex HWTC-872b3fa5 line 1 default line 1
+active
+aim 0/4/11 name 641112_Amit_C_904
+permit sn string-hex HWTC-872bbda5 line 1 default line 1
+active
+aim 0/4/12 name 641129_Arpit_D701
+permit sn string-hex HWTC-323d11a6 line 1 default line 1
+active
+aim 0/4/13 name 641131_neha
+permit sn string-hex HWTC-323a80a6 line 1 default line 1
+active
+aim 0/4/14 name ankrita_641134
+permit sn string-hex HWTC-3238ada6 line 1 default line 1
+active
+aim 0/4/16 name 641152_vivek
+permit sn string-hex HWTC-91df289f line 1 default line 1
+active
+aim 0/4/17 name 641141_Dasari_Krishna
+permit sn string-hex HWTC-323dd5a6 line 1 default line 1
+active
+aim 0/5/1 name 641010_Madhu_D606
+permit sn string-hex HWTC-88a2c2a5 line 1 default line 1
+active
+aim 0/5/2 name 641014_Darpana_D707
+permit sn string-hex HWTC-ace0d5a3 line 1 default line 1
+active
+aim 0/5/3 name 641074_Saroj_302
+permit sn string-hex GNXS-612001fc line 1 default line 1
+active
+aim 0/5/4 name 641011_Anup_D103
+permit sn string-hex HWTC-8726e3a5 line 1 default line 1
+active
+aim 0/5/5 name 641077_Ashish
+permit sn string-hex GNXS-60c01751 line 1 default line 1
+active
+aim 0/5/6 name 641088_Vineet
+permit sn string-hex HWTC-872b2ba5 line 1 default line 1
+active
+aim 0/5/7 name 641103_Jeevanjyoti_F707
+permit sn string-hex HWTC-872b75a5 line 1 default line 1
+active
+aim 0/5/8 name 641116_Vir
+permit sn string-hex HWTC-872b63a5 line 1 default line 1
+active
+aim 0/5/9 name 641122_Jagtar
+permit sn string-hex HWTC-75e9a89d line 1 default line 1
+active
+aim 0/5/10 name 641133_Sharad
+permit sn string-hex HWTC-323dbba6 line 1 default line 1
+active
+aim 0/5/11 name 641155_Shailender
+permit sn string-hex HWTC-03d1a69d line 1 default line 1
+active
+aim 0/6/1 name 641015_Amit_E408
+permit sn string-hex HWTC-d6aa569f line 1 default line 1
+active
+aim 0/6/2 name 641012_Uesh_E901
+permit sn string-hex HWTC-966f08a4 line 1 default line 1
+active
+aim 0/6/3 name 641038_Dhananjay_E107
+permit sn string-hex GNXS-61200173 line 1 default line 1
+active
+aim 0/6/4 name 641052_Prem_E301
+permit sn string-hex GNXS-61200f24 line 1 default line 1
+active
+aim 0/6/5 name 641067_Krishna_E703
+permit sn string-hex GNXS-61200b79 line 1 default line 1
+active
+aim 0/6/7 name 641079_Prashant
+permit sn string-hex GNXS-6120005f line 1 default line 1
+active
+aim 0/6/8 name 641094_Suraj
+permit sn string-hex HWTC-61200158 line 1 default line 1
+active
+aim 0/6/9 name 641124_Raghu_E603
+permit sn string-hex HWTC-3233dca6 line 1 default line 1
+active
+aim 0/6/10 name Bhanu_641071
+permit sn string-hex HWTC-3238b4a6 line 1 default line 1
+active
+aim 0/7/1 name 641004_Milind_E807
+permit sn string-hex HWTC-91ded19f line 1 default line 1
+active
+aim 0/7/2 name 641041_Vikash_F102
+permit sn string-hex GNXS-6120018b line 1 default line 1
+active
+aim 0/7/3 name 641056_Nimit
+permit sn string-hex GNXS-61200f36 line 1 default line 1
+active
+aim 0/7/4 name 641064_Kamal
+permit sn string-hex GNXS-61200176 line 1 default line 1
+active
+aim 0/7/5 name 641075_Manoranjan
+permit sn string-hex GNXS-612000c8 line 1 default line 1
+active
+aim 0/7/6 name 641095_Deepti_F506
+permit sn string-hex HWTC-8726e0a5 line 1 default line 1
+active
+aim 0/7/7 name 641096_Sheetal_F101
+permit sn string-hex HWTC-872b12a5 line 1 default line 1
+active
+aim 0/7/8 name 641104_Nitin_F302
+permit sn string-hex HWTC-872aa4a5 line 1 default line 1
+active
+aim 0/7/9 name 641135_abhishek
+permit sn string-hex HWTC-32371ca6 line 1 default line 1
+active
+aim 0/7/10 name 641144_ronak
+permit sn string-hex HWTC-323e01a6 line 1 default line 1
+active
+aim 0/8/1 name 641006_Sulagna_F1002
+permit sn string-hex HWTC-88a192a5 line 1 default line 1
+active
+aim 0/8/2 name 641047_Vikas_F605
+permit sn string-hex GNXS-61200106 line 1 default line 1
+active
+aim 0/8/3 name 641051_Asha_F1008
+permit sn string-hex GNXS-6120023e line 1 default line 1
+active
+aim 0/8/4 name 641076_Chandan_F407
+permit sn string-hex GNXS-6120001a line 1 default line 1
+active
+aim 0/8/5 name 641082_Simer_F108
+permit sn string-hex GNXS-612001de line 1 default line 1
+active
+aim 0/8/6 name 641101_shrikant_F706
+permit sn string-hex HWTC-872b95a5 line 1 default line 1
+active
+aim 0/8/7 name 641100_Shalini
+permit sn string-hex HWTC-872af7a5 line 1 default line 1
+active
+aim 0/8/8 name 641123_Ritu
+permit sn string-hex HWTC-da5c719d line 1 default line 1
+active
+aim 0/8/9 name 641125_Tarun_F806
+permit sn string-hex HWTC-c01a879d line 1 default line 1
+active
+aim 0/8/10 name 641136_Dhruv_F408
+permit sn string-hex HWTC-323341a6 line 1 default line 1
+active
+aim 0/8/11 name 641156_Avinash_F807
+permit sn string-hex HWTC-4654809d line 1 default line 1
+active
+aim 0/8/15 name 641156_Avinash
+permit sn string-hex HWTC-88a16ea5 line 1 default line 1
+active
+aim 0/9/1 name 641016_Nirmala_G706
+permit sn string-hex HWTC-91de999f line 1 default line 1
+active
+aim 0/9/2 name 641046_Sujit_G1005
+permit sn string-hex GNXS-01042cab line 1 default line 1
+active
+aim 0/9/3 name 641084_Bobby_G102
+permit sn string-hex GNXS-6120049f line 1 default line 1
+active
+aim 0/9/4 name 641089_Harsh
+permit sn string-hex GNXS-6120004b line 1 default line 1
+active
+aim 0/9/5 name 641132_Sunil_G808
+permit sn string-hex HWTC-323da8a6 line 1 default line 1
+active
+aim 0/9/6 name 641151_Ankur_G905
+permit sn string-hex HWTC-3238afa6 line 1 default line 1
+active
+aim 0/10/1 name 641036_Shikher_G502
+permit sn string-hex GNXS-61200182 line 1 default line 1
+active
+aim 0/10/2 name 641045_Siddharth_G802
+permit sn string-hex GNXS-612001cf line 1 default line 1
+active
+aim 0/10/3 name 646053_Gyanender_H804
+permit sn string-hex GNXS-61200185 line 1 default line 1
+active
+aim 0/10/4 name 641081_Jyoti_G1003
+permit sn string-hex GNXS-6120052c line 1 default line 1
+active
+aim 0/10/5 name 641113_Jatinder
+permit sn string-hex HWTC-872b70a5 line 1 default line 1
+active
+aim 0/10/6 name 641110_Bhuneshwar
+permit sn string-hex HWTC-872aeca5 line 1 default line 1
+active
+aim 0/10/7 name 641145_Merwyn_H604
+permit sn string-hex HWTC-d6b02b9f line 1 default line 1
+active
+aim 0/10/8 name 641147_Vishlesh_H-801
+permit sn string-hex HWTC-88a2c7a5 line 1 default line 1
+active
+aim 0/10/9 name 641153_Adarsh_G801
+permit sn string-hex HWTC-96971ba4 line 1 default line 1
+active
+aim 0/10/11 name 641158_Vineet_G804
+permit sn string-hex HWTC-11a4e7a6 line 1 default line 1
+active
+aim 0/10/12 name 641139_mirtunjay
+permit sn string-hex HWTC-323b6ca6 line 1 default line 1
+active
+aim 0/11/1 name 646050_Gurpreet_1501
+permit sn string-hex GNXS-61200c37 line 1 default line 1
+active
+aim 0/11/2 name 641065_Anil_I302
+permit sn string-hex GNXS-612000c4 line 1 default line 1
+active
+aim 0/11/3 name 641069_Raj
+permit sn string-hex GNXS-61200c33 line 1 default line 1
+active
+aim 0/12/1 name 641035_Sunil_H507
+permit sn string-hex GNXS-612000ba line 1 default line 1
+active
+aim 0/12/2 name 641109_preeti
+permit sn string-hex HWTC-872bc2a5 line 1 default line 1
+active
+aim 0/12/3 name 641130_prerana
+permit sn string-hex HWTC-323dcaa6 line 1 default line 1
+active
+aim 0/12/4 name 641020_Towe_H_Meter
+permit sn string-hex HWTC-e4d0074a line 1 default line 1
+active
+aim 0/12/5 name 641061_Abhas
+permit sn string-hex GNXS-612001f9 line 1 default line 1
+active
+aim 0/12/6 name 641085_Anil
+permit sn string-hex GNXS-61200068 line 1 default line 1
+active
+aim 0/12/7 name 641092_Akhilesh
+permit sn string-hex GNXS-61200f55 line 1 default line 1
+active
+aim 0/12/8 name 641126_Puneet
+permit sn string-hex HWTC-323d14a6 line 1 default line 1
+active
+aim 0/12/9 name ipp
+permit sn string-hex HWTC-e4d0f54a line 1 default line 1
+active
+aim 0/12/11 name Naven_641148
+permit sn string-hex HWTC-d6aafb9f line 1 default line 1
+active
+aim 0/13/1 name 641055_Neha_J1301
+permit sn string-hex HWTC-872bfea5 line 1 default line 1
+active
+aim 0/13/3 name 641070_Ashok
+permit sn string-hex GNXS-61200144 line 1 default line 1
+active
+aim 0/13/4 name 641072_Piyush
+permit sn string-hex GNXS-010b8188 line 1 default line 1
+active
+aim 0/13/5 name 641080_Abhinav
+permit sn string-hex GNXS-612004a8 line 1 default line 1
+active
+aim 0/13/6 name 641083_Ankush
+permit sn string-hex GNXS-612004f7 line 1 default line 1
+active
+aim 0/13/7 name 641097_Vijay_J103
+permit sn string-hex HWTC-8727caa5 line 1 default line 1
+active
+aim 0/13/8 name 641108_Sanjay_I306
+permit sn string-hex HWTC-872b9da5 line 1 default line 1
+active
+aim 0/14/1 name 641042_Keshav
+permit sn string-hex GNXS-61200188 line 1 default line 1
+active
+aim 0/14/2 name 641043_Amresh_Kumar
+permit sn string-hex GNXS-612009dc line 1 default line 1
+active
+aim 0/14/3 name 641058_Aman_J607
+permit sn string-hex GNXS-6120026e line 1 default line 1
+active
+aim 0/14/4 name 641154_vikky
+permit sn string-hex HWTC-3689269d line 1 default line 1
+active
+aim 0/14/5 name 641114_Ujjwal_J308
+permit sn string-hex HWTC-872a99a5 line 1 default line 1
+active
+aim 0/15/1 name 641003_Priya_K105
+permit sn string-hex HWTC-88a190a5 line 1 default line 1
+active
+aim 0/15/2 name 641054_Subir_K406
+permit sn string-hex GNXS-6120015e line 1 default line 1
+active
+aim 0/15/3 name 641091_Manoj_K503
+permit sn string-hex GNXS-6120014e line 1 default line 1
+active
+aim 0/15/4 name 641106_vikash_K103
+permit sn string-hex HWTC-872b74a5 line 1 default line 1
+active
+aim 0/15/5 name 641105_Ashutosh
+permit sn string-hex HWTC-872b4ca5 line 1 default line 1
+active
+aim 0/15/6 name 641111_Nikita_K308
+permit sn string-hex HWTC-872af1a5 line 1 default line 1
+active
+aim 0/15/7 name 641117_Judith_K701
+permit sn string-hex HWTC-872ba8a5 line 1 default line 1
+active
+aim 0/15/8 name 641118_Varun_K107
+permit sn string-hex HWTC-ace093a3 line 1 default line 1
+active
+aim 0/15/9 name 641128_Geeta_K704
+permit sn string-hex HWTC-323db2a6 line 1 default line 1
+active
+aim 0/15/10 name 641138_Ashwin
+permit sn string-hex HWTC-32355aa6 line 1 default line 1
+active
+aim 0/15/11 name 641140_Malati
+permit sn string-hex HWTC-323e0aa6 line 1 default line 1
+active
+aim 0/16/1 name 641048_Neeraj
+permit sn string-hex GNXS-612001e6 line 1 default line 1
+active
+aim 0/16/2 name 641090_Bhuvanesh
+permit sn string-hex GNXS-61200197 line 1 default line 1
+active
+aim 0/16/3 name club_house_66105
+permit sn string-hex HWTC-323d93a6 line 1 default line 1
+active
+aim 0/16/4 name 641119_rishav
+permit sn string-hex HWTC-d6a7109f line 1 default line 1
+active
+aim 0/16/5 name 641120_ankita
+permit sn string-hex HWTC-872be4a5 line 1 default line 1
+active
+aim 0/16/6 name 661002_Facility_B5
+permit sn string-hex HWTC-616a4e9b line 1 default line 1
+active
+aim 0/16/7 name 661003_GuardRoom
+permit sn string-hex HWTC-323593a6 line 1 default line 1
+active
+aim 0/16/8 name 641137_Ekta_K908
+permit sn string-hex HWTC-32359fa6 line 1 default line 1
+active
+aim 0/16/9 name 661004_Nitin_B2005
+permit sn string-hex HWTC-67258b9d line 1 default line 1
+active
+aim 0/16/10 name 661006_Vumin_B4904
+permit sn string-hex HWTC-318cd19d line 1 default line 1
+active
+exit
+exit
+![gpon-device]
+ont-find interface gpon all
+ont-find list-age
+
+##ENDOF_CONFIG##
+

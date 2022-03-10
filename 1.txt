@@ -1,0 +1,104 @@
+##CONFIG##
+
+UV#RING_1#P N A Corpserve#SW82.61### 
+##UV#RING_1#P N A Corpserve#SW82.61### 
+  Building configuration...
+
+  Current configuration: 
+
+no remote-management 1 
+vlan 1 
+  name 1 
+  normal 1-8 
+  fixed 9-10 
+  forbidden "" 
+  untagged 1-10 
+  ip address default-management 172.30.82.61 255.255.255.224 
+  ip address default-gateway 172.30.82.33 
+exit 
+vlan 135 
+  name "P N A Corpserve" 
+  normal 2-8 
+  fixed 1,9-10 
+  forbidden "" 
+  untagged 1 
+exit 
+interface port-channel 1  
+  name "##P N A Corpserve#131427#100Mb#UV##" 
+  pvid 135 
+  ingress-check 
+  bandwidth-limit ingress 107520 
+  bandwidth-limit ingress 
+  bandwidth-limit egress 107520 
+  bandwidth-limit egress 
+  broadcast-limit 
+  broadcast-limit 500 
+  multicast-limit 
+  multicast-limit 500 
+  dlf-limit 
+  dlf-limit 500 
+  loopguard 
+exit 
+interface port-channel 2  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 3  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 4  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 5  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 6  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 7  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 8  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 9  
+  name "##UV#RING_1#Enter 10 Television#SW82.45##" 
+  vlan-trunking 
+exit 
+interface port-channel 10  
+  name "##UV#RING_1#Think Future Technologie#SW82.73##" 
+  vlan-trunking 
+exit 
+spanning-tree 
+spanning-tree 9 
+spanning-tree 10 
+spanning-tree 1 edge-port 
+spanning-tree 2 edge-port 
+spanning-tree 3 edge-port 
+spanning-tree 4 edge-port 
+spanning-tree 5 edge-port 
+spanning-tree 6 edge-port 
+spanning-tree 7 edge-port 
+spanning-tree 8 edge-port 
+hostname "##UV#RING_1#P N A Corpserve#SW82.61##" 
+storm-control 
+bandwidth-control 
+loopguard 
+snmp-server get-community deldsl 
+snmp-server set-community "" 
+snmp-server trap-community "" 
+remote-management 2 
+remote-management 3 
+remote-management 4 
+remote-management 5 
+remote-management 2 start-addr 172.30.82.1 end-addr 172.30.82.254 service telnet ftp http icmp snmp  
+remote-management 3 start-addr 203.110.80.184 end-addr 203.110.80.187 service icmp snmp
+
+##ENDOF_CONFIG##
+

@@ -1,0 +1,93 @@
+##CONFIG##
+
+mill#ring_3#Satkar Travels#sw82.103### 
+##mill#ring_3#Satkar Travels#sw82.103### 
+  Building configuration...
+
+  Current configuration: 
+
+vlan 1 
+  name 1 
+  normal "" 
+  fixed 1-10 
+  forbidden "" 
+  untagged 1-10 
+  ip address default-management 172.30.82.103 255.255.255.224 
+  ip address default-gateway 172.30.82.97 
+exit 
+vlan 338 
+  name SAtkar 
+  normal 2-8 
+  fixed 1,9-10 
+  forbidden "" 
+  untagged 1 
+exit 
+interface port-channel 1  
+  name "##SatkarTravels Pvt Ltd#111387#15Mb#Mill##" 
+  pvid 338 
+  ingress-check 
+  bandwidth-limit ingress 17408 
+  bandwidth-limit ingress 
+  bandwidth-limit egress 17408 
+  bandwidth-limit egress 
+  broadcast-limit 
+  broadcast-limit 500 
+  multicast-limit 
+  multicast-limit 500 
+  dlf-limit 
+  dlf-limit 500 
+  loopguard 
+exit 
+interface port-channel 2  
+  loopguard 
+exit 
+interface port-channel 3  
+  loopguard 
+exit 
+interface port-channel 4  
+  loopguard 
+exit 
+interface port-channel 5  
+  loopguard 
+exit 
+interface port-channel 6  
+  loopguard 
+exit 
+interface port-channel 7  
+  loopguard 
+exit 
+interface port-channel 8  
+  loopguard 
+exit 
+interface port-channel 9  
+  name "##MILL#RING_3#ARM DIGITAL#SW82.5##" 
+  vlan-trunking 
+exit 
+interface port-channel 10  
+  name "##mill#ring_3#indo asia leisure#sw82.8##" 
+  vlan-trunking 
+exit 
+spanning-tree 
+spanning-tree 9 
+spanning-tree 10 
+spanning-tree 1 edge-port 
+spanning-tree 2 edge-port 
+spanning-tree 3 edge-port 
+spanning-tree 4 edge-port 
+spanning-tree 5 edge-port 
+spanning-tree 6 edge-port 
+spanning-tree 7 edge-port 
+spanning-tree 8 edge-port 
+hostname "##mill#ring_3#Satkar Travels#sw82.103##" 
+storm-control 
+bandwidth-control 
+loopguard 
+snmp-server get-community deldsl 
+snmp-server set-community "" 
+snmp-server trap-community "" 
+remote-management 2 
+remote-management 1 start-addr 203.110.80.161 end-addr 203.110.80.174 service telnet ftp http icmp snmp ssh https  
+remote-management 2 start-addr 172.30.82.1 end-addr 172.30.82.254 service icmp snmp
+
+##ENDOF_CONFIG##
+

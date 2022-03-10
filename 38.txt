@@ -1,0 +1,208 @@
+##CONFIG##
+
+It will take a long time if the content you search is too much or the string  you input is too long, you can press CTRL_C to break
+[Active: H801MCUD1; Standby: --]
+[Patch Info: SPH101]
+[MA5600V800R018: 5600]
+#
+[sysmode]
+  <sysmode>
+ switch adsl mode to rfc2662 vdsl mode to tr129
+ xpon mode switch-to profile-mode
+ voice-spec set vag-num 8
+ voice-spec set sip-account-num 2048
+ protocol support h248
+ system ex-mode backup
+ router mode basic
+#
+[global-config]
+  <global-config>
+ sysname EMAAR_VPP
+ terminal user name buildrun_new_password root *j$1b$E89-M+a]J<$.QvCF);#t8z^n\K\XTL#E])cD'^J:(L0,09wi93N$* 7 0000:00:00:00:00:00 2019:09:16:23:22:51 root 1 
+first-login-info 0 "-----"
+ terminal user name buildrun_new_password deldsl *~pc$1b$.qSmOiIk3L$2n(V#,HapXS\#1/$57#N'^DADt;S1<ZMgMB=F0_+$* 0 2019:05:30:15:07:48 2019:09:16:23:22:24 root 2 first-login-info 0 "-----"
+ terminal user name history_password root *j$1b$^m;h#N]G~<$!zWW1F8_E:X17^!pdW+
+Ex@~:;wGP~9$xy!9X./t)$* *j$1b$d:9N#jmjvP$6MY\6ZFVg-!Jn9&"Ob%LBgBsVDb6m$gu`]HB$
+dWC$*
+ terminal user name history_password deldsl *~pc$1b$=mEZ.3`_B=$657iRE]7v%[YF}
+QvfWU>xdJ{&aXl~K2Ap;IvEC+C$*
+ dba-profile add profile-id 11 profile-name "ONT_Voice" type3 assure 1024 max 
+1024
+ dba-profile add profile-id 12 profile-name "ONT_Data" type4 max 102400
+ gpon ont home-gateway config-method omci
+ ont-srvprofile gpon profile-id 100 profile-name "ONT"
+  ont-port pots adaptive 32 eth adaptive 8 catv adaptive 8
+  commit
+ ont-lineprofile gpon profile-id 0 profile-name "line-profile_default_0"
+  tcont 0 dba-profile-id 2
+  tcont 1 dba-profile-id 0
+  commit
+  quit
+ ont-lineprofile gpon profile-id 200 profile-name "ONT_Data_Voice"
+  tcont 1 dba-profile-id 12
+  tcont 2 dba-profile-id 11
+  gem add 1 eth tcont 1
+  gem add 2 eth tcont 2
+  gem add 3 eth tcont 1
+  gem add 4 eth tcont 1
+  gem add 5 eth tcont 1
+  gem add 6 eth tcont 1
+  gem add 7 eth tcont 1
+  gem add 8 eth tcont 1
+  gem add 9 eth tcont 1
+  gem mapping 1 0 vlan 200
+  gem mapping 2 0 vlan 601
+  gem mapping 2 1 vlan 100
+  gem mapping 3 0 vlan 558
+  gem mapping 4 0 vlan 560
+  gem mapping 5 0 vlan 101
+  gem mapping 6 0 vlan 11
+  gem mapping 7 0 vlan 427
+  gem mapping 8 0 vlan 428
+  gem mapping 9 0 vlan 457
+  commit
+  quit
+#
+[device-config]
+  <device-config>
+ board add 0/0 H807GPBH
+ board add 0/4 H801MPWD
+#
+[public-config]
+  <public-config>
+ monitor uplink-port traffic port 0/2/0
+ monitor uplink-port traffic port 0/2/1
+ monitor uplink-port traffic port 0/2/2
+ monitor uplink-port traffic port 0/2/3
+ snmp-agent local-engineid 000007DB032841C60BA92033
+ snmp-agent community read %#%#eJJfI1;:A$5YUo7kY`_&#Ok@(e$\7Oc#9U*s@8yJ/i.rGoJC}*>2>+'h0{T,%#%#
+ snmp-agent community write %#%#H|eqBYA2eLh2~6"P2GL:tSojOr\X.3A@@**XptD(cCN*"Y< p|4)u*Z2K_aT1%#%#
+#
+[vlan-config]
+  <vlan-config>
+ vlan 11 smart
+ vlan 100 to 101 smart
+ vlan 200 smart
+ vlan 427 smart
+ vlan 457 smart
+ vlan 558 smart
+ vlan 560 smart
+ vlan 601 smart
+ port vlan 100 to 101 0/2 0
+ port vlan 200 0/2 0
+ port vlan 427 0/2 0
+ port vlan 457 0/2 0
+ port vlan 558 0/2 0
+ port vlan 560 0/2 0
+ port vlan 601 0/2 0
+#
+[mcu]
+  <mcu-0/2>
+interface mcu 0/2
+ mdi 0 normal
+ speed 0 1000
+ speed 1 1000
+ speed 2 1000
+ speed 3 1000
+#
+[gpon]
+  <gpon-0/0>
+ interface gpon 0/0
+ port 0 ont-auto-find enable
+ port 1 ont-auto-find enable
+ port 2 ont-auto-find enable
+ port 3 ont-auto-find enable
+ port 4 ont-auto-find enable
+ port 5 ont-auto-find enable
+ port 6 ont-auto-find enable
+ ont add 0 3 sn-auth "48575443E4C1384A" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "211052"
+ ont add 0 7 sn-auth "48575443AC717B9E" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "211053_Kontent"
+ ont add 0 9 sn-auth "48575443AC71739E" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "##Amplus#211055#70Mb##"
+ ont add 0 11 sn-auth "48575443AC6E9A9E" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "211056"
+ ont add 0 12 sn-auth "48575443AC71699E" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "156076_Brindco"
+ ont add 1 0 sn-auth "48575443D6AC6E9F" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "211057_NCR_BUSINESS"
+ ont add 2 0 sn-auth "48575443A294F1A3" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "151183_Signet"
+ ont add 2 2 sn-auth "4857544396935AA4" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "151034_Pareena"
+ ont add 2 3 sn-auth "4857544301106930" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "211058_Insight"
+#
+[emu-config]
+  <emu-config>
+ emu add 0 fan 0 1  "H831FCBB"
+ emu add 1 h801pmu 0 0  "H801PMUB"
+#
+[bbs-config]
+  <bbs-config>
+ service-port 1 vlan 101 gpon 0/0/2 ont 0 gemport 5 multi-service user-vlan 101 tag-transform translate
+ service-port 3 vlan 427 gpon 0/0/2 ont 2 gemport 7 multi-service user-vlan 427 tag-transform translate
+ service-port 5 vlan 200 gpon 0/0/0 ont 3 gemport 1 multi-service user-vlan 200 tag-transform translate
+ service-port 6 vlan 601 gpon 0/0/0 ont 3 gemport 2 multi-service user-vlan 601 tag-transform translate
+ service-port 8 vlan 457 gpon 0/0/2 ont 3 gemport 9 multi-service user-vlan 457 tag-transform translate
+ service-port 9 vlan 200 gpon 0/0/0 ont 7 gemport 1 multi-service user-vlan 200 tag-transform translate
+ service-port 10 vlan 601 gpon 0/0/2 ont 3 gemport 2 multi-service user-vlan 601 tag-transform translate
+ service-port 12 vlan 601 gpon 0/0/0 ont 7 gemport 2 multi-service user-vlan 601 tag-transform translate
+ service-port 15 vlan 200 gpon 0/0/0 ont 11 gemport 1 multi-service user-vlan 
+200 tag-transform translate
+ service-port 18 vlan 560 gpon 0/0/0 ont 9 gemport 4 multi-service user-vlan 560 tag-transform translate
+ service-port 19 vlan 601 gpon 0/0/0 ont 12 gemport 2 multi-service user-vlan 
+601 tag-transform translate
+ service-port 20 vlan 200 gpon 0/0/1 ont 0 gemport 1 multi-service user-vlan 200 tag-transform translate
+ service-port 21 vlan 601 gpon 0/0/1 ont 0 gemport 2 multi-service user-vlan 601 tag-transform translate
+ service-port 22 vlan 100 gpon 0/0/1 ont 0 gemport 2 multi-service user-vlan 100 tag-transform translate
+#
+[config]
+  <config>
+ mpls label start 8192
+#
+[prevlanif]
+  <prevlanif>
+ interface vlanif1
+ interface vlanif457
+#
+[vlanif]
+  <vlanif1>
+interface vlanif1
+ ip address 172.30.85.65 255.255.255.0
+#
+  <vlanif457>
+interface vlanif457
+#
+[meth]
+  <meth0>
+interface meth0
+ ip address 10.11.104.2 255.255.255.0
+#
+[null]
+  <null0>
+interface null0
+#
+[aaa]
+  <aaa>
+aaa
+ authentication-scheme "default"
+ #
+ authorization-scheme "default"
+ #
+ accounting-scheme "default"
+ #
+ domain "default"
+ #
+#
+[post-system]
+  <post-system>
+ip route-static 0.0.0.0 0.0.0.0 172.30.85.1
+ ssh user root authentication-type password
+ ssh user deldsl authentication-type password
+#
+return
+
+##ENDOF_CONFIG##
+

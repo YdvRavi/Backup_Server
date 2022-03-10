@@ -1,0 +1,888 @@
+##CONFIG##
+
+!LanSwitch BuildRun(Saturn Platform)
+enable
+configure terminal
+![VLAN]
+interface range ethernet 1/2
+switchport mode access
+exit
+interface range ethernet 1/1
+switchport mode trunk
+exit
+vlan 100,400,500
+exit
+![DEVICE]
+interface gpon 0/1
+description 1
+exit
+interface gpon 0/2
+exit
+interface gpon 0/3
+exit
+interface gpon 0/4
+exit
+interface gpon 0/5
+port-car-rate 27
+exit
+interface gpon 0/6
+exit
+interface gpon 0/7
+exit
+interface gpon 0/8
+exit
+interface ethernet 1/1
+switchport trunk allowed vlan 100,400,500
+exit
+interface ethernet 1/2
+mtu 1500
+switchport default vlan 500
+exit
+interface ethernet 1/3
+shutdown
+exit
+interface ethernet 1/4
+exit
+interface ethernet 2/1
+exit
+interface ethernet 2/2
+exit
+![OAM]
+service password-encryption
+username admin privilege 15 password 7 bf18ebb3
+username deldsl privilege 1 password 7 4f6f80c9
+screen-rows per-page 0
+hostname H-MAX
+clock timezone delhi 5 30
+![SNMP]
+snmp-server name H-MAX
+snmp-server community deldsl ro permit view iso
+snmp-server community public rw permit view iso
+snmp-server community private rw permit view iso
+snmp-server host 203.110.80.165 version 2c deldsl udp-port 162 notify-type bri
+dge gbn gbnsavecfg interfaces rmon snmp
+snmp-server enable traps bridge gbn gbnsavecfg interfaces rmon snmp
+![IF]
+interface vlan-interface 1 
+ip address 172.30.82.137 255.255.255.224 
+exit 
+interface vlan-interface 100 
+exit 
+interface meth-interface 0 
+ip address 192.168.100.1 255.255.255.0 
+exit 
+![STATIC_ROUTE]
+ip route 0.0.0.0 0.0.0.0 172.30.82.129
+![LLDP]
+lldp
+![deploy-profile-vlan]
+deploy profile vlan
+aim 1 name INTERNET
+translate old-vlan 400 new-vlan 400
+active
+aim 2 name VOIP
+translate old-vlan 500 new-vlan 500
+active
+exit
+![deploy-profile-dba]
+deploy profile dba
+aim 1 name GIG_NET
+type 4 max 1024000
+active
+aim 2 name MEGA_VOIP
+type 1 fix 2048
+active
+exit
+![deploy-profile-line]
+deploy profile line
+aim 1 name DATA_ONT
+device type c30-423
+tcont 1 profile dba 1
+tcont 2 profile dba 2
+gemport 1 tcont 1 vlan-profile 1
+gemport 2 tcont 2 vlan-profile 2
+mapping 1 vlan 400 gemport 1
+mapping 2 vlan 500 gemport 2
+active
+aim 2 name SYROTECH
+device type c40-218
+tcont 1 profile dba 1
+tcont 2 profile dba 2
+gemport 1 tcont 1 vlan-profile 1
+gemport 2 tcont 2 vlan-profile 2
+mapping 1 vlan 400 gemport 1
+mapping 2 vlan 500 gemport 2
+active
+aim 3 name Huawei
+device type d10-423
+tcont 1 profile dba 1
+tcont 2 profile dba 2
+gemport 1 tcont 1 vlan-profile 1
+gemport 2 tcont 2 vlan-profile 2
+mapping 1 vlan 400 gemport 1
+mapping 2 vlan 500 gemport 2
+active
+aim 4 name Huawei_Single
+device type t10-423
+tcont 1 profile dba 1
+tcont 2 profile dba 2
+gemport 1 tcont 1 vlan-profile 1
+gemport 2 tcont 2 vlan-profile 2
+mapping 1 vlan 400 gemport 1
+mapping 2 vlan 500 gemport 2
+active
+exit
+![deploy-profile-unique]
+deploy profile unique
+aim 0/1/1
+description 291029_Maingate
+active
+aim 0/1/2
+active
+aim 0/1/3
+active
+aim 0/1/5
+local protocol-port-80 enable mode forward
+active
+aim 0/1/6
+active
+aim 0/1/7
+active
+aim 0/1/8
+active
+aim 0/1/9
+active
+aim 0/1/10
+active
+aim 0/1/11
+active
+aim 0/1/12
+active
+aim 0/1/13
+active
+aim 0/1/14
+active
+aim 0/1/15
+active
+aim 0/1/16 name 256023_Anurag_A302_Intercom
+active
+aim 0/1/17
+active
+aim 0/1/20
+active
+aim 0/1/21
+active
+aim 0/1/23 name 251216_Nitesh_A603
+active
+aim 0/1/24 name 251210_Vivek_A301
+active
+aim 0/1/25
+active
+aim 0/1/27
+active
+aim 0/2/4
+active
+aim 0/2/6
+local protocol-port-80 enable mode forward
+active
+aim 0/2/7
+active
+aim 0/2/8
+active
+aim 0/2/10
+local protocol-port-80 enable mode forward
+active
+aim 0/2/11
+active
+aim 0/2/20
+active
+aim 0/2/24
+active
+aim 0/2/28 name 251183_Virender_
+active
+aim 0/3/1
+active
+aim 0/3/4
+active
+aim 0/3/5 name 251203_Sumit_B1802
+active
+aim 0/3/6 name 251070_Sonam_B1402
+active
+aim 0/3/8
+local protocol-port-80 enable mode forward
+active
+aim 0/3/10 name 251247_APOORV_B1603
+active
+aim 0/3/14 name 251170_Anil
+active
+aim 0/3/15
+local protocol-port-80 enable mode forward
+active
+aim 0/3/16
+active
+aim 0/3/18
+active
+aim 0/3/19
+active
+aim 0/3/20 name 251212_Vikrant_B1603
+active
+aim 0/3/21 name 251037_Monoj_B1403
+active
+aim 0/3/24
+active
+aim 0/4/2
+active
+aim 0/4/3 name 251055_Maj_Gen_Kuldip_C1503
+active
+aim 0/4/4
+active
+aim 0/4/5
+active
+aim 0/4/6
+active
+aim 0/4/7
+active
+aim 0/4/9
+active
+aim 0/4/11 name 251145_Harsh
+active
+aim 0/4/13
+active
+aim 0/4/15
+active
+aim 0/4/16
+active
+aim 0/4/17
+active
+aim 0/4/18
+active
+aim 0/4/20
+active
+aim 0/4/21
+active
+aim 0/4/22 name 251192_Nishant_C001
+active
+aim 0/4/23
+active
+aim 0/5/1
+active
+aim 0/5/2
+active
+aim 0/5/5
+active
+aim 0/5/6
+active
+aim 0/5/7
+active
+aim 0/5/8 name 251220_Ashwani_D2001
+description 251058_AmanPawar
+active
+aim 0/5/13
+active
+aim 0/5/14 name 251027_Rahul_D603
+active
+aim 0/5/15
+active
+aim 0/5/16
+active
+aim 0/5/18
+active
+aim 0/5/20
+active
+aim 0/5/22
+active
+aim 0/5/24
+active
+aim 0/5/25
+active
+aim 0/5/27
+active
+aim 0/5/28
+active
+aim 0/5/30
+active
+aim 0/5/31
+active
+aim 0/5/33
+active
+aim 0/5/34
+active
+aim 0/5/35
+active
+aim 0/6/1
+active
+aim 0/6/2
+local mode forward
+active
+aim 0/6/3
+active
+aim 0/6/4 name 251126_Daksh_D204
+active
+aim 0/6/5
+active
+aim 0/6/10
+active
+aim 0/6/11
+active
+aim 0/6/12
+active
+aim 0/6/13
+active
+aim 0/6/14
+active
+aim 0/6/15
+active
+aim 0/6/18
+active
+aim 0/6/19 name 256207_Googan_D1602
+active
+aim 0/6/20
+active
+aim 0/6/22 name 251176_Gard
+active
+aim 0/6/23
+active
+aim 0/6/24
+active
+aim 0/6/25 name 251024_Gavin
+active
+aim 0/6/26
+active
+aim 0/6/28 name 251242_Naveen
+active
+aim 0/6/29
+active
+aim 0/7/1
+description 251118_Saurabh_E801
+active
+aim 0/7/3
+active
+aim 0/7/4
+active
+aim 0/7/5
+active
+aim 0/7/7 name 256177_Nirbhab_E601
+active
+aim 0/7/8
+active
+aim 0/7/10
+active
+aim 0/7/11
+active
+aim 0/7/12
+active
+aim 0/7/13 name 256127_Anuradha_E1801
+active
+aim 0/7/15
+active
+aim 0/7/16
+active
+aim 0/7/17 name Girish_251218_E2101
+active
+aim 0/7/18
+active
+aim 0/7/20 name 251236_Assotech_Blith
+active
+aim 0/8/1
+active
+aim 0/8/3
+active
+aim 0/8/4
+active
+aim 0/8/5
+active
+aim 0/8/6
+active
+aim 0/8/7
+active
+aim 0/8/9 name 251132_Diptarang_F1901
+active
+aim 0/8/11
+active
+aim 0/8/12
+local wan 2 mode static ip-address 10.0.6.31 mask 255.255.0.0 gateway 10.0.0.4
+ vlan 500 3
+active
+aim 0/8/13
+active
+aim 0/8/14
+active
+aim 0/8/15
+active
+aim 0/8/18 name 251132_Diptarang
+active
+exit
+![deploy-profile-rule]
+deploy profile rule
+aim 0/1/1 name 251029_MAINGATE
+permit sn string-hex GNXS-0110ef20 line 1 default line 1
+active
+aim 0/1/2 name 251105_Deepak
+permit sn string-hex GNXS-01041f13 line 1 default line 1
+active
+aim 0/1/3 name 256078_Sudhir
+permit sn string-hex GNXS-01041207 line 1 default line 1
+active
+aim 0/1/6 name 256103_Naval
+permit sn string-hex GPON-00b0693c line 1 default line 1
+active
+aim 0/1/7 name 251136_Nikunj
+permit sn string-hex GNXS-01042bd9 line 1 default line 1
+active
+aim 0/1/8 name 251153_Dhruv
+permit sn string-hex GNXS-01041c93 line 1 default line 1
+active
+aim 0/1/10 name 251005_Amar
+permit sn string-hex GNXS-01040d93 line 1 default line 1
+active
+aim 0/1/11 name 256233_Santendra
+permit sn string-hex GPON-00c3d6fc line 2 default line 2
+active
+aim 0/1/12 name 251160_Pankaj
+permit sn string-hex GNXS-01042bcf line 1 default line 1
+active
+aim 0/1/13 name 251085_Basant
+permit sn string-hex GNXS-010411d5 line 1 default line 1
+active
+aim 0/1/14 name AUTO_ONT_0/1/14
+permit sn string-hex GNXS-010430bb line 1 default line 1
+active
+aim 0/1/15 name 251161_Darpan
+permit sn string-hex GNXS-010b86ce line 1 default line 1
+active
+aim 0/1/16 name 256023_Anurag_A302_Intercom
+permit sn string-hex GPON-00ab120a line 2 default line 2
+active
+aim 0/1/17 name 251106_Lokesh
+permit sn string-hex GNXS-01041bb7 line 1 default line 1
+active
+aim 0/1/18 name 256119_Ram
+permit sn string-hex GPON-00c3e401 line 2 default line 2
+active
+aim 0/1/19 name Pumproom
+permit sn string-hex GPON-00a8c202 line 2 default line 2
+active
+aim 0/1/20 name 251246_Anil
+permit sn string-hex GNXS-011e6800 line 1 default line 1
+active
+aim 0/1/22 name 251067_Manish
+permit sn string-hex GNXS-010427f1 line 1 default line 1
+active
+aim 0/1/24 name 251210_Vivek_A301
+permit sn string-hex GNXS-010b8e8a line 1 default line 1
+active
+aim 0/1/25 name 251208_Shailendra
+permit sn string-hex GNXS-010b9d8a line 1 default line 1
+active
+aim 0/1/26 name 251026_Sakshi
+permit sn string-hex HWTC-323a5ea6 line 1 default line 1
+active
+aim 0/1/28 name STP_1007_10.0.0.11
+permit sn string-hex GPON-00be3741 line 2 default line 2
+active
+aim 0/2/1 name 251002_Ravi
+permit sn string-hex GNXS-010422b5 line 1 default line 1
+active
+aim 0/2/2 name 251031_amit
+permit sn string-hex HWTC-323a82a6 line 1 default line 1
+active
+aim 0/2/3 name 251001_H-MAX_POP
+permit sn string-hex GNXS-011e56a0 line 1 default line 1
+active
+aim 0/2/5 name 256050_Clubh_Intercom
+permit sn string-hex GNXS-01042d5f line 1 default line 1
+active
+aim 0/2/7 name 251179_Avijit
+permit sn string-hex GNXS-010b993e line 1 default line 1
+active
+aim 0/2/8 name 251188_Vikas
+permit sn string-hex GNXS-01107b90 line 1 default line 1
+active
+aim 0/2/10 name 251080_Pawan
+permit sn string-hex GNXS-61200030 line 2 default line 2
+active
+aim 0/2/13 name 251069_Sanjeev
+permit sn string-hex HWTC-323df8a6 line 3 default line 3
+active
+aim 0/2/16 name 251189_Simple
+permit sn string-hex GPON-00ab126d line 2 default line 2
+active
+aim 0/2/18 name 1005_Club
+permit sn string-hex GPON-00ab1299 line 2 default line 2
+active
+aim 0/2/19 name 251004_DREAM
+permit sn string-hex GPON-00a8c1d6 line 2 default line 2
+active
+aim 0/2/20 name 256050_T_A_B
+permit sn string-hex GNXS-010b8d04 line 1 default line 1
+active
+aim 0/2/21 name 256196_CaptRahul
+permit sn string-hex GPON-00b0946b line 2 default line 2
+active
+aim 0/2/22 name 256150
+permit sn string-hex GPON-00d96f7a line 2 default line 2
+active
+aim 0/2/23 name 251261_Vikas
+permit sn string-hex HWTC-a29131a3 line 3 default line 3
+active
+aim 0/2/24 name 251172_Ravindra
+permit sn string-hex GNXS-010b8642 line 1 default line 1
+active
+aim 0/2/25 name 256215_Vikas
+permit sn string-hex GPON-00c3e485 line 2 default line 2
+active
+aim 0/2/26 name 256231_Jay
+permit sn string-hex GPON-00c3ebb2 line 2 default line 2
+active
+aim 0/2/29 name 251183_Virender_
+permit sn string-hex HWTC-e523419f line 3 default line 3
+active
+aim 0/3/2 name 256003_Abhilash_B2302
+permit sn string-hex GNXS-0110fc90 line 1 default line 1
+active
+aim 0/3/3 name 256013_Hemant
+permit sn string-hex GPON-00ab1283 line 2 default line 2
+active
+aim 0/3/4 name 251222_Vikas
+permit sn string-hex GNXS-0110eef0 line 1 default line 1
+active
+aim 0/3/5 name 251203_Sumit_B1802
+permit sn string-hex GNXS-010b57c6 line 1 default line 1
+active
+aim 0/3/6 name 251070_Sonam_B1402
+permit sn string-hex GNXS-010ba35c line 1 default line 1
+active
+aim 0/3/8 name 251256_DIWAKAR
+permit sn string-hex GNXS-61200ea1 line 1 default line 1
+active
+aim 0/3/11 name 256112_Ashutosh
+permit sn string-hex GPON-00c3f1a0 line 2 default line 2
+active
+aim 0/3/13 name 251182_Anubhav
+permit sn string-hex GNXS-01106610 line 1 default line 1
+active
+aim 0/3/14 name 251168_Namita
+permit sn string-hex GNXS-0110ed70 line 1 default line 1
+active
+aim 0/3/21 name 251037_Monoj_B1403
+permit sn string-hex GNXS-011039b0 line 1 default line 1
+active
+aim 0/3/22 name 251260_mukesh_903
+permit sn string-hex GNXS-010b274c line 1 default line 1
+active
+aim 0/3/24 name 251045_Anjali
+permit sn string-hex GNXS-010424d1 line 1 default line 1
+active
+aim 0/3/25 name 251247_Apoorv
+permit sn string-hex GNXS-0110f710 line 1 default line 1
+active
+aim 0/4/2 name 251038_VeeLancer
+permit sn string-hex GNXS-01042125 line 1 default line 1
+active
+aim 0/4/3 name 251055_Maj_Gen_Kuldip_C1503
+permit sn string-hex GNXS-01106280 line 1 default line 1
+active
+aim 0/4/5 name 251225_Varun
+permit sn string-hex GNXS-0110f390 line 1 default line 1
+active
+aim 0/4/6 name 251046_Rajiv
+permit sn string-hex GNXS-01108430 line 1 default line 1
+active
+aim 0/4/7 name 251159_Abhishek
+permit sn string-hex HWTC-e4c9a74a line 1 default line 1
+active
+aim 0/4/11 name 251145_Harsh
+permit sn string-hex GNXS-011e6120 line 1 default line 1
+active
+aim 0/4/12 name 251243_Puneet
+permit sn string-hex GNXS-01106540 line 1 default line 1
+active
+aim 0/4/13 name 251075_DreamHome
+permit sn string-hex GNXS-01104160 line 1 default line 1
+active
+aim 0/4/15 name 251056_Rajni
+permit sn string-hex GPON-00b068ad line 2 default line 2
+active
+aim 0/4/16 name 251137_Sumesh
+permit sn string-hex GNXS-010b9e70 line 1 default line 1
+active
+aim 0/4/17 name 256041_Tarun.
+permit sn string-hex GPON-00acc124 line 2 default line 2
+active
+aim 0/4/18 name 251240_Varun_C_702
+permit sn string-hex GNXS-01106570 line 1 default line 1
+active
+aim 0/4/19 name 251072_Rajat
+permit sn string-hex HWTC-8728aba5 line 2 default line 2
+active
+aim 0/4/21 name 251164_Dinesh
+permit sn string-hex GNXS-0110f1e0 line 1 default line 1
+active
+aim 0/4/22 name 251192_Nishant_C001
+permit sn string-hex GNXS-01106e90 line 1 default line 1
+active
+aim 0/4/23 name 251251_SHARIN2ND_C102_2ndconnection
+permit sn string-hex GNXS-011f2b60 line 1 default line 1
+active
+aim 0/4/24 name 251254_AMIT_C1102
+permit sn string-hex GNXS-61200496 line 1 default line 1
+active
+aim 0/4/25 name 251257_NARESH
+permit sn string-hex HWTC-872c18a5 line 1 default line 1
+active
+aim 0/5/2 name 251199_Nikhil
+permit sn string-hex GNXS-010b795e line 1 default line 1
+active
+aim 0/5/3 name 256086_Ravi
+permit sn string-hex GPON-00be37af line 2 default line 2
+active
+aim 0/5/4 name 256054_Ravinder
+permit sn string-hex GPON-00b068ef line 2 default line 2
+active
+aim 0/5/5 name 251169_Ankur
+permit sn string-hex GNXS-01041063 line 1 default line 1
+active
+aim 0/5/6 name 251019_Suman
+permit sn string-hex GNXS-01040fff line 1 default line 1
+active
+aim 0/5/7 name 251197_Ekta
+permit sn string-hex GNXS-010b8836 line 1 default line 1
+active
+aim 0/5/8 name 251220_Ashwani_D2001
+permit sn string-hex GNXS-0110ead0 line 1 default line 1
+active
+aim 0/5/9 name 251040_Bela_Raw
+permit sn string-hex HWTC-872be6a5 line 1 default line 1
+active
+aim 0/5/10 name 251063_Ankur
+permit sn string-hex GPON-00b0941e line 2 default line 2
+active
+aim 0/5/12 name 251191_Nitin.
+permit sn string-hex HWTC-323d5aa6 line 1 default line 1
+active
+aim 0/5/13 name 251131_Mohit
+permit sn string-hex GNXS-010ba334 line 1 default line 1
+active
+aim 0/5/14 name 251036_Gunjan
+permit sn string-hex GNXS-0110ee00 line 1 default line 1
+active
+aim 0/5/15 name 256115
+permit sn string-hex GNXS-01106520 line 1 default line 1
+active
+aim 0/5/16 name 251200_Santosh
+permit sn string-hex GNXS-010b481c line 1 default line 1
+active
+aim 0/5/18 name 251204_Sourabh_D1804
+permit sn string-hex GNXS-01107bf0 line 1 default line 1
+active
+aim 0/5/19 name 256025_Kamaldeep
+permit sn string-hex GPON-00ab1236 line 2 default line 2
+active
+aim 0/5/20 name 251034_Pallavi
+permit sn string-hex GPON-00acc5b2 line 2 default line 2
+active
+aim 0/5/21 name 256129_Sudhir
+permit sn string-hex GPON-00acc565 line 2 default line 2
+active
+aim 0/5/22 name 251006_Saurabh
+permit sn string-hex GNXS-01106910 line 1 default line 1
+active
+aim 0/5/23 name 251073_Monika
+permit sn string-hex GNXS-010b6e64 line 1 default line 1
+active
+aim 0/5/24 name 251252_ANKIT_C2401
+permit sn string-hex GNXS-612001f5 line 1 default line 1
+active
+aim 0/5/25 name 251180_Anuj
+permit sn string-hex GNXS-010b7e68 line 1 default line 1
+active
+aim 0/5/27 name 251100_Surinder
+permit sn string-hex GNXS-01106f70 line 1 default line 1
+active
+aim 0/5/28 name 251206_Iqra_khan
+permit sn string-hex HWTC-d6a7a89f line 1 default line 1
+active
+aim 0/5/30 name 251082_Hridyesh
+permit sn string-hex GNXS-010b3fb6 line 1 default line 1
+active
+aim 0/5/32 name 256197_Ekta
+permit sn string-hex GPON-00b56b56 line 2 default line 2
+active
+aim 0/5/33 name 256221_Bhuwneshwar
+permit sn string-hex GPON-00ab1215 line 2 default line 2
+active
+aim 0/5/34 name 256087_Karan
+permit sn string-hex GPON-00acc570 line 2 default line 2
+active
+aim 0/5/35 name 251040_Bela_R
+permit sn string-hex GNXS-0110f3a0 line 1 default line 1
+active
+aim 0/5/36 name 251224_Tanmay
+permit sn string-hex GNXS-0110f550 line 1 default line 1
+active
+aim 0/6/1 name 251211_Paramjeet
+permit sn string-hex GNXS-01106ee0 line 1 default line 1
+active
+aim 0/6/2 name 251255_Akash
+permit sn string-hex GNXS-61200498 line 1 default line 1
+active
+aim 0/6/3 name 251194_Bhagat
+permit sn string-hex GNXS-010b8afc line 1 default line 1
+active
+aim 0/6/4 name 251126_Daksh_D204
+permit sn string-hex GNXS-01111a40 line 1 default line 1
+active
+aim 0/6/5 name 251122_Binod
+permit sn string-hex GNXS-010b43d0 line 1 default line 1
+active
+aim 0/6/6 name 256077_Sunil
+permit sn string-hex GPON-00acc171 line 2 default line 2
+active
+aim 0/6/7 name 251021_Shailendra
+permit sn string-hex GNXS-011ef8c0 line 1 default line 1
+active
+aim 0/6/8 name GNXS-010422b5
+active
+aim 0/6/9 name 256202_Shyam_D2402
+permit sn string-hex GPON-00be12e7 line 2 default line 2
+active
+aim 0/6/10 name 251227_Gaurav
+permit sn string-hex GNXS-01106840 line 1 default line 1
+active
+aim 0/6/12 name 251011_Sumeet
+permit sn string-hex GPON-00a8c22e line 2 default line 2
+active
+aim 0/6/13 name 251015_Ravinder
+permit sn string-hex GPON-00acc5de line 2 default line 2
+active
+aim 0/6/14 name 256201_Ravi
+permit sn string-hex GNXS-01106410 line 1 default line 1
+active
+aim 0/6/15 name 251035_Sujata
+permit sn string-hex GNXS-010b83fe line 1 default line 1
+active
+aim 0/6/18 name 256050_Tower_C_D
+permit sn string-hex GNXS-010423b9 line 1 default line 1
+active
+aim 0/6/19 name 256207_Googan_D1602
+permit sn string-hex GNXS-0110e6e0 line 1 default line 1
+active
+aim 0/6/20 name 251048_Shivnath
+permit sn string-hex GNXS-01108360 line 1 default line 1
+active
+aim 0/6/22 name 251176_Gazal_D202
+permit sn string-hex GNXS-01040c5d line 1 default line 1
+active
+aim 0/6/23 name 251207_Googan_D_1602
+permit sn string-hex HWTC-d6aa379f line 3 default line 3
+active
+aim 0/6/25 name 251024_Gavin
+permit sn string-hex GNXS-01106920 line 1 default line 1
+active
+aim 0/6/26 name 251223_Arvind
+permit sn string-hex GNXS-01107cc0 line 1 default line 1
+active
+aim 0/6/29 name 251242_Naveen.
+permit sn string-hex GNXS-011e60e0 line 1 default line 1
+active
+aim 0/6/31 name 251116_Ajay
+permit sn string-hex HWTC-ace0daa3 line 1 default line 1
+active
+aim 0/6/32 name 251039_Dipayana
+permit sn string-hex GNXS-010ba2a8 line 1 default line 1
+active
+aim 0/6/33 name 251262_vineeta
+permit sn string-hex HWTC-d6a5919f line 3 default line 3
+active
+aim 0/6/40 name 251094_kuljeet
+permit sn string-hex HWTC-d6b0279f line 1 default line 1
+active
+aim 0/7/1 name 251118_Saurabh_E801
+permit sn string-hex GNXS-6120014d line 1 default line 1
+active
+aim 0/7/3 name 251146_Neha
+permit sn string-hex GNXS-010b2fbc line 1 default line 1
+active
+aim 0/7/4 name 256109_Harwinder_E2602
+permit sn string-hex GPON-00c39dec line 2 default line 2
+active
+aim 0/7/5 name 251184_Vipin
+permit sn string-hex GNXS-01042a3f line 1 default line 1
+active
+aim 0/7/7 name 256177_Nirbhab_E601
+permit sn string-hex GNXS-010423cd line 1 default line 1
+active
+aim 0/7/8 name 251165_Kartik
+permit sn string-hex GPON-000e21bc line 2 default line 2
+active
+aim 0/7/9 name 256258_Rakesh_F501
+permit sn string-hex GPON-00c3f082 line 1 default line 1
+active
+aim 0/7/10 name 251139_Sudip
+permit sn string-hex GNXS-01042391 line 1 default line 1
+active
+aim 0/7/11 name 256017_Sheetal
+permit sn string-hex GNXS-01041121 line 1 default line 1
+active
+aim 0/7/13 name 256127_Anuradha
+permit sn string-hex GPON-00a8c1ec line 1 default line 1
+active
+aim 0/7/15 name 256050_Intercom_Tower_E&F
+permit sn string-hex GNXS-010b9858 line 1 default line 1
+active
+aim 0/7/16 name Major_Vimal
+permit sn string-hex GPON-00ab12af line 2 default line 2
+active
+aim 0/7/17 name 251253_Ajayverma
+permit sn string-hex HWTC-11a7aea6 line 1 default line 1
+active
+aim 0/7/18 name 251095_Sushma
+permit sn string-hex GNXS-6120015a line 1 default line 1
+active
+aim 0/7/20 name 251110_Jyoti.
+permit sn string-hex GNXS-01107f50 line 1 default line 1
+active
+aim 0/7/21 name 251010_Bimal
+permit sn string-hex GNXS-0110ef30 line 1 default line 1
+active
+aim 0/8/1 name 256174_Vivek
+permit sn string-hex GPON-00ab1262 line 1 default line 1
+active
+aim 0/8/2 name 256099_kishori
+permit sn string-hex GPON-00be3854 line 1 default line 1
+active
+aim 0/8/4 name 256133_Parshu
+permit sn string-hex GNXS-01040ebf line 1 default line 1
+active
+aim 0/8/5 name 251065_Shekhar
+permit sn string-hex GNXS-01042c51 line 1 default line 1
+active
+aim 0/8/6 name 251111_Seema
+permit sn string-hex GNXS-01041e69 line 1 default line 1
+active
+aim 0/8/7 name 251157_Vijender
+permit sn string-hex HWTC-11a4e1a6 line 1 default line 1
+active
+aim 0/8/9 name 251064_Subhas
+permit sn string-hex GNXS-0110eb10 line 1 default line 1
+active
+aim 0/8/13 name 251226_Vijay_pal
+permit sn string-hex GNXS-01106960 line 1 default line 1
+active
+aim 0/8/14 name 251228_Sandeep
+permit sn string-hex GNXS-01107c30 line 1 default line 1
+active
+aim 0/8/17 name 251241_Chander
+permit sn string-hex HWTC-91de569f line 3 default line 3
+active
+aim 0/8/18 name 251132_Diptarang_F1901
+permit sn string-hex GNXS-011f1280 line 1 default line 1
+active
+exit
+exit
+![gpon-device]
+ont-find interface gpon 0/1-0/8
+ont-find list-age
+
+##ENDOF_CONFIG##
+

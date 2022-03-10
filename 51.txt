@@ -1,0 +1,368 @@
+##CONFIG##
+
+!LanSwitch BuildRun(ZyXEL Platform)
+enable
+configure terminal
+![VLAN]
+interface range ethernet 0/0/3 ethernet 0/0/5 to ethernet 0/0/10 ethernet 0/0/
+14 to ethernet 0/0/19
+switchport mode access
+exit
+interface range ethernet 0/0/1 to ethernet 0/0/2 ethernet 0/0/4 ethernet 0/0/1
+1 to ethernet 0/0/13
+switchport mode trunk
+exit
+interface range ethernet 0/0/20 to ethernet 0/0/28
+switchport mode trunk
+exit
+vlan 2,4-800
+exit
+![DEVICE]
+interface ethernet 0/0/1
+description ##C4#MAIN_RING#OLT85.58#Heritage##
+switchport trunk allowed vlan 3,50,100,200,295,305,414,416,426,428-429,433,452
+,459,500,514,517,522,556,600-601,605,612
+exit
+interface ethernet 0/0/2
+exit
+interface ethernet 0/0/3
+description "##RawPower#Heritage POP##"
+exit
+interface ethernet 0/0/4
+exit
+interface ethernet 0/0/5
+description "##Heritage Xperiential Learning School#201072#75Mb##"
+speed 100
+duplex full
+switchport default vlan 408
+exit
+interface ethernet 0/0/6
+description ##ConcientFootball#201003#20Mb##
+speed 100
+duplex full
+switchport default vlan 449
+exit
+interface ethernet 0/0/7
+description ##The_Special_Child_Trust#201002#20Mb##
+speed 100
+duplex full
+switchport default vlan 550
+exit
+interface ethernet 0/0/8
+description ##RajeevDheer#201011#BB4Mb##
+speed 100
+duplex full
+switchport default vlan 305
+exit
+interface ethernet 0/0/9
+description ##SECUREL_YNKX_NETWORKS_LEMON#201019#70Mb##
+speed 1000
+duplex full
+switchport default vlan 552
+exit
+interface ethernet 0/0/10
+description ##HeritageSchool#201004#250Mb##
+speed 1000
+duplex full
+switchport default vlan 447
+exit
+interface ethernet 0/0/11
+description "##C4#RING_1#Technopak Advisors Pvt Ltd#SW85.8##"
+speed 1000
+duplex full
+switchport trunk allowed vlan 301,305,406,416-417,439,448,452,457,514,551,553-
+555,557-559,561-562,601
+exit
+interface ethernet 0/0/12
+description ##C4#RING_1#Mahindra_Homes#SW85.13##
+speed 1000
+duplex full
+switchport trunk allowed vlan 301,305,406,416-417,439,448,452,457,514,551,553-
+555,557-559,561-562,601
+exit
+interface ethernet 0/0/13
+exit
+interface ethernet 0/0/14
+description ##Nextra_Communication_Pvt_Ltd#201082#50Mb##
+speed 100
+duplex full
+switchport default vlan 460
+exit
+interface ethernet 0/0/15
+description "##Indira Gandhi Eye Hospital#201041#10Mb##"
+speed 100
+duplex full
+switchport default vlan 404
+exit
+interface ethernet 0/0/16
+exit
+interface ethernet 0/0/17
+description "##Synoptics Technologies Pvt Ltd#201052#BB40Mb##"
+speed 100
+duplex full
+switchport default vlan 305
+exit
+interface ethernet 0/0/18
+description "##Logwin Air & Ocean India Pvt Ltd#201057#10Mb##"
+speed 100
+duplex full
+switchport default vlan 502
+exit
+interface ethernet 0/0/19
+description "##Nextra Communications Pvt Ltd#201061#30Mb##"
+speed 100
+duplex full
+switchport default vlan 437
+exit
+interface ethernet 0/0/20
+speed 1000
+duplex full
+switchport trunk allowed vlan 3-4094
+exit
+interface ethernet 0/0/21
+speed 1000
+duplex full
+switchport trunk allowed vlan 100,414,419,453,456-457,517,600-602,605,610,702
+exit
+interface ethernet 0/0/22
+description ##C4#MAIN_RING#SW82.230#SUCCESS##
+speed 1000
+duplex full
+switchport trunk allowed vlan 2-4094
+exit
+interface ethernet 0/0/23
+description ##C4#MAIN_RING#SW82.238#MILL##
+speed 1000
+duplex full
+switchport trunk allowed vlan 2-4094
+exit
+interface ethernet 0/0/24
+description ##C4#HONE_RING#SW82.233#H_ONE##
+speed 1000
+duplex full
+switchport trunk allowed vlan 2-4094
+storm-control broadcast 1000
+storm-control unicast 1500
+storm-control multicast 1500
+errdisable detect cause arp
+errdisable detect cause bpdu
+errdisable detect cause igmp
+errdisable auto-recovery cause arp
+errdisable auto-recovery cause bpdu
+errdisable auto-recovery cause igmp
+exit
+interface ethernet 0/0/25
+speed 1000
+switchport trunk allowed vlan 3-600,602-701,703-4094
+storm-control broadcast 1000
+storm-control unicast 1500
+storm-control multicast 1500
+errdisable detect cause arp
+errdisable detect cause bpdu
+errdisable detect cause igmp
+errdisable auto-recovery cause arp
+errdisable auto-recovery cause bpdu
+errdisable auto-recovery cause igmp
+exit
+interface ethernet 0/0/26
+speed 1000
+switchport trunk allowed vlan 3-600,602-701,703-4094
+storm-control broadcast 1000
+storm-control unicast 1500
+storm-control multicast 1500
+errdisable detect cause arp
+errdisable detect cause bpdu
+errdisable detect cause igmp
+errdisable auto-recovery cause arp
+errdisable auto-recovery cause bpdu
+errdisable auto-recovery cause igmp
+exit
+interface ethernet 0/0/27
+speed 1000
+switchport trunk allowed vlan 3-600,602-701,703-4094
+storm-control broadcast 1000
+storm-control unicast 1500
+storm-control multicast 1500
+errdisable detect cause arp
+errdisable detect cause bpdu
+errdisable detect cause igmp
+errdisable auto-recovery cause arp
+errdisable auto-recovery cause bpdu
+errdisable auto-recovery cause igmp
+exit
+interface ethernet 0/0/28
+switchport trunk allowed vlan 3-600,602-701,703-4094
+storm-control broadcast 1000
+storm-control unicast 1500
+storm-control multicast 1500
+errdisable detect cause arp
+errdisable detect cause bpdu
+errdisable detect cause igmp
+errdisable auto-recovery cause arp
+errdisable auto-recovery cause bpdu
+errdisable auto-recovery cause igmp
+exit
+no alarm all-packets
+![OAM]
+username admin privilege 15 password 0 ckng@#&%)PD
+screen-rows per-page 0
+hostname ##c4#main_ring#sw82.231#heritage##
+http enable
+![STP]
+no spanning-tree
+spanning-tree priority 28672
+interface ethernet 0/0/1
+spanning-tree cost 19
+exit
+interface ethernet 0/0/2
+spanning-tree cost 19
+exit
+interface ethernet 0/0/3
+spanning-tree cost 19
+exit
+interface ethernet 0/0/4
+spanning-tree cost 19
+exit
+interface ethernet 0/0/5
+spanning-tree cost 19
+exit
+interface ethernet 0/0/6
+spanning-tree cost 19
+exit
+interface ethernet 0/0/7
+spanning-tree cost 19
+exit
+interface ethernet 0/0/8
+spanning-tree cost 19
+exit
+interface ethernet 0/0/9
+spanning-tree cost 19
+exit
+interface ethernet 0/0/10
+spanning-tree cost 19
+exit
+interface ethernet 0/0/11
+spanning-tree cost 19
+exit
+interface ethernet 0/0/12
+spanning-tree cost 19
+exit
+interface ethernet 0/0/13
+spanning-tree cost 19
+exit
+interface ethernet 0/0/14
+spanning-tree cost 19
+exit
+interface ethernet 0/0/15
+spanning-tree cost 19
+exit
+interface ethernet 0/0/16
+spanning-tree cost 19
+exit
+interface ethernet 0/0/17
+spanning-tree cost 19
+exit
+interface ethernet 0/0/18
+spanning-tree cost 19
+exit
+interface ethernet 0/0/19
+spanning-tree cost 19
+exit
+interface ethernet 0/0/20
+spanning-tree cost 19
+exit
+interface ethernet 0/0/21
+spanning-tree cost 19
+exit
+interface ethernet 0/0/22
+spanning-tree cost 4
+exit
+interface ethernet 0/0/23
+spanning-tree cost 4
+exit
+interface ethernet 0/0/24
+spanning-tree cost 4
+exit
+interface ethernet 0/0/25
+spanning-tree cost 2000
+exit
+![SNMP]
+snmp-server contact 9910495862
+snmp-server name ##c4#main_ring#sw82.231#heritage##
+snmp-server community deldsl ro permit view iso
+snmp-server community deldsl@21 rw permit view iso
+snmp-server enable traps bridge gbn gbnsavecfg interfaces rmon snmp
+![IF]
+interface vlan-interface 1 
+ip address 172.30.82.231 255.255.255.224 
+exit 
+![STATIC_ROUTE]
+ip route 0.0.0.0 0.0.0.0 172.30.82.225
+![SYSLOG]
+logging 203.110.80.167
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module sys
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module oam
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module device
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module link_aggregation
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module mirror
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module stp
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module mstp
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module vlan
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module garp
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module igmp
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module igmp_snooping
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module mld_snooping
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module port_isolation
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module qacl
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module if
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module static_route
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module arp
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module dhcp
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module ippool
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module route_common
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module rip
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module ospf
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module bgp
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module vrrp
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module snmp
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module dot1x
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module radius
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module zymnt
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module sntpc
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module syslog
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module cmdline
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module softdog
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module srm
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module pim
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module ssh
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module mailalarm
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module ospfv3
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module lldp
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module dhcpsnooping
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module eaps
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module erps
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module udld
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module efm
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module flink
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module mlink
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module cfm
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module urpf
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module pppoeia
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module bfd
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module ndp
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module radvd
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module tacacs+
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module dhcpv6snooping
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module remote_mirror
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module stack
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module port-security
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module mac-security
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module icmp4
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module web-buildrun
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module anti-attack
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module pmp
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module sflow
+logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module rmon
+
+##ENDOF_CONFIG##
+

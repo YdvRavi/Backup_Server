@@ -1,0 +1,146 @@
+##CONFIG##
+
+!Software Version V200R020C10SPC500
+#
+sysname ##PEERING#SW_EXTREME#80.34##
+#
+vlan batch 2112
+#
+stp mode rstp
+#
+authentication-profile name default_authen_profile
+authentication-profile name dot1x_authen_profile
+authentication-profile name dot1xmac_authen_profile
+authentication-profile name mac_authen_profile
+authentication-profile name multi_authen_profile
+authentication-profile name portal_authen_profile
+#
+telnet server enable
+telnet server-source all-interface
+#
+http server-source all-interface
+#
+smart-upgrade web-prompt disable
+#
+diffserv domain default
+#
+radius-server template default
+#
+pki realm default
+ certificate-check none
+#
+free-rule-template name default_free_rule
+#
+portal-access-profile name portal_access_profile
+#
+aaa
+ authentication-scheme default
+  authentication-mode local
+ authentication-scheme radius
+  authentication-mode radius
+ authorization-scheme default
+  authorization-mode local
+ accounting-scheme default
+  accounting-mode none
+ local-aaa-user password policy administrator
+  password history record number 0
+  password expire 0
+ domain default
+  authentication-scheme radius
+  accounting-scheme default
+  radius-server default
+ domain default_admin
+  authentication-scheme default
+  accounting-scheme default
+ local-user admin password irreversible-cipher $1c$jL5M9$z*jQ$B=Z.L\:e[Ud(YpDY!HL%7O,s,=i9A)`PNe9AmFCJ$
+ local-user admin privilege level 10
+ local-user admin service-type telnet terminal ssh http
+#
+interface Vlanif1
+ ip address 172.30.80.18 255.255.255.248
+#
+interface Vlanif2112
+ ip address 172.30.80.34 255.255.255.248
+#
+interface GigabitEthernet0/0/1
+#
+interface GigabitEthernet0/0/2
+#
+interface GigabitEthernet0/0/3
+#
+interface GigabitEthernet0/0/4
+#
+interface GigabitEthernet0/0/5
+#
+interface GigabitEthernet0/0/6
+#
+interface GigabitEthernet0/0/7
+#
+interface GigabitEthernet0/0/8
+#
+interface XGigabitEthernet0/0/1
+ description ##PEERING#EXTREME_SIFY#3G##
+ port link-type access
+ port default vlan 2112
+ stp disable
+#
+interface XGigabitEthernet0/0/2
+ shutdown
+#
+interface XGigabitEthernet0/0/3
+ description ##MILL#SW_JUNOS#80.12##Link1_BSNL_SIFY_FMS44
+ port link-type trunk
+ port trunk allow-pass vlan 2 to 4094
+ stp no-agreement-check
+ stp instance 0 cost 4
+#
+interface XGigabitEthernet0/0/4
+ description ##MILL#SW_JUNOS#80.12##Link2_Pure_delDSL_FMS35
+ port link-type trunk
+ port trunk allow-pass vlan 2 to 4094
+ stp no-agreement-check
+ stp instance 0 cost 19
+#
+interface NULL0
+#
+undo icmp name timestamp-request receive
+#
+ip route-static 0.0.0.0 0.0.0.0 172.30.80.17 preference 100
+ip route-static 0.0.0.0 0.0.0.0 172.30.80.33
+#
+snmp-agent
+snmp-agent local-engineid 800007DB0334584002A800
+snmp-agent community read cipher %^%#ubS)Y$P,mPk0g/7B#>$2%n+w0SY+%KOm7iR*"F]Y^%2r%,m>!4C<.o~]4,H,7Y7MM.@/$E\!soR`})[$%^%#
+snmp-agent sys-info version all
+snmp-agent protocol source-status all-interface
+undo snmp-agent protocol source-status ipv6 all-interface
+#
+undo ssh authentication-type default password
+ssh server cipher aes256_ctr aes128_ctr
+ssh server hmac sha2_256
+ssh server key-exchange dh_group16_sha512 dh_group15_sha512 dh_group14_sha256 dh_group_exchange_sha256
+ssh client cipher aes256_ctr aes128_ctr
+ssh client hmac sha2_256
+ssh client key-exchange dh_group16_sha512 dh_group15_sha512 dh_group14_sha256 dh_group_exchange_sha256
+ssh server dh-exchange min-len 2048
+#
+user-interface maximum-vty 3
+user-interface con 0
+ authentication-mode password
+ set authentication password cipher $1a$~f-/<.j\QJ$q+X9K1.=fLYD~R)%H1UM<5mw,}A^"'=,b'IT,_RU$
+user-interface vty 0 2
+ authentication-mode aaa
+ idle-timeout 20 0
+ protocol inbound telnet
+user-interface vty 16 20
+#
+dot1x-access-profile name dot1x_access_profile
+#
+mac-access-profile name mac_access_profile
+#
+ops
+#
+return
+
+##ENDOF_CONFIG##
+

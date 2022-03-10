@@ -1,0 +1,113 @@
+##CONFIG##
+
+MILL#RING_1#Sagacious Research Pvt Ltd#SW82.107### 
+##MILL#RING_1#Sagacious Research Pvt Ltd#SW82.107### 
+  Building configuration...
+
+  Current configuration: 
+
+no spanning-tree 9 edge-port 
+no spanning-tree 10 edge-port 
+no remote-management 1 service ftp  
+vlan 1 
+  name 1 
+  normal 1-8 
+  fixed 9-10 
+  forbidden "" 
+  untagged 1-10 
+  ip address default-management 172.30.82.107 255.255.255.224 
+  ip address default-gateway 172.30.82.97 
+exit 
+vlan 315 
+  name 315 
+  normal 2-8 
+  fixed 1,9-10 
+  forbidden "" 
+  untagged 1 
+exit 
+interface port-channel 1  
+  name "##Sagacious Research Pvt Ltd#111315#50Mb##" 
+  pvid 315 
+  ingress-check 
+  bandwidth-limit cir 51200 
+  bandwidth-limit cir 
+  bandwidth-limit pir 51200 
+  bandwidth-limit pir 
+  bandwidth-limit egress 51200 
+  bandwidth-limit egress 
+  broadcast-limit 
+  broadcast-limit 500 
+  multicast-limit 
+  multicast-limit 500 
+  dlf-limit 
+  dlf-limit 500 
+  loopguard 
+exit 
+interface port-channel 2  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 3  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 4  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 5  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 6  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 7  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 8  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 9  
+  name "##MILL#RING_1#Handy Online#SW82.115##" 
+  vlan-trunking 
+  broadcast-limit 
+  broadcast-limit 10000 
+  multicast-limit 
+  multicast-limit 10000 
+  dlf-limit 
+  dlf-limit 10000 
+exit 
+interface port-channel 10  
+  name "##MILL#RING_1#Niksun India Pvt Ltd#SW82.27##" 
+  vlan-trunking 
+  broadcast-limit 
+  broadcast-limit 10000 
+  multicast-limit 
+  multicast-limit 10000 
+  dlf-limit 
+  dlf-limit 10000 
+exit 
+spanning-tree 
+spanning-tree priority 24576 
+spanning-tree 9 
+spanning-tree 10 
+hostname "##MILL#RING_1#Sagacious Research Pvt Ltd#SW82.107##" 
+storm-control 
+bandwidth-control 
+loopguard 
+snmp-server get-community deldsl 
+snmp-server set-community "" 
+snmp-server trap-community "" 
+snmp-server contact "Rohit Vohra 9990180088" location "Plot No-B7B8 Sector-32 GGN" 
+remote-management 2 
+remote-management 3 
+remote-management 4 
+remote-management 1 start-addr 203.110.80.161 end-addr 203.110.80.174 service telnet http icmp snmp ssh https  
+remote-management 2 start-addr 203.110.80.184 end-addr 203.110.80.187 service icmp snmp
+
+##ENDOF_CONFIG##
+

@@ -1,0 +1,133 @@
+##CONFIG##
+
+!Software Version V200R011C10SPC600
+#
+sysname ##RESIDENCE#MAIN_RING#SW82.130#ENKAY##
+#
+info-center loghost 203.110.80.167
+#
+vlan batch 2 to 4094
+#
+stp mode rstp
+#
+authentication-profile name default_authen_profile
+authentication-profile name dot1x_authen_profile
+authentication-profile name mac_authen_profile
+authentication-profile name portal_authen_profile
+authentication-profile name dot1xmac_authen_profile
+authentication-profile name multi_authen_profile
+#
+telnet server enable
+#
+radius-server template default
+#
+pki realm default
+ certificate-check none
+#
+acl number 2001
+ rule 5 permit source 203.110.80.160 0.0.0.15
+ rule 10 permit source 172.30.82.129 0.0.0.64
+#
+free-rule-template name default_free_rule
+#
+portal-access-profile name portal_access_profile
+#
+aaa
+ authentication-scheme default
+ authentication-scheme radius
+  authentication-mode radius
+ authorization-scheme default
+ accounting-scheme default
+ local-aaa-user password policy administrator 
+  password history record number 0
+  password expire 0
+ domain default
+  authentication-scheme radius
+  radius-server default
+ domain default_admin
+  authentication-scheme default
+ local-user admin password irreversible-cipher $1a$NK*2B<[@l6$O9/q@IZIgE,O/q1nHJI.iQd{Pxk>cOMo:m<E"5tV$
+ local-user admin privilege level 15
+ local-user admin service-type telnet terminal ssh http
+#
+interface Vlanif1
+ ip address 172.30.82.130 255.255.255.224
+#
+interface GigabitEthernet0/0/1
+ description ##Enkay India Rubber Company Pvt Ltd#111307#50Mb##
+ port link-type access
+ port default vlan 262
+ stp disable
+#
+interface GigabitEthernet0/0/2
+#
+interface GigabitEthernet0/0/3
+#
+interface GigabitEthernet0/0/4
+#
+interface GigabitEthernet0/0/5
+#
+interface GigabitEthernet0/0/6
+#
+interface GigabitEthernet0/0/7
+#
+interface GigabitEthernet0/0/8
+#
+interface GigabitEthernet0/0/9
+ storm-control broadcast min-rate 1000 max-rate 2000
+ storm-control multicast min-rate 1000 max-rate 1500
+ storm-control unicast min-rate 1000 max-rate 2000
+ storm-control interval 30
+ storm-control action block
+#
+interface GigabitEthernet0/0/10
+ storm-control broadcast min-rate 1000 max-rate 2000
+ storm-control multicast min-rate 1000 max-rate 1500
+ storm-control unicast min-rate 1000 max-rate 2000
+ storm-control interval 30
+ storm-control action block
+#
+interface GigabitEthernet0/0/11
+ description ##RESIDENCE#MAIN_RING#SW82.134#HMAX##
+ port link-type trunk
+ port trunk allow-pass vlan 2 to 4094
+ stp instance 0 cost 4
+ storm-control broadcast min-rate 1000 max-rate 2000
+ storm-control multicast min-rate 1000 max-rate 1500
+ storm-control unicast min-rate 1000 max-rate 2000
+ storm-control interval 30
+#
+interface GigabitEthernet0/0/12
+ description ##residence#main_ring#sw82.143#mill##
+ port link-type trunk
+ port trunk allow-pass vlan 2 to 4094
+ stp instance 0 cost 4
+#
+interface NULL0
+#
+ip route-static 0.0.0.0 0.0.0.0 172.30.82.129
+#
+snmp-agent
+snmp-agent local-engineid 800007DB03AC8D340ECDD0
+snmp-agent community read cipher %^%#f"u>H0R=(PI&'4BH<bD(sv+iD,D:a**w_+&k.RoPMmK~+Bp5&~{;,&Cly4QG#C}T6vm,~;{vcG@M'tuP%^%#
+snmp-agent sys-info version v2c
+undo snmp-agent sys-info version v3
+#
+user-interface maximum-vty 14
+user-interface con 0
+ authentication-mode aaa
+ screen-length 300
+user-interface vty 0 13
+ acl 2001 inbound
+ authentication-mode aaa
+ protocol inbound all
+user-interface vty 16 20
+#
+dot1x-access-profile name dot1x_access_profile
+#
+mac-access-profile name mac_access_profile
+#
+return
+
+##ENDOF_CONFIG##
+

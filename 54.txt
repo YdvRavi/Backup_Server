@@ -1,0 +1,267 @@
+##CONFIG##
+
+UV#MAIN_RING#SW87.134#JMD_REG_SQ### 
+##UV#MAIN_RING#SW87.134#JMD_REG_SQ### 
+  Building configuration...
+
+  Current configuration: 
+
+no spanning-tree 1 edge-port 
+no spanning-tree 23 edge-port 
+no spanning-tree 24 edge-port 
+no spanning-tree 25 edge-port 
+no spanning-tree 26 edge-port 
+no spanning-tree 27 edge-port 
+no spanning-tree 28 edge-port 
+no service-control ftp 
+no service-control ssh 
+vlan 1 
+  name 1 
+  normal 1-23,26 
+  fixed 24-25,27-28 
+  forbidden "" 
+  untagged 24-25,27-28 
+  ip address default-management 172.30.87.134 255.255.255.240 
+  ip address default-gateway 172.30.87.129 
+exit 
+vlan 3 
+  name 3 
+  normal 1-25 
+  fixed 26-28 
+  forbidden "" 
+  untagged "" 
+exit 
+vlan 110 
+  name 110 
+  normal 1-6,8-24 
+  fixed 7,25-28 
+  forbidden "" 
+  untagged 7 
+exit 
+vlan 130 
+  name 130 
+  normal 1,3-24 
+  fixed 2,25-28 
+  forbidden "" 
+  untagged 2 
+exit 
+interface port-channel 1  
+  bandwidth-limit cir 20480 
+  bandwidth-limit pir 20480 
+  bandwidth-limit egress 20480 
+  broadcast-limit 
+  broadcast-limit 20480 
+  multicast-limit 
+  multicast-limit 20480 
+exit 
+interface port-channel 2  
+  name "##Samsonite South Asia Pvt.Ltd#141005#10MB#JMD##" 
+  pvid 130 
+  ingress-check 
+  bandwidth-limit cir 10240 
+  bandwidth-limit cir 
+  bandwidth-limit pir 10240 
+  bandwidth-limit pir 
+  bandwidth-limit egress 10240 
+  bandwidth-limit egress 
+  broadcast-limit 
+  broadcast-limit 1500 
+  multicast-limit 
+  multicast-limit 1500 
+  loopguard 
+exit 
+interface port-channel 3  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 4  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 5  
+  inactive 
+  bandwidth-limit cir 8192 
+  bandwidth-limit pir 8192 
+  bandwidth-limit egress 8192 
+  loopguard 
+exit 
+interface port-channel 6  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 7  
+  name "##Prota-Tech India Solutions Pvt Ltd#111107#50MB#JMD##" 
+  pvid 110 
+  ingress-check 
+  bandwidth-limit cir 51200 
+  bandwidth-limit cir 
+  bandwidth-limit pir 51200 
+  bandwidth-limit pir 
+  bandwidth-limit egress 51200 
+  bandwidth-limit egress 
+  loopguard 
+exit 
+interface port-channel 8  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 9  
+  inactive 
+  bandwidth-limit cir 10240 
+  bandwidth-limit pir 10240 
+  bandwidth-limit egress 10240 
+  loopguard 
+exit 
+interface port-channel 10  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 11  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 12  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 13  
+  inactive 
+  bandwidth-limit cir 5120 
+  bandwidth-limit pir 5120 
+  bandwidth-limit egress 5120 
+  loopguard 
+exit 
+interface port-channel 14  
+  inactive 
+  bandwidth-limit cir 5120 
+  bandwidth-limit pir 5120 
+  bandwidth-limit egress 5120 
+  loopguard 
+exit 
+interface port-channel 15  
+  inactive 
+  bandwidth-limit cir 10240 
+  bandwidth-limit pir 10240 
+  bandwidth-limit egress 10240 
+  loopguard 
+exit 
+interface port-channel 16  
+  inactive 
+  bandwidth-limit cir 10240 
+  bandwidth-limit pir 10240 
+  bandwidth-limit egress 10240 
+  loopguard 
+exit 
+interface port-channel 17  
+  inactive 
+  bandwidth-limit cir 5120 
+  bandwidth-limit pir 5120 
+  bandwidth-limit egress 5120 
+  loopguard 
+exit 
+interface port-channel 18  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 19  
+  inactive 
+  bandwidth-limit cir 5120 
+  bandwidth-limit pir 5120 
+  bandwidth-limit egress 5120 
+  loopguard 
+exit 
+interface port-channel 20  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 21  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 22  
+  inactive 
+  loopguard 
+exit 
+interface port-channel 23  
+  inactive 
+  bandwidth-limit cir 8196 
+  bandwidth-limit pir 8196 
+  bandwidth-limit egress 8196 
+exit 
+interface port-channel 24  
+  inactive 
+exit 
+interface port-channel 25  
+  name ##UV#MAIN_RING#SW87.136## 
+  speed-duplex 1000-full 
+  vlan-trunking 
+  broadcast-limit 1000 
+  multicast-limit 
+  multicast-limit 1500 
+  dlf-limit 
+  dlf-limit 1500 
+exit 
+interface port-channel 26  
+  speed-duplex 1000-full 
+  vlan-trunking 
+exit 
+interface port-channel 27  
+  name ##UV#MAIN_RING#SW87.138#JMD_EMP_SQ## 
+  vlan-trunking 
+  broadcast-limit 1000 
+  multicast-limit 
+  multicast-limit 1500 
+  dlf-limit 
+  dlf-limit 1500 
+exit 
+interface port-channel 28  
+  name ##UV#MAIN_RING#SW87.130## 
+  speed-duplex 1000-full 
+  vlan-trunking 
+  broadcast-limit 5000 
+  multicast-limit 
+  multicast-limit 5000 
+  dlf-limit 
+  dlf-limit 1500 
+exit 
+spanning-tree 
+spanning-tree priority 12288 
+spanning-tree 1 
+spanning-tree 23 
+spanning-tree 24 
+spanning-tree 25 
+spanning-tree 26 
+spanning-tree 27 
+spanning-tree 28 
+spanning-tree 24 path-cost 4 
+hostname ##UV#MAIN_RING#SW87.134#JMD_REG_SQ## 
+timesync server 203.110.80.66 
+timesync ntp 
+storm-control 
+bandwidth-control 
+loopguard 
+snmp-server get-community deldsl 
+snmp-server set-community "" 
+snmp-server trap-community "" 
+snmp-server contact "Amar Singh" location "JMD Regent Square " 
+remote-management 2 
+remote-management 3 
+remote-management 4 
+remote-management 5 
+remote-management 1 start-addr 203.110.80.161 end-addr 203.110.80.174 service telnet ftp http icmp snmp ssh https  
+remote-management 2 start-addr 203.110.87.129 end-addr 203.110.87.142 service telnet ftp http icmp snmp ssh https  
+remote-management 3 start-addr 203.110.80.153 end-addr 203.110.80.154 service telnet ftp http icmp snmp ssh https  
+remote-management 4 start-addr 203.110.80.184 end-addr 203.110.80.187 service icmp snmp  
+remote-management 5 start-addr 203.110.80.64 end-addr 203.110.80.67 service icmp snmp  
+syslog 
+syslog type system 
+syslog type interface 
+syslog type switch 
+syslog type aaa 
+syslog type ip 
+syslog type commands 
+syslog server 203.110.80.167 level 7 
+terminal length 0
+
+##ENDOF_CONFIG##
+
