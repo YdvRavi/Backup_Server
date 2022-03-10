@@ -833,9 +833,6 @@ active
 aim 0/7/16 name Major_Vimal
 permit sn string-hex GPON-00ab12af line 2 default line 2
 active
-aim 0/7/17 name 251253_Ajayverma
-permit sn string-hex HWTC-11a7aea6 line 1 default line 1
-active
 aim 0/7/18 name 251095_Sushma
 permit sn string-hex GNXS-6120015a line 1 default line 1
 active
