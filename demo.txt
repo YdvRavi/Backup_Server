@@ -1,5 +1,5 @@
 this is my first line.
-no one checking this file guys.
+
 hey this is new demo file for understanding git functions.
 i have deleted this line. 
 this line is added after upload project. 
