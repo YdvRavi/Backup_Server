@@ -7,7 +7,7 @@ map["origin"]="delDSL_Backup_Server"
 git init
 git checkout -b Master
 git add --a
-git commit -m "Submitted"
+git commit -m "Please_Check_Change_Config"
 
 for i in "${!map[@]}"
 do
