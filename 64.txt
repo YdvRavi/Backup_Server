@@ -618,7 +618,7 @@ onu 1 ctc eth 1 vlan mode tag
 onu 2 description 191897_YASHVEER
 onu 2 ctc eth 1 vlan pvid 813 pri 0
 onu 2 ctc eth 1 vlan mode transparent
-onu 4 description 191574_Febind
+onu 4 description 191574_Fabind
 onu 4 ctc eth 1 vlan pvid 813 pri 0
 onu 4 ctc eth 1 vlan mode transparent
 onu 5 description 191864_Ubuntu
