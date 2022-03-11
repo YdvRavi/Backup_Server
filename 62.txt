@@ -479,6 +479,7 @@ exit
 !
 interface epon 0/2
 onu auth-mode mac
+confirm onu mac 7c:a9:6b:3b:19:db onuid 1 auth-mode mac
 confirm onu mac e0:67:b3:10:33:b8 onuid 2 auth-mode mac
 confirm onu mac a4:00:e2:6d:87:ea onuid 3
 confirm onu mac a4:00:e2:8e:f5:82 onuid 4 auth-mode mac
@@ -538,8 +539,10 @@ exit
 !
 interface epon 0/2
 onu mac-auth add 7C:A9:6B:84:0F:82
+onu mac-auth add 7C:A9:6B:3B:19:DB
 onu mac-auth add 7C:A9:6B:84:D5:08
 onu mac-auth add E0:67:B3:10:33:B8
+onu mac-auth add A4:00:E2:6D:87:EA
 onu mac-auth add A4:00:E2:8E:F5:82
 exit
 !
