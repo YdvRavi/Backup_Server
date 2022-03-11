@@ -2,6 +2,8 @@
 
 ## terminal length 0
 UV_olt#87.139### 
+2022/03/11 17:06:48   ONU Link Discover        PON 0/2 ONU 1 7C:A9:6B:3B:19:DB.
+
 
 Current configuration:
 !
