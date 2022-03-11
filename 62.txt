@@ -392,8 +392,6 @@ switchport hybrid pvid vlan 1
 no shutdown 
 mdi force
 storm-control broadcast fps 512
-
-2022/03/11 12:26:48   ONU Link Discover        PON 0/2 ONU 1 7C:A9:6B:3B:19:DB.
 no storm-control multicast
 storm-control unknow fps 512
 switchport isolate
@@ -481,7 +479,6 @@ exit
 !
 interface epon 0/2
 onu auth-mode mac
-confirm onu mac 7c:a9:6b:3b:19:db onuid 1 auth-mode mac
 confirm onu mac e0:67:b3:10:33:b8 onuid 2 auth-mode mac
 confirm onu mac a4:00:e2:6d:87:ea onuid 3
 confirm onu mac a4:00:e2:8e:f5:82 onuid 4 auth-mode mac
@@ -534,7 +531,6 @@ exit
 interface epon 0/1
 onu mac-auth add 98:C7:A4:05:02:67
 onu mac-auth add E0:67:B3:11:93:16
-onu mac-auth add 7C:A9:6B:3B:19:DB
 onu mac-auth add A4:00:E2:6D:87:EA
 onu mac-auth add 38:94:E0:E3:40:CA
 onu mac-auth add 7C:A9:6B:84:D4:FE
@@ -542,7 +538,6 @@ exit
 !
 interface epon 0/2
 onu mac-auth add 7C:A9:6B:84:0F:82
-onu mac-auth add 7C:A9:6B:3B:19:DB
 onu mac-auth add 7C:A9:6B:84:D5:08
 onu mac-auth add E0:67:B3:10:33:B8
 onu mac-auth add A4:00:E2:8E:F5:82
@@ -611,9 +606,6 @@ onu 5 ctc eth 1 vlan mode tag
 exit
 !
 interface epon 0/2
-onu 1 description 131415_Pallia
-onu 1 ctc eth 1 vlan pvid 39 pri 0
-onu 1 ctc eth 1 vlan mode tag
 onu 2 description 131455_AVL
 onu 2 ctc eth 1 phy_ctrl enable
 onu 2 ctc eth 1 vlan pvid 600 pri 0
