@@ -1,0 +1,575 @@
+##CONFIG##
+
+## terminal length 0
+AMBI_VK_OLT#83.27### 
+
+Current configuration:
+!
+hostname AMBI_VK_OLT#83.27##
+password admin
+enable password admin
+syslog server ip 203.110.80.167 port 514
+!
+line vty
+!
+!
+interface aux
+ip address 192.168.8.100 255.255.255.0
+exit
+interface loopback
+ip address 127.0.0.1 255.0.0.0
+exit
+!
+vlan 1
+exit
+vlan 3
+exit
+vlan 5
+exit
+vlan 10
+exit
+vlan 23
+exit
+vlan 230
+exit
+vlan 237 - 238
+vlan 712
+exit
+interface vlan 1
+ip address 172.30.83.27/29
+vlan 3
+description Synop
+exit
+!
+vlan 10
+description Uniqlo
+exit
+!
+vlan 230
+description 230
+exit
+!
+vlan 712
+description broadband_vrf
+exit
+!
+interface aux
+exit
+!
+!
+!
+interface gigabitethernet 0/1
+switchport mode hybrid
+switchport hybrid vlan 1 untagged
+switchport hybrid pvid vlan 1
+no shutdown 
+mdi force
+storm-control broadcast fps 512
+no storm-control multicast
+storm-control unknow fps 512
+switchport isolate
+no ip igmp snooping immediate-leave
+exit
+!
+interface gigabitethernet 0/2
+switchport mode hybrid
+switchport hybrid vlan 1 untagged
+switchport hybrid pvid vlan 1
+no shutdown 
+mdi force
+storm-control broadcast fps 512
+no storm-control multicast
+storm-control unknow fps 512
+switchport isolate
+no ip igmp snooping immediate-leave
+exit
+!
+interface gigabitethernet 0/3
+switchport mode hybrid
+switchport hybrid vlan 1 untagged
+switchport hybrid pvid vlan 1
+no shutdown 
+mdi force
+storm-control broadcast fps 512
+no storm-control multicast
+storm-control unknow fps 512
+switchport isolate
+no ip igmp snooping immediate-leave
+exit
+!
+interface gigabitethernet 0/4
+switchport mode hybrid
+switchport hybrid vlan 1 untagged
+switchport hybrid pvid vlan 1
+no shutdown 
+mdi force
+storm-control broadcast fps 512
+no storm-control multicast
+storm-control unknow fps 512
+switchport isolate
+no ip igmp snooping immediate-leave
+exit
+!
+interface gigabitethernet 0/5
+description UPLINK_SW
+switchport mode hybrid
+switchport hybrid vlan 1 untagged
+switchport hybrid vlan 3 tagged
+switchport hybrid vlan 5 tagged
+switchport hybrid vlan 10 tagged
+switchport hybrid vlan 23 tagged
+switchport hybrid vlan 230 tagged
+switchport hybrid vlan 237 - 238 tagged
+switchport hybrid vlan 712 tagged
+switchport hybrid pvid vlan 1
+no shutdown 
+mdi force
+storm-control broadcast fps 512
+no storm-control multicast
+storm-control unknow fps 512
+switchport isolate
+no ip igmp snooping immediate-leave
+loopback disable
+exit
+!
+interface gigabitethernet 0/6
+switchport mode hybrid
+switchport hybrid vlan 1 untagged
+switchport hybrid pvid vlan 1
+no shutdown 
+mdi force
+storm-control broadcast fps 512
+no storm-control multicast
+storm-control unknow fps 512
+switchport isolate
+no ip igmp snooping immediate-leave
+exit
+!
+interface gigabitethernet 0/7
+switchport mode hybrid
+switchport hybrid vlan 1 untagged
+switchport hybrid pvid vlan 1
+no shutdown 
+mdi force
+storm-control broadcast fps 512
+no storm-control multicast
+storm-control unknow fps 512
+switchport isolate
+no ip igmp snooping immediate-leave
+exit
+!
+interface gigabitethernet 0/8
+switchport mode hybrid
+switchport hybrid vlan 1 untagged
+switchport hybrid vlan 230 tagged
+switchport hybrid pvid vlan 1
+no shutdown 
+mdi force
+storm-control broadcast fps 512
+no storm-control multicast
+storm-control unknow fps 512
+switchport isolate
+no ip igmp snooping immediate-leave
+exit
+!
+interface epon 0/1
+switchport mode hybrid
+switchport hybrid vlan 1 untagged
+switchport hybrid vlan 712 untagged
+switchport hybrid vlan 10 tagged
+switchport hybrid vlan 230 tagged
+switchport hybrid pvid vlan 712
+mdi force
+storm-control broadcast fps 512
+no storm-control multicast
+storm-control unknow fps 512
+switchport isolate
+no ip igmp snooping immediate-leave
+lacp port-priority 0
+lacp admin-key 0
+exit
+!
+interface epon 0/2
+switchport mode hybrid
+switchport hybrid vlan 1 untagged
+switchport hybrid vlan 712 untagged
+switchport hybrid vlan 3 tagged
+switchport hybrid vlan 23 tagged
+switchport hybrid pvid vlan 712
+mdi force
+storm-control broadcast fps 512
+no storm-control multicast
+storm-control unknow fps 512
+switchport isolate
+no ip igmp snooping immediate-leave
+lacp port-priority 0
+lacp admin-key 0
+exit
+!
+interface epon 0/3
+switchport mode hybrid
+switchport hybrid vlan 1 untagged
+switchport hybrid vlan 712 untagged
+switchport hybrid vlan 5 tagged
+switchport hybrid vlan 230 tagged
+switchport hybrid vlan 237 tagged
+switchport hybrid pvid vlan 712
+mdi force
+storm-control broadcast fps 512
+no storm-control multicast
+storm-control unknow fps 512
+switchport isolate
+no ip igmp snooping immediate-leave
+lacp port-priority 0
+lacp admin-key 0
+exit
+!
+interface epon 0/4
+switchport mode hybrid
+switchport hybrid vlan 1 untagged
+switchport hybrid vlan 230 untagged
+switchport hybrid vlan 712 untagged
+switchport hybrid pvid vlan 712
+mdi force
+storm-control broadcast fps 512
+no storm-control multicast
+storm-control unknow fps 512
+switchport isolate
+no ip igmp snooping immediate-leave
+lacp port-priority 0
+lacp admin-key 0
+exit
+!
+ip route 0.0.0.0/0 172.30.83.25
+!
+
+!
+
+!
+queue-scheduler strict-priority
+!<RSTP Cconfig Information>
+!
+dhcp-server leasetime 864000
+dhcp-server startip 192.168.0.20 endip 192.168.0.254
+dhcp-server interface vlan 1
+!
+!<dhcp relay config information>
+!
+!
+loopback detect enable  
+snmp-server start
+no snmp-server community public
+no snmp-server community private
+snmp-server community deldsl ro 
+snmp-server notify notify inform inform  inform 
+snmp-server notify notify trap trap  trap 
+snmp-server trap-source 127.0.1.1
+!
+!
+interface epon 0/1
+onu auth-mode mac
+confirm onu mac 38:94:e0:b1:d9:48 onuid 1 auth-mode mac
+confirm onu mac 38:94:e0:b1:b7:d6 onuid 2 auth-mode mac
+confirm onu mac 38:94:e0:b1:d9:6e onuid 3 auth-mode mac
+confirm onu mac 7c:a9:6b:84:d5:02 onuid 4 auth-mode mac
+confirm onu mac 38:94:e0:a4:0b:50 onuid 5 auth-mode mac
+confirm onu mac 38:94:e0:a4:21:10 onuid 6 auth-mode mac
+confirm onu mac e0:67:b3:1a:f0:01 onuid 7 auth-mode mac
+confirm onu mac 38:94:e0:a4:21:40 onuid 8 auth-mode mac
+confirm onu mac 38:94:e0:a4:22:30 onuid 9 auth-mode mac
+confirm onu mac 38:94:e0:a4:22:28 onuid 10 auth-mode mac
+confirm onu mac 38:94:e0:c2:43:78 onuid 11 auth-mode mac
+confirm onu mac e0:67:b3:0e:34:f5 onuid 12 auth-mode mac
+confirm onu mac 38:94:e0:b3:f6:be onuid 13 auth-mode mac
+confirm onu mac 38:94:e0:d0:4d:79 onuid 14 auth-mode mac
+confirm onu mac 38:94:e0:c3:a2:59 onuid 15 auth-mode mac
+confirm onu mac 38:94:e0:e3:13:3a onuid 16 auth-mode mac
+confirm onu mac 38:94:e0:c3:eb:0d onuid 17 auth-mode mac
+confirm onu mac 38:94:e0:ac:c5:c8 onuid 18 auth-mode mac
+confirm onu mac 38:94:e0:c3:f1:f8 onuid 19 auth-mode mac
+confirm onu mac 38:94:e0:c2:50:70 onuid 20 auth-mode mac
+confirm onu mac 7c:a9:6b:3b:19:eb onuid 21 auth-mode mac
+confirm onu mac 7c:a9:6b:84:d5:00 onuid 22 auth-mode mac
+confirm onu mac 38:94:e0:a4:0b:60 onuid 23 auth-mode mac
+confirm onu mac 1c:20:db:9a:ed:ee onuid 24 auth-mode mac
+confirm onu mac 38:94:e0:a4:0b:a0 onuid 25 auth-mode mac
+exit
+!
+interface epon 0/2
+onu auth-mode mac
+confirm onu mac 38:94:e0:e3:13:3a onuid 1
+confirm onu mac 38:94:e0:a4:22:38 onuid 2 auth-mode mac
+confirm onu mac 38:94:e0:ac:c1:b3 onuid 3 auth-mode mac
+confirm onu mac 38:94:e0:a4:58:70 onuid 4 auth-mode mac
+confirm onu mac 38:94:e0:b1:d3:66 onuid 5
+confirm onu mac 38:94:e0:a4:21:88 onuid 6 auth-mode mac
+confirm onu mac 38:94:e0:c2:3a:30 onuid 7 auth-mode mac
+confirm onu mac 38:94:e0:c3:a2:6f onuid 8 auth-mode mac
+confirm onu mac 38:94:e0:ac:c5:91 onuid 9 auth-mode mac
+confirm onu mac e0:67:b3:0e:34:e5 onuid 10 auth-mode mac
+confirm onu mac 38:94:e0:e3:1d:8a onuid 11 auth-mode mac
+confirm onu mac 38:94:e0:a4:21:a0 onuid 12 auth-mode mac
+confirm onu mac 38:94:e0:ab:12:af onuid 13 auth-mode mac
+confirm onu mac 38:94:e0:b0:45:2f onuid 14 auth-mode mac
+confirm onu mac 7c:a9:6b:af:07:18 onuid 15 auth-mode mac
+confirm onu mac 7c:a9:6b:3b:19:e9 onuid 16 auth-mode mac
+confirm onu mac 38:94:e0:d3:c5:52 onuid 17 auth-mode mac
+confirm onu mac 38:94:e0:d3:9b:fc onuid 18 auth-mode mac
+confirm onu mac 38:94:e0:b3:f6:c9 onuid 19 auth-mode mac
+confirm onu mac 38:94:e0:be:38:49 onuid 20 auth-mode mac
+confirm onu mac 38:94:e0:b3:f7:00 onuid 21 auth-mode mac
+exit
+!
+interface epon 0/3
+onu auth-mode mac
+confirm onu mac 38:94:e0:a4:21:f0 onuid 1 auth-mode mac
+confirm onu mac 38:94:e0:b1:d9:66 onuid 2 auth-mode mac
+confirm onu mac 38:94:e0:b1:b7:d2 onuid 3 auth-mode mac
+confirm onu mac 38:94:e0:b1:d9:58 onuid 4 auth-mode mac
+confirm onu mac 38:94:e0:a4:22:10 onuid 5 auth-mode mac
+confirm onu mac 38:94:e0:b5:5e:67 onuid 6 auth-mode mac
+confirm onu mac 38:94:e0:a4:0b:08 onuid 7 auth-mode mac
+confirm onu mac 38:94:e0:a4:21:90 onuid 8 auth-mode mac
+confirm onu mac a0:c6:ec:04:ca:2e onuid 9 auth-mode mac
+confirm onu mac 38:94:e0:c2:50:48 onuid 10 auth-mode mac
+confirm onu mac 38:94:e0:a4:22:48 onuid 11 auth-mode mac
+confirm onu mac 38:94:e0:c2:3b:b8 onuid 12 auth-mode mac
+confirm onu mac 38:94:e0:a4:bb:f8 onuid 13 auth-mode mac
+confirm onu mac 38:94:e0:b1:b7:90 onuid 14 auth-mode mac
+confirm onu mac 38:94:e0:a4:0a:d8 onuid 15 auth-mode mac
+confirm onu mac 38:94:e0:c4:1b:38 onuid 16 auth-mode mac
+confirm onu mac 38:94:e0:b7:84:79 onuid 17 auth-mode mac
+confirm onu mac 38:94:e0:b0:69:47 onuid 18 auth-mode mac
+confirm onu mac 38:94:e0:be:16:ba onuid 19 auth-mode mac
+confirm onu mac a4:00:e2:84:22:63 onuid 20 auth-mode mac
+confirm onu mac 38:94:e0:be:38:49 onuid 21 auth-mode mac
+confirm onu mac a4:00:e2:8b:13:33 onuid 22 auth-mode mac
+confirm onu mac 38:94:e0:ac:c1:5b onuid 23
+confirm onu mac 7c:a9:6b:d6:af:3c onuid 24 auth-mode mac
+exit
+!
+interface epon 0/4
+onu auth-mode mac
+confirm onu mac 7c:a9:6b:af:06:d8 onuid 1 auth-mode mac
+confirm onu mac 38:94:e0:a4:21:98 onuid 2 auth-mode mac
+confirm onu mac 38:94:e0:b0:44:95 onuid 3 auth-mode mac
+confirm onu mac 38:94:e0:b5:7c:5a onuid 4 auth-mode mac
+confirm onu mac 38:94:e0:a8:c1:e1 onuid 5 auth-mode mac
+exit
+!
+interface epon 0/1
+onu mac-auth add 38:94:E0:B3:F6:BE
+onu mac-auth add 38:94:E0:C3:F1:F8
+onu mac-auth add 38:94:E0:A4:21:10
+onu mac-auth add 38:94:E0:A4:22:28
+onu mac-auth add 38:94:E0:A4:22:30
+onu mac-auth add 38:94:E0:A4:0B:50
+onu mac-auth add 38:94:E0:A4:21:40
+onu mac-auth add 38:94:E0:A4:0B:60
+onu mac-auth add 7C:A9:6B:3B:19:EB
+onu mac-auth add 38:94:E0:E3:13:3A
+onu mac-auth add 7C:A9:6B:84:D5:00
+onu mac-auth add 7C:A9:6B:84:D5:02
+onu mac-auth add 38:94:E0:A4:0B:A0
+onu mac-auth add E0:67:B3:1A:F0:01
+onu mac-auth add 38:94:E0:B5:5E:67
+onu mac-auth add 38:94:E0:C2:43:78
+onu mac-auth add 38:94:E0:C2:50:70
+onu mac-auth add E0:67:B3:0E:34:F5
+onu mac-auth add 38:94:E0:D0:4D:79
+onu mac-auth add 38:94:E0:C3:EB:0D
+onu mac-auth add 38:94:E0:C3:A2:59
+onu mac-auth add 38:94:E0:B1:D9:48
+onu mac-auth add 1C:20:DB:9A:ED:EE
+onu mac-auth add 38:94:E0:B1:D9:6E
+onu mac-auth add 38:94:E0:AC:C5:C8
+onu mac-auth add 38:94:E0:B1:B7:D6
+exit
+!
+interface epon 0/2
+onu mac-auth add 38:94:E0:D3:9B:FC
+onu mac-auth add 38:94:E0:B3:F6:C9
+onu mac-auth add 7C:A9:6B:AF:07:18
+onu mac-auth add 38:94:E0:A4:21:20
+onu mac-auth add 38:94:E0:A4:22:38
+onu mac-auth add 7C:A9:6B:3B:19:E9
+onu mac-auth add 38:94:E0:B0:45:2F
+onu mac-auth add 38:94:E0:C2:3A:30
+onu mac-auth add 38:94:E0:BE:38:49
+onu mac-auth add 38:94:E0:A4:21:88
+onu mac-auth add 38:94:E0:A4:21:A0
+onu mac-auth add 38:94:E0:A4:58:70
+onu mac-auth add 38:94:E0:AB:12:AF
+onu mac-auth add E0:67:B3:0E:34:E5
+onu mac-auth add 38:94:E0:E3:1D:8A
+onu mac-auth add 38:94:E0:B3:F7:00
+onu mac-auth add 38:94:E0:C3:A2:6F
+onu mac-auth add 38:94:E0:D3:C5:52
+onu mac-auth add 38:94:E0:B1:B7:90
+onu mac-auth add 38:94:E0:AC:C5:91
+onu mac-auth add 38:94:E0:AC:C1:B3
+exit
+!
+interface epon 0/3
+onu mac-auth add 38:94:E0:A4:BB:F8
+onu mac-auth add A4:00:E2:8B:13:33
+onu mac-auth add 38:94:E0:A4:0B:08
+onu mac-auth add 38:94:E0:A4:22:10
+onu mac-auth add A4:00:E2:84:22:63
+onu mac-auth add 38:94:E0:A4:22:48
+onu mac-auth add 38:94:E0:C4:1B:38
+onu mac-auth add 38:94:E0:BE:38:49
+onu mac-auth add 38:94:E0:A4:21:90
+onu mac-auth add 38:94:E0:C2:50:48
+onu mac-auth add 38:94:E0:B0:69:47
+onu mac-auth add 38:94:E0:B5:5E:67
+onu mac-auth add 38:94:E0:A4:0A:D8
+onu mac-auth add 38:94:E0:BE:16:BA
+onu mac-auth add A0:C6:EC:04:CA:2E
+onu mac-auth add 7C:A9:6B:D6:AF:3C
+onu mac-auth add 38:94:E0:B7:84:79
+onu mac-auth add 38:94:E0:A4:21:F0
+onu mac-auth add 38:94:E0:C2:3B:B8
+onu mac-auth add 38:94:E0:B1:D9:58
+onu mac-auth add 38:94:E0:B1:D9:66
+onu mac-auth add 38:94:E0:B1:B7:90
+onu mac-auth add 38:94:E0:B1:B7:D2
+exit
+!
+interface epon 0/4
+onu mac-auth add 38:94:E0:A4:21:98
+onu mac-auth add 7C:A9:6B:AF:06:D8
+onu mac-auth add 38:94:E0:B0:44:95
+onu mac-auth add 38:94:E0:B5:7C:5A
+onu mac-auth add 38:94:E0:A8:C1:E1
+exit
+!
+interface epon 0/1
+onu 1 description Lifestyle_331282
+onu 2 description Innisfree_331287
+onu 3 description U.S.POLO_331291
+onu 4 description 331346_Premimum
+onu 5 description 331051_Quest
+onu 6 description BRAND_BREWERY
+onu 6 ctc eth 1 vlan pvid 10 pri 0
+onu 6 ctc eth 1 vlan mode tag
+onu 7 description 331300_Only
+onu 8 description Veromoda_331299
+onu 9 description 331301_Rhea
+onu 10 description 331305_Uniqlo
+onu 10 ctc eth 1 vlan pvid 10 pri 0
+onu 10 ctc eth 1 vlan mode tag
+onu 11 description 331308_Rj
+onu 12 description 331318_Creamery
+onu 13 description 331330_West
+onu 14 description 331338_Mohan
+onu 14 ctc eth 1 phy_ctrl enable
+onu 15 description 331067_Welgrow
+onu 16 description 331342_COCO
+onu 17 description 331344_Aditya
+onu 18 description 331351_M-zone
+onu 19 ctc eth 1 vlan pvid 712 pri 0
+onu 19 ctc eth 1 vlan mode tag
+onu 20 description 331356_Vision
+onu 21 description 331063_Diamond
+onu 22 description 331347_Premium
+onu 23 description 331224_VENTOTA
+onu 24 description 331185_jamie
+onu 25 description 331341_Dolomite
+exit
+!
+interface epon 0/2
+onu 2 description 331268_Titan
+onu 3 description ChaiThela
+onu 4 description Kram_331274
+onu 6 description Synoptics_331276
+onu 6 ctc eth 1 flow_control enable
+onu 6 ctc eth 1 phy_ctrl enable
+onu 6 ctc eth 1 vlan pvid 3 pri 0
+onu 6 ctc eth 1 vlan mode tag
+onu 7 description 331312_Holy
+onu 8 description 331327_Pratham
+onu 9 description Naks_331271
+onu 9 ctc eth 1 policy cir 16900 cbs 10240 ebs 1024 
+onu 9 ctc eth 1 rate_limit cir 16900 pir 16900 
+onu 9 ctc eth 1 vlan pvid 712 pri 0
+onu 9 ctc eth 1 vlan mode tag
+onu 10 description 331297_Manyavar
+onu 11 description 331339_Citimax
+onu 11 ctc eth 1 vlan pvid 712 pri 0
+onu 11 ctc eth 1 vlan mode transparent
+onu 12 description 331303_Anant
+onu 13 description 331336_Comax
+onu 14 description 331348_Possible
+onu 15 description 331349_Akansha
+onu 16 description 331352_Decathlon
+onu 17 description 331321_RELIANCE
+onu 18 description 331357_BUBBLEGUM
+onu 19 description 331324_COMAX
+onu 20 description 331365_sagar
+onu 21 description 331366_FUTEK
+exit
+!
+interface epon 0/3
+onu 1 description Impresso_331277
+onu 1 ctc eth 1 vlan pvid 5 pri 0
+onu 1 ctc eth 1 vlan mode tag
+onu 2 description Lifestyle_331281
+onu 3 description 331359_VOGANOW
+onu 4 description Lifestyle_331286
+onu 5 description 331292_Chumbak
+onu 6 description 331343_Gurudev
+onu 7 description Jack_331293
+onu 8 description SSIPL_331041
+onu 9 description 331004_Quest
+onu 9 ctc eth 1 phy_ctrl enable
+onu 10 description 331065_Venus
+onu 11 description 331229_Titan
+onu 12 description 331306_Cravatex
+onu 13 description 331307_Metro
+onu 14 description 331309_STELATOES
+onu 15 description 331313_NIRBHAU
+onu 16 description 331326_GKB
+onu 17 description 331322_GKB
+onu 18 description 331345_Ambience
+onu 19 description 331228_Titan
+onu 20 description 331367_Deepika
+onu 20 ctc eth 1 phy_ctrl enable
+onu 20 ctc eth 1 vlan pvid 712 pri 0
+onu 20 ctc eth 1 vlan mode transparent
+onu 20 ctc eth 2 phy_ctrl enable
+onu 20 ctc eth 2 vlan pvid 712 pri 0
+onu 20 ctc eth 2 vlan mode transparent
+onu 21 description 331364_Sanjay
+onu 22 description 331141_Damila
+onu 22 ctc eth 1 vlan pvid 0 pri 0
+onu 22 ctc eth 1 vlan mode transparent
+onu 24 description 331364_Sanjay
+exit
+!
+interface epon 0/4
+onu 1 description 331320_Bluestone
+onu 2 description FRONFI_331275
+onu 3 description 331261_Titan
+onu 4 description 331323_comax
+onu 4 ctc eth 1 vlan pvid 712 pri 0
+onu 4 ctc eth 1 vlan mode tag
+onu 5 description 331360_GRASIM
+exit
+!
+debug mode 
+config level log l2ftp 6
+exit
+!
+!
+
+!!!
+web login timeout 5
+!
+time zone 5:30
+!
+um!
+user add
+
+##ENDOF_CONFIG##
+
