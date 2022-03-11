@@ -378,6 +378,7 @@ onu 9 description 351118_Anita
 onu 10 description 351131_Ajay
 onu 11 description GShospitality
 onu 12 description 351135_bagger
+onu 13 description 351140_MANAS
 onu 14 description 351109_Trust
 onu 18 description 351137_Car
 onu 18 ctc eth 1 vlan pvid 600 pri 0
