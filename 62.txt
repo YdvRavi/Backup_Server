@@ -1,10 +1,6 @@
 ##CONFIG##
 
-## 
-2022/03/11 14:26:50   ONU Link LOST            PON 0/2 ONU 1 7C:A9:6B:3B:19:DB.
-
-2022/03/11 14:26:50   ONU Register             PON 0/2 ONU 1 7C:A9:6B:3B:19:DB.
-terminal length 0
+## terminal length 0
 UV_olt#87.139### 
 
 Current configuration:
