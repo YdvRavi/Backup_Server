@@ -28,7 +28,7 @@ vlan 15
 exit
 vlan 17
 exit
-vlan 21 - 23
+vlan 21 - 24
 vlan 100
 exit
 vlan 813
@@ -202,7 +202,7 @@ switchport hybrid vlan 7 - 8 tagged
 switchport hybrid vlan 11 tagged
 switchport hybrid vlan 15 tagged
 switchport hybrid vlan 17 tagged
-switchport hybrid vlan 21 - 23 tagged
+switchport hybrid vlan 21 - 24 tagged
 switchport hybrid vlan 100 tagged
 switchport hybrid vlan 813 tagged
 switchport hybrid pvid vlan 1
@@ -325,6 +325,7 @@ switchport hybrid vlan 7 - 8 tagged
 switchport hybrid vlan 15 tagged
 switchport hybrid vlan 17 tagged
 switchport hybrid vlan 21 tagged
+switchport hybrid vlan 24 tagged
 switchport hybrid vlan 100 tagged
 switchport hybrid pvid vlan 813
 mdi force
@@ -482,7 +483,7 @@ confirm onu mac 7c:a9:6b:d7:6f:e4 onuid 2 auth-mode mac
 confirm onu mac 38:94:e0:ac:c1:c9 onuid 3 auth-mode mac
 confirm onu mac 7c:a9:6b:d7:22:e2 onuid 4 auth-mode mac
 confirm onu mac 7c:a9:6b:84:0f:62 onuid 5 auth-mode mac
-confirm onu mac a4:00:e2:8d:39:68 onuid 6
+confirm onu mac a4:00:e2:8d:39:68 onuid 6 auth-mode mac
 confirm onu mac a0:c6:ec:07:87:58 onuid 7 auth-mode mac
 confirm onu mac 38:94:e0:ac:c6:0a onuid 8 auth-mode mac
 confirm onu mac a4:00:e2:6f:ae:fe onuid 9 auth-mode mac
@@ -550,6 +551,7 @@ exit
 !
 interface epon 0/2
 onu mac-auth add 7C:A9:6B:84:0F:62
+onu mac-auth add A4:00:E2:8D:39:68
 onu mac-auth add 7C:A9:6B:3B:19:EF
 onu mac-auth add A0:C6:EC:07:79:31
 onu mac-auth add 7C:A9:6B:84:D5:2C
@@ -625,6 +627,9 @@ onu 4 ctc eth 1 vlan mode transparent
 onu 5 description 191864_Ubuntu
 onu 5 ctc eth 1 vlan pvid 15 pri 0
 onu 5 ctc eth 1 vlan mode tag
+onu 6 description 191901_Infynix
+onu 6 ctc eth 1 vlan pvid 24 pri 0
+onu 6 ctc eth 1 vlan mode tag
 onu 7 description 191430_Rosso
 onu 7 ctc eth 1 vlan pvid 813 pri 0
 onu 7 ctc eth 1 vlan mode transparent
