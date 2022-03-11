@@ -609,6 +609,9 @@ onu 5 ctc eth 1 vlan mode tag
 exit
 !
 interface epon 0/2
+onu 1 description 131415_Pallia
+onu 1 ctc eth 1 vlan pvid 39 pri 0
+onu 1 ctc eth 1 vlan mode tag
 onu 2 description 131455_AVL
 onu 2 ctc eth 1 phy_ctrl enable
 onu 2 ctc eth 1 vlan pvid 600 pri 0
