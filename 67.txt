@@ -608,11 +608,10 @@ snmp-server trap-source 127.0.1.1
 interface epon 0/1
 onu auth-mode mac
 confirm onu mac 7c:a9:6b:01:d4:20 onuid 1 auth-mode mac
-confirm onu mac 7c:a9:6b:d7:6a:b2 onuid 2 auth-mode mac
 confirm onu mac 7c:a9:6b:d7:5f:f4 onuid 3
 confirm onu mac 38:94:e0:d9:4e:7a onuid 4 auth-mode mac
 confirm onu mac 38:94:e0:a4:0a:90 onuid 5 auth-mode mac
-confirm onu mac 38:94:e0:ac:c1:5b onuid 6
+confirm onu mac 38:94:e0:ac:c1:5b onuid 6 auth-mode mac
 confirm onu mac a0:c6:ec:07:79:31 onuid 7 auth-mode mac
 confirm onu mac 38:94:e0:e3:39:4a onuid 9 auth-mode mac
 confirm onu mac 38:94:e0:d8:e9:b7 onuid 11 auth-mode mac
@@ -691,7 +690,7 @@ onu mac-auth add 38:94:E0:A4:0A:90
 onu mac-auth add A0:C6:EC:07:79:31
 onu mac-auth add 38:94:E0:E3:39:4A
 onu mac-auth add 38:94:E0:D9:4E:7A
-onu mac-auth add 7C:A9:6B:D7:6A:B2
+onu mac-auth add 38:94:E0:AC:C1:5B
 onu mac-auth add 7C:A9:6B:3B:1A:0B
 exit
 !
@@ -751,9 +750,6 @@ interface epon 0/1
 onu 1 description 231052_Mahadev
 onu 1 ctc eth 1 vlan pvid 612 pri 0
 onu 1 ctc eth 1 vlan mode tag
-onu 2 description 231073_Arun
-onu 2 ctc eth 1 vlan pvid 612 pri 0
-onu 2 ctc eth 1 vlan mode tag
 onu 4 description 231044_Ravi
 onu 5 description 231017_Manoj
 onu 5 ctc eth 1 vlan pvid 305 pri 0
