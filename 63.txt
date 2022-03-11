@@ -276,6 +276,7 @@ confirm onu mac 38:94:e0:c2:44:b0 onuid 9 auth-mode mac
 confirm onu mac 7c:a9:6b:01:a6:20 onuid 10 auth-mode mac
 confirm onu mac 38:94:e0:a4:0a:c0 onuid 11 auth-mode mac
 confirm onu mac 38:94:e0:a4:21:38 onuid 12 auth-mode mac
+confirm onu mac 7c:a9:6b:02:21:70 onuid 13 auth-mode mac
 confirm onu mac 38:94:e0:a4:21:28 onuid 14 auth-mode mac
 confirm onu mac 7c:a9:6b:01:d5:f8 onuid 18 auth-mode mac
 confirm onu mac 7c:a9:6b:01:c1:10 onuid 19 auth-mode mac
@@ -283,7 +284,6 @@ confirm onu mac e0:67:b3:1a:ef:f8 onuid 23 auth-mode mac
 confirm onu mac 7c:a9:6b:01:a0:40 onuid 25 auth-mode mac
 confirm onu mac 7c:a9:6b:02:25:a0 onuid 26 auth-mode mac
 confirm onu mac 38:94:e0:d3:d0:50 onuid 27 auth-mode mac
-confirm onu mac 7c:a9:6b:02:21:70 onuid 28 auth-mode mac
 confirm onu mac 7c:a9:6b:af:07:50 onuid 29 auth-mode mac
 confirm onu mac 7c:a9:6b:84:0f:72 onuid 30 auth-mode mac
 exit
@@ -388,7 +388,6 @@ onu 25 description 351070_Thea
 onu 25 ctc eth 1 phy_ctrl enable
 onu 26 description 351078_GRFOOD
 onu 27 description 351141
-onu 28 description 351140_Manas
 onu 29 description 351123_Balvinder
 onu 29 ctc eth 1 flow_control enable
 onu 29 ctc eth 1 loopdetect enable
