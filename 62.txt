@@ -2,8 +2,6 @@
 
 ## terminal length 0
 UV_olt#87.139### 
-2022/03/11 14:56:48   ONU Deregister           PON 0/2 ONU 1 7C:A9:6B:3B:19:DB MPCP TIMEOUT.
-
 
 Current configuration:
 !
@@ -481,7 +479,7 @@ exit
 !
 interface epon 0/2
 onu auth-mode mac
-confirm onu mac 7c:a9:6b:3b:19:db onuid 1
+confirm onu mac 7c:a9:6b:3b:19:db onuid 1 auth-mode mac
 confirm onu mac e0:67:b3:10:33:b8 onuid 2 auth-mode mac
 confirm onu mac a4:00:e2:6d:87:ea onuid 3
 confirm onu mac a4:00:e2:8e:f5:82 onuid 4 auth-mode mac
