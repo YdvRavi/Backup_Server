@@ -754,6 +754,7 @@ onu 4 description 231044_Ravi
 onu 5 description 231017_Manoj
 onu 5 ctc eth 1 vlan pvid 305 pri 0
 onu 5 ctc eth 1 vlan mode tag
+onu 6 description 231073_arun
 onu 7 description 231062_SAMRAT
 onu 7 ctc eth 1 vlan pvid 612 pri 0
 onu 7 ctc eth 1 vlan mode tag

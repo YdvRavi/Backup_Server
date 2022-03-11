@@ -482,6 +482,7 @@ confirm onu mac 7c:a9:6b:d7:6f:e4 onuid 2 auth-mode mac
 confirm onu mac 38:94:e0:ac:c1:c9 onuid 3 auth-mode mac
 confirm onu mac 7c:a9:6b:d7:22:e2 onuid 4 auth-mode mac
 confirm onu mac 7c:a9:6b:84:0f:62 onuid 5 auth-mode mac
+confirm onu mac a4:00:e2:8d:39:68 onuid 6
 confirm onu mac a0:c6:ec:07:87:58 onuid 7 auth-mode mac
 confirm onu mac 38:94:e0:ac:c6:0a onuid 8 auth-mode mac
 confirm onu mac a4:00:e2:6f:ae:fe onuid 9 auth-mode mac
