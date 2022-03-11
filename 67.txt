@@ -1,0 +1,906 @@
+##CONFIG##
+
+85.58# terminal length 0
+OLT#Heritage#85.58# 
+
+Current configuration:
+!
+hostname OLT#Heritage#85.58
+password admin
+enable password admin
+syslog server ip 203.110.80.167 port 514
+!
+line vty
+!
+!
+interface aux
+ip address 192.168.8.100 255.255.255.0
+exit
+interface loopback
+ip address 127.0.0.1 255.0.0.0
+exit
+!
+vlan 1
+exit
+vlan 3
+exit
+vlan 100
+exit
+vlan 200
+exit
+vlan 295
+exit
+vlan 305
+exit
+vlan 401
+exit
+vlan 414
+exit
+vlan 426
+exit
+vlan 428 - 429
+vlan 433
+exit
+vlan 452
+exit
+vlan 459
+exit
+vlan 500
+exit
+vlan 514
+exit
+vlan 522
+exit
+vlan 556
+exit
+vlan 600 - 601
+vlan 605
+exit
+vlan 612
+exit
+interface vlan 1
+ip address 172.30.85.58/24
+vlan 3
+description MiLLBB
+exit
+!
+vlan 200
+description VPP_BB
+exit
+!
+vlan 295
+description Vibhoor
+exit
+!
+vlan 305
+description ULLAWAS
+exit
+!
+vlan 426
+description DCPLUS_201081
+exit
+!
+vlan 429
+description Nextra
+exit
+!
+vlan 433
+description 433
+exit
+!
+vlan 459
+description Max
+exit
+!
+vlan 500
+description Success
+exit
+!
+vlan 514
+description vlan514_111264
+exit
+!
+vlan 556
+description Choise
+exit
+!
+vlan 600
+description BPTP
+exit
+!
+vlan 601
+description Private
+exit
+!
+interface aux
+exit
+!
+!
+!
+interface gigabitethernet 0/1
+switchport mode hybrid
+switchport hybrid vlan 1 untagged
+switchport hybrid pvid vlan 1
+no shutdown 
+mdi force
+storm-control broadcast fps 512
+no storm-control multicast
+storm-control unknow fps 512
+switchport isolate
+no ip igmp snooping immediate-leave
+loopback disable
+exit
+!
+interface gigabitethernet 0/2
+switchport mode hybrid
+switchport hybrid vlan 1 untagged
+switchport hybrid pvid vlan 1
+no shutdown 
+mdi force
+storm-control broadcast fps 512
+no storm-control multicast
+storm-control unknow fps 512
+switchport isolate
+no ip igmp snooping immediate-leave
+loopback disable
+exit
+!
+interface gigabitethernet 0/3
+switchport mode hybrid
+switchport hybrid vlan 1 untagged
+switchport hybrid pvid vlan 1
+no shutdown 
+mdi force
+storm-control broadcast fps 512
+no storm-control multicast
+storm-control unknow fps 512
+switchport isolate
+no ip igmp snooping immediate-leave
+loopback disable
+exit
+!
+interface gigabitethernet 0/4
+switchport mode hybrid
+switchport hybrid vlan 1 untagged
+switchport hybrid pvid vlan 1
+no shutdown 
+mdi force
+storm-control broadcast fps 512
+no storm-control multicast
+storm-control unknow fps 512
+switchport isolate
+no ip igmp snooping immediate-leave
+loopback disable
+exit
+!
+interface gigabitethernet 0/5
+switchport mode hybrid
+switchport hybrid vlan 1 untagged
+switchport hybrid pvid vlan 1
+no shutdown 
+mdi force
+storm-control broadcast fps 512
+no storm-control multicast
+storm-control unknow fps 512
+switchport isolate
+no ip igmp snooping immediate-leave
+loopback disable
+exit
+!
+interface gigabitethernet 0/6
+switchport mode hybrid
+switchport hybrid vlan 1 untagged
+switchport hybrid pvid vlan 1
+no shutdown 
+mdi force
+storm-control broadcast fps 512
+no storm-control multicast
+storm-control unknow fps 512
+switchport isolate
+no ip igmp snooping immediate-leave
+loopback disable
+exit
+!
+interface gigabitethernet 0/7
+switchport mode hybrid
+switchport hybrid vlan 1 untagged
+switchport hybrid pvid vlan 1
+no shutdown 
+mdi force
+storm-control broadcast fps 512
+no storm-control multicast
+storm-control unknow fps 512
+switchport isolate
+no ip igmp snooping immediate-leave
+loopback disable
+exit
+!
+interface gigabitethernet 0/8
+switchport mode hybrid
+switchport hybrid vlan 1 untagged
+switchport hybrid pvid vlan 1
+no shutdown 
+mdi force
+storm-control broadcast fps 512
+no storm-control multicast
+storm-control unknow fps 512
+switchport isolate
+no ip igmp snooping immediate-leave
+loopback disable
+exit
+!
+interface gigabitethernet 0/9
+switchport mode hybrid
+switchport hybrid vlan 1 untagged
+switchport hybrid pvid vlan 1
+no shutdown 
+mdi force
+storm-control broadcast fps 512
+no storm-control multicast
+storm-control unknow fps 512
+switchport isolate
+no ip igmp snooping immediate-leave
+loopback disable
+exit
+!
+interface gigabitethernet 0/10
+switchport mode hybrid
+switchport hybrid vlan 1 untagged
+switchport hybrid vlan 3 tagged
+switchport hybrid vlan 100 tagged
+switchport hybrid vlan 200 tagged
+switchport hybrid vlan 295 tagged
+switchport hybrid vlan 305 tagged
+switchport hybrid vlan 401 tagged
+switchport hybrid vlan 414 tagged
+switchport hybrid vlan 426 tagged
+switchport hybrid vlan 428 - 429 tagged
+switchport hybrid vlan 433 tagged
+switchport hybrid vlan 452 tagged
+switchport hybrid vlan 459 tagged
+switchport hybrid vlan 500 tagged
+switchport hybrid vlan 514 tagged
+switchport hybrid vlan 522 tagged
+switchport hybrid vlan 556 tagged
+switchport hybrid vlan 600 - 601 tagged
+switchport hybrid vlan 605 tagged
+switchport hybrid vlan 612 tagged
+switchport hybrid pvid vlan 1
+no shutdown 
+mdi force
+storm-control broadcast fps 512
+no storm-control multicast
+storm-control unknow fps 512
+switchport isolate
+no ip igmp snooping immediate-leave
+loopback disable
+exit
+!
+interface gigabitethernet 0/11
+switchport mode hybrid
+switchport hybrid vlan 1 untagged
+switchport hybrid pvid vlan 1
+no shutdown 
+mdi force
+storm-control broadcast fps 512
+no storm-control multicast
+storm-control unknow fps 512
+switchport isolate
+no ip igmp snooping immediate-leave
+loopback disable
+exit
+!
+interface gigabitethernet 0/12
+switchport mode hybrid
+switchport hybrid vlan 1 untagged
+switchport hybrid pvid vlan 1
+no shutdown 
+mdi force
+storm-control broadcast fps 512
+no storm-control multicast
+storm-control unknow fps 512
+switchport isolate
+no ip igmp snooping immediate-leave
+loopback disable
+exit
+!
+interface gigabitethernet 0/13
+switchport mode hybrid
+switchport hybrid vlan 1 untagged
+switchport hybrid pvid vlan 1
+no shutdown 
+mdi force
+storm-control broadcast fps 512
+no storm-control multicast
+storm-control unknow fps 512
+switchport isolate
+no ip igmp snooping immediate-leave
+loopback disable
+exit
+!
+interface gigabitethernet 0/14
+switchport mode hybrid
+switchport hybrid vlan 1 untagged
+switchport hybrid pvid vlan 1
+no shutdown 
+mdi force
+storm-control broadcast fps 512
+no storm-control multicast
+storm-control unknow fps 512
+switchport isolate
+no ip igmp snooping immediate-leave
+loopback disable
+exit
+!
+interface gigabitethernet 0/15
+switchport mode hybrid
+switchport hybrid vlan 1 untagged
+switchport hybrid pvid vlan 1
+no shutdown 
+mdi force
+storm-control broadcast fps 512
+no storm-control multicast
+storm-control unknow fps 512
+switchport isolate
+no ip igmp snooping immediate-leave
+loopback disable
+exit
+!
+interface gigabitethernet 0/16
+switchport mode hybrid
+switchport hybrid vlan 1 untagged
+switchport hybrid pvid vlan 1
+no shutdown 
+mdi force
+storm-control broadcast fps 512
+no storm-control multicast
+storm-control unknow fps 512
+switchport isolate
+no ip igmp snooping immediate-leave
+loopback disable
+exit
+!
+interface epon 0/1
+description Ullawas
+switchport mode trunk
+switchport trunk vlan 305
+switchport trunk vlan 612
+switchport trunk pvid vlan 1
+mdi force
+storm-control broadcast fps 512
+no storm-control multicast
+storm-control unknow fps 512
+switchport isolate
+no ip igmp snooping immediate-leave
+loopback disable
+lacp port-priority 0
+lacp admin-key 0
+exit
+!
+interface epon 0/2
+description BPTPE&F
+switchport mode trunk
+switchport trunk vlan 3
+switchport trunk vlan 100
+switchport trunk vlan 200
+switchport trunk vlan 295
+switchport trunk vlan 305
+switchport trunk vlan 401
+switchport trunk vlan 428
+switchport trunk vlan 452
+switchport trunk vlan 500
+switchport trunk vlan 514
+switchport trunk vlan 522
+switchport trunk vlan 600 - 601
+switchport trunk vlan 605
+switchport trunk vlan 612
+switchport trunk pvid vlan 1
+mdi force
+storm-control broadcast fps 512
+no storm-control multicast
+storm-control unknow fps 512
+switchport isolate
+no ip igmp snooping immediate-leave
+lacp port-priority 0
+lacp admin-key 0
+exit
+!
+interface epon 0/3
+description BPTPC&D
+switchport mode trunk
+switchport trunk vlan 3
+switchport trunk vlan 100
+switchport trunk vlan 200
+switchport trunk vlan 295
+switchport trunk vlan 305
+switchport trunk vlan 401
+switchport trunk vlan 428 - 429
+switchport trunk vlan 452
+switchport trunk vlan 500
+switchport trunk vlan 522
+switchport trunk vlan 600 - 601
+switchport trunk vlan 612
+switchport trunk pvid vlan 1
+mdi force
+storm-control broadcast fps 512
+no storm-control multicast
+storm-control unknow fps 512
+switchport isolate
+no ip igmp snooping immediate-leave
+loopback disable
+lacp port-priority 0
+lacp admin-key 0
+exit
+!
+interface epon 0/4
+description BPTPA&B
+switchport mode trunk
+switchport trunk vlan 3
+switchport trunk vlan 100
+switchport trunk vlan 200
+switchport trunk vlan 295
+switchport trunk vlan 305
+switchport trunk vlan 401
+switchport trunk vlan 426
+switchport trunk vlan 428
+switchport trunk vlan 452
+switchport trunk vlan 500
+switchport trunk vlan 522
+switchport trunk vlan 600 - 601
+switchport trunk vlan 612
+switchport trunk pvid vlan 1
+mdi force
+storm-control broadcast fps 512
+no storm-control multicast
+storm-control unknow fps 512
+switchport isolate
+no ip igmp snooping immediate-leave
+loopback disable
+lacp port-priority 0
+lacp admin-key 0
+exit
+!
+interface epon 0/5
+description BPTPJ&G
+switchport mode trunk
+switchport trunk vlan 3
+switchport trunk vlan 100
+switchport trunk vlan 200
+switchport trunk vlan 295
+switchport trunk vlan 305
+switchport trunk vlan 401
+switchport trunk vlan 426
+switchport trunk vlan 428
+switchport trunk vlan 452
+switchport trunk vlan 500
+switchport trunk vlan 522
+switchport trunk vlan 600 - 601
+switchport trunk vlan 612
+switchport trunk pvid vlan 1
+mdi force
+storm-control broadcast fps 512
+no storm-control multicast
+storm-control unknow fps 512
+switchport isolate
+no ip igmp snooping immediate-leave
+loopback disable
+lacp port-priority 0
+lacp admin-key 0
+exit
+!
+interface epon 0/6
+description DharamTower
+switchport mode trunk
+switchport trunk vlan 3
+switchport trunk vlan 100
+switchport trunk vlan 200
+switchport trunk vlan 295
+switchport trunk vlan 305
+switchport trunk vlan 401
+switchport trunk vlan 426
+switchport trunk vlan 428
+switchport trunk vlan 452
+switchport trunk vlan 500
+switchport trunk vlan 522
+switchport trunk vlan 600 - 601
+switchport trunk vlan 612
+switchport trunk pvid vlan 1
+mdi force
+storm-control broadcast fps 512
+no storm-control multicast
+storm-control unknow fps 512
+switchport isolate
+no ip igmp snooping immediate-leave
+loopback disable
+lacp port-priority 0
+lacp admin-key 0
+exit
+!
+interface epon 0/7
+description BPTPH
+switchport mode trunk
+switchport trunk vlan 3
+switchport trunk vlan 100
+switchport trunk vlan 200
+switchport trunk vlan 295
+switchport trunk vlan 305
+switchport trunk vlan 401
+switchport trunk vlan 426
+switchport trunk vlan 428
+switchport trunk vlan 452
+switchport trunk vlan 500
+switchport trunk vlan 522
+switchport trunk vlan 600 - 601
+switchport trunk vlan 612
+switchport trunk pvid vlan 1
+mdi force
+storm-control broadcast fps 512
+no storm-control multicast
+storm-control unknow fps 512
+switchport isolate
+no ip igmp snooping immediate-leave
+loopback disable
+lacp port-priority 0
+lacp admin-key 2
+exit
+!
+interface epon 0/8
+description Magnum
+switchport mode trunk
+switchport trunk vlan 3
+switchport trunk vlan 100
+switchport trunk vlan 200
+switchport trunk vlan 295
+switchport trunk vlan 305
+switchport trunk vlan 401
+switchport trunk vlan 414
+switchport trunk vlan 426
+switchport trunk vlan 428
+switchport trunk vlan 433
+switchport trunk vlan 452
+switchport trunk vlan 459
+switchport trunk vlan 500
+switchport trunk vlan 522
+switchport trunk vlan 556
+switchport trunk vlan 600 - 601
+switchport trunk vlan 612
+switchport trunk pvid vlan 1
+mdi force
+storm-control broadcast fps 512
+no storm-control multicast
+storm-control unknow fps 512
+switchport isolate
+no ip igmp snooping immediate-leave
+loopback disable
+lacp port-priority 0
+lacp admin-key 3
+exit
+!
+ip route 0.0.0.0/0 172.30.85.1
+!
+
+!
+login-access-list permit web 203.110.80.161 255.255.255.240
+login-access-list permit telnet 203.110.80.161 255.255.255.240
+login-access-list permit snmp 203.110.80.161 255.255.255.240
+login-access-list enable 
+!
+queue-scheduler strict-priority
+!<RSTP Cconfig Information>
+!
+dhcp-server leasetime 864000
+dhcp-server startip 192.168.0.20 endip 192.168.0.254
+dhcp-server interface vlan 1
+!
+!<dhcp relay config information>
+!
+!
+no loopback detect
+snmp-server start
+no snmp-server community public
+no snmp-server community private
+snmp-server community deldsl ro 
+snmp-server notify notify inform inform  inform 
+snmp-server notify notify trap trap  trap 
+snmp-server trap-source 127.0.1.1
+!
+!
+interface epon 0/1
+onu auth-mode mac
+confirm onu mac 7c:a9:6b:01:d4:20 onuid 1 auth-mode mac
+confirm onu mac 7c:a9:6b:d7:6a:b2 onuid 2 auth-mode mac
+confirm onu mac 7c:a9:6b:d7:5f:f4 onuid 3
+confirm onu mac 38:94:e0:d9:4e:7a onuid 4 auth-mode mac
+confirm onu mac 38:94:e0:a4:0a:90 onuid 5 auth-mode mac
+confirm onu mac a0:c6:ec:07:79:31 onuid 7 auth-mode mac
+confirm onu mac 38:94:e0:e3:39:4a onuid 9 auth-mode mac
+confirm onu mac 38:94:e0:d8:e9:b7 onuid 11 auth-mode mac
+confirm onu mac 7c:a9:6b:3b:1a:0b onuid 15 auth-mode mac
+exit
+!
+interface epon 0/2
+onu auth-mode mac
+confirm onu mac a0:c6:ec:07:81:86 onuid 1 auth-mode mac
+confirm onu mac e0:67:b3:1a:ef:f2 onuid 2 auth-mode mac
+confirm onu mac 38:94:e0:b1:b7:e6 onuid 3
+confirm onu mac 38:94:e0:d3:d0:7c onuid 4
+confirm onu mac 38:94:e0:a8:c5:9e onuid 5 auth-mode mac
+exit
+!
+interface epon 0/3
+onu auth-mode mac
+confirm onu mac 7c:a9:6b:3b:1a:1d onuid 1 auth-mode mac
+confirm onu mac 7c:a9:6b:3b:19:d9 onuid 2 auth-mode mac
+confirm onu mac 7c:a9:6b:af:07:b8 onuid 3 auth-mode mac
+exit
+!
+interface epon 0/4
+onu auth-mode mac
+confirm onu mac 38:94:e0:e3:19:9a onuid 1 auth-mode mac
+confirm onu mac a0:c6:ec:07:87:5c onuid 2
+confirm onu mac 38:94:e0:e3:1b:4a onuid 3
+confirm onu mac 38:94:e0:e3:3f:92 onuid 4 auth-mode mac
+confirm onu mac 38:94:e0:a4:0b:28 onuid 5 auth-mode mac
+confirm onu mac 7c:a9:6b:84:d5:28 onuid 6 auth-mode mac
+confirm onu mac 38:94:e0:b5:6b:56 onuid 7 auth-mode mac
+confirm onu mac 38:94:e0:a4:0b:18 onuid 10 auth-mode mac
+exit
+!
+interface epon 0/5
+onu auth-mode mac
+exit
+!
+interface epon 0/6
+onu auth-mode mac
+confirm onu mac 38:94:e0:d2:62:c0 onuid 2 auth-mode mac
+confirm onu mac 38:94:e0:a8:c5:9e onuid 4
+confirm onu mac 7c:a9:6b:af:07:48 onuid 5 auth-mode mac
+confirm onu mac a0:c6:ec:04:ca:30 onuid 6 auth-mode mac
+confirm onu mac a0:c6:ec:07:7f:42 onuid 7
+confirm onu mac 7c:a9:6b:01:ce:60 onuid 8 auth-mode mac
+exit
+!
+interface epon 0/7
+onu auth-mode mac
+confirm onu mac 7c:a9:6b:af:06:dc onuid 9 auth-mode mac
+confirm onu mac 38:94:e0:d3:d0:70 onuid 10 auth-mode mac
+exit
+!
+interface epon 0/8
+onu auth-mode mac
+confirm onu mac 38:94:e0:a4:21:60 onuid 1 auth-mode mac
+confirm onu mac 38:94:e0:a4:0a:f0 onuid 2 auth-mode mac
+confirm onu mac 38:94:e0:a4:59:38 onuid 3 auth-mode mac
+confirm onu mac 7c:a9:6b:3b:19:d7 onuid 4 auth-mode mac
+confirm onu mac e0:67:b3:1a:f0:0a onuid 5 auth-mode mac
+confirm onu mac 38:94:e0:e3:39:82 onuid 6 auth-mode mac
+confirm onu mac 7c:a9:6b:84:0f:7a onuid 7 auth-mode mac
+confirm onu mac 7c:a9:6b:ae:cf:c4 onuid 8 auth-mode mac
+confirm onu mac 38:94:e0:a8:c2:18 onuid 9 auth-mode mac
+confirm onu mac 38:94:e0:b1:d9:4e onuid 10 auth-mode mac
+confirm onu mac 7c:a9:6b:84:0f:5c onuid 11 auth-mode mac
+confirm onu mac 7c:a9:6b:84:d5:0c onuid 12 auth-mode mac
+confirm onu mac 7c:a9:6b:84:d5:04 onuid 13 auth-mode mac
+exit
+!
+interface epon 0/1
+onu mac-auth add 38:94:E0:D8:E9:B7
+onu mac-auth add 7C:A9:6B:01:D4:20
+onu mac-auth add 38:94:E0:A4:0A:90
+onu mac-auth add A0:C6:EC:07:79:31
+onu mac-auth add 38:94:E0:E3:39:4A
+onu mac-auth add 38:94:E0:D9:4E:7A
+onu mac-auth add 7C:A9:6B:D7:6A:B2
+onu mac-auth add 7C:A9:6B:3B:1A:0B
+exit
+!
+interface epon 0/2
+onu mac-auth add A0:C6:EC:04:CA:28
+onu mac-auth add A0:C6:EC:07:81:86
+onu mac-auth add 38:94:E0:A8:C5:9E
+onu mac-auth add E0:67:B3:1A:EF:F2
+exit
+!
+interface epon 0/3
+onu mac-auth add 7C:A9:6B:3B:1A:1D
+onu mac-auth add 7C:A9:6B:3B:19:D9
+onu mac-auth add 7C:A9:6B:AF:07:B8
+exit
+!
+interface epon 0/4
+onu mac-auth add 38:94:E0:A4:0B:18
+onu mac-auth add 38:94:E0:A4:0B:28
+onu mac-auth add 7C:A9:6B:84:D5:28
+onu mac-auth add 38:94:E0:B5:6B:56
+onu mac-auth add 38:94:E0:E3:19:9A
+onu mac-auth add 38:94:E0:E3:3F:92
+exit
+!
+interface epon 0/6
+onu mac-auth add 7C:A9:6B:AF:07:48
+onu mac-auth add 7C:A9:6B:01:CE:60
+onu mac-auth add A0:C6:EC:04:CA:30
+onu mac-auth add 38:94:E0:D2:62:C0
+onu mac-auth add 38:94:E0:A8:C5:9E
+exit
+!
+interface epon 0/7
+onu mac-auth add 7C:A9:6B:AF:06:DC
+onu mac-auth add EC:08:6B:BE:17:F8
+onu mac-auth add 38:94:E0:D3:D0:70
+exit
+!
+interface epon 0/8
+onu mac-auth add 7C:A9:6B:84:0F:5C
+onu mac-auth add 7C:A9:6B:84:0F:7A
+onu mac-auth add 7C:A9:6B:3B:19:D7
+onu mac-auth add 38:94:E0:A4:21:60
+onu mac-auth add 38:94:E0:A4:59:38
+onu mac-auth add 7C:A9:6B:84:D5:04
+onu mac-auth add 7C:A9:6B:84:D5:0C
+onu mac-auth add E0:67:B3:1A:F0:0A
+onu mac-auth add 38:94:E0:A8:C2:18
+onu mac-auth add 38:94:E0:A4:0A:F0
+onu mac-auth add 38:94:E0:E3:39:82
+onu mac-auth add 38:94:E0:B1:D9:4E
+onu mac-auth add 7C:A9:6B:AE:CF:C4
+exit
+!
+interface epon 0/1
+onu 1 description 231052_Mahadev
+onu 1 ctc eth 1 vlan pvid 612 pri 0
+onu 1 ctc eth 1 vlan mode tag
+onu 2 description 231073_Arun
+onu 2 ctc eth 1 vlan pvid 612 pri 0
+onu 2 ctc eth 1 vlan mode tag
+onu 4 description 231044_Ravi
+onu 5 description 231017_Manoj
+onu 5 ctc eth 1 vlan pvid 305 pri 0
+onu 5 ctc eth 1 vlan mode tag
+onu 7 description 231062_SAMRAT
+onu 7 ctc eth 1 vlan pvid 612 pri 0
+onu 7 ctc eth 1 vlan mode tag
+onu 9 description 231056_Divya
+onu 9 ctc eth 1 vlan pvid 612 pri 0
+onu 9 ctc eth 1 vlan mode tag
+onu 11 description 231053_Licorne
+onu 15 description 231063_FURNITURE
+onu 15 ctc eth 1 vlan pvid 305 pri 0
+onu 15 ctc eth 1 vlan mode tag
+exit
+!
+interface epon 0/2
+onu 1 description Vibhoor_111264
+onu 1 ctc eth 1 vlan pvid 514 pri 0
+onu 1 ctc eth 1 vlan mode tag
+onu 2 description 271004_KCC
+onu 2 ctc eth 1 flow_control enable
+onu 2 ctc eth 1 phy_ctrl enable
+onu 2 ctc eth 1 vlan pvid 428 pri 0
+onu 2 ctc eth 1 vlan mode tag
+onu 5 description 271001_Evergreen
+exit
+!
+interface epon 0/3
+onu 1 description 231060_Tinku
+onu 1 ctc eth 1 vlan pvid 612 pri 0
+onu 1 ctc eth 1 vlan mode tag
+onu 2 description 231061_ASPRAN
+onu 2 ctc eth 1 vlan pvid 612 pri 0
+onu 2 ctc eth 1 vlan mode tag
+onu 3 description 231068_Nextra
+onu 3 ctc eth 1 phy_ctrl enable
+onu 3 ctc eth 1 vlan pvid 305 pri 0
+onu 3 ctc eth 1 vlan mode tag
+exit
+!
+interface epon 0/4
+onu 1 description 231036_Beer
+onu 1 ctc eth 1 vlan pvid 305 pri 0
+onu 1 ctc eth 1 vlan mode tag
+onu 4 description 231039_Inderjeet
+onu 4 ctc eth 1 vlan pvid 612 pri 0
+onu 4 ctc eth 1 vlan mode tag
+onu 5 description 231035_Ravinder
+onu 5 ctc eth 1 vlan pvid 305 pri 0
+onu 5 ctc eth 1 vlan mode tag
+onu 6 description 231071_SP_ENT
+onu 6 ctc mgmt ip 203.110.95.180 mask 255.255.255.224 gw 203.110.95.161 
+onu 6 ctc eth 1 vlan pvid 612 pri 0
+onu 6 ctc eth 1 vlan mode tag
+onu 7 description 231072_Girijesh
+onu 7 pri wan_conn add bridge
+onu 7 pri wan_conn index 1 bridge internet 
+onu 7 pri wan_conn index 1 vlan tag wan_vlan 305 1 
+onu 7 pri wan_conn index 1 bind lan1 
+onu 7 pri wan_conn add route
+onu 7 pri wan_conn index 2 route voip_internet nat enable static ip 10.8.95.152 mask 255.255.0.0 gw 10.8.0.1 dns master 203.110.80.232 slave 0.0.0.0 
+onu 7 pri wan_conn index 2 vlan tag wan_vlan 100 1 
+onu 7 pri wan_conn commit
+onu 7 ctc eth 1 flow_control disable
+onu 7 ctc eth 1 phy_ctrl enable
+onu 7 ctc eth 1 vlan pvid 305 pri 0
+onu 7 ctc eth 1 vlan mode tag
+onu 7 ctc eth 2 phy_ctrl disable
+onu 10 description 231046_Ram
+onu 10 ctc eth 1 flow_control enable
+onu 10 ctc eth 1 autoneg enable
+onu 10 ctc eth 1 vlan pvid 612 pri 0
+onu 10 ctc eth 1 vlan mode tag
+exit
+!
+interface epon 0/6
+onu 2 description 231034_Rahul
+onu 2 ctc eth 1 vlan pvid 305 pri 0
+onu 2 ctc eth 1 vlan mode tag
+onu 5 description 231066_Prashant
+onu 5 ctc eth 1 vlan pvid 612 pri 0
+onu 5 ctc eth 1 vlan mode tag
+onu 6 description 231049_TCS
+onu 6 ctc eth 1 vlan pvid 612 pri 0
+onu 6 ctc eth 1 vlan mode tag
+onu 8 description 231057_Smashit
+onu 8 ctc eth 1 vlan pvid 612 pri 0
+onu 8 ctc eth 1 vlan mode tag
+exit
+!
+interface epon 0/7
+onu 9 description 201062_Brahm
+onu 9 ctc eth 1 vlan pvid 305 pri 0
+onu 9 ctc eth 1 vlan mode tag
+onu 10 description 231067_Jyoti
+onu 10 ctc eth 1 vlan pvid 612 pri 0
+onu 10 ctc eth 1 vlan mode tag
+exit
+!
+interface epon 0/8
+onu 1 description 201040_SAS
+onu 1 ctc eth 1 vlan pvid 305 pri 0
+onu 1 ctc eth 1 vlan mode tag
+onu 2 description 201043_Magnum
+onu 2 ctc eth 1 vlan pvid 612 pri 0
+onu 2 ctc eth 1 vlan mode tag
+onu 4 description 201073_Max_Real
+onu 4 ctc eth 1 vlan pvid 459 pri 0
+onu 4 ctc eth 1 vlan mode tag
+onu 5 description 201074_Square
+onu 5 ctc eth 1 vlan pvid 433 pri 0
+onu 5 ctc eth 1 vlan mode tag
+onu 6 description COSMO_201077
+onu 6 ctc eth 1 vlan pvid 305 pri 0
+onu 6 ctc eth 1 vlan mode tag
+onu 7 description 201040_SAS
+onu 7 ctc eth 1 vlan pvid 305 pri 0
+onu 7 ctc eth 1 vlan mode tag
+onu 8 description 201078_Choice
+onu 8 ctc eth 1 vlan pvid 556 pri 0
+onu 8 ctc eth 1 vlan mode tag
+onu 10 description 201055_BLGupta
+onu 10 ctc eth 1 vlan pvid 305 pri 0
+onu 10 ctc eth 1 vlan mode tag
+onu 11 description 231069_Tramiso
+onu 11 ctc eth 1 vlan pvid 305 pri 0
+onu 11 ctc eth 1 vlan mode tag
+onu 12 description 231070_Cogniz
+onu 12 ctc eth 1 vlan pvid 305 pri 0
+onu 12 ctc eth 1 vlan mode tag
+onu 13 description 201081_DCSPLUS
+onu 13 ctc eth 1 vlan pvid 426 pri 0
+onu 13 ctc eth 1 vlan mode tag
+exit
+!
+debug mode 
+config level log l2ftp 6
+exit
+!
+!
+
+!!!
+web login timeout 5
+!
+!
+um!
+user add
+
+##ENDOF_CONFIG##
+
