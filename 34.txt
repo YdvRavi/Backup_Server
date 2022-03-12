@@ -235,9 +235,6 @@ active
 aim 0/2/7 name 561025_Vikas
 permit sn string-hex GNXS-011f24c0 line 1 default line 1
 active
-aim 0/2/8 name 561017_Ankit_A11_1001
-permit sn string-hex GNXS-011e6df0 line 1 default line 1
-active
 aim 0/2/9 name 561029_Nayak.
 permit sn string-hex GNXS-61200055 line 1 default line 1
 active

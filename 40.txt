@@ -1,10 +1,6 @@
 ##CONFIG##
 
-## 
-2022/03/12 11:18:14   ONU Port Los             PON 0/1 ONU 1 78:D7:52:46:09:31 eth 1 eth_port_los raised event
-
-2022/03/12 11:18:14   ONU Port Los             PON 0/1 ONU 1 78:D7:52:46:09:31 eth 4 eth_port_los raised event
-terminal length 0
+## terminal length 0
 Ardee_OLT#85.61### 
 
 Current configuration:
