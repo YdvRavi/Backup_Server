@@ -714,6 +714,9 @@ active
 aim 0/14/5 name 641114_Ujjwal_J308
 permit sn string-hex HWTC-872a99a5 line 1 default line 1
 active
+aim 0/14/6 name 641161_Kokare
+permit sn string-hex HWTC-11a4d9a6 line 1 default line 1
+active
 aim 0/15/1 name 641003_Priya_K105
 permit sn string-hex HWTC-88a190a5 line 1 default line 1
 active
