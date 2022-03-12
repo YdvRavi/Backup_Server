@@ -1,6 +1,6 @@
 ##CONFIG##
 
-## Last commit: 2022-03-10 15:59:54 UTC by deldsl
+## Last commit: 2022-03-12 06:20:17 UTC by deldsl
 version 17.4R1.16;
 system {
     host-name MILL_R_JUNOS;
@@ -1446,7 +1446,7 @@ interfaces {
             }
         }
         unit 555 {
-            description "##Square_Dotcom#201046#100Mb_Demo##";
+            description "##Square_Dotcom#201046#50Mb##";
             vlan-id 555;
             family inet {
                 filter {
@@ -1454,8 +1454,8 @@ interfaces {
                     output VOIP;
                 }
                 policer {
-                    input 100_Mbps;
-                    output 100_Mbps;
+                    input 50_Mbps;
+                    output 50_Mbps;
                 }
                 address 203.110.93.17/29;
             }
