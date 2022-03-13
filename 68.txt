@@ -546,8 +546,8 @@ interface epon 0/2
 onu auth-mode mac
 confirm onu mac 38:94:e0:d3:cf:8a onuid 1
 confirm onu mac 7c:a9:6b:d6:ae:6a onuid 2 auth-mode mac
+confirm onu mac 38:94:e0:c2:46:30 onuid 3 auth-mode mac
 confirm onu mac 38:94:e0:a4:21:18 onuid 10
-confirm onu mac 38:94:e0:c2:46:30 onuid 16 auth-mode mac
 confirm onu mac 38:94:e0:a4:0b:c8 onuid 18 auth-mode mac
 confirm onu mac 38:94:e0:d3:cf:8e onuid 20 auth-mode mac
 exit
@@ -638,10 +638,6 @@ onu 10 ctc eth 1 policy default
 onu 10 ctc eth 1 rate_limit default
 onu 10 ctc eth 1 vlan pvid 424 pri 0
 onu 10 ctc eth 1 vlan mode tag
-onu 16 description 221077_Inavit
-onu 16 ctc eth 1 flow_control disable
-onu 16 ctc eth 1 vlan pvid 612 pri 0
-onu 16 ctc eth 1 vlan mode tag
 onu 18 description 221078_Shiroki
 onu 18 ctc eth 1 vlan pvid 510 pri 0
 onu 18 ctc eth 1 vlan mode tag
