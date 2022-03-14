@@ -70,6 +70,7 @@ interface port-channel 8
 exit 
 interface port-channel 9  
   name "##MILL#RING_1#Rahul Chaudhary & Partners (laal lahiri)#SW82.16##" 
+  speed-duplex 1000-full 
   vlan-trunking 
   broadcast-limit 
   broadcast-limit 10000 

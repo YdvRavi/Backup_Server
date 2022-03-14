@@ -2,8 +2,6 @@
 
 ## terminal length 0
 UV_olt#87.139### 
-2022/03/14 15:36:29   ONU Deregister           PON 0/3 ONU 13 7C:A9:6B:84:D5:2E MPCP RTT DRIFT.
-
 
 Current configuration:
 !
