@@ -7,6 +7,7 @@ C4#MAIN_RING#SW82.226#JMD_MEGA###
   Current configuration: 
 
 no spanning-tree 21 edge-port 
+no spanning-tree 22 edge-port 
 no spanning-tree 23 edge-port 
 no spanning-tree 24 edge-port 
 no spanning-tree 26 edge-port 
