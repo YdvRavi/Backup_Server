@@ -664,6 +664,7 @@ onu 1 ctc eth 1 vlan mode tag
 onu 2 description 111197_Sumit
 onu 2 ctc eth 1 vlan pvid 3 pri 0
 onu 2 ctc eth 1 vlan mode tag
+onu 3 description 111197_Sumit
 onu 3 ctc eth 1 vlan pvid 3 pri 0
 onu 3 ctc eth 1 vlan mode tag
 onu 4 description 111379_Daman_BB
