@@ -501,7 +501,7 @@ confirm onu mac 7c:a9:6b:84:0f:60 onuid 9 auth-mode mac
 confirm onu mac 7c:a9:6b:af:07:a8 onuid 10 auth-mode mac
 confirm onu mac 7c:a9:6b:af:06:f8 onuid 11 auth-mode mac
 confirm onu mac 7c:a9:6b:af:07:14 onuid 12 auth-mode mac
-confirm onu mac 7c:a9:6b:84:d5:2e onuid 13 auth-mode mac
+confirm onu mac 7c:a9:6b:84:d5:2e onuid 13
 confirm onu mac 7c:a9:6b:84:0f:5e onuid 14 auth-mode mac
 confirm onu mac 7c:a9:6b:af:06:f0 onuid 15 auth-mode mac
 confirm onu mac a0:c6:ec:07:79:22 onuid 16 auth-mode mac
