@@ -122,11 +122,12 @@ snmp-server community deldsl ro permit view iso
 snmp-server enable traps bridge gbn gbnsavecfg interfaces rmon snmp
 ![IF]
 interface vlan-interface 1 
-ip address 203.110.87.70 255.255.255.252 
+ip address 172.30.80.18 255.255.255.248 
 ip address 192.168.1.1 255.0.0.0 
+ip address 203.110.87.70 255.255.255.252 
 exit 
 ![STATIC_ROUTE]
-ip route 0.0.0.0 0.0.0.0 203.110.87.69
+ip route 0.0.0.0 0.0.0.0 172.30.80.17
 ![SYSLOG]
 logging 203.110.80.167
 logging host 203.110.80.167 level-list 0 1 2 3 4 5 6 7 module rmon

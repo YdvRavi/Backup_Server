@@ -5,7 +5,7 @@ R_CORE1###
 ##MILL#R_CORE1###
 Building configuration...
 
-Current configuration : 107496 bytes
+Current configuration : 107440 bytes
 !
 ! Last configuration change at 14:57:50 UTC Thu Mar 10 2022
 !
@@ -4157,10 +4157,9 @@ interface GigabitEthernet0/1/3
  negotiation auto
 !
 interface GigabitEthernet0/1/3.1
- description ##MILL#SW_FOR_TATA_UPLINK#87.70##
+ description ##MILL#SW_80.18#TATA_UPLINK##
  encapsulation dot1Q 1 native
- ip address 172.30.80.17 255.255.255.248 secondary
- ip address 203.110.87.69 255.255.255.252
+ ip address 172.30.80.17 255.255.255.248
 !
 interface GigabitEthernet0/1/3.3000
  description ##VSNL_UPLINK2_AS4755##
