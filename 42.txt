@@ -5,10 +5,10 @@ R_CORE###
 ##MILL#R_CORE###
 Building configuration...
 
-Current configuration : 39356 bytes
+Current configuration : 39252 bytes
 !
-! Last configuration change at 14:00:24 IST Tue Mar 15 2022
-! NVRAM config last updated at 14:15:35 IST Tue Mar 15 2022
+! Last configuration change at 14:57:57 IST Tue Mar 15 2022
+! NVRAM config last updated at 14:57:58 IST Tue Mar 15 2022
 !
 version 15.3
 service timestamps debug datetime msec
@@ -1421,8 +1421,6 @@ ip prefix-list GOOGLE seq 90 permit 203.110.90.0/24
 ip prefix-list GOOGLE seq 91 permit 203.110.91.0/24
 ip prefix-list GOOGLE seq 92 permit 203.110.92.0/24
 ip prefix-list GOOGLE seq 93 permit 203.110.93.0/24
-ip prefix-list GOOGLE seq 94 permit 203.110.94.0/24
-ip prefix-list GOOGLE seq 95 permit 203.110.95.0/24
 ip prefix-list GOOGLE seq 224 permit 103.242.224.0/24
 ip prefix-list GOOGLE seq 225 permit 103.242.225.0/24
 ip prefix-list GOOGLE seq 226 permit 103.242.226.0/24
