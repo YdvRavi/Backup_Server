@@ -753,6 +753,8 @@ onu 52 ctc eth 1 vlan pvid 401 pri 0
 onu 52 ctc eth 1 vlan mode tag
 onu 53 description 281079_Maa
 onu 54 description Synoptics
+onu 54 ctc eth 1 vlan pvid 401 pri 0
+onu 54 ctc eth 1 vlan mode tag
 exit
 !
 interface epon 0/3
