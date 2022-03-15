@@ -1,6 +1,6 @@
 ##CONFIG##
 
-## Last commit: 2022-03-15 13:25:25 UTC by deldsl
+## Last commit: 2022-03-15 13:43:24 UTC by deldsl
 version 17.4R1.16;
 system {
     host-name MILL_R_JUNOS;
@@ -2303,6 +2303,7 @@ routing-instances {
         routing-options {
             static {
                 route 192.168.10.0/24 next-hop 172.21.80.1;
+                route 192.168.12.0/24 next-hop 172.21.80.1;
             }
         }
     }
