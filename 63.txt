@@ -382,6 +382,7 @@ onu 11 description GShospitality
 onu 12 description 351135_bagger
 onu 13 description 351140_MANAS
 onu 14 description 351109_Trust
+onu 15 description 351147_simran
 onu 15 ctc eth 1 vlan pvid 1 pri 0
 onu 15 ctc eth 1 vlan mode tag
 onu 18 description 351137_Car
