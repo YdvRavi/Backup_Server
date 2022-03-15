@@ -633,8 +633,8 @@ onu 2 description 221088_Reliance
 onu 2 ctc eth 1 vlan pvid 511 pri 0
 onu 2 ctc eth 1 vlan mode tag
 onu 3 description 221077_Inavit
-onu 3 ctc eth 1 vlan pvid 510 pri 0
-onu 3 ctc eth 1 vlan mode tag
+onu 3 ctc eth 1 vlan pvid 0 pri 0
+onu 3 ctc eth 1 vlan mode transparent
 onu 10 description 201032_Intello
 onu 10 ctc eth 1 flow_control enable
 onu 10 ctc eth 1 policy default
