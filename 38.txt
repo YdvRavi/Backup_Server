@@ -162,6 +162,15 @@ ont-srvprofile-id 100 desc "211058_Insight"
   <config>
  mpls label start 8192
 #
+[hwtacacs]
+  <hwtacacs>
+hwtacacs-server template "t1"
+ hwtacacs-server authentication 192.168.10.77
+ hwtacacs-server authorization 192.168.10.77
+ hwtacacs-server accounting 192.168.10.77
+ hwtacacs-server shared-key "%#%#%o[o,4|DYXtERROSE7[H4Ug"RL}J9*Y"`PNKI>
+tOecj3OsaQz#[mcEEZSxQ4,D*FG>2KHP4R~w'Z$_@:vV8rXR)Y{Tt|d`&P<}$<%#%#"
+#
 [prevlanif]
   <prevlanif>
  interface vlanif1
@@ -196,8 +205,6 @@ aaa
   authorization-mode hwtacacs local
  #
  accounting-scheme "default"
- accounting-scheme "tac1"
-  accounting-mode hwtacacs
  #
  domain "default"
  #
