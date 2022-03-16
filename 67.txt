@@ -887,6 +887,8 @@ onu 12 ctc eth 1 vlan mode tag
 onu 13 description 201081_DCSPLUS
 onu 13 ctc eth 1 vlan pvid 426 pri 0
 onu 13 ctc eth 1 vlan mode tag
+onu 14 ctc eth 1 vlan pvid 305 pri 0
+onu 14 ctc eth 1 vlan mode tag
 exit
 !
 debug mode 
