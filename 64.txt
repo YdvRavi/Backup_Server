@@ -672,6 +672,9 @@ onu 3 ctc eth 1 vlan mode tag
 onu 4 description 191781_Nicobar
 onu 4 ctc eth 1 vlan pvid 22 pri 0
 onu 4 ctc eth 1 vlan mode tag
+onu 5 description 191841_Deepika
+onu 5 ctc eth 1 vlan pvid 813 pri 0
+onu 5 ctc eth 1 vlan mode tag
 onu 6 description 191702_INDITEX
 onu 6 ctc eth 1 vlan pvid 8 pri 0
 onu 6 ctc eth 1 vlan mode tag
