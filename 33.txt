@@ -465,6 +465,9 @@ active
 aim 0/1/38 name 601038_chetna
 permit sn string-hex GNXS-6120004a line 1 default line 1
 active
+aim 0/1/39 name 601038_Aggya_SHOP212
+permit sn string-hex HWTC-88a181a5 line 1 default line 1
+active
 aim 0/1/40 name 601037_anil
 permit sn string-hex GNXS-6120001f line 1 default line 1
 active
