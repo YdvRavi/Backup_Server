@@ -188,10 +188,16 @@ interface null0
   <aaa>
 aaa
  authentication-scheme "default"
+ authentication-scheme "tac1"
+  authentication-mode hwtacacs local
  #
  authorization-scheme "default"
+ authorization-scheme "tac1"
+  authorization-mode hwtacacs local
  #
  accounting-scheme "default"
+ accounting-scheme "tac1"
+  accounting-mode hwtacacs
  #
  domain "default"
  #
