@@ -2,6 +2,8 @@
 
 ## terminal length 0
 VSM_OLT#80.58### 
+2022/03/16 14:05:40   System Config Save       save Configuration
+
 
 Current configuration:
 !
@@ -382,7 +384,7 @@ onu 11 description GShospitality
 onu 12 description 351135_bagger
 onu 13 description 351140_MANAS
 onu 14 description 351109_Trust
-onu 16 description 351147_simra
+onu 16 description 351147_simran
 onu 16 ctc eth 1 vlan pvid 1 pri 0
 onu 16 ctc eth 1 vlan mode transparent
 onu 18 description 351137_Car
