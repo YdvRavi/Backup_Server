@@ -743,7 +743,6 @@ onu mac-auth add E0:67:B3:1A:F0:0A
 onu mac-auth add 38:94:E0:A8:C2:18
 onu mac-auth add 38:94:E0:A4:0A:F0
 onu mac-auth add 38:94:E0:E3:39:82
-onu mac-auth add A0:C6:EC:07:81:84
 onu mac-auth add 38:94:E0:B1:D9:4E
 onu mac-auth add 7C:A9:6B:AE:CF:C4
 exit
@@ -887,8 +886,6 @@ onu 12 ctc eth 1 vlan mode tag
 onu 13 description 201081_DCSPLUS
 onu 13 ctc eth 1 vlan pvid 426 pri 0
 onu 13 ctc eth 1 vlan mode tag
-onu 14 ctc eth 1 vlan pvid 305 pri 0
-onu 14 ctc eth 1 vlan mode tag
 exit
 !
 debug mode 
