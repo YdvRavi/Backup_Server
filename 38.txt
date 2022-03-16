@@ -21,6 +21,7 @@ It will take a long time if the content you search is too much or the string  yo
  terminal user name buildrun_new_password root *j$1b$E89-M+a]J<$.QvCF);#t8z^n\K\XTL#E])cD'^J:(L0,09wi93N$* 7 0000:00:00:00:00:00 2019:09:16:23:22:51 root 1 
 first-login-info 0 "-----"
  terminal user name buildrun_new_password deldsl *~pc$1b$.qSmOiIk3L$2n(V#,HapXS\#1/$57#N'^DADt;S1<ZMgMB=F0_+$* 0 2019:05:30:15:07:48 2019:09:16:23:22:24 root 2 first-login-info 0 "-----"
+ terminal user name buildrun_new_password deldsl1 *~ub$1b$,T7vGe:vj.$E_]8TA]=&! Q+IaGerem7&1d"MldWV'h)qN)qIB|T$* 0 2022:03:17:00:33:08 2022:03:17:00:33:08 root 3 first-login-info 1 "NOC_USER"
  terminal user name history_password root *j$1b$^m;h#N]G~<$!zWW1F8_E:X17^!pdW+
 Ex@~:;wGP~9$xy!9X./t)$* *j$1b$d:9N#jmjvP$6MY\6ZFVg-!Jn9&"Ob%LBgBsVDb6m$gu`]HB$
 dWC$*
@@ -214,6 +215,7 @@ aaa
 ip route-static 0.0.0.0 0.0.0.0 172.30.85.1
  ssh user root authentication-type password
  ssh user deldsl authentication-type password
+ ssh user deldsl1 authentication-type password
 #
 return
 
