@@ -208,6 +208,10 @@ aaa
  accounting-scheme "default"
  #
  domain "default"
+ domain "huawei"
+  authentication-scheme "tac1"
+  authorization-scheme "tac1"
+  hwtacacs-server "t1"
  #
 #
 [post-system]
