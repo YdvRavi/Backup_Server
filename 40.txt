@@ -1,8 +1,6 @@
 ##CONFIG##
 
-## 
-2022/03/16 12:08:31   ONU Deregister           PON 0/3 ONU 11 38:94:E0:C3:E6:3D MPCP TIMEOUT.
-terminal length 0
+## terminal length 0
 Ardee_OLT#85.61### 
 
 Current configuration:
