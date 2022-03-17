@@ -412,7 +412,7 @@ aim 0/1/20 name 601013_Piyush
 permit sn string-hex HWTC-d6aa5e9f line 3 default line 3
 active
 aim 0/1/21 name 601049_FoodGarage
-permit sn string-hex HWTC-323db1a6 line 1 default line 1
+permit sn string-hex HWTC-323db1a6 line 3 default line 3
 active
 aim 0/1/22 name 601024_Creativ
 permit sn string-hex GNXS-011f3840 line 1 default line 1
