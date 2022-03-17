@@ -373,7 +373,7 @@ aim 0/1/7 name 601046_DesignS_F209
 permit sn string-hex GPON-00394b84 line 1 default line 1
 active
 aim 0/1/8 name 601011_Chinese_Corner_Shop_G_46
-permit sn string-hex HWTC-872baca5 line 1 default line 1
+permit sn string-hex HWTC-872baca5 line 3 default line 3
 active
 aim 0/1/9 name 601050_dealskart
 permit sn string-hex GNXS-61200042 line 1 default line 1
@@ -454,7 +454,7 @@ aim 0/1/34 name 601051_Human_Assets
 permit sn string-hex GNXS-61200190 line 1 default line 1
 active
 aim 0/1/35 name 601053_Samosa_S62
-permit sn string-hex HWTC-323de1a6 line 1 default line 1
+permit sn string-hex HWTC-323de1a6 line 3 default line 3
 active
 aim 0/1/36 name 601055_Rahul
 permit sn string-hex HWTC-323dada6 line 1 default line 1
