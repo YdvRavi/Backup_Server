@@ -429,7 +429,7 @@ confirm onu mac 80:14:a8:00:00:00 onuid 50
 confirm onu mac 38:94:e0:b0:44:95 onuid 51
 confirm onu mac 7c:a9:6b:af:07:40 onuid 52 auth-mode mac
 confirm onu mac 38:94:e0:cc:7c:fd onuid 53 auth-mode mac
-confirm onu mac e0:67:b3:1a:f0:0d onuid 54 auth-mode mac
+confirm onu mac e0:67:b3:1a:f0:0d onuid 54
 exit
 !
 interface epon 0/3
@@ -531,7 +531,6 @@ onu mac-auth add 38:94:E0:B0:74:26
 onu mac-auth add 38:94:E0:B5:5E:3B
 onu mac-auth add 38:94:E0:BE:17:80
 onu mac-auth add 38:94:E0:B5:6B:40
-onu mac-auth add E0:67:B3:1A:F0:0D
 onu mac-auth add 38:94:E0:B5:5D:54
 onu mac-auth add 7C:A9:6B:01:DB:A8
 onu mac-auth add 38:94:E0:BE:16:99
@@ -599,56 +598,6 @@ onu 7 ctc eth 1 flow_control disable
 onu 9 description 281026_Aroma
 onu 10 description 281110_FETT
 onu 11 description 281015_forever
-onu 11 ctc eth 1 vlan pvid 0 pri 0
-onu 11 ctc eth 1 vlan mode transparent
-onu 12 description 281029_Biba
-onu 12 ctc eth 1 flow_control disable
-onu 13 description 281038_Yatin
-onu 13 ctc eth 1 flow_control disable
-onu 14 description 281011_Superhero
-onu 15 description 281010_RNS
-onu 16 description 281012_Geetanj
-onu 17 description 281012_Geetanj
-onu 18 description 281040_H&B
-onu 18 ctc eth 1 vlan pvid 401 pri 0
-onu 18 ctc eth 1 vlan mode tag
-onu 19 description 281045_TCNS
-onu 20 description 281136_Radhamani
-onu 21 description 281049_RAMA
-onu 22 description 281048_TACFAB
-onu 23 description 281047_ARCEE
-onu 24 description 281046_Arrow
-onu 25 description 281054_Aditya
-onu 26 description 281055_Retail
-onu 27 description 281060_Sandee
-onu 28 description 281039_Go
-onu 30 description 281068_Thea
-onu 31 description 281080_Pankh
-onu 32 description 281061_Malik
-onu 33 description 281106_Theo
-onu 34 description 286088
-onu 36 description 281024_Nazer
-onu 36 ctc eth 1 phy_ctrl enable
-onu 37 description 281034_EARTH
-onu 38 description 281073_All
-onu 39 description 281070_PSTRADERS
-onu 40 description 281071_VAN
-onu 41 description 281072_Color
-onu 42 description 281074_Looks
-onu 43 description RJSquare_281069
-onu 44 description 281075_Kala
-onu 46 description 281138_HONASA
-onu 46 pri wan_conn add route
-onu 46 pri wan_conn index 1 route internet nat enable static ip 203.110.89.117 mask 255.255.255.224 gw 203.110.89.97 dns master 203.110.80.232 slave 203.110.80.233 
-onu 46 pri wan_conn index 1 vlan tag wan_vlan 401 2 
-onu 46 pri wan_conn commit
-onu 47 description 281062_Jain
-onu 48 description 281130_JUBILANT
-onu 51 description 281092_Makeov
-onu 53 description 281121_Sagar
-onu 54 description 281140_Scheppend
-onu 56 description 281111_Major
-onu 57 description 281041_Mustard
 exit
 !
 interface epon 0/2
@@ -752,9 +701,6 @@ onu 52 description 281129_Rhine
 onu 52 ctc eth 1 vlan pvid 401 pri 0
 onu 52 ctc eth 1 vlan mode tag
 onu 53 description 281079_Maa
-onu 54 description Synoptics_281142
-onu 54 ctc eth 1 vlan pvid 401 pri 0
-onu 54 ctc eth 1 vlan mode tag
 exit
 !
 interface epon 0/3
