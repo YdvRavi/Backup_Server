@@ -615,8 +615,6 @@ active
 aim 0/9/7 name 641163_ravi
 permit sn string-hex HWTC-11a4fba6 line 1 default line 1
 active
-aim 0/9/12 name 641165_piyush
-active
 aim 0/10/1 name 641036_Shikher_G502
 permit sn string-hex GNXS-61200182 line 1 default line 1
 active
