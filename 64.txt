@@ -1,8 +1,6 @@
 ##CONFIG##
 
-## 
-2022/03/17 20:59:59   ONU Port Loopback        PON 0/4 ONU 8 80:14:A8:86:E5:18 eth 1 eth_port_loopback clear event
-terminal length 0
+## terminal length 0
 AMBI_GGN_OLT#83.99### 
 
 Current configuration:
