@@ -1,6 +1,8 @@
 ##CONFIG##
 
-## terminal length 0
+## 
+2022/03/17 19:44:58   OLT Port Loopback        PON 0/4 ONU 8 80:14:A8:86:E5:18 Loopback Clear
+terminal length 0
 AMBI_GGN_OLT#83.99### 
 
 Current configuration:
