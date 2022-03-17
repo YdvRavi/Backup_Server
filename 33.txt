@@ -457,7 +457,7 @@ aim 0/1/35 name 601053_Samosa_S62
 permit sn string-hex HWTC-323de1a6 line 3 default line 3
 active
 aim 0/1/36 name 601055_Rahul
-permit sn string-hex HWTC-323dada6 line 1 default line 1
+permit sn string-hex HWTC-323dada6 line 3 default line 3
 active
 aim 0/1/37 name 601041_DK
 permit sn string-hex GNXS-612000ec line 1 default line 1
@@ -466,7 +466,7 @@ aim 0/1/38 name 601038_chetna
 permit sn string-hex GNXS-6120004a line 1 default line 1
 active
 aim 0/1/39 name 601038_Aggya_SHOP212
-permit sn string-hex HWTC-88a181a5 line 1 default line 1
+permit sn string-hex HWTC-88a181a5 line 3 default line 3
 active
 aim 0/1/40 name 601037_anil
 permit sn string-hex GNXS-6120001f line 1 default line 1
@@ -496,13 +496,13 @@ aim 0/2/10 name 601034_Manjit
 permit sn string-hex GNXS-612000fc line 1 default line 1
 active
 aim 0/2/11 name 606020_Firecontroll_1111
-permit sn string-hex HWTC-8c236e9d line 1 default line 1
+permit sn string-hex HWTC-8c236e9d line 3 default line 3
 active
 aim 0/2/12 name 601038_Chetna_SHOP212
 permit sn string-hex GNXS-6120004a line 1 default line 1
 active
 aim 0/2/14 name 601058_Madan_S85
-permit sn string-hex HWTC-7504c69d line 1 default line 1
+permit sn string-hex HWTC-7504c69d line 3 default line 3
 active
 aim 0/2/15 name 601043
 permit sn string-hex GNXS-612005d0 line 1 default line 1
