@@ -474,6 +474,9 @@ active
 aim 0/1/41 name 601030_swaatique
 permit sn string-hex GNXS-011f1a00 line 1 default line 1
 active
+aim 0/1/42 name 601057_aagaya
+permit sn string-hex HWTC-119db1a6 line 1 default line 1
+active
 aim 0/2/1 name 601007_KREATIVE
 permit sn string-hex GNXS-01107f90 line 1 default line 1
 active
