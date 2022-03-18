@@ -1,6 +1,6 @@
 ##CONFIG##
 
-## Last commit: 2022-03-15 13:43:24 UTC by deldsl
+## Last commit: 2022-03-18 07:56:45 UTC by deldsl
 version 17.4R1.16;
 system {
     host-name MILL_R_JUNOS;
@@ -1503,6 +1503,7 @@ interfaces {
                     output 50_Mbps;
                 }
                 address 203.110.81.113/29;
+                address 203.110.81.145/29;
             }
         }
         unit 560 {
