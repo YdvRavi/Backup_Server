@@ -1,6 +1,10 @@
 ##CONFIG##
 
-## terminal length 0
+## 
+2022/03/19 16:15:06   ONU Port Loopback        PON 0/4 ONU 8 80:14:A8:86:E5:18 eth 1 eth_port_loopback raised event
+
+2022/03/19 16:15:06   ONU Deregister           PON 0/4 ONU 8 80:14:A8:86:E5:18 MPCP OLT initiates DEREG.
+terminal length 0
 AMBI_GGN_OLT#83.99### 
 
 Current configuration:
