@@ -207,6 +207,8 @@ aim 0/6/3
 active
 aim 0/6/5
 active
+aim 0/6/6 name 641167_Amrita_E406
+active
 aim 0/6/8
 local protocol-port-80 enable mode forward
 active
@@ -512,6 +514,9 @@ permit sn string-hex GNXS-61200f24 line 1 default line 1
 active
 aim 0/6/5 name 641067_Krishna_E703
 permit sn string-hex GNXS-61200b79 line 1 default line 1
+active
+aim 0/6/6 name 641167_Amrita_E406
+permit sn string-hex HWTC-119db4a6 line 1 default line 1
 active
 aim 0/6/7 name 641079_Prashant
 permit sn string-hex GNXS-6120005f line 1 default line 1
