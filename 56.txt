@@ -1,7 +1,7 @@
 ##CONFIG##
 
 BGMPR#MAIN_SW#SW87.36### 
-##BGMPR#MAIN_SW#SW87.36### 
+##BGMPR#MAIN_SW#SW87.36### show running-config
   Building configuration...
 
   Current configuration: 
