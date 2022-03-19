@@ -730,7 +730,7 @@ aim 0/14/3 name 641058_Aman_J607
 permit sn string-hex GNXS-6120026e line 1 default line 1
 active
 aim 0/14/4 name 641154_vikky
-permit sn string-hex HWTC-3689269d line 1 default line 1
+permit sn string-hex HWTC-119fc8a6 line 1 default line 1
 active
 aim 0/14/5 name 641114_Ujjwal_J308
 permit sn string-hex HWTC-872a99a5 line 1 default line 1
