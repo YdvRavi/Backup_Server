@@ -779,6 +779,9 @@ active
 aim 0/15/11 name 641140_Malati
 permit sn string-hex HWTC-323e0aa6 line 1 default line 1
 active
+aim 0/15/12 name 641170_Deepanshu
+permit sn string-hex HWTC-11a16ea6 line 1 default line 1
+active
 aim 0/16/1 name 641048_Neeraj
 permit sn string-hex GNXS-612001e6 line 1 default line 1
 active
