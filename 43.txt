@@ -5,9 +5,9 @@ R_CORE1###
 ##MILL#R_CORE1###
 Building configuration...
 
-Current configuration : 107196 bytes
+Current configuration : 107416 bytes
 !
-! Last configuration change at 14:41:20 UTC Mon Mar 21 2022
+! Last configuration change at 16:54:02 UTC Mon Mar 21 2022
 !
 version 15.5
 service timestamps debug datetime msec
@@ -3320,6 +3320,14 @@ interface GigabitEthernet0/0/5.205
  arp timeout 5
  service-policy input 30_Mbps
  service-policy output 30_Mbps
+!
+interface GigabitEthernet0/0/5.206
+ description ##For_Server#Testing#10Mb##
+ encapsulation dot1Q 206
+ ip address 203.110.81.9 255.255.255.248
+ arp timeout 5
+ service-policy input 10_Mbps
+ service-policy output 10_Mbps
 !
 interface GigabitEthernet0/0/5.210
  encapsulation dot1Q 210
