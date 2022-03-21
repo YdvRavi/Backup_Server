@@ -480,6 +480,9 @@ active
 aim 0/1/43 name 601059_Gifts_SHOP214
 permit sn string-hex HWTC-119cdfa6 line 3 default line 3
 active
+aim 0/1/44 name 601021_Crown
+permit sn string-hex GNXS-011e60d0 line 1 default line 1
+active
 aim 0/2/1 name 601007_KREATIVE
 permit sn string-hex GNXS-01107f90 line 1 default line 1
 active
