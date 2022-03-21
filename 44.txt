@@ -457,8 +457,6 @@ errdisable auto-recovery cause igmp
 exit
 interface ethernet 0/0/25
 description ##MILL#R_MIKROTIK#80.80##
-switchport trunk allowed vlan 2-216,218-326,328-331,333-580,582-603,606-802,80
-4-998,1000-4094
 storm-control broadcast 1000
 storm-control unicast 1500
 storm-control multicast 1500
