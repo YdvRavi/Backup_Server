@@ -760,6 +760,8 @@ onu 7 ctc eth 1 vlan pvid 612 pri 0
 onu 7 ctc eth 1 vlan mode tag
 onu 9 description 231056_Divya
 onu 9 ctc eth 1 vlan pvid 612 pri 0
+
+2022/03/21 17:14:47   ONU Deregister           PON 0/8 ONU 4 7C:A9:6B:3B:19:D7 MPCP TIMEOUT.
 onu 9 ctc eth 1 vlan mode tag
 onu 11 description 231053_Licorne
 onu 15 description 231063_FURNITURE
