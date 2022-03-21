@@ -286,6 +286,7 @@ errdisable auto-recovery cause igmp
 exit
 interface ethernet 0/0/13
 description ##MILL#RING_5#TargetOne#SW82.15##
+shutdown
 speed 1000
 duplex full
 switchport trunk allowed vlan 216
@@ -457,6 +458,7 @@ errdisable auto-recovery cause igmp
 exit
 interface ethernet 0/0/25
 description ##MILL#R_MIKROTIK#80.80##
+switchport trunk allowed vlan 401,600,605,612,870-871
 storm-control broadcast 1000
 storm-control unicast 1500
 storm-control multicast 1500
