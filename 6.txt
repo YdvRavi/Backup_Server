@@ -1,6 +1,6 @@
 ##CONFIG##
 
-## Last commit: 2022-03-21 15:01:13 UTC by deldsl
+## Last commit: 2022-03-21 15:04:32 UTC by deldsl
 version 17.4R1.16;
 system {
     host-name MILL_R_JUNOS;
@@ -447,6 +447,7 @@ interfaces {
             }
         }
         unit 413 {
+            disable;
             description "##nextra_Communications_Pvt_Ltd#181085#10Mb##";
             vlan-id 413;
             family inet {
@@ -1091,6 +1092,7 @@ interfaces {
             }
         }
         unit 458 {
+            disable;
             description "##Nextra_Communications_Pvt_Ltd#181094#50Mb##";
             vlan-id 458;
             family inet {
