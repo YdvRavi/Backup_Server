@@ -2,6 +2,8 @@
 
 ## terminal length 0
 AMBI_VK_OLT#83.27### 
+2022/03/23 18:53:31   ONU Deregister           PON 0/3 ONU 26 7C:A9:6B:D7:6A:B2 MPCP ONU initiates DEREG.
+
 
 Current configuration:
 !
@@ -347,7 +349,7 @@ confirm onu mac a4:00:e2:8b:13:33 onuid 22 auth-mode mac
 confirm onu mac 38:94:e0:ac:c1:5b onuid 23
 confirm onu mac 7c:a9:6b:d6:af:3c onuid 24 auth-mode mac
 confirm onu mac cc:05:77:b9:e2:b8 onuid 25 auth-mode mac
-confirm onu mac 7c:a9:6b:d7:6a:b2 onuid 26 auth-mode mac
+confirm onu mac 7c:a9:6b:d7:6a:b2 onuid 26
 exit
 !
 interface epon 0/4
