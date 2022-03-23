@@ -352,6 +352,7 @@ exit
 interface epon 0/2
 switchport mode hybrid
 switchport hybrid vlan 1 untagged
+switchport hybrid vlan 515 untagged
 switchport hybrid vlan 305 tagged
 switchport hybrid vlan 401 tagged
 switchport hybrid vlan 408 tagged
@@ -364,7 +365,6 @@ switchport hybrid vlan 500 tagged
 switchport hybrid vlan 503 tagged
 switchport hybrid vlan 506 tagged
 switchport hybrid vlan 508 - 511 tagged
-switchport hybrid vlan 515 tagged
 switchport hybrid vlan 518 tagged
 switchport hybrid vlan 601 tagged
 switchport hybrid vlan 612 tagged
@@ -579,6 +579,7 @@ interface epon 0/6
 onu auth-mode mac
 confirm onu mac a0:c6:ec:07:79:2e onuid 1 auth-mode mac
 confirm onu mac a0:c6:ec:04:ca:2b onuid 2 auth-mode mac
+confirm onu mac 38:94:e0:d3:d0:08 onuid 3
 confirm onu mac a0:c6:ec:07:81:85 onuid 5 auth-mode mac
 confirm onu mac 7c:a9:6b:d6:a6:1e onuid 7 auth-mode mac
 confirm onu mac e0:67:b3:1a:ef:e0 onuid 11 auth-mode mac
@@ -630,7 +631,7 @@ exit
 !
 interface epon 0/2
 onu 2 description 221088_Reliance
-onu 2 ctc eth 1 vlan pvid 511 pri 0
+onu 2 ctc eth 1 vlan pvid 515 pri 0
 onu 2 ctc eth 1 vlan mode tag
 onu 3 description 221077_Inavit
 onu 3 ctc eth 1 vlan pvid 612 pri 0
