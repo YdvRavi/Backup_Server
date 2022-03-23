@@ -264,6 +264,12 @@ syslog type switch
 syslog type aaa 
 syslog type ip 
 syslog type commands 
+syslog type system facility 7 
+syslog type interface facility 7 
+syslog type switch facility 7 
+syslog type aaa facility 7 
+syslog type ip facility 7 
+syslog type commands facility 7 
 syslog server 203.110.80.167 level 7 
 errdisable recovery 
 errdisable recovery cause loopguard 
