@@ -195,7 +195,8 @@ interface port-channel 25
   name ##UV#MAIN_RING#SW87.136## 
   speed-duplex 1000-full 
   vlan-trunking 
-  broadcast-limit 1000 
+  broadcast-limit 
+  broadcast-limit 10000 
   multicast-limit 
   multicast-limit 1500 
   dlf-limit 
@@ -208,7 +209,8 @@ exit
 interface port-channel 27  
   name ##UV#MAIN_RING#SW87.138#JMD_EMP_SQ## 
   vlan-trunking 
-  broadcast-limit 1000 
+  broadcast-limit 
+  broadcast-limit 10000 
   multicast-limit 
   multicast-limit 1500 
   dlf-limit 
@@ -219,7 +221,8 @@ interface port-channel 28
   speed-duplex 1000-full 
   inactive 
   vlan-trunking 
-  broadcast-limit 5000 
+  broadcast-limit 
+  broadcast-limit 10000 
   multicast-limit 
   multicast-limit 5000 
   dlf-limit 
@@ -262,6 +265,19 @@ syslog type aaa
 syslog type ip 
 syslog type commands 
 syslog server 203.110.80.167 level 7 
+errdisable recovery 
+errdisable recovery cause loopguard 
+errdisable recovery cause ARP 
+errdisable recovery cause BPDU 
+errdisable recovery cause IGMP 
+errdisable recovery cause stormcontrol 
+errdisable recovery cause portsecurity 
+errdisable detect cause ARP 
+errdisable detect cause BPDU 
+errdisable detect cause IGMP 
+errdisable detect cause ARP mode rate-limitation 
+errdisable detect cause BPDU mode rate-limitation 
+errdisable detect cause IGMP mode rate-limitation 
 terminal length 0
 
 ##ENDOF_CONFIG##
