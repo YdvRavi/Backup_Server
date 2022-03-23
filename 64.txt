@@ -495,7 +495,7 @@ confirm onu mac 7c:a9:6b:84:d5:30 onuid 14 auth-mode mac
 confirm onu mac 38:94:e0:be:70:eb onuid 15 auth-mode mac
 confirm onu mac 38:94:e0:a8:c2:0d onuid 16 auth-mode mac
 confirm onu mac 7c:a9:6b:84:d5:2c onuid 17 auth-mode mac
-confirm onu mac 38:94:e0:c2:43:60 onuid 18
+confirm onu mac 38:94:e0:c2:43:60 onuid 18 auth-mode mac
 exit
 !
 interface epon 0/3
@@ -556,6 +556,7 @@ onu mac-auth add 7C:A9:6B:84:0F:62
 onu mac-auth add A4:00:E2:8D:39:68
 onu mac-auth add 7C:A9:6B:3B:19:EF
 onu mac-auth add A0:C6:EC:07:79:31
+onu mac-auth add 38:94:E0:C2:43:60
 onu mac-auth add 7C:A9:6B:84:D5:2C
 onu mac-auth add 7C:A9:6B:84:D5:30
 onu mac-auth add 38:94:E0:A8:C2:0D
@@ -653,6 +654,7 @@ onu 14 description 191102_Food
 onu 15 description 191887_BREADSLY
 onu 16 description 191886_BREADSLY
 onu 17 description 191823_SaajRest
+onu 18 description 191902_BON
 exit
 !
 interface epon 0/4
