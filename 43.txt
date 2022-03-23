@@ -5,7 +5,7 @@ R_CORE1###
 ##MILL#R_CORE1###
 Building configuration...
 
-Current configuration : 107275 bytes
+Current configuration : 107273 bytes
 !
 ! Last configuration change at 17:17:02 UTC Wed Mar 23 2022
 !
@@ -3005,7 +3005,7 @@ interface GigabitEthernet0/0/5.105
  service-policy output 50_Mbps
 !
 interface GigabitEthernet0/0/5.106
- description ##P.C. Financial Services Pvt Ltd..#131341#100Mb#UV##
+ description ##P.C. Financial Services Pvt Ltd..#131341#5Mb#UV##
  encapsulation dot1Q 106
  ip address 203.110.83.177 255.255.255.248
  ip access-group VOIP in
