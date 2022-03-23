@@ -5,10 +5,10 @@ R_CORE###
 ##MILL#R_CORE###
 Building configuration...
 
-Current configuration : 39252 bytes
+Current configuration : 39385 bytes
 !
-! Last configuration change at 14:57:57 IST Tue Mar 15 2022
-! NVRAM config last updated at 14:57:58 IST Tue Mar 15 2022
+! Last configuration change at 16:59:41 IST Mon Mar 21 2022
+! NVRAM config last updated at 17:00:06 IST Mon Mar 21 2022
 !
 version 15.3
 service timestamps debug datetime msec
@@ -1243,9 +1243,12 @@ interface GigabitEthernet0/1/2.5
  ip access-group H8 out
 !
 interface GigabitEthernet0/1/2.6
+ description ##TELECALLER#111xxx#10Mb##
  encapsulation dot1Q 6
+ ip address 203.110.83.89 255.255.255.248
  no ip redirects
- shutdown
+ service-policy input 10_Mbps
+ service-policy output 10_Mbps
 !
 interface GigabitEthernet0/1/2.7
 !

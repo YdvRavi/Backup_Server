@@ -670,13 +670,12 @@ interface epon 0/8
 onu auth-mode mac
 confirm onu mac 38:94:e0:a4:21:60 onuid 1 auth-mode mac
 confirm onu mac 38:94:e0:a4:0a:f0 onuid 2 auth-mode mac
+confirm onu mac 38:94:e0:b1:d9:4e onuid 3 auth-mode mac
 confirm onu mac 7c:a9:6b:3b:19:d7 onuid 4 auth-mode mac
 confirm onu mac e0:67:b3:1a:f0:0a onuid 5 auth-mode mac
 confirm onu mac 38:94:e0:e3:39:82 onuid 6 auth-mode mac
 confirm onu mac 7c:a9:6b:84:0f:7a onuid 7 auth-mode mac
 confirm onu mac 7c:a9:6b:ae:cf:c4 onuid 8 auth-mode mac
-confirm onu mac 38:94:e0:a8:c2:18 onuid 9 auth-mode mac
-confirm onu mac 38:94:e0:b1:d9:4e onuid 10 auth-mode mac
 confirm onu mac 7c:a9:6b:84:0f:5c onuid 11 auth-mode mac
 confirm onu mac 7c:a9:6b:84:d5:0c onuid 12 auth-mode mac
 confirm onu mac 7c:a9:6b:84:d5:04 onuid 13 auth-mode mac
@@ -738,7 +737,6 @@ onu mac-auth add 38:94:E0:A4:21:60
 onu mac-auth add 7C:A9:6B:84:D5:04
 onu mac-auth add 7C:A9:6B:84:D5:0C
 onu mac-auth add E0:67:B3:1A:F0:0A
-onu mac-auth add 38:94:E0:A8:C2:18
 onu mac-auth add 38:94:E0:A4:0A:F0
 onu mac-auth add 38:94:E0:E3:39:82
 onu mac-auth add A0:C6:EC:07:81:84
@@ -858,6 +856,9 @@ onu 1 ctc eth 1 vlan mode tag
 onu 2 description 201043_Magnum
 onu 2 ctc eth 1 vlan pvid 612 pri 0
 onu 2 ctc eth 1 vlan mode tag
+onu 3 description 201055_BL_gupta
+onu 3 ctc eth 1 vlan pvid 305 pri 0
+onu 3 ctc eth 1 vlan mode tag
 onu 4 description 201073_Max_Real
 onu 4 ctc eth 1 vlan pvid 459 pri 0
 onu 4 ctc eth 1 vlan mode tag
@@ -873,9 +874,6 @@ onu 7 ctc eth 1 vlan mode tag
 onu 8 description 201078_Choice
 onu 8 ctc eth 1 vlan pvid 556 pri 0
 onu 8 ctc eth 1 vlan mode tag
-onu 10 description 201055_BLGupta
-onu 10 ctc eth 1 vlan pvid 305 pri 0
-onu 10 ctc eth 1 vlan mode tag
 onu 11 description 231069_Tramiso
 onu 11 ctc eth 1 vlan pvid 305 pri 0
 onu 11 ctc eth 1 vlan mode tag

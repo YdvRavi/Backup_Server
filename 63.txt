@@ -278,6 +278,7 @@ confirm onu mac 38:94:e0:a4:0a:c0 onuid 11 auth-mode mac
 confirm onu mac 38:94:e0:a4:21:38 onuid 12 auth-mode mac
 confirm onu mac 7c:a9:6b:02:21:70 onuid 13 auth-mode mac
 confirm onu mac 38:94:e0:a4:21:28 onuid 14 auth-mode mac
+confirm onu mac 38:94:e0:a4:22:20 onuid 15 auth-mode mac
 confirm onu mac 7c:a9:6b:d6:c4:92 onuid 16 auth-mode mac
 confirm onu mac 7c:a9:6b:01:d5:f8 onuid 18 auth-mode mac
 confirm onu mac 7c:a9:6b:01:c1:10 onuid 19 auth-mode mac
@@ -324,6 +325,7 @@ onu mac-auth add 7C:A9:6B:02:25:A0
 onu mac-auth add 7C:A9:6B:01:C1:10
 onu mac-auth add 7C:A9:6B:01:A0:40
 onu mac-auth add 7C:A9:6B:84:0F:5A
+onu mac-auth add 38:94:E0:A4:22:20
 onu mac-auth add 7C:A9:6B:84:0F:72
 onu mac-auth add 7C:A9:6B:AF:07:50
 onu mac-auth add 38:94:E0:A4:21:28
@@ -382,6 +384,7 @@ onu 11 description GShospitality
 onu 12 description 351135_bagger
 onu 13 description 351140_MANAS
 onu 14 description 351109_Trust
+onu 15 description 351148_Outlook
 onu 16 description 351147_simran
 onu 16 ctc eth 1 vlan pvid 1 pri 0
 onu 16 ctc eth 1 vlan mode transparent

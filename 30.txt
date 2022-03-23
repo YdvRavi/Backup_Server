@@ -812,6 +812,9 @@ active
 aim 0/16/10 name 661006_Vumin_B4904
 permit sn string-hex HWTC-318cd19d line 1 default line 1
 active
+aim 0/16/11 name 661007_Laxmi
+permit sn string-hex HWTC-7c48899a line 1 default line 1
+active
 exit
 exit
 ![gpon-device]

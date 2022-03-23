@@ -418,7 +418,7 @@ aim 0/1/22 name 601024_Creativ
 permit sn string-hex GNXS-011f3840 line 1 default line 1
 active
 aim 0/1/23 name 601032_decor
-permit sn string-hex GNXS-011f3060 line 1 default line 1
+permit sn string-hex HWTC-11a1b4a6 line 1 default line 1
 active
 aim 0/1/24 name 601044_Shikha_G142
 permit sn string-hex GNXS-011042b0 line 1 default line 1
