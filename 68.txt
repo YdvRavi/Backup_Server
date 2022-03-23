@@ -352,7 +352,7 @@ exit
 interface epon 0/2
 switchport mode hybrid
 switchport hybrid vlan 1 untagged
-switchport hybrid vlan 515 untagged
+switchport hybrid vlan 511 untagged
 switchport hybrid vlan 305 tagged
 switchport hybrid vlan 401 tagged
 switchport hybrid vlan 408 tagged
@@ -364,7 +364,8 @@ switchport hybrid vlan 452 tagged
 switchport hybrid vlan 500 tagged
 switchport hybrid vlan 503 tagged
 switchport hybrid vlan 506 tagged
-switchport hybrid vlan 508 - 511 tagged
+switchport hybrid vlan 508 - 510 tagged
+switchport hybrid vlan 515 tagged
 switchport hybrid vlan 518 tagged
 switchport hybrid vlan 601 tagged
 switchport hybrid vlan 612 tagged
@@ -579,7 +580,7 @@ interface epon 0/6
 onu auth-mode mac
 confirm onu mac a0:c6:ec:07:79:2e onuid 1 auth-mode mac
 confirm onu mac a0:c6:ec:04:ca:2b onuid 2 auth-mode mac
-confirm onu mac 38:94:e0:d3:d0:08 onuid 3
+confirm onu mac 38:94:e0:d3:d0:08 onuid 3 auth-mode mac
 confirm onu mac a0:c6:ec:07:81:85 onuid 5 auth-mode mac
 confirm onu mac 7c:a9:6b:d6:a6:1e onuid 7 auth-mode mac
 confirm onu mac e0:67:b3:1a:ef:e0 onuid 11 auth-mode mac
@@ -624,6 +625,7 @@ onu mac-auth add A0:C6:EC:07:79:2D
 onu mac-auth add A0:C6:EC:07:79:2E
 onu mac-auth add 7C:A9:6B:D6:A6:1E
 onu mac-auth add A0:C6:EC:04:CA:2B
+onu mac-auth add 38:94:E0:D3:D0:08
 onu mac-auth add A0:C6:EC:07:81:85
 onu mac-auth add 38:94:E0:A4:58:F0
 onu mac-auth add E0:67:B3:1A:EF:E0
@@ -696,6 +698,9 @@ onu 1 ctc eth 1 vlan pvid 612 pri 0
 onu 1 ctc eth 1 vlan mode tag
 onu 2 ctc eth 1 vlan pvid 612 pri 0
 onu 2 ctc eth 1 vlan mode tag
+onu 3 description 221087_FLASH
+onu 3 ctc eth 1 vlan pvid 612 pri 0
+onu 3 ctc eth 1 vlan mode tag
 onu 5 description 221042_Synergy
 onu 5 ctc eth 1 flow_control enable
 onu 5 ctc eth 1 policy cir 112400 cbs 10240 ebs 10240 
