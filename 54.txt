@@ -219,7 +219,6 @@ exit
 interface port-channel 28  
   name ##UV#MAIN_RING#SW87.130## 
   speed-duplex 1000-full 
-  inactive 
   vlan-trunking 
   broadcast-limit 
   broadcast-limit 10000 
