@@ -655,6 +655,8 @@ onu 15 description 191887_BREADSLY
 onu 16 description 191886_BREADSLY
 onu 17 description 191823_SaajRest
 onu 18 description 191902_BON
+onu 18 ctc eth 1 vlan pvid 813 pri 0
+onu 18 ctc eth 1 vlan mode transparent
 exit
 !
 interface epon 0/4
