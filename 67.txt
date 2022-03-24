@@ -663,6 +663,7 @@ exit
 interface epon 0/7
 onu auth-mode mac
 confirm onu mac 54:47:e8:6f:bc:21 onuid 1
+confirm onu mac 54:47:e8:6f:bc:d1 onuid 2
 confirm onu mac 7c:a9:6b:af:06:dc onuid 9 auth-mode mac
 confirm onu mac 38:94:e0:d3:d0:70 onuid 10 auth-mode mac
 exit
