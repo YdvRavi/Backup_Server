@@ -430,7 +430,7 @@ confirm onu mac 38:94:e0:b0:44:95 onuid 51
 confirm onu mac 7c:a9:6b:af:07:40 onuid 52 auth-mode mac
 confirm onu mac 38:94:e0:cc:7c:fd onuid 53 auth-mode mac
 confirm onu mac e0:67:b3:1a:f0:0d onuid 54
-confirm onu mac 38:94:e0:b5:6b:77 onuid 55
+confirm onu mac 38:94:e0:b5:6b:77 onuid 55 auth-mode mac
 exit
 !
 interface epon 0/3
@@ -539,6 +539,7 @@ onu mac-auth add 38:94:E0:C3:A2:17
 onu mac-auth add 38:94:E0:B5:5D:75
 onu mac-auth add 78:D7:52:45:F0:69
 onu mac-auth add 38:94:E0:BE:1E:B8
+onu mac-auth add 38:94:E0:B5:6B:77
 onu mac-auth add 38:94:E0:BE:37:A4
 onu mac-auth add 38:94:E0:AC:C1:3A
 onu mac-auth add 38:94:E0:B5:5C:99
@@ -702,6 +703,7 @@ onu 52 description 281129_Rhine
 onu 52 ctc eth 1 vlan pvid 401 pri 0
 onu 52 ctc eth 1 vlan mode tag
 onu 53 description 281079_Maa
+onu 55 description 281143_Synoptics
 exit
 !
 interface epon 0/3
