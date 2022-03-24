@@ -5,7 +5,7 @@ R_CORE1###
 ##MILL#R_CORE1###
 Building configuration...
 
-Current configuration : 107235 bytes
+Current configuration : 107024 bytes
 !
 ! Last configuration change at 13:03:38 UTC Thu Mar 24 2022
 !
@@ -208,13 +208,6 @@ interface Loopback0
 interface Loopback101
  no ip address
 !
-interface Loopback3000
- description ##FOR TATA_NEW_LINK_TESTING##
- vrf forwarding TATA_TEST
- no ip address
- ipv6 address 2404:A200:0:8::10/64
- ipv6 enable
-!
 interface TenGigabitEthernet0/0/0
  no ip address
  shutdown
@@ -225,7 +218,6 @@ interface TenGigabitEthernet0/0/1
 !
 interface GigabitEthernet0/0/0
  no ip address
- ip ospf 20 area 0
  negotiation auto
  ipv6 enable
  arp timeout 5
@@ -252,7 +244,6 @@ interface GigabitEthernet0/0/2
  ip address 203.110.80.49 255.255.255.252
  ip ospf 20 area 0
  negotiation auto
- ipv6 address 2404:A200:0:2::9/126
  ipv6 enable
  arp timeout 5
 !
