@@ -110,6 +110,7 @@ switchport default vlan 502
 exit
 interface ethernet 0/0/19
 description "##Nextra Communications Pvt Ltd#201061#30Mb##"
+shutdown
 speed 100
 duplex full
 switchport default vlan 437
