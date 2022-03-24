@@ -1,6 +1,6 @@
 ##CONFIG##
 
-## Last commit: 2022-03-24 18:12:05 UTC by deldsl
+## Last commit: 2022-03-24 19:41:11 UTC by deldsl
 version 17.4R1.16;
 system {
     host-name MILL_R_JUNOS;
@@ -783,21 +783,6 @@ interfaces {
                     output 20_Mbps;
                 }
                 address 103.242.225.229/30;
-            }
-        }
-        unit 437 {
-            description "##Nextra_Communications_Pvt_Ltd#201061#30Mb##";
-            vlan-id 437;
-            family inet {
-                filter {
-                    input VOIP;
-                    output VOIP;
-                }
-                policer {
-                    input 30_Mbps;
-                    output 30_Mbps;
-                }
-                address 103.242.225.81/29;
             }
         }
         unit 438 {
