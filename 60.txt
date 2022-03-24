@@ -88,10 +88,10 @@ vlan 412
 exit 
 vlan 413 
   name 413 
-  normal 1-25 
-  fixed 26-28 
+  normal 1-20,22-25 
+  fixed 21,26-28 
   forbidden "" 
-  untagged "" 
+  untagged 21 
 exit 
 vlan 414 
   name 414 
