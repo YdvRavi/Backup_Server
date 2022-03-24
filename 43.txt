@@ -5,7 +5,7 @@ R_CORE1###
 ##MILL#R_CORE1###
 Building configuration...
 
-Current configuration : 106994 bytes
+Current configuration : 106905 bytes
 !
 ! Last configuration change at 15:56:39 UTC Thu Mar 24 2022
 !
@@ -2465,7 +2465,6 @@ interface GigabitEthernet0/0/4.604
 !
 interface GigabitEthernet0/0/4.613
  encapsulation dot1Q 613
- ip address 45.64.93.1 255.255.255.128
  shutdown
 !
 interface GigabitEthernet0/0/4.702
@@ -2668,7 +2667,6 @@ interface GigabitEthernet0/0/5.21
  service-policy output 8_Mbps
 !
 interface GigabitEthernet0/0/5.22
- description ##Triumph Infocomm#131214#OLD_DATA##
  encapsulation dot1Q 22
  shutdown
  arp timeout 5
