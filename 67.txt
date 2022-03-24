@@ -631,7 +631,7 @@ interface epon 0/3
 onu auth-mode mac
 confirm onu mac 7c:a9:6b:3b:1a:1d onuid 1 auth-mode mac
 confirm onu mac 7c:a9:6b:3b:19:d9 onuid 2 auth-mode mac
-confirm onu mac 7c:a9:6b:af:07:b8 onuid 3 auth-mode mac
+confirm onu mac 7c:a9:6b:af:07:b8 onuid 3
 exit
 !
 interface epon 0/4
@@ -703,7 +703,6 @@ exit
 interface epon 0/3
 onu mac-auth add 7C:A9:6B:3B:1A:1D
 onu mac-auth add 7C:A9:6B:3B:19:D9
-onu mac-auth add 7C:A9:6B:AF:07:B8
 exit
 !
 interface epon 0/4
@@ -784,10 +783,6 @@ onu 1 ctc eth 1 vlan mode tag
 onu 2 description 231061_ASPRAN
 onu 2 ctc eth 1 vlan pvid 612 pri 0
 onu 2 ctc eth 1 vlan mode tag
-onu 3 description 231068_Nextra
-onu 3 ctc eth 1 phy_ctrl enable
-onu 3 ctc eth 1 vlan pvid 305 pri 0
-onu 3 ctc eth 1 vlan mode tag
 exit
 !
 interface epon 0/4
