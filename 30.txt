@@ -344,8 +344,8 @@ active
 aim 0/1/18 name 641143_punit
 permit sn string-hex HWTC-872c01a5 line 1 default line 1
 active
-aim 0/1/19 name 641149_Akshay_A501
-permit sn string-hex HWTC-e4c8974a line 1 default line 1
+aim 0/1/19 name 641149_akshay
+permit sn string-hex HWTC-11a383a6 line 1 default line 1
 active
 aim 0/1/20 name 641159_Shatabdi_A202
 permit sn string-hex HWTC-11a66ea6 line 1 default line 1
