@@ -88,10 +88,10 @@ vlan 412
 exit 
 vlan 413 
   name 413 
-  normal 1-20,22-25 
-  fixed 21,26-28 
+  normal 1-25 
+  fixed 26-28 
   forbidden "" 
-  untagged 21 
+  untagged "" 
 exit 
 vlan 414 
   name 414 
@@ -480,8 +480,6 @@ interface port-channel 20
   loopguard 
 exit 
 interface port-channel 21  
-  name ##nextra_Communications_Pvt_Ltd#181085#10Mb## 
-  pvid 413 
   ingress-check 
   bandwidth-limit cir 15360 
   bandwidth-limit cir 
