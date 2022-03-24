@@ -639,7 +639,7 @@ onu 1 description 111034_Quadient
 onu 1 ctc eth 1 vlan pvid 321 pri 0
 onu 1 ctc eth 1 vlan mode tag
 onu 2 description 111277_TPV
-onu 3 description 131379_AAS
+onu 3 description 111417_AAS
 onu 3 pri wan_conn add bridge
 onu 3 pri wan_conn index 1 bridge internet 
 onu 3 pri wan_conn index 1 vlan tag wan_vlan 282 0 
