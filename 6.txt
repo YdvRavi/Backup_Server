@@ -1,6 +1,6 @@
 ##CONFIG##
 
-## Last commit: 2022-03-24 13:06:42 UTC by deldsl
+## Last commit: 2022-03-24 15:56:54 UTC by deldsl
 version 17.4R1.16;
 system {
     host-name MILL_R_JUNOS;
@@ -979,7 +979,6 @@ interfaces {
             }
         }
         unit 451 {
-            disable;
             description "##Prompt_Engineering_Pvt_Ltd#151153#5Mb##";
             vlan-id 451;
             family inet {
@@ -1010,7 +1009,6 @@ interfaces {
             }
         }
         unit 453 {
-            disable;
             description "##Olive_Realcon_Pvt_Ltd#101348#40Mb##";
             vlan-id 453;
             family inet {
