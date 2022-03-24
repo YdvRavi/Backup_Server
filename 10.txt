@@ -1,8 +1,8 @@
 ##CONFIG##
 
 MILL#RING_1#Sagacious Research Pvt Ltd#SW82.107### 
-##MILL#RING_1#Sagacious Research Pvt Ltd#SW82.107### 
-  Building configuration...
+
+##MILL#RING_1#Sagacious Research Pvt Ltd#SW82.107###   Building configuration...
 
   Current configuration: 
 

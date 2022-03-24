@@ -664,6 +664,7 @@ interface epon 0/7
 onu auth-mode mac
 confirm onu mac 54:47:e8:6f:bc:21 onuid 1 auth-mode mac
 confirm onu mac 54:47:e8:6f:bc:d1 onuid 2
+confirm onu mac 54:47:e8:6e:99:a1 onuid 3
 confirm onu mac 7c:a9:6b:af:06:dc onuid 9 auth-mode mac
 confirm onu mac 38:94:e0:d3:d0:70 onuid 10 auth-mode mac
 exit
@@ -788,7 +789,7 @@ onu 2 description 231061_ASPRAN
 onu 2 ctc eth 1 vlan pvid 612 pri 0
 onu 2 ctc eth 1 vlan mode tag
 onu 3 description 201088_Sham
-onu 3 ctc eth 1 phy_ctrl disable
+onu 3 ctc eth 1 phy_ctrl enable
 onu 3 ctc eth 1 vlan pvid 305 pri 0
 onu 3 ctc eth 1 vlan mode tag
 exit
