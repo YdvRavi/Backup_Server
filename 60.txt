@@ -480,6 +480,7 @@ interface port-channel 20
   loopguard 
 exit 
 interface port-channel 21  
+  name ##Nextra_Communication_Pvt_LTD#181085#10Mb## 
   ingress-check 
   bandwidth-limit cir 15360 
   bandwidth-limit cir 
