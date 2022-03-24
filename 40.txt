@@ -428,7 +428,7 @@ confirm onu mac 38:94:e0:c3:76:01 onuid 49 auth-mode mac
 confirm onu mac 80:14:a8:00:00:00 onuid 50
 confirm onu mac 38:94:e0:b0:44:95 onuid 51
 confirm onu mac 7c:a9:6b:af:07:40 onuid 52 auth-mode mac
-confirm onu mac 38:94:e0:cc:7c:fd onuid 53 auth-mode mac
+confirm onu mac 38:94:e0:cc:7c:fd onuid 53
 confirm onu mac e0:67:b3:1a:f0:0d onuid 54
 exit
 !
