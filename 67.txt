@@ -786,7 +786,7 @@ onu 2 description 231061_ASPRAN
 onu 2 ctc eth 1 vlan pvid 612 pri 0
 onu 2 ctc eth 1 vlan mode tag
 onu 3 description 201088_Sham
-onu 3 ctc eth 1 vlan pvid 600 pri 0
+onu 3 ctc eth 1 vlan pvid 305 pri 0
 onu 3 ctc eth 1 vlan mode tag
 exit
 !
