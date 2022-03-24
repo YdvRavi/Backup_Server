@@ -7,7 +7,7 @@ Building configuration...
 
 Current configuration : 106905 bytes
 !
-! Last configuration change at 16:51:22 UTC Thu Mar 24 2022
+! Last configuration change at 16:55:02 UTC Thu Mar 24 2022
 !
 version 15.5
 service timestamps debug datetime msec
@@ -1161,7 +1161,6 @@ interface GigabitEthernet0/0/4.310
  ip access-group VOIP out
  ip ospf 20 area 3
  ip ospf cost 20
- shutdown
  service-policy input 300_Mbps
  service-policy output 300_Mbps
 !
@@ -1283,6 +1282,7 @@ interface GigabitEthernet0/0/4.331
  ip access-group VOIP in
  ip access-group VOIP out
  ip ospf 20 area 3
+ shutdown
  service-policy input 300_Mbps
  service-policy output 300_Mbps
 !
