@@ -415,6 +415,8 @@ switchport trunk vlan 295
 switchport trunk vlan 305
 switchport trunk vlan 401
 switchport trunk vlan 428 - 429
+
+2022/03/24 22:15:25   ONU Illegal Register     PON 0/7 ONU 2 54:47:E8:6F:BC:D1 Rejected by White-list authentication.
 switchport trunk vlan 452
 switchport trunk vlan 500
 switchport trunk vlan 522
