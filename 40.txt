@@ -350,7 +350,7 @@ confirm onu mac 38:94:e0:be:38:33 onuid 27 auth-mode mac
 confirm onu mac 38:94:e0:c3:a2:01 onuid 28 auth-mode mac
 confirm onu mac 38:94:e0:be:38:07 onuid 29
 confirm onu mac 38:94:e0:bd:d5:54 onuid 30 auth-mode mac
-confirm onu mac 38:94:e0:be:18:0f onuid 31 auth-mode mac
+confirm onu mac 38:94:e0:be:18:0f onuid 31
 confirm onu mac 38:94:e0:be:21:78 onuid 32 auth-mode mac
 confirm onu mac 38:94:e0:c3:eb:a7 onuid 33 auth-mode mac
 confirm onu mac 38:94:e0:ab:12:4c onuid 34 auth-mode mac
@@ -376,7 +376,7 @@ exit
 !
 interface epon 0/2
 onu auth-mode mac
-confirm onu mac 38:94:e0:ac:c1:3a onuid 1 auth-mode mac
+confirm onu mac 38:94:e0:ac:c1:3a onuid 1
 confirm onu mac 38:94:e0:b5:5c:0a onuid 2 auth-mode mac
 confirm onu mac 38:94:e0:b0:74:26 onuid 3 auth-mode mac
 confirm onu mac a8:ca:7b:ad:bd:9a onuid 4 auth-mode mac
@@ -394,7 +394,7 @@ confirm onu mac 38:94:e0:b5:5e:1a onuid 15 auth-mode mac
 confirm onu mac 38:94:e0:c3:8e:f8 onuid 16 auth-mode mac
 confirm onu mac 38:94:e0:ac:c1:92 onuid 17 auth-mode mac
 confirm onu mac 78:d7:52:45:fa:84 onuid 18 auth-mode mac
-confirm onu mac 38:94:e0:b5:5d:75 onuid 19 auth-mode mac
+confirm onu mac 38:94:e0:b5:5d:75 onuid 19
 confirm onu mac 7c:a9:6b:01:db:a8 onuid 20 auth-mode mac
 confirm onu mac 9c:28:ef:9f:45:f5 onuid 21 auth-mode mac
 confirm onu mac 38:94:e0:ab:12:73 onuid 22
