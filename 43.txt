@@ -5,7 +5,7 @@ R_CORE1###
 ##MILL#R_CORE1###
 Building configuration...
 
-Current configuration : 106905 bytes
+Current configuration : 106915 bytes
 !
 ! Last configuration change at 16:55:02 UTC Thu Mar 24 2022
 !
@@ -2391,6 +2391,7 @@ interface GigabitEthernet0/0/4.581
  ip address 203.110.83.17 255.255.255.252
  ip access-group VOIP in
  ip access-group VOIP out
+ shutdown
  service-policy input 10_Mbps
  service-policy output 10_Mbps
 !
