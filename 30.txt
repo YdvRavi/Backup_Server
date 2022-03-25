@@ -446,9 +446,6 @@ active
 aim 0/4/9 name 641086_Mudit
 permit sn string-hex GNXS-6120021d line 1 default line 1
 active
-aim 0/4/10 name 641102_Kulbir_C506
-permit sn string-hex HWTC-872b3fa5 line 1 default line 1
-active
 aim 0/4/11 name 641112_Amit_C_904
 permit sn string-hex HWTC-872bbda5 line 1 default line 1
 active
