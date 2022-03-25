@@ -5,9 +5,9 @@ R_CORE1###
 ##MILL#R_CORE1###
 Building configuration...
 
-Current configuration : 106915 bytes
+Current configuration : 106918 bytes
 !
-! Last configuration change at 12:47:36 UTC Fri Mar 25 2022
+! Last configuration change at 13:36:36 UTC Fri Mar 25 2022
 !
 version 15.5
 service timestamps debug datetime msec
@@ -1132,11 +1132,11 @@ interface GigabitEthernet0/0/4.301
  service-policy output 10_Mbps
 !
 interface GigabitEthernet0/0/4.302
- description ##Remfry & Sagar.#111086#40MB#Mill##
+ description ##Remfry & Sagar.#111086#75MB#Mill##
  encapsulation dot1Q 302
  ip address 203.110.85.33 255.255.255.248
- service-policy input 40_Mbps
- service-policy output 40_Mbps
+ service-policy input 75_Mbps
+ service-policy output 75_Mbps
 !
 interface GigabitEthernet0/0/4.303
  encapsulation dot1Q 303
@@ -1296,13 +1296,13 @@ interface GigabitEthernet0/0/4.332
  service-policy output 30_Mbps
 !
 interface GigabitEthernet0/0/4.333
- description ##Just 4 Kids Services Pvt Ltd#111183#50Mb#Mill##
+ description ##Just 4 Kids Services Pvt Ltd#111183#150Mb#Mill##
  encapsulation dot1Q 333
  ip address 203.110.81.97 255.255.255.252
  ip access-group VOIP in
  ip access-group VOIP out
- service-policy input 50_Mbps
- service-policy output 50_Mbps
+ service-policy input 150_Mbps
+ service-policy output 150_Mbps
 !
 interface GigabitEthernet0/0/4.334
  description ##India For You Holidays Pvt ltd#111112#100Mb#Mill##
