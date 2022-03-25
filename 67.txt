@@ -853,6 +853,8 @@ onu 4 description 201086_Sham_Bas
 onu 4 ctc eth 1 vlan pvid 305 pri 0
 onu 4 ctc eth 1 vlan mode tag
 onu 5 description 201088_sham
+onu 5 ctc eth 1 vlan pvid 305 pri 0
+onu 5 ctc eth 1 vlan mode tag
 onu 9 description 201062_Brahm
 onu 9 ctc eth 1 vlan pvid 305 pri 0
 onu 9 ctc eth 1 vlan mode tag
