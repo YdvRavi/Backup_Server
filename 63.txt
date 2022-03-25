@@ -2,8 +2,6 @@
 
 ## terminal length 0
 VSM_OLT#80.58### 
-2022/03/25 07:41:15   ONU AUTH Success         PON 0/2 ONU 2 7C:A9:6B:84:0F:5A.
-
 
 Current configuration:
 !
