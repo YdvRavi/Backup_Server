@@ -7,7 +7,7 @@ MAHI#MAIN_RING#SW87.227###
   Current configuration: 
 
 no spanning-tree 10 edge-port 
-spanning-tree 28 edge-port 
+no spanning-tree 28 edge-port 
 no remote-management 1 service ssh  
 vlan 1 
   name 1 
