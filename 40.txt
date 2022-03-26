@@ -2,8 +2,6 @@
 
 ## terminal length 0
 Ardee_OLT#85.61### 
-2000/01/04 13:40:01   ONU Deregister           PON 0/2 ONU 37 14:A7:2B:0E:1C:FC MPCP ONU initiates DEREG.
-
 
 Current configuration:
 !
