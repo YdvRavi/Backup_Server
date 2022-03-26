@@ -542,7 +542,7 @@ confirm onu mac 7c:a9:6b:01:99:f8 onuid 1 auth-mode mac
 confirm onu mac 98:c7:a4:05:02:9b onuid 2 auth-mode mac
 confirm onu mac 38:94:e0:be:37:fc onuid 3 auth-mode mac
 confirm onu mac 38:94:e0:d8:ee:a8 onuid 4 auth-mode mac
-confirm onu mac 54:47:e8:6f:bc:21 onuid 5
+confirm onu mac 54:47:e8:6f:bc:21 onuid 5 auth-mode mac
 confirm onu mac 7c:a9:6b:84:d5:36 onuid 6 auth-mode mac
 confirm onu mac 38:94:e0:e3:41:2a onuid 8 auth-mode mac
 confirm onu mac a0:c6:ec:07:87:5c onuid 9 auth-mode mac
@@ -601,6 +601,7 @@ interface epon 0/4
 onu mac-auth add 38:94:E0:D8:EE:A8
 onu mac-auth add 7C:A9:6B:84:0F:68
 onu mac-auth add 98:C7:A4:05:02:9B
+onu mac-auth add 54:47:E8:6F:BC:21
 onu mac-auth add AC:F9:70:5C:58:20
 onu mac-auth add 38:94:E0:E3:41:2A
 onu mac-auth add 7C:A9:6B:84:D5:36
@@ -695,6 +696,8 @@ onu 4 ctc eth 1 vlan mode tag
 onu 4 ctc eth 2 flow_control disable
 onu 4 ctc eth 2 phy_ctrl enable
 onu 4 ctc eth 2 autoneg disable
+onu 5 ctc eth 1 vlan pvid 3 pri 0
+onu 5 ctc eth 1 vlan mode tag
 onu 6 description 111407_REINHART
 onu 6 ctc eth 1 vlan pvid 3 pri 0
 onu 6 ctc eth 1 vlan mode tag
