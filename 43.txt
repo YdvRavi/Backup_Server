@@ -5,9 +5,9 @@ R_CORE1###
 ##MILL#R_CORE1###
 Building configuration...
 
-Current configuration : 106957 bytes
+Current configuration : 106874 bytes
 !
-! Last configuration change at 14:58:31 UTC Sat Mar 26 2022
+! Last configuration change at 15:31:28 UTC Sat Mar 26 2022
 !
 version 15.5
 service timestamps debug datetime msec
@@ -3182,9 +3182,7 @@ interface GigabitEthernet0/0/5.141
  service-policy output 100_Mbps
 !
 interface GigabitEthernet0/0/5.142
- description ##EASTMAN#131461#50Mb#UV##
  encapsulation dot1Q 142
- ip address 203.110.83.185 255.255.255.248
  ip access-group VOIP in
  ip access-group VOIP out
  arp timeout 5
