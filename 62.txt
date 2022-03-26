@@ -532,6 +532,7 @@ exit
 interface epon 0/1
 onu mac-auth add 98:C7:A4:05:02:67
 onu mac-auth add E0:67:B3:11:93:16
+onu mac-auth add 7C:A9:6B:02:C9:68
 onu mac-auth add A4:00:E2:6D:87:EA
 onu mac-auth add 38:94:E0:E3:40:CA
 onu mac-auth add 7C:A9:6B:84:D4:FE
