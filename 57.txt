@@ -203,8 +203,6 @@ interface port-channel 1
   bandwidth-limit pir 
   bandwidth-limit egress 10240 
   bandwidth-limit egress 
-  bandwidth-limit egress queue -17 1 
-  bandwidth-limit egress queue -17 
   broadcast-limit 
   broadcast-limit 100 
   multicast-limit 
