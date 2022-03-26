@@ -5,9 +5,9 @@ R_CORE1###
 ##MILL#R_CORE1###
 Building configuration...
 
-Current configuration : 106874 bytes
+Current configuration : 106957 bytes
 !
-! Last configuration change at 15:31:28 UTC Sat Mar 26 2022
+! Last configuration change at 15:37:29 UTC Sat Mar 26 2022
 !
 version 15.5
 service timestamps debug datetime msec
@@ -3186,8 +3186,6 @@ interface GigabitEthernet0/0/5.142
  ip access-group VOIP in
  ip access-group VOIP out
  arp timeout 5
- service-policy input 50_Mbps
- service-policy output 50_Mbps
 !
 interface GigabitEthernet0/0/5.143
  encapsulation dot1Q 143
@@ -4054,9 +4052,13 @@ interface GigabitEthernet0/1/0.1003005
  service-policy output 50_Mbps
 !
 interface GigabitEthernet0/1/0.1003006
+ description ##EASTMAN#131461#50Mb#UV##
  encapsulation dot1Q 1003 second-dot1q 6
+ ip address 203.110.83.185 255.255.255.248
  ip access-group VOIP in
  ip access-group VOIP out
+ service-policy input 50_Mbps
+ service-policy output 50_Mbps
 !
 interface GigabitEthernet0/1/0.1003007
  description ##Norhcred Services Pvt Ltd#261007#100Mb##
