@@ -1,6 +1,6 @@
 ##CONFIG##
 
-## Last commit: 2022-03-25 13:51:59 UTC by deldsl
+## Last commit: 2022-03-26 20:00:21 UTC by deldsl
 version 17.4R1.16;
 system {
     host-name MILL_R_JUNOS;
@@ -1628,7 +1628,6 @@ interfaces {
             }
         }
         unit 903 {
-            disable;
             description "##CROWN_PROPBUILD_PRIVATE_LIMITED#601021#20Mb##";
             vlan-id 903;
             family inet {
