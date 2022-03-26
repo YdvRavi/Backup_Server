@@ -696,6 +696,7 @@ onu 4 ctc eth 1 vlan mode tag
 onu 4 ctc eth 2 flow_control disable
 onu 4 ctc eth 2 phy_ctrl enable
 onu 4 ctc eth 2 autoneg disable
+onu 5 description 111421_ValueD3
 onu 5 ctc eth 1 vlan pvid 3 pri 0
 onu 5 ctc eth 1 vlan mode tag
 onu 6 description 111407_REINHART
