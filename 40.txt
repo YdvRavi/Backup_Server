@@ -1,44 +1,6 @@
 ##CONFIG##
 
-## 
-2000/01/05 17:20:05   ONU Dying Gasp           PON 0/1 ONU 57 C0:BF:C0:43:2C:62 
-
-2000/01/05 17:20:05   ONU Dying Gasp           PON 0/1 ONU 57 C0:BF:C0:43:2C:62 
-
-2000/01/05 17:20:05   ONU Dying Gasp           PON 0/1 ONU 57 C0:BF:C0:43:2C:62 
-
-2000/01/05 17:20:05   ONU Dying Gasp           PON 0/1 ONU 57 C0:BF:C0:43:2C:62 
-
-2000/01/05 17:20:05   ONU Dying Gasp           PON 0/3 ONU 18 38:94:E0:D9:4E:A6 
-
-2000/01/05 17:20:05   ONU Dying Gasp           PON 0/1 ONU 25 38:94:E0:A8:C1:73 
-
-2000/01/05 17:20:05   ONU Dying Gasp           PON 0/1 ONU 11 38:94:E0:BE:37:C5 
-
-2000/01/05 17:20:05   ONU Dying Gasp           PON 0/2 ONU 25 38:94:E0:AB:12:6D 
-
-2000/01/05 17:20:05   ONU Dying Gasp           PON 0/1 ONU 33 38:94:E0:C3:EB:A7 
-
-2000/01/05 17:20:05   ONU Dying Gasp           PON 0/2 ONU 19 38:94:E0:B5:5D:75 
-
-2000/01/05 17:20:05   ONU Dying Gasp           PON 0/1 ONU 27 38:94:E0:BE:38:33 
-
-2000/01/05 17:20:05   ONU Dying Gasp           PON 0/1 ONU 32 38:94:E0:BE:21:78 
-
-2000/01/05 17:20:05   ONU Dying Gasp           PON 0/2 ONU 23 38:94:E0:B5:6B:C4 
-
-2000/01/05 17:20:05   ONU Dying Gasp           PON 0/1 ONU 36 38:94:E0:BE:16:78 
-
-2000/01/05 17:20:05   ONU Dying Gasp           PON 0/1 ONU 22 38:94:E0:B5:5B:E9 
-
-2000/01/05 17:20:05   ONU Dying Gasp           PON 0/1 ONU 23 38:94:E0:B5:5E:30 
-
-2000/01/05 17:20:05   ONU Dying Gasp           PON 0/2 ONU 33 38:94:E0:D9:6C:78 
-
-2000/01/05 17:20:05   ONU Dying Gasp           PON 0/2 ONU 44 38:94:E0:C3:F2:03 
-
-2000/01/05 17:20:05   ONU Dying Gasp           PON 0/1 ONU 43 38:94:E0:BE:17:A1 
-terminal length 0
+## terminal length 0
 Ardee_OLT#85.61### 
 
 Current configuration:
