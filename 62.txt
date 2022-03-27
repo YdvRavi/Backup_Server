@@ -526,7 +526,7 @@ confirm onu mac e0:67:b3:1a:ef:ec onuid 7 auth-mode mac
 confirm onu mac 7c:a9:6b:02:c9:68 onuid 8 auth-mode mac
 confirm onu mac 7c:a9:6b:af:07:28 onuid 9 auth-mode mac
 confirm onu mac 54:47:e8:6f:03:b9 onuid 10
-confirm onu mac 54:47:e8:6e:e1:e9 onuid 11
+confirm onu mac 54:47:e8:6e:e1:e9 onuid 11 auth-mode mac
 confirm onu mac 7c:a9:6b:01:ce:48 onuid 14 auth-mode mac
 confirm onu mac e0:67:b3:0e:34:f3 onuid 17 auth-mode mac
 exit
@@ -729,6 +729,9 @@ onu 9 ctc eth 1 flow_control disable
 onu 9 ctc eth 1 loopdetect enable
 onu 9 ctc eth 1 vlan pvid 41 pri 0
 onu 9 ctc eth 1 vlan mode tag
+onu 11 description 131393_toshsni
+onu 11 ctc eth 1 vlan pvid 842 pri 0
+onu 11 ctc eth 1 vlan mode tag
 onu 14 description 131312_Vital
 onu 14 ctc eth 1 vlan pvid 42 pri 0
 onu 14 ctc eth 1 vlan mode tag
