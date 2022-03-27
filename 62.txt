@@ -525,6 +525,7 @@ confirm onu mac a4:00:e2:73:1b:6b onuid 6 auth-mode mac
 confirm onu mac e0:67:b3:1a:ef:ec onuid 7 auth-mode mac
 confirm onu mac 7c:a9:6b:02:c9:68 onuid 8 auth-mode mac
 confirm onu mac 7c:a9:6b:af:07:28 onuid 9 auth-mode mac
+confirm onu mac 54:47:e8:6f:03:b9 onuid 10
 confirm onu mac 7c:a9:6b:01:ce:48 onuid 14 auth-mode mac
 confirm onu mac e0:67:b3:0e:34:f3 onuid 17 auth-mode mac
 exit
