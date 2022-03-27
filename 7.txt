@@ -1,7 +1,7 @@
 ##CONFIG##
 
 MILL#RING_4#Vatika Hotels Pvt Ltd Triangle#SW82.104### 
-##MILL#RING_4#Vatika Hotels Pvt Ltd Triangle#SW82.104### show running-config
+##MILL#RING_4#Vatika Hotels Pvt Ltd Triangle#SW82.104### 
   Building configuration...
 
   Current configuration: 
