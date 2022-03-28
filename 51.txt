@@ -278,12 +278,10 @@ interface ethernet 0/0/22
 spanning-tree cost 4
 exit
 interface ethernet 0/0/23
-no spanning-tree
-spanning-tree cost 2000
+spanning-tree cost 4
 exit
 interface ethernet 0/0/24
-no spanning-tree
-spanning-tree cost 2000
+spanning-tree cost 4
 exit
 interface ethernet 0/0/25
 spanning-tree cost 2000
