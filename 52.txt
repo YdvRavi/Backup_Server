@@ -61,6 +61,8 @@ interface ethernet 0/0/16
 exit
 interface ethernet 0/0/17
 description ##Umesh_Chaudhary#151159#20Mb##
+speed 100
+duplex full
 switchport default vlan 101
 exit
 interface ethernet 0/0/18
