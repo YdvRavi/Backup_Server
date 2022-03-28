@@ -6,7 +6,7 @@ UV#MAIN_RING#SW87.134#JMD_REG_SQ###
 
   Current configuration: 
 
-no spanning-tree 1 edge-port 
+spanning-tree 1 edge-port 
 no spanning-tree 23 edge-port 
 no spanning-tree 24 edge-port 
 no spanning-tree 25 edge-port 
