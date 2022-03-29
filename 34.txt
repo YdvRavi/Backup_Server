@@ -47,11 +47,11 @@ exit
 service password-encryption
 username admin privilege 15 password 7 433dd746
 screen-rows per-page 0
-hostname ##UNITECH_VISTA_OLT#82.239##
+hostname ##Unitech_Vista#OLT_82.239##
 ![IGMP_SNOOPING]
 igmp-snooping
 ![SNMP]
-snmp-server name ##UNITECH_VISTA_OLT#82.239##
+snmp-server name ##Unitech_Vista#OLT_82.239##
 snmp-server community deldsl ro permit view iso
 ![IF]
 interface vlan-interface 1 

@@ -63,7 +63,7 @@ exit
 ![OAM]
 username admin privilege 15 password 0 golt@GEN
 screen-rows per-page 0
-hostname Emaar_imperial
+hostname ##Emaar_Imperial#OLT_82.140##
 ![STP]
 no spanning-tree
 interface gpon 0/1
@@ -91,7 +91,7 @@ interface gpon 0/8
 no spanning-tree
 exit
 ![SNMP]
-snmp-server name Emaar_imperial
+snmp-server name ##Emaar_Imperial#OLT_82.140##
 snmp-server community deldsl ro permit view iso
 snmp-server community public rw permit view iso
 snmp-server community private rw permit view iso
