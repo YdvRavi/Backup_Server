@@ -151,6 +151,9 @@ active
 aim 0/9/2 name 671015_Suman
 permit sn string-hex HWTC-11a34ea6 line 1 default line 1
 active
+aim 0/9/3 name 671011_Ashok
+permit sn string-hex HWTC-11a7a9a6 line 1 default line 1
+active
 aim 0/10/1 name 6710XX_Facility
 permit sn string-hex HWTC-119b74a6 line 1 default line 1
 active
