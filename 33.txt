@@ -101,7 +101,7 @@ dlf-forward multicast
 service password-encryption
 username admin privilege 15 password 7 433dd746
 screen-rows per-page 0
-hostname ##OLT_SAPPHIRE_90#OLT87.99##
+hostname ##Sapphire_90#OLT_87.99##
 ![IGMP_SNOOPING]
 igmp-snooping
 interface gpon 0/1
@@ -162,7 +162,7 @@ interface gpon 0/8
 no spanning-tree
 exit
 ![SNMP]
-snmp-server name ##OLT_SAPPHIRE_90#OLT87.99##
+snmp-server name ##Sapphire_90#OLT_87.99##
 snmp-server community deldsl ro permit view iso
 snmp-server community public rw permit view iso
 snmp-server community private rw permit view iso
