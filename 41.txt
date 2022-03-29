@@ -2,8 +2,6 @@
 
 ## terminal length 0
 VTC_OLT#85.60### 
-2021/05/17 21:22:52   ONU AUTH Success         PON 0/1 ONU 9 7C:A9:6B:01:D0:F8.
-
 
 Current configuration:
 !
