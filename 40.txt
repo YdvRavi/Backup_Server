@@ -706,8 +706,9 @@ onu 52 ctc eth 1 vlan pvid 401 pri 0
 onu 52 ctc eth 1 vlan mode tag
 onu 53 description 281079_Maa
 onu 55 description 281143_Synoptics
-onu 56 ctc eth 1 vlan pvid 0 pri 0
-onu 56 ctc eth 1 vlan mode transparent
+onu 56 description 281144_ADITYA
+onu 56 ctc eth 1 vlan pvid 401 pri 0
+onu 56 ctc eth 1 vlan mode tag
 exit
 !
 interface epon 0/3
