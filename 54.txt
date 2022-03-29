@@ -193,7 +193,7 @@ interface port-channel 24
 exit 
 interface port-channel 25  
   name ##UV#MAIN_RING#SW87.136## 
-  inactive 
+  speed-duplex 1000-full 
   vlan-trunking 
   broadcast-limit 
   broadcast-limit 10000 
