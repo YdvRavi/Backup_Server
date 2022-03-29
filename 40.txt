@@ -602,6 +602,7 @@ onu 7 ctc eth 1 flow_control disable
 onu 9 description 281026_Aroma
 onu 10 description 281110_FETT
 onu 11 description 281015_forever
+onu 30 description 281068_Thea
 exit
 !
 interface epon 0/2
