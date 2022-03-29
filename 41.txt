@@ -2,6 +2,8 @@
 
 ## terminal length 0
 VTC_OLT#85.60### 
+2021/05/18 12:37:55   ONU Deregister           PON 0/1 ONU 19 A4:00:E2:6D:87:EA MPCP TIMEOUT.
+
 
 Current configuration:
 !
