@@ -2,6 +2,8 @@
 
 ## terminal length 0
 AMBI_GGN_OLT#83.99### 
+2022/03/30 00:55:46   ONU Deregister           PON 0/8 ONU 10 38:94:E0:A4:0A:E0 MPCP TIMEOUT.
+
 
 Current configuration:
 !
