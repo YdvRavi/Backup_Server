@@ -110,6 +110,7 @@ errdisable recovery cause igmp
 exit
 interface ethernet 0/0/25
 description ##UV#MAIN_RING#SW87.134##
+shutdown
 speed 1000
 switchport trunk allowed vlan 2-4094
 storm-control broadcast 1000
