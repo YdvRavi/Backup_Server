@@ -45,7 +45,7 @@ interface ethernet 2/2
 exit
 ![OAM]
 service password-encryption
-username admin privilege 15 password 7 bf18ebb3
+username admin privilege 15 password 7 433dd746
 screen-rows per-page 0
 hostname ##UNITECH_VISTA_OLT#82.239##
 ![IGMP_SNOOPING]

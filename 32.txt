@@ -61,7 +61,7 @@ storm-control multicast 512
 dlf-forward multicast
 exit
 ![OAM]
-username admin privilege 15 password 0 deldsl@nlclsl
+username admin privilege 15 password 0 golt@GEN
 screen-rows per-page 0
 hostname Emaar_imperial
 ![STP]

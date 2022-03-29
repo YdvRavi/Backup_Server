@@ -99,7 +99,7 @@ exit
 dlf-forward multicast
 ![OAM]
 service password-encryption
-username admin privilege 15 password 7 bf18ebb3
+username admin privilege 15 password 7 433dd746
 screen-rows per-page 0
 hostname ##OLT_SAPPHIRE_90#OLT87.99##
 ![IGMP_SNOOPING]
