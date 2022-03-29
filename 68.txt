@@ -2,8 +2,6 @@
 
 ## terminal length 0
 Success_OLT#85.59### 
-2022/03/29 20:30:48   ONU AUTH Success         PON 0/4 ONU 6 7C:A9:6B:3B:19:E5.
-
 
 Current configuration:
 !
