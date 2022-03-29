@@ -208,7 +208,8 @@ interface port-channel 26
   vlan-trunking 
 exit 
 interface port-channel 27  
-  name ##UV#MAIN_RING#SW87.138#JMD_EMP_SQ## 
+  name ##UV#MAIN_RING#SW87.140#JMD_EMP_SQ## 
+  speed-duplex 1000-full 
   vlan-trunking 
   broadcast-limit 
   broadcast-limit 10000 
