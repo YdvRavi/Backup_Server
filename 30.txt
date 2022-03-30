@@ -71,7 +71,8 @@ vlan 800
 pon-switch
 exit
 ![OAM]
-username admin privilege 15 password 0 deldsl@nlclsl
+service password-encryption
+username admin privilege 15 password 7 433dd746
 screen-rows per-page 0
 hostname ##OLT#LOTUS_HOMZ#82.158##
 ![SNMP]
@@ -201,7 +202,6 @@ active
 aim 0/5/7
 active
 aim 0/5/8
-local protocol-port-80 enable
 active
 aim 0/6/3
 active
@@ -251,7 +251,6 @@ active
 aim 0/12/3
 active
 aim 0/12/6
-local mode forward
 active
 aim 0/12/7
 local protocol-port-80 enable mode forward
