@@ -1,6 +1,6 @@
 ##CONFIG##
 
-## Last commit: 2022-03-30 01:46:16 UTC by deldsl
+## Last commit: 2022-03-30 22:37:36 UTC by deldsl
 version 17.4R1.16;
 system {
     host-name MILL_R_JUNOS;
@@ -478,7 +478,7 @@ interfaces {
             }
         }
         unit 415 {
-            description "##Trendsutra_Client_Services_Pvt_Ltd#181078#10Mb##";
+            description "##Pepperfry_Private_Limited#181078#10Mb##";
             vlan-id 415;
             family inet {
                 filter {
@@ -797,7 +797,6 @@ interfaces {
                     input 30_Mbps;
                     output 30_Mbps;
                 }
-                address 103.242.225.81/29;
             }
         }
         unit 438 {
