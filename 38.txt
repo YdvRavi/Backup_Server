@@ -122,8 +122,6 @@ ont-srvprofile-id 100 desc "211052"
 ont-srvprofile-id 100 desc "211053_Kontent"
  ont add 0 9 sn-auth "48575443AC71739E" omci ont-lineprofile-id 200 
 ont-srvprofile-id 100 desc "##Amplus#211055#70Mb##"
- ont add 0 11 sn-auth "48575443AC6E9A9E" omci ont-lineprofile-id 200 
-ont-srvprofile-id 100 desc "211056"
  ont add 0 12 sn-auth "48575443AC71699E" omci ont-lineprofile-id 200 
 ont-srvprofile-id 100 desc "156076_Brindco"
  ont add 1 0 sn-auth "48575443D6AC6E9F" omci ont-lineprofile-id 200 
@@ -150,8 +148,6 @@ ont-srvprofile-id 100 desc "211058_Insight"
  service-port 9 vlan 200 gpon 0/0/0 ont 7 gemport 1 multi-service user-vlan 200 tag-transform translate
  service-port 10 vlan 601 gpon 0/0/2 ont 3 gemport 2 multi-service user-vlan 601 tag-transform translate
  service-port 12 vlan 601 gpon 0/0/0 ont 7 gemport 2 multi-service user-vlan 601 tag-transform translate
- service-port 15 vlan 200 gpon 0/0/0 ont 11 gemport 1 multi-service user-vlan 
-200 tag-transform translate
  service-port 18 vlan 560 gpon 0/0/0 ont 9 gemport 4 multi-service user-vlan 560 tag-transform translate
  service-port 19 vlan 601 gpon 0/0/0 ont 12 gemport 2 multi-service user-vlan 
 601 tag-transform translate

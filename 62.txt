@@ -728,6 +728,9 @@ onu 9 ctc eth 1 flow_control disable
 onu 9 ctc eth 1 loopdetect enable
 onu 9 ctc eth 1 vlan pvid 41 pri 0
 onu 9 ctc eth 1 vlan mode tag
+onu 10 description 131393_TOSHNIWAL
+onu 10 ctc eth 1 vlan pvid 842 pri 0
+onu 10 ctc eth 1 vlan mode tag
 onu 14 description 131312_Vital
 onu 14 ctc eth 1 vlan pvid 42 pri 0
 onu 14 ctc eth 1 vlan mode tag
