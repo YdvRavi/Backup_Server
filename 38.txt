@@ -128,6 +128,8 @@ ont-srvprofile-id 100 desc "156076_Brindco"
 ont-srvprofile-id 100 desc "211057_NCR_BUSINESS"
  ont add 2 0 sn-auth "48575443A294F1A3" omci ont-lineprofile-id 200 
 ont-srvprofile-id 100 desc "151183_Signet"
+ ont add 2 1 sn-auth "4857544311A35EA6" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "211023_RELIANCE"
  ont add 2 2 sn-auth "4857544396935AA4" omci ont-lineprofile-id 200 
 ont-srvprofile-id 100 desc "151034_Pareena"
  ont add 2 3 sn-auth "4857544301106930" omci ont-lineprofile-id 200 
@@ -147,7 +149,9 @@ ont-srvprofile-id 100 desc "211058_Insight"
  service-port 8 vlan 457 gpon 0/0/2 ont 3 gemport 9 multi-service user-vlan 457 tag-transform translate
  service-port 9 vlan 200 gpon 0/0/0 ont 7 gemport 1 multi-service user-vlan 200 tag-transform translate
  service-port 10 vlan 601 gpon 0/0/2 ont 3 gemport 2 multi-service user-vlan 601 tag-transform translate
+ service-port 11 vlan 200 gpon 0/0/2 ont 1 gemport 1 multi-service user-vlan 200 tag-transform translate
  service-port 12 vlan 601 gpon 0/0/0 ont 7 gemport 2 multi-service user-vlan 601 tag-transform translate
+ service-port 13 vlan 601 gpon 0/0/2 ont 1 gemport 2 multi-service user-vlan 601 tag-transform translate
  service-port 18 vlan 560 gpon 0/0/0 ont 9 gemport 4 multi-service user-vlan 560 tag-transform translate
  service-port 19 vlan 601 gpon 0/0/0 ont 12 gemport 2 multi-service user-vlan 
 601 tag-transform translate
