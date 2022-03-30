@@ -5,9 +5,9 @@ R_CORE1###
 ##MILL#R_CORE1###
 Building configuration...
 
-Current configuration : 106944 bytes
+Current configuration : 106954 bytes
 !
-! Last configuration change at 16:49:35 UTC Tue Mar 29 2022
+! Last configuration change at 06:53:21 UTC Wed Mar 30 2022
 !
 version 15.5
 service timestamps debug datetime msec
@@ -1397,6 +1397,7 @@ interface GigabitEthernet0/0/4.345
  ip address 203.110.91.241 255.255.255.248
  ip access-group VOIP in
  ip access-group VOIP out
+ shutdown
  arp timeout 5
  service-policy input 15_Mbps
  service-policy output 15_Mbps
