@@ -1,6 +1,8 @@
 ##CONFIG##
 
-## terminal length 0
+## 
+2022/03/30 21:45:49   ONU Dying Gasp           PON 0/8 ONU 6 7C:A9:6B:D7:6E:72 
+terminal length 0
 AMBI_GGN_OLT#83.99### 
 
 Current configuration:
