@@ -9,7 +9,6 @@ c4#main_ring#sw82.237#sunvision###
 no spanning-tree 25 edge-port 
 no spanning-tree 26 edge-port 
 no spanning-tree 27 edge-port 
-no spanning-tree 28 edge-port 
 vlan 1 
   name 1 
   normal "" 
