@@ -271,7 +271,7 @@ interface port-channel 6
   loopguard 
 exit 
 interface port-channel 7  
-  name "##Trendsutra Client Services Pvt Ltd#181078#10Mb##" 
+  name "##Pepperfry Private Limited#181078#10Mb##" 
   pvid 415 
   ingress-check 
   bandwidth-limit cir 10240 
