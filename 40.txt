@@ -432,7 +432,7 @@ confirm onu mac 38:94:e0:cc:7c:fd onuid 53 auth-mode mac
 confirm onu mac e0:67:b3:1a:f0:0d onuid 54
 confirm onu mac 38:94:e0:b5:6b:77 onuid 55 auth-mode mac
 confirm onu mac 54:47:e8:6f:03:b9 onuid 56 auth-mode mac
-confirm onu mac 38:94:e0:a8:c1:89 onuid 57
+confirm onu mac 38:94:e0:a8:c1:89 onuid 57 auth-mode mac
 exit
 !
 interface epon 0/3
@@ -558,6 +558,7 @@ onu mac-auth add 38:94:E0:BE:20:FF
 onu mac-auth add 9C:28:EF:9F:45:F5
 onu mac-auth add 38:94:E0:B5:6B:C4
 onu mac-auth add 38:94:E0:B5:5B:DE
+onu mac-auth add 38:94:E0:A8:C1:89
 onu mac-auth add 38:94:E0:AC:C1:92
 onu mac-auth add 38:94:E0:C3:A2:A6
 onu mac-auth add 78:D7:52:45:E2:F4
@@ -711,6 +712,7 @@ onu 55 description 281143_Synoptics
 onu 56 description 281144_ADITYA
 onu 56 ctc eth 1 vlan pvid 401 pri 0
 onu 56 ctc eth 1 vlan mode tag
+onu 57 description 286144_ADITYA
 exit
 !
 interface epon 0/3
