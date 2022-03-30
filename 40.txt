@@ -2,8 +2,6 @@
 
 ## terminal length 0
 Ardee_OLT#85.61### 
-2000/01/09 04:10:16   ONU Dying Gasp           PON 0/1 ONU 21 38:94:E0:B5:6B:1F 
-
 
 Current configuration:
 !
