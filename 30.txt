@@ -349,6 +349,9 @@ active
 aim 0/1/20 name 641159_Shatabdi_A202
 permit sn string-hex HWTC-11a66ea6 line 1 default line 1
 active
+aim 0/1/22 name 641172_Debarghya
+permit sn string-hex HWTC-11a4d4a6 line 1 default line 1
+active
 aim 0/2/1 name 641002_KCC_T_B
 permit sn string-hex HWTC-8727a4a5 line 1 default line 1
 active
