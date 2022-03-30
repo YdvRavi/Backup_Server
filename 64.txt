@@ -747,6 +747,8 @@ onu 10 description 191502_Dolomite
 onu 10 ctc eth 1 vlan pvid 813 pri 0
 onu 10 ctc eth 1 vlan mode tag
 onu 11 description 191484_Reliance
+onu 11 ctc eth 1 vlan pvid 813 pri 0
+onu 11 ctc eth 1 vlan mode tag
 onu 12 description 191899_BLUESTONE
 exit
 !
