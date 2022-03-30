@@ -152,6 +152,7 @@ ont-srvprofile-id 100 desc "211058_Insight"
  service-port 11 vlan 200 gpon 0/0/2 ont 1 gemport 1 multi-service user-vlan 200 tag-transform translate
  service-port 12 vlan 601 gpon 0/0/0 ont 7 gemport 2 multi-service user-vlan 601 tag-transform translate
  service-port 13 vlan 601 gpon 0/0/2 ont 1 gemport 2 multi-service user-vlan 601 tag-transform translate
+ service-port 14 vlan 101 gpon 0/0/2 ont 1 gemport 5 multi-service user-vlan 101 tag-transform translate
  service-port 18 vlan 560 gpon 0/0/0 ont 9 gemport 4 multi-service user-vlan 560 tag-transform translate
  service-port 19 vlan 601 gpon 0/0/0 ont 12 gemport 2 multi-service user-vlan 
 601 tag-transform translate
