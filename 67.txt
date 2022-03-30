@@ -668,6 +668,8 @@ confirm onu mac 54:47:e8:6e:99:a1 onuid 3
 confirm onu mac 54:47:e8:6f:00:c1 onuid 4 auth-mode mac
 confirm onu mac 54:47:e8:6f:3f:01 onuid 5 auth-mode mac
 confirm onu mac 7c:a9:6b:af:06:dc onuid 9 auth-mode mac
+
+2022/03/30 11:15:50   ONU AUTH Success         PON 0/1 ONU 7 A0:C6:EC:07:79:31.
 confirm onu mac 38:94:e0:d3:d0:70 onuid 10 auth-mode mac
 exit
 !
