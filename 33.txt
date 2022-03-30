@@ -360,9 +360,6 @@ active
 aim 0/1/3 name PAMP_ROOM
 permit sn string-hex HWTC-8a8df59d line 4 default line 4
 active
-aim 0/1/4 name 601047_Pradeep
-permit sn string-hex HWTC-872afca5 line 1 default line 1
-active
 aim 0/1/5 name LT_Room_B-1
 permit sn string-hex HWTC-94150b9c line 4 default line 4
 active
@@ -489,7 +486,7 @@ active
 aim 0/1/47 name 601061_Beyond
 permit sn string-hex HWTC-11a35da6 line 1 default line 1
 active
-aim 0/1/49 name 601043_pardeep
+aim 0/1/49 name 601047_pardeep
 permit sn string-hex HWTC-11a358a6 line 3 default line 3
 active
 aim 0/2/1 name 601007_KREATIVE
