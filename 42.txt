@@ -5,9 +5,9 @@ R_CORE###
 ##MILL#R_CORE###
 Building configuration...
 
-Current configuration : 39281 bytes
+Current configuration : 39312 bytes
 !
-! Last configuration change at 11:05:36 IST Fri Mar 25 2022
+! Last configuration change at 15:26:31 IST Wed Mar 30 2022
 ! NVRAM config last updated at 13:28:18 IST Sun Mar 27 2022
 !
 version 15.3
@@ -1465,6 +1465,7 @@ snmp-server community public RO 20
 snmp-server host 203.110.80.168 informs version 2c deldsl 
 snmp ifmib ifindex persist
 !
+tacacs-server host 203.110.80.163
 !
 control-plane
 !
@@ -1493,7 +1494,7 @@ line vty 0 4
  exec-timeout 15 0
  password 7 141317072F0B382E0409202773435746
  login
- transport input telnet
+ transport input all
 line vty 5
  session-timeout 2 
  access-class 21 in vrf-also
