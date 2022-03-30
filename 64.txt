@@ -500,6 +500,8 @@ exit
 !
 interface epon 0/3
 onu auth-mode mac
+confirm onu mac a0:c6:ec:04:ca:31 onuid 1
+confirm onu mac a4:00:e2:82:a2:8d onuid 2
 exit
 !
 interface epon 0/4
@@ -527,6 +529,9 @@ interface epon 0/7
 onu auth-mode mac
 confirm onu mac 7c:a9:6b:d7:6f:9e onuid 1 auth-mode mac
 confirm onu mac 7c:a9:6b:84:0f:70 onuid 2 auth-mode mac
+confirm onu mac a0:c6:ec:04:ca:31 onuid 3
+confirm onu mac a4:00:e2:82:a2:8d onuid 4
+confirm onu mac 38:94:e0:d9:6f:85 onuid 5
 exit
 !
 interface epon 0/8
@@ -543,6 +548,8 @@ confirm onu mac a0:c6:ec:04:ca:31 onuid 9
 confirm onu mac 38:94:e0:a4:0a:e0 onuid 10
 confirm onu mac 54:47:e8:6f:03:b9 onuid 11
 confirm onu mac 38:94:e0:d9:6f:85 onuid 12
+confirm onu mac 7c:a9:6b:84:0f:70 onuid 13
+confirm onu mac 7c:a9:6b:d7:6f:9e onuid 14
 exit
 !
 interface epon 0/1
@@ -645,6 +652,9 @@ onu 17 description 191823_SaajRest
 onu 18 description 191902_BON
 onu 18 ctc eth 1 vlan pvid 813 pri 0
 onu 18 ctc eth 1 vlan mode transparent
+exit
+!
+interface epon 0/3
 exit
 !
 interface epon 0/4
