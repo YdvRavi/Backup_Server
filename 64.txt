@@ -531,16 +531,6 @@ confirm onu mac 38:94:e0:a4:0a:e0 onuid 9
 confirm onu mac 7c:a9:6b:84:d5:2a onuid 10
 exit
 !
-interface epon 0/6
-confirm onu mac 38:94:e0:a4:0a:e0 onuid 1
-confirm onu mac a0:c6:ec:04:ca:31 onuid 2
-confirm onu mac a4:00:e2:82:a2:8d onuid 3
-confirm onu mac 38:94:e0:a4:0a:a0 onuid 4
-confirm onu mac 7c:a9:6b:d7:6f:76 onuid 5
-confirm onu mac 7c:a9:6b:d7:6e:72 onuid 6
-confirm onu mac 7c:a9:6b:d7:6e:b4 onuid 7
-exit
-!
 interface epon 0/7
 onu auth-mode mac
 confirm onu mac 7c:a9:6b:d7:6f:9e onuid 1 auth-mode mac
@@ -713,9 +703,6 @@ onu 9 ctc eth 1 vlan mode tag
 exit
 !
 interface epon 0/5
-exit
-!
-interface epon 0/6
 exit
 !
 interface epon 0/7
