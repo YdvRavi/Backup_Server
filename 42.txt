@@ -5,7 +5,7 @@ R_CORE###
 ##MILL#R_CORE###
 Building configuration...
 
-Current configuration : 39336 bytes
+Current configuration : 39346 bytes
 !
 ! Last configuration change at 16:06:16 IST Wed Mar 30 2022
 ! NVRAM config last updated at 13:28:18 IST Sun Mar 27 2022
@@ -1397,6 +1397,7 @@ ip route 203.110.93.0 255.255.255.0 Null0
 ip route 203.110.94.0 255.255.255.0 Null0 248
 ip route 203.110.95.0 255.255.255.0 Null0
 ip route vrf Mgmt-intf 192.168.10.0 255.255.255.0 172.21.80.1 name MGMT_NOC
+ip tacacs source-interface GigabitEthernet0
 !
 ip access-list extended H8
  deny   tcp any host 203.110.80.140 eq 1433
@@ -1465,7 +1466,6 @@ snmp-server community public RO 20
 snmp-server host 203.110.80.168 informs version 2c deldsl 
 snmp ifmib ifindex persist
 !
-tacacs-server host 203.110.80.163
 !
 control-plane
 !
