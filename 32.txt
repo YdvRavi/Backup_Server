@@ -210,8 +210,6 @@ aim 0/5/2
 active
 aim 0/5/3
 active
-aim 0/5/4
-active
 aim 0/6/1
 active
 aim 0/6/2
@@ -295,9 +293,6 @@ permit sn string-hex GNXS-0110ed40 line 1 default line 1
 active
 aim 0/5/3 name 501047_Yogesh
 permit sn string-hex GNXS-01040b13 line 1 default line 1
-active
-aim 0/5/4 name 501049_PremKUMAR_T5-02
-permit sn string-hex GNXS-011f2c60 line 1 default line 1
 active
 aim 0/5/5 name 501058_Abhishek
 permit sn string-hex HWTC-8727cba5 line 2 default line 2
