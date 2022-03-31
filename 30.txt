@@ -724,9 +724,6 @@ active
 aim 0/13/4 name 641072_Piyush
 permit sn string-hex GNXS-010b8188 line 1 default line 1
 active
-aim 0/13/5 name 641080_Abhinav
-permit sn string-hex GNXS-612004a8 line 1 default line 1
-active
 aim 0/13/6 name 641083_Ankush
 permit sn string-hex GNXS-612004f7 line 1 default line 1
 active
