@@ -2,6 +2,8 @@
 
 85.58# terminal length 0
 OLT#Heritage#85.58# 
+2022/03/31 12:10:55   ONU Dying Gasp           PON 0/8 ONU 11 7C:A9:6B:84:0F:5C 
+
 
 Current configuration:
 !
