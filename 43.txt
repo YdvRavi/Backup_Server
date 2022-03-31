@@ -5,9 +5,9 @@ R_CORE1###
 ##MILL#R_CORE1###
 Building configuration...
 
-Current configuration : 106954 bytes
+Current configuration : 106872 bytes
 !
-! Last configuration change at 06:53:21 UTC Wed Mar 30 2022
+! Last configuration change at 11:15:43 UTC Thu Mar 31 2022
 !
 version 15.5
 service timestamps debug datetime msec
@@ -3859,7 +3859,7 @@ interface GigabitEthernet0/1/0.953
 interface GigabitEthernet0/1/0.954
  description ##Shriram Rayons#111321#8Mb##
  encapsulation dot1Q 954
- ip address 203.110.87.209 255.255.255.252
+ ip address 203.110.88.97 255.255.255.248
  ip access-group VOIP in
  ip access-group VOIP out
  service-policy input 8_Mbps
@@ -4256,7 +4256,6 @@ ip route 203.110.86.0 255.255.255.0 Null0
 ip route 203.110.87.0 255.255.255.0 Null0
 ip route 203.110.88.0 255.255.255.0 Null0
 ip route 203.110.88.80 255.255.255.248 203.110.80.246 10 name LEA
-ip route 203.110.88.96 255.255.255.248 203.110.87.210 name SHRIRAM-RAYONS-311036
 ip route 203.110.88.112 255.255.255.248 203.110.87.46 name China
 ip route 203.110.89.0 255.255.255.0 Null0
 ip route 203.110.90.0 255.255.255.0 Null0
