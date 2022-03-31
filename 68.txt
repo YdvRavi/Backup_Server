@@ -547,7 +547,7 @@ interface epon 0/2
 onu auth-mode mac
 confirm onu mac 38:94:e0:d3:cf:8a onuid 1
 confirm onu mac 7c:a9:6b:d6:ae:6a onuid 2 auth-mode mac
-confirm onu mac 38:94:e0:c2:46:30 onuid 3 auth-mode mac
+confirm onu mac 38:94:e0:c2:46:30 onuid 3
 confirm onu mac 38:94:e0:a4:21:18 onuid 10
 confirm onu mac 38:94:e0:a4:0b:c8 onuid 18 auth-mode mac
 confirm onu mac 38:94:e0:d3:cf:8e onuid 20 auth-mode mac
@@ -597,7 +597,6 @@ exit
 !
 interface epon 0/2
 onu mac-auth add 38:94:E0:A4:21:18
-onu mac-auth add 38:94:E0:C2:46:30
 onu mac-auth add 38:94:E0:A4:0B:C8
 onu mac-auth add E0:67:B3:0E:34:F3
 onu mac-auth add 7C:A9:6B:D6:AE:6A
@@ -633,9 +632,6 @@ interface epon 0/2
 onu 2 description 221088_Reliance
 onu 2 ctc eth 1 vlan pvid 515 pri 0
 onu 2 ctc eth 1 vlan mode tag
-onu 3 description 221077_Inavit
-onu 3 ctc eth 1 vlan pvid 612 pri 0
-onu 3 ctc eth 1 vlan mode tag
 onu 10 description 201032_Intello
 onu 10 ctc eth 1 flow_control enable
 onu 10 ctc eth 1 policy default
