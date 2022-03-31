@@ -30,10 +30,10 @@ vlan 45
 exit 
 vlan 200 
   name 200 
-  normal 1-2,4-5,9-14,16-24 
-  fixed 3,6-8,15,25-28 
+  normal 1-2,4-5,9-24 
+  fixed 3,6-8,25-28 
   forbidden "" 
-  untagged 3,6-8,15 
+  untagged 3,6-8 
 exit 
 vlan 201 
   name 201 
@@ -377,9 +377,7 @@ interface port-channel 14
   loopguard 
 exit 
 interface port-channel 15  
-  name "##Quovadis Travels Pvt Ltd#211015#BB100Mb##" 
-  pvid 200 
-  ingress-check 
+  inactive 
   broadcast-limit 
   broadcast-limit 500 
   multicast-limit 
