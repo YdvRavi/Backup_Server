@@ -5,7 +5,7 @@ R_CORE1###
 ##MILL#R_CORE1###
 Building configuration...
 
-Current configuration : 106927 bytes
+Current configuration : 106884 bytes
 !
 ! Last configuration change at 13:11:24 UTC Thu Mar 31 2022
 !
@@ -2821,7 +2821,6 @@ interface GigabitEthernet0/0/5.43
 interface GigabitEthernet0/0/5.44
  description ## ZAPPERS TRAVELS PRIVATE LIMITED#131441#10Mb#UV##
  encapsulation dot1Q 44
- ip address 203.110.88.161 255.255.255.252
  arp timeout 5
  service-policy input 10_Mbps
  service-policy output 10_Mbps
