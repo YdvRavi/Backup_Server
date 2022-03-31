@@ -1,12 +1,29 @@
 ##CONFIG##
 
-## Last commit: 2022-03-31 08:42:18 UTC by deldsl
+## Last commit: 2022-03-31 10:56:10 UTC by amar
 version 17.4R1.16;
 system {
     host-name MILL_R_JUNOS;
     management-instance;
+    authentication-order tacplus;
     root-authentication {
         encrypted-password "$6$BNdPctVQ$Sw9ITL4D78FjSjAvxZbllN.YaWwX4ibVbNBOHBn0WUTc3ZvFMYctS21RHj16HNedkgGZ9RKEkkmWIWYMW/Ozd1"; ## SECRET-DATA
+    }
+    tacplus-server {
+        203.110.80.163 {
+            secret "$9$FS59npBIRSKvLz3eW8L-dHq.fFnCtu"; ## SECRET-DATA
+            timeout 3;
+        }
+    }
+    accounting {
+        events [ login change-log interactive-commands ];
+        destination {
+            tacplus {
+                server {
+                    203.110.80.163 secret "$9$eb.v7Vws4GUHlKZjiHPfBIRcevLxN"; ## SECRET-DATA
+                }
+            }
+        }
     }
     login {
         class noc_team {
@@ -14,8 +31,8 @@ system {
             permissions all;
         }
         user amar {
-            uid 2020;
-            class noc_team;
+            uid 101;
+            class super-user;
             authentication {
                 encrypted-password "$6$SJzL6..j$3.PHqbjckDHo7.lS095wywrUvW71Z5vKLSpbeW9I6ERR.Wbg3HStPEB5UI8TN.6jZ7P10m7DDYXRhmzyTWRLL."; ## SECRET-DATA
             }
