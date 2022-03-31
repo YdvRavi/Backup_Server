@@ -1,6 +1,6 @@
 ##CONFIG##
 
-## Last commit: 2022-03-30 22:37:36 UTC by deldsl
+## Last commit: 2022-03-31 08:42:18 UTC by deldsl
 version 17.4R1.16;
 system {
     host-name MILL_R_JUNOS;
@@ -792,10 +792,6 @@ interfaces {
                 filter {
                     input VOIP;
                     output VOIP;
-                }
-                policer {
-                    input 30_Mbps;
-                    output 30_Mbps;
                 }
             }
         }
