@@ -1,6 +1,6 @@
 ##CONFIG##
 
-## Last commit: 2022-03-31 19:18:15 UTC by deldsl
+## Last commit: 2022-04-01 01:45:15 UTC by deldsl
 version 17.4R1.16;
 system {
     host-name MILL_R_JUNOS;
@@ -484,18 +484,12 @@ interfaces {
         }
         unit 414 {
             disable;
-            description "##SMART_INVESTORS#181093#5Mb##";
             vlan-id 414;
             family inet {
                 filter {
                     input VOIP;
                     output VOIP;
                 }
-                policer {
-                    input 5_Mbps;
-                    output 5_Mbps;
-                }
-                address 203.110.87.193/30;
             }
         }
         unit 415 {

@@ -95,10 +95,10 @@ vlan 413
 exit 
 vlan 414 
   name 414 
-  normal 1-11,13-25 
-  fixed 12,26-28 
+  normal 1-25 
+  fixed 26-28 
   forbidden "" 
-  untagged 12 
+  untagged "" 
 exit 
 vlan 415 
   name 415 
@@ -355,9 +355,7 @@ interface port-channel 11
   loopguard 
 exit 
 interface port-channel 12  
-  name "##SMART INVESTORS#181093#5MB##" 
-  pvid 414 
-  ingress-check 
+  inactive 
   broadcast-limit 
   broadcast-limit 500 
   multicast-limit 
