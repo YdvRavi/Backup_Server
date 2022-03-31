@@ -1,6 +1,6 @@
 ##CONFIG##
 
-## Last commit: 2022-03-31 10:56:10 UTC by amar
+## Last commit: 2022-03-31 11:05:41 UTC by amar
 version 17.4R1.16;
 system {
     host-name MILL_R_JUNOS;
@@ -11,8 +11,9 @@ system {
     }
     tacplus-server {
         203.110.80.163 {
-            secret "$9$FS59npBIRSKvLz3eW8L-dHq.fFnCtu"; ## SECRET-DATA
+            secret "$9$zsVl3tO1IceK8QFlMW8N-ikqPz39Ap"; ## SECRET-DATA
             timeout 3;
+            source-address 203.110.80.161;
         }
     }
     accounting {
@@ -20,7 +21,10 @@ system {
         destination {
             tacplus {
                 server {
-                    203.110.80.163 secret "$9$eb.v7Vws4GUHlKZjiHPfBIRcevLxN"; ## SECRET-DATA
+                    203.110.80.163 {
+                        secret "$9$/pRHCBEcSe8LN69Wx7Nwsmf5z/CuO1"; ## SECRET-DATA
+                        source-address 203.110.80.161;
+                    }
                 }
             }
         }
