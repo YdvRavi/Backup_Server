@@ -169,8 +169,6 @@ active
 aim 0/2/9
 local protocol-port-80 enable mode forward
 active
-aim 0/2/10
-active
 aim 0/3/7
 active
 aim 0/3/8
@@ -378,9 +376,6 @@ permit sn string-hex GNXS-61200131 line 1 default line 1
 active
 aim 0/2/9 name 641057_Lotus_Realtech
 permit sn string-hex GNXS-6120006b line 1 default line 1
-active
-aim 0/2/10 name 641078_Rohan
-permit sn string-hex GNXS-01106fe0 line 1 default line 1
 active
 aim 0/2/11 name 641057_Meter
 permit sn string-hex HWTC-3159849d line 1 default line 1
