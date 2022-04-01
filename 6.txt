@@ -1,6 +1,6 @@
 ##CONFIG##
 
-## Last commit: 2022-04-01 01:45:15 UTC by deldsl
+## Last commit: 2022-04-01 11:43:59 UTC by deldsl
 version 17.4R1.16;
 system {
     host-name MILL_R_JUNOS;
@@ -215,7 +215,7 @@ interfaces {
             }
         }
         unit 301 {
-            description "##Mahindra_Homes#201065#15Mb##";
+            description "##Mahindra_Homes#201065#70Mb##";
             vlan-id 301;
             family inet {
                 filter {
@@ -223,8 +223,8 @@ interfaces {
                     output VOIP;
                 }
                 policer {
-                    input 15_Mbps;
-                    output 15_Mbps;
+                    input 70_Mbps;
+                    output 70_Mbps;
                 }
                 address 203.110.90.217/29;
             }
