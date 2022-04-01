@@ -2,6 +2,8 @@
 
 ## terminal length 0
 VSM_OLT#80.58### 
+2022/04/01 10:11:43   ONU Deregister           PON 0/2 ONU 16 7C:A9:6B:D6:C4:92 MPCP TIMEOUT.
+
 
 Current configuration:
 !
