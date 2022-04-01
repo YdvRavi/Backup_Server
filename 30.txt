@@ -362,9 +362,6 @@ active
 aim 0/2/4 name 641049_Khushbu_A507
 permit sn string-hex GNXS-6120009e line 1 default line 1
 active
-aim 0/2/5 name 641121_Harvender
-permit sn string-hex HWTC-720e429d line 1 default line 1
-active
 aim 0/2/6 name 641020_Towe_B_Meter
 permit sn string-hex HWTC-e4cc0b4a line 1 default line 1
 active
