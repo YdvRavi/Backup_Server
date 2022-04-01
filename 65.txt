@@ -288,7 +288,6 @@ confirm onu mac 38:94:e0:c3:eb:0d onuid 17 auth-mode mac
 confirm onu mac 38:94:e0:ac:c5:c8 onuid 18 auth-mode mac
 confirm onu mac 38:94:e0:c3:f1:f8 onuid 19 auth-mode mac
 confirm onu mac 38:94:e0:c2:50:70 onuid 20 auth-mode mac
-confirm onu mac 7c:a9:6b:3b:19:eb onuid 21 auth-mode mac
 confirm onu mac 7c:a9:6b:84:d5:00 onuid 22 auth-mode mac
 confirm onu mac 38:94:e0:a4:0b:60 onuid 23 auth-mode mac
 confirm onu mac 1c:20:db:9a:ed:ee onuid 24 auth-mode mac
@@ -369,7 +368,6 @@ onu mac-auth add 38:94:E0:A4:22:30
 onu mac-auth add 38:94:E0:A4:0B:50
 onu mac-auth add 38:94:E0:A4:21:40
 onu mac-auth add 38:94:E0:A4:0B:60
-onu mac-auth add 7C:A9:6B:3B:19:EB
 onu mac-auth add 38:94:E0:E3:13:3A
 onu mac-auth add 7C:A9:6B:84:D5:00
 onu mac-auth add 7C:A9:6B:84:D5:02
@@ -477,7 +475,6 @@ onu 18 description 331351_M-zone
 onu 19 ctc eth 1 vlan pvid 712 pri 0
 onu 19 ctc eth 1 vlan mode tag
 onu 20 description 331356_Vision
-onu 21 description 331063_Diamond
 onu 22 description 331347_Premium
 onu 23 description 331224_VENTOTA
 onu 24 description 331185_jamie
