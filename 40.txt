@@ -354,7 +354,7 @@ confirm onu mac 38:94:e0:be:18:0f onuid 31 auth-mode mac
 confirm onu mac 38:94:e0:be:21:78 onuid 32 auth-mode mac
 confirm onu mac 38:94:e0:c3:eb:a7 onuid 33 auth-mode mac
 confirm onu mac 38:94:e0:ab:12:4c onuid 34 auth-mode mac
-confirm onu mac 38:94:e0:c2:46:30 onuid 35
+confirm onu mac 38:94:e0:c2:46:30 onuid 35 auth-mode mac
 confirm onu mac 38:94:e0:be:16:78 onuid 36 auth-mode mac
 confirm onu mac 38:94:e0:be:13:3f onuid 37 auth-mode mac
 confirm onu mac 38:94:e0:be:12:dc onuid 38 auth-mode mac
@@ -477,6 +477,7 @@ onu mac-auth add 78:D7:52:45:EA:03
 onu mac-auth add 38:94:E0:B5:6B:09
 onu mac-auth add 38:94:E0:BE:38:33
 onu mac-auth add 38:94:E0:B5:6B:14
+onu mac-auth add 38:94:E0:C2:46:30
 onu mac-auth add 38:94:E0:BE:13:6B
 onu mac-auth add 38:94:E0:B5:6B:1F
 onu mac-auth add 38:94:E0:B5:5E:30
@@ -606,6 +607,9 @@ onu 9 description 281026_Aroma
 onu 10 description 281110_FETT
 onu 11 description 281015_forever
 onu 30 description 281068_Thea
+onu 35 description 281022_Alliant
+onu 35 ctc eth 1 vlan pvid 401 pri 0
+onu 35 ctc eth 1 vlan mode tag
 exit
 !
 interface epon 0/2
