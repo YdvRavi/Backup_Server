@@ -147,7 +147,6 @@ interface GigabitEthernet0/0/11
  storm-control action block
 #
 interface GigabitEthernet0/0/12
- shutdown
  port link-type trunk
  port trunk allow-pass vlan 2 to 4094
  stp instance 0 cost 4
