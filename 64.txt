@@ -544,7 +544,7 @@ confirm onu mac a0:c6:ec:04:ca:31 onuid 9 auth-mode mac
 confirm onu mac 38:94:e0:a4:0a:e0 onuid 10 auth-mode mac
 confirm onu mac 54:47:e8:6f:03:b9 onuid 11 auth-mode mac
 confirm onu mac 38:94:e0:d9:6f:85 onuid 12 auth-mode mac
-confirm onu mac 7c:a9:6b:d9:1f:50 onuid 13
+confirm onu mac 7c:a9:6b:d9:1f:50 onuid 13 auth-mode mac
 exit
 !
 interface epon 0/1
@@ -741,6 +741,9 @@ onu 11 description 191484_Reliance
 onu 11 ctc eth 1 vlan pvid 813 pri 0
 onu 11 ctc eth 1 vlan mode tag
 onu 12 description 191899_BLUESTONE
+onu 13 description 191909_Public
+onu 13 ctc eth 1 vlan pvid 813 pri 0
+onu 13 ctc eth 1 vlan mode tag
 exit
 !
 debug mode 
