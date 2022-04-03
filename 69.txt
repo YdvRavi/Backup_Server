@@ -142,6 +142,9 @@ active
 aim 0/5/2 name 671016_Sukrit
 permit sn string-hex HWTC-119feea6 line 1 default line 1
 active
+aim 0/5/3 name 671020_VINAY
+permit sn string-hex HWTC-f0e801a5 line 1 default line 1
+active
 aim 0/7/1 name 671008_Atul
 permit sn string-hex HWTC-11a362a6 line 1 default line 1
 active
