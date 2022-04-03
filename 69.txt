@@ -118,6 +118,9 @@ deploy profile rule
 aim 0/1/1 name 671018_BHUPENDRA
 permit sn string-hex HWTC-f0e794a5 line 1 default line 1
 active
+aim 0/1/2 name 671019_ANSHU
+permit sn string-hex HWTC-f0e786a5 line 1 default line 1
+active
 aim 0/2/1 name 671002_SUSHIL
 permit sn string-hex HWTC-11a1aca6 line 1 default line 1
 active
