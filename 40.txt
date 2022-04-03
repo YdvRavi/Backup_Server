@@ -321,7 +321,7 @@ exit
 interface epon 0/1
 onu auth-mode mac
 confirm onu mac 78:d7:52:46:09:31 onuid 1 auth-mode mac
-confirm onu mac 38:94:e0:a4:0a:f8 onuid 2 auth-mode mac
+confirm onu mac 38:94:e0:ac:c5:bd onuid 2 auth-mode mac
 confirm onu mac 38:94:e0:b5:5b:bd onuid 3 auth-mode mac
 confirm onu mac 38:94:e0:a8:c2:39 onuid 4 auth-mode mac
 confirm onu mac 38:94:e0:d8:ee:24 onuid 5 auth-mode mac
@@ -345,7 +345,7 @@ confirm onu mac 38:94:e0:b5:5b:e9 onuid 22 auth-mode mac
 confirm onu mac 38:94:e0:b5:5e:30 onuid 23 auth-mode mac
 confirm onu mac 38:94:e0:b5:6b:09 onuid 24 auth-mode mac
 confirm onu mac 38:94:e0:a8:c1:73 onuid 25 auth-mode mac
-confirm onu mac 38:94:e0:ac:c5:bd onuid 26 auth-mode mac
+confirm onu mac 38:94:e0:b5:6b:6c onuid 26 auth-mode mac
 confirm onu mac 38:94:e0:be:38:33 onuid 27 auth-mode mac
 confirm onu mac 38:94:e0:c3:a2:01 onuid 28 auth-mode mac
 confirm onu mac 38:94:e0:be:38:07 onuid 29
@@ -491,9 +491,9 @@ onu mac-auth add 38:94:E0:BE:14:94
 onu mac-auth add 38:94:E0:C3:A2:01
 onu mac-auth add 38:94:E0:BE:17:A1
 onu mac-auth add 38:94:E0:BE:13:AD
+onu mac-auth add 38:94:E0:B5:6B:6C
 onu mac-auth add 38:94:E0:A8:C2:23
 onu mac-auth add 38:94:E0:A8:C2:39
-onu mac-auth add 38:94:E0:A4:0A:F8
 onu mac-auth add 38:94:E0:BE:12:DC
 onu mac-auth add 38:94:E0:D3:CF:0A
 onu mac-auth add 38:94:E0:B5:6B:8D
@@ -592,9 +592,6 @@ exit
 !
 interface epon 0/1
 onu 1 description 281002_KSOver
-onu 2 description 281022_Alliant
-onu 2 ctc eth 1 vlan pvid 401 pri 0
-onu 2 ctc eth 1 vlan mode tag
 onu 3 description 281123_Lite
 onu 4 description 281014_Lite
 onu 5 description 281134_Burrito
@@ -606,6 +603,11 @@ onu 7 ctc eth 1 flow_control disable
 onu 9 description 281026_Aroma
 onu 10 description 281110_FETT
 onu 11 description 281015_forever
+onu 16 ctc eth 1 vlan pvid 0 pri 0
+onu 16 ctc eth 1 vlan mode transparent
+onu 26 description 281055_quest
+onu 26 ctc eth 1 vlan pvid 401 pri 0
+onu 26 ctc eth 1 vlan mode tag
 onu 30 description 281068_Thea
 onu 35 description 281022_Alliant
 onu 35 ctc eth 1 vlan pvid 401 pri 0
@@ -614,6 +616,8 @@ exit
 !
 interface epon 0/2
 onu 1 description 281035_RMK
+onu 1 ctc eth 1 vlan pvid 0 pri 0
+onu 1 ctc eth 1 vlan mode transparent
 onu 2 description 281043_Sunshine
 onu 3 description 281009_nox
 onu 4 description 281006_Rhea
@@ -698,7 +702,7 @@ onu 31 description 286083_BIG_INT
 onu 32 description 281084_Future
 onu 33 description 281085_Da_Mila
 onu 34 description 281083_Big
-onu 35 description 281100_Silver
+onu 35 description 281063_Mountain
 onu 36 description 281100_Silver
 onu 37 description 281114
 onu 38 description 286018_Reliance

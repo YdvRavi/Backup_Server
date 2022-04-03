@@ -540,9 +540,15 @@ interface port-channel 24
   dlf-limit 500 
 exit 
 interface port-channel 25  
-  name "##OMG Network India Pvt Ltd#181061#100Mb##" 
+  name "##OMG Network India Pvt Ltd#181061#150Mb##" 
   pvid 403 
   ingress-check 
+  bandwidth-limit cir 153600 
+  bandwidth-limit cir 
+  bandwidth-limit pir 153600 
+  bandwidth-limit pir 
+  bandwidth-limit egress 153600 
+  bandwidth-limit egress 
   broadcast-limit 
   broadcast-limit 1000 
   multicast-limit 

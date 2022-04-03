@@ -584,6 +584,9 @@ active
 aim 0/8/11 name 641156_Avinash_F807
 permit sn string-hex HWTC-4654809d line 1 default line 1
 active
+aim 0/8/12 name 641174_Puneet_F206
+permit sn string-hex HWTC-119e53a6 line 1 default line 1
+active
 aim 0/8/15 name 641156_Avinash
 permit sn string-hex HWTC-88a16ea5 line 1 default line 1
 active
@@ -629,9 +632,6 @@ active
 aim 0/10/4 name 641081_Jyoti_G1003
 permit sn string-hex GNXS-6120052c line 1 default line 1
 active
-aim 0/10/5 name 641113_Jatinder
-permit sn string-hex HWTC-872b70a5 line 1 default line 1
-active
 aim 0/10/6 name 641110_Bhuneshwar
 permit sn string-hex HWTC-872aeca5 line 1 default line 1
 active
@@ -671,9 +671,6 @@ active
 aim 0/12/1 name 641035_Sunil_H507
 permit sn string-hex GNXS-612000ba line 1 default line 1
 active
-aim 0/12/2 name 641109_preeti
-permit sn string-hex HWTC-872bc2a5 line 1 default line 1
-active
 aim 0/12/3 name 641130_prerana
 permit sn string-hex HWTC-323dcaa6 line 1 default line 1
 active
@@ -703,9 +700,6 @@ permit sn string-hex HWTC-11a33aa6 line 1 default line 1
 active
 aim 0/12/15 name 641171_Shashi_Bhushan
 permit sn string-hex HWTC-11a4e6a6 line 1 default line 1
-active
-aim 0/13/1 name 641055_Neha_J1301
-permit sn string-hex HWTC-872bfea5 line 1 default line 1
 active
 aim 0/13/3 name 641070_Ashok
 permit sn string-hex GNXS-61200144 line 1 default line 1
@@ -808,6 +802,9 @@ permit sn string-hex HWTC-318cd19d line 1 default line 1
 active
 aim 0/16/11 name 661007_Laxmi
 permit sn string-hex HWTC-7c48899a line 1 default line 1
+active
+aim 0/16/12 name 661008_Club_House
+permit sn string-hex HWTC-11a371a6 line 1 default line 1
 active
 exit
 exit

@@ -1,6 +1,6 @@
 ##CONFIG##
 
-## Last commit: 2022-04-01 11:43:59 UTC by deldsl
+## Last commit: 2022-04-02 12:53:10 UTC by deldsl
 version 17.4R1.16;
 system {
     host-name MILL_R_JUNOS;
@@ -334,12 +334,12 @@ interfaces {
             }
         }
         unit 403 {
-            description "##OMG_Network_India_Pvt_Ltd#181061#100Mb##";
+            description "##OMG_Network_India_Pvt_Ltd#181061#150Mb##";
             vlan-id 403;
             family inet {
                 policer {
-                    input 100_Mbps;
-                    output 100_Mbps;
+                    input 150_Mbps;
+                    output 150_Mbps;
                 }
                 address 203.110.84.137/29;
             }
@@ -1104,8 +1104,8 @@ interfaces {
             vlan-id 458;
             family inet {
                 policer {
-                    input 70_Mbps;
-                    output 70_Mbps;
+                    input 50_Mbps;
+                    output 50_Mbps;
                 }
                 address 103.242.225.145/30;
             }
