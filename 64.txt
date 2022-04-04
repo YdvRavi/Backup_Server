@@ -722,7 +722,7 @@ onu 4 ctc eth 1 vlan mode tag
 onu 5 description 191891_Craftpac
 onu 5 ctc eth 1 vlan pvid 813 pri 0
 onu 5 ctc eth 1 vlan mode tag
-onu 6 description 191323
+onu 6 description 191323_G_B
 onu 6 ctc eth 1 vlan pvid 813 pri 0
 onu 6 ctc eth 1 vlan mode tag
 onu 7 description 191188_kapoor
