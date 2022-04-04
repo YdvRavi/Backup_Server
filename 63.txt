@@ -394,7 +394,7 @@ onu 16 ctc eth 1 vlan pvid 201 pri 0
 onu 16 ctc eth 1 vlan mode tag
 onu 17 description 351143_Akash
 onu 17 ctc eth 1 vlan pvid 201 pri 0
-onu 17 ctc eth 1 vlan mode tag
+onu 17 ctc eth 1 vlan mode transparent
 onu 18 description 351137_Car
 onu 18 ctc eth 1 vlan pvid 600 pri 0
 onu 18 ctc eth 1 vlan mode transparent
