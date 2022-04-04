@@ -357,7 +357,7 @@ confirm onu mac 38:94:e0:a4:21:98 onuid 2 auth-mode mac
 confirm onu mac 38:94:e0:b0:44:95 onuid 3 auth-mode mac
 confirm onu mac 38:94:e0:b5:7c:5a onuid 4 auth-mode mac
 confirm onu mac 38:94:e0:a8:c1:e1 onuid 5 auth-mode mac
-confirm onu mac 7c:a9:6b:3b:19:eb onuid 6
+confirm onu mac 7c:a9:6b:3b:19:eb onuid 6 auth-mode mac
 exit
 !
 interface epon 0/1
@@ -442,6 +442,7 @@ onu mac-auth add 38:94:E0:B1:B7:D2
 exit
 !
 interface epon 0/4
+onu mac-auth add 7C:A9:6B:3B:19:EB
 onu mac-auth add 38:94:E0:A4:21:98
 onu mac-auth add 7C:A9:6B:AF:06:D8
 onu mac-auth add 38:94:E0:B0:44:95
@@ -561,6 +562,7 @@ onu 4 description 331323_comax
 onu 4 ctc eth 1 vlan pvid 712 pri 0
 onu 4 ctc eth 1 vlan mode tag
 onu 5 description 331360_GRASIM
+onu 6 description 331045_Lagoon
 exit
 !
 debug mode 
