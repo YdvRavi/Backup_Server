@@ -5,7 +5,7 @@ R_CORE1###
 ##MILL#R_CORE1###
 Building configuration...
 
-Current configuration : 106689 bytes
+Current configuration : 106737 bytes
 !
 ! Last configuration change at 14:10:49 UTC Mon Apr 4 2022
 !
@@ -387,6 +387,7 @@ interface GigabitEthernet0/0/4.1
  encapsulation dot1Q 1 native
  ip address 172.30.82.1 255.255.255.224 secondary
  ip address 172.30.87.17 255.255.255.240 secondary
+ ip address 172.30.89.1 255.255.255.0 secondary
  ip address 172.30.82.97 255.255.255.224
 !
 interface GigabitEthernet0/0/4.2
