@@ -7,7 +7,7 @@ Building configuration...
 
 Current configuration : 106757 bytes
 !
-! Last configuration change at 10:54:05 UTC Sat Apr 2 2022
+! Last configuration change at 12:31:32 UTC Mon Apr 4 2022
 !
 version 15.5
 service timestamps debug datetime msec
@@ -386,7 +386,7 @@ interface GigabitEthernet0/0/4
 interface GigabitEthernet0/0/4.1
  encapsulation dot1Q 1 native
  ip address 172.30.82.1 255.255.255.224 secondary
- ip address 172.30.87.17 255.255.255.248 secondary
+ ip address 172.30.87.17 255.255.255.240 secondary
  ip address 172.30.82.97 255.255.255.224
 !
 interface GigabitEthernet0/0/4.2
@@ -3695,7 +3695,7 @@ interface GigabitEthernet0/0/5.841
 !
 interface GigabitEthernet0/0/5.842
  encapsulation dot1Q 842
- ip address 172.30.87.25 255.255.255.248
+ ip address 172.30.80.41 255.255.255.248
  arp timeout 5
 !
 interface GigabitEthernet0/0/5.3000
