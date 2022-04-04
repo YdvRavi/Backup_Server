@@ -543,6 +543,7 @@ interface ethernet 0/0/3
 spanning-tree cost 4
 exit
 interface ethernet 0/0/4
+no spanning-tree
 spanning-tree cost 4
 exit
 interface ethernet 0/0/5
@@ -588,6 +589,7 @@ interface ethernet 0/0/17
 spanning-tree cost 4
 exit
 interface ethernet 0/0/18
+no spanning-tree
 spanning-tree cost 4
 exit
 interface ethernet 0/0/19
