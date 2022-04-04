@@ -4025,7 +4025,7 @@ interface GigabitEthernet0/1/0.1002001
 interface GigabitEthernet0/1/0.1003001
  description Begapul_MGMT
  encapsulation dot1Q 1003
- ip address 172.30.87.33 255.255.255.240
+ ip address 172.30.87.33 255.255.255.224
 !
 interface GigabitEthernet0/1/0.1003002
  description ##Padmini VNA Mechatronics Pvt Ltd#111201#50MB#Begumpur##
