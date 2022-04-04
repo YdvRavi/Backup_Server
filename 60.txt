@@ -289,7 +289,7 @@ interface port-channel 7
   loopguard 
 exit 
 interface port-channel 8  
-  name "##Mb Informatics Pvt Ltd#181008#11Mb##" 
+  name "##Mb Informatics Pvt Ltd#181008#15Mb##" 
   pvid 407 
   ingress-check 
   bandwidth-limit cir 100000 

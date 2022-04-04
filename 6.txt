@@ -1,6 +1,6 @@
 ##CONFIG##
 
-## Last commit: 2022-04-02 12:53:10 UTC by deldsl
+## Last commit: 2022-04-04 11:37:06 UTC by deldsl
 version 17.4R1.16;
 system {
     host-name MILL_R_JUNOS;
@@ -380,7 +380,7 @@ interfaces {
             }
         }
         unit 407 {
-            description "##MB_Informatics_Pvt_Ltd#181008#11MB##";
+            description "##MB_Informatics_Pvt_Ltd#181008#15MB##";
             vlan-id 407;
             family inet {
                 filter {
@@ -388,8 +388,8 @@ interfaces {
                     output VOIP;
                 }
                 policer {
-                    input 11_Mbps;
-                    output 11_Mbps;
+                    input 15_Mbps;
+                    output 15_Mbps;
                 }
                 address 203.110.91.233/29;
             }

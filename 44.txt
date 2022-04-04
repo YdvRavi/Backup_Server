@@ -106,8 +106,9 @@ interface ethernet 0/0/1
 description ##MILL#R_CORE1##
 priority 6
 switchport trunk allowed vlan 2-603,605,609,611-700,703,706-709,803
-storm-control unicast 1000
-storm-control multicast 1000
+storm-control broadcast 10000
+storm-control unicast 10000
+storm-control multicast 10000
 errdisable detect cause arp
 errdisable detect cause bpdu
 errdisable detect cause igmp
@@ -118,8 +119,9 @@ exit
 interface ethernet 0/0/2
 description Mill-mainring-SW8720
 switchport trunk allowed vlan 2-279,281-580,582-603,606-869,871-4094
-storm-control unicast 1000
-storm-control multicast 1000
+storm-control broadcast 10000
+storm-control unicast 10000
+storm-control multicast 10000
 errdisable detect cause arp
 errdisable detect cause bpdu
 errdisable detect cause igmp
@@ -132,8 +134,9 @@ description "##MILL#RING_4#Grant Thornton Advisory Pvt Ltd#SW82.30##"
 switchport trunk allowed vlan 3,6,100,201,210-211,214,216,218,260,262-264,270,
 301,303,310,322,330-331,343,348,352-353,360,400,500,600-601,
 switchport trunk allowed vlan 604,606-609,706-707,803,999
-storm-control unicast 1000
-storm-control multicast 1000
+storm-control broadcast 10000
+storm-control unicast 10000
+storm-control multicast 10000
 errdisable detect cause arp
 errdisable detect cause bpdu
 errdisable detect cause igmp
@@ -143,9 +146,9 @@ errdisable auto-recovery cause igmp
 exit
 interface ethernet 0/0/4
 switchport default vlan 609
-storm-control broadcast 1000
-storm-control unicast 1500
-storm-control multicast 1500
+storm-control broadcast 10000
+storm-control unicast 10000
+storm-control multicast 10000
 errdisable detect cause arp
 errdisable detect cause bpdu
 errdisable detect cause igmp
@@ -159,9 +162,9 @@ speed 1000
 duplex full
 switchport trunk allowed vlan 3,212-213,215-216,218,240,250,261,270,281,293,31
 5,325,327,345,803
-storm-control broadcast 1000
-storm-control unicast 1500
-storm-control multicast 1500
+storm-control broadcast 10000
+storm-control unicast 10000
+storm-control multicast 10000
 errdisable detect cause arp
 errdisable detect cause bpdu
 errdisable detect cause igmp
@@ -176,9 +179,9 @@ duplex full
 priority 6
 switchport trunk allowed vlan 3,212-213,215-216,218,240,250,261,270,281,293,31
 5,325,327,345,803
-storm-control broadcast 1000
-storm-control unicast 1500
-storm-control multicast 1500
+storm-control broadcast 10000
+storm-control unicast 10000
+storm-control multicast 10000
 errdisable detect cause arp
 errdisable detect cause bpdu
 errdisable detect cause igmp
@@ -192,9 +195,9 @@ speed 1000
 duplex full
 switchport trunk allowed vlan 220,241,270,280,290,292,314,335,341,344-347,349-
 351,354,803
-storm-control broadcast 1000
-storm-control unicast 1500
-storm-control multicast 1500
+storm-control broadcast 10000
+storm-control unicast 10000
+storm-control multicast 10000
 errdisable detect cause arp
 errdisable detect cause bpdu
 errdisable detect cause igmp
@@ -208,9 +211,9 @@ speed 1000
 duplex full
 switchport trunk allowed vlan 220,241,270,280,290,292,314,335,341,344-347,349-
 351,354,803
-storm-control broadcast 1000
-storm-control unicast 1500
-storm-control multicast 1500
+storm-control broadcast 10000
+storm-control unicast 10000
+storm-control multicast 10000
 errdisable detect cause arp
 errdisable detect cause bpdu
 errdisable detect cause igmp
@@ -225,9 +228,9 @@ duplex full
 switchport trunk allowed vlan 3,100,201,210-211,214,216,218,220,260,262-264,26
 6,270,301,303,310,322,330-331,343,345,348-349,352-354,360,
 switchport trunk allowed vlan 400,419,500,604,606-609,706-709,803,999
-storm-control broadcast 1000
-storm-control unicast 1500
-storm-control multicast 1500
+storm-control broadcast 10000
+storm-control unicast 10000
+storm-control multicast 10000
 errdisable detect cause arp
 errdisable detect cause bpdu
 errdisable detect cause igmp
@@ -242,9 +245,9 @@ duplex full
 switchport trunk allowed vlan 3,100,201,210-211,214,216,218,260,262-264,266,27
 0,301,303,310,322,330-331,343,345,348-349,352-354,360,400,
 switchport trunk allowed vlan 419,500,604,606-609,706-709,803,999
-storm-control broadcast 1000
-storm-control unicast 1500
-storm-control multicast 1500
+storm-control broadcast 10000
+storm-control unicast 10000
+storm-control multicast 10000
 errdisable detect cause arp
 errdisable detect cause bpdu
 errdisable detect cause igmp
@@ -258,9 +261,9 @@ speed 1000
 duplex full
 switchport trunk allowed vlan 3,213,282,294,323-324,332-335,338,340,342,345,80
 3
-storm-control broadcast 1000
-storm-control unicast 1500
-storm-control multicast 1500
+storm-control broadcast 10000
+storm-control unicast 10000
+storm-control multicast 10000
 errdisable detect cause arp
 errdisable detect cause bpdu
 errdisable detect cause igmp
@@ -274,9 +277,9 @@ speed 1000
 duplex full
 switchport trunk allowed vlan 3,213,282,294,323-324,332-335,338,340,342,345,80
 3
-storm-control broadcast 1000
-storm-control unicast 1500
-storm-control multicast 1500
+storm-control broadcast 10000
+storm-control unicast 10000
+storm-control multicast 10000
 errdisable detect cause arp
 errdisable detect cause bpdu
 errdisable detect cause igmp
@@ -289,9 +292,9 @@ description ##MILL#RING_5#TargetOne#SW82.15##
 speed 1000
 duplex full
 switchport trunk allowed vlan 216
-storm-control broadcast 1000
-storm-control unicast 1500
-storm-control multicast 1500
+storm-control broadcast 10000
+storm-control unicast 10000
+storm-control multicast 10000
 mac-address-table max-mac-count 10
 errdisable detect cause arp
 errdisable detect cause bpdu
@@ -305,9 +308,9 @@ speed 1000
 duplex full
 switchport trunk allowed vlan 4,100,214,262-264,270,301,327,400,500,604,606-60
 9,706-709
-storm-control broadcast 1000
-storm-control unicast 1500
-storm-control multicast 1500
+storm-control broadcast 10000
+storm-control unicast 10000
+storm-control multicast 10000
 errdisable detect cause arp
 errdisable detect cause bpdu
 errdisable detect cause igmp
@@ -320,9 +323,9 @@ description ##MILL#RING_5#TargetOne#SW82.15##
 speed 1000
 duplex full
 switchport trunk allowed vlan 216
-storm-control broadcast 1000
-storm-control unicast 1500
-storm-control multicast 1500
+storm-control broadcast 10000
+storm-control unicast 10000
+storm-control multicast 10000
 mac-address-table max-mac-count 10
 errdisable detect cause arp
 errdisable detect cause bpdu
@@ -334,9 +337,9 @@ exit
 interface ethernet 0/0/16
 description #FAULTY#
 shutdown
-storm-control broadcast 1000
-storm-control unicast 1500
-storm-control multicast 1500
+storm-control broadcast 10000
+storm-control unicast 10000
+storm-control multicast 10000
 errdisable detect cause arp
 errdisable detect cause bpdu
 errdisable detect cause igmp
@@ -349,9 +352,9 @@ description "##ACI Eduabroads Pvt Ltd#111380#15Mbps##"
 speed 100
 duplex full
 switchport default vlan 214
-storm-control broadcast 1000
-storm-control unicast 1500
-storm-control multicast 1500
+storm-control broadcast 10000
+storm-control unicast 10000
+storm-control multicast 10000
 errdisable detect cause arp
 errdisable detect cause bpdu
 errdisable detect cause igmp
@@ -364,9 +367,9 @@ description ##Arvind_Medicare#P2P##
 speed 100
 duplex full
 switchport default vlan 999
-storm-control broadcast 1000
-storm-control unicast 1500
-storm-control multicast 1500
+storm-control broadcast 10000
+storm-control unicast 10000
+storm-control multicast 10000
 errdisable detect cause arp
 errdisable detect cause bpdu
 errdisable detect cause igmp
@@ -378,9 +381,9 @@ interface ethernet 0/0/19
 description "##MILL#RING_6#Gold Souk Infrastructure Pvt Ltd#SW82.19##"
 priority 6
 switchport trunk allowed vlan 327,336
-storm-control broadcast 1000
-storm-control unicast 1500
-storm-control multicast 1500
+storm-control broadcast 10000
+storm-control unicast 10000
+storm-control multicast 10000
 errdisable detect cause arp
 errdisable detect cause bpdu
 errdisable detect cause igmp
@@ -392,9 +395,9 @@ interface ethernet 0/0/20
 speed 100
 duplex full
 switchport default vlan 283
-storm-control broadcast 1000
-storm-control unicast 1500
-storm-control multicast 1500
+storm-control broadcast 10000
+storm-control unicast 10000
+storm-control multicast 10000
 errdisable detect cause arp
 errdisable detect cause bpdu
 errdisable detect cause igmp
@@ -405,9 +408,9 @@ exit
 interface ethernet 0/0/21
 description ##C4#MAIN_RING#SW82.238##
 switchport trunk allowed vlan 2-216,218-326,328-869,871-998,1000-4094
-storm-control broadcast 1000
-storm-control unicast 1500
-storm-control multicast 1500
+storm-control broadcast 10000
+storm-control unicast 10000
+storm-control multicast 10000
 errdisable detect cause arp
 errdisable detect cause bpdu
 errdisable detect cause igmp
@@ -417,9 +420,9 @@ errdisable auto-recovery cause igmp
 exit
 interface ethernet 0/0/22
 switchport trunk allowed vlan 327
-storm-control broadcast 1000
-storm-control unicast 1500
-storm-control multicast 1500
+storm-control broadcast 10000
+storm-control unicast 10000
+storm-control multicast 10000
 errdisable detect cause arp
 errdisable detect cause bpdu
 errdisable detect cause igmp
@@ -432,9 +435,9 @@ description ##MILL#RING_6#Heritage_School#SW82.13##
 speed 1000
 duplex full
 switchport trunk allowed vlan 100,214,262-264,327,336,400,500,602-609,706-709
-storm-control broadcast 1000
-storm-control unicast 1500
-storm-control multicast 1500
+storm-control broadcast 10000
+storm-control unicast 10000
+storm-control multicast 10000
 errdisable detect cause arp
 errdisable detect cause bpdu
 errdisable detect cause igmp
@@ -445,9 +448,9 @@ exit
 interface ethernet 0/0/24
 description ##ESSEL#SW87.18##
 switchport trunk allowed vlan 3,6,211,310-313,316,803
-storm-control broadcast 1000
-storm-control unicast 1500
-storm-control multicast 1500
+storm-control broadcast 10000
+storm-control unicast 10000
+storm-control multicast 10000
 errdisable detect cause arp
 errdisable detect cause bpdu
 errdisable detect cause igmp
@@ -458,9 +461,9 @@ exit
 interface ethernet 0/0/25
 description ##MILL#R_MIKROTIK#80.80##
 switchport trunk allowed vlan 401,600,605,612,870-871
-storm-control broadcast 1000
-storm-control unicast 1500
-storm-control multicast 1500
+storm-control broadcast 10000
+storm-control unicast 10000
+storm-control multicast 10000
 errdisable detect cause arp
 errdisable detect cause bpdu
 errdisable detect cause igmp
@@ -469,9 +472,9 @@ errdisable auto-recovery cause bpdu
 errdisable auto-recovery cause igmp
 exit
 interface ethernet 0/0/26
-storm-control broadcast 1000
-storm-control unicast 1500
-storm-control multicast 1500
+storm-control broadcast 10000
+storm-control unicast 10000
+storm-control multicast 10000
 errdisable detect cause arp
 errdisable detect cause bpdu
 errdisable detect cause igmp
@@ -484,9 +487,9 @@ shutdown
 switchport trunk allowed vlan 6,8,18,20,107,110,120-121,130,150,160-165,170,21
 0-211,240-241,250,260-261,270,280-281,283,301-304,322,
 switchport trunk allowed vlan 330-331,341-344,346-347,350-351,354
-storm-control broadcast 1000
-storm-control unicast 1500
-storm-control multicast 1500
+storm-control broadcast 10000
+storm-control unicast 10000
+storm-control multicast 10000
 errdisable detect cause arp
 errdisable detect cause bpdu
 errdisable detect cause igmp
@@ -497,9 +500,9 @@ exit
 interface ethernet 0/0/28
 shutdown
 switchport trunk allowed vlan 3,6,400,600
-storm-control broadcast 1000
-storm-control unicast 1500
-storm-control multicast 1500
+storm-control broadcast 10000
+storm-control unicast 10000
+storm-control multicast 10000
 errdisable detect cause arp
 errdisable detect cause bpdu
 errdisable detect cause igmp
