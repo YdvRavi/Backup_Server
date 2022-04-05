@@ -280,7 +280,7 @@ confirm onu mac 7c:a9:6b:02:21:70 onuid 13 auth-mode mac
 confirm onu mac 38:94:e0:a4:21:28 onuid 14 auth-mode mac
 confirm onu mac 38:94:e0:a4:22:20 onuid 15 auth-mode mac
 confirm onu mac 7c:a9:6b:d6:c4:92 onuid 16 auth-mode mac
-confirm onu mac 54:47:e8:6f:a8:91 onuid 17
+confirm onu mac 54:47:e8:6f:a8:91 onuid 17 auth-mode mac
 confirm onu mac 7c:a9:6b:01:d5:f8 onuid 18 auth-mode mac
 confirm onu mac 7c:a9:6b:01:c1:10 onuid 19 auth-mode mac
 confirm onu mac e0:67:b3:1a:ef:f8 onuid 23 auth-mode mac
@@ -336,6 +336,7 @@ onu mac-auth add 38:94:E0:A4:0B:70
 onu mac-auth add 38:94:E0:A4:21:68
 onu mac-auth add 38:94:E0:A4:0A:C0
 onu mac-auth add 38:94:E0:A4:0A:D0
+onu mac-auth add 54:47:E8:6F:A8:91
 onu mac-auth add 7C:A9:6B:02:C9:D8
 onu mac-auth add 38:94:E0:C2:43:88
 onu mac-auth add 38:94:E0:C2:43:90
@@ -391,6 +392,7 @@ onu 15 description 351148_Outlook
 onu 16 description 351147_simran
 onu 16 ctc eth 1 vlan pvid 1 pri 0
 onu 16 ctc eth 1 vlan mode transparent
+onu 17 description 351143_Akash
 onu 18 description 351137_Car
 onu 18 ctc eth 1 vlan pvid 600 pri 0
 onu 18 ctc eth 1 vlan mode transparent
