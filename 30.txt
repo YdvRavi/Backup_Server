@@ -839,6 +839,9 @@ active
 aim 0/16/15 name 661010_Prashant
 permit sn string-hex HWTC-e4cc2d4a line 1 default line 1
 active
+aim 0/16/16 name 661011_Gajendra
+permit sn string-hex HWTC-e4c8974a line 1 default line 1
+active
 exit
 exit
 ![gpon-device]
