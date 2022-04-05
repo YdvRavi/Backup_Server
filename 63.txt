@@ -265,7 +265,6 @@ exit
 interface epon 0/2
 onu auth-mode mac
 confirm onu mac 38:94:e0:a4:21:68 onuid 1 auth-mode mac
-confirm onu mac 7c:a9:6b:84:0f:5a onuid 2 auth-mode mac
 confirm onu mac 38:94:e0:a4:0a:d0 onuid 3 auth-mode mac
 confirm onu mac 38:94:e0:c2:43:88 onuid 4 auth-mode mac
 confirm onu mac 7c:a9:6b:02:c9:d8 onuid 5 auth-mode mac
@@ -326,7 +325,6 @@ onu mac-auth add 7C:A9:6B:01:A6:20
 onu mac-auth add 7C:A9:6B:02:25:A0
 onu mac-auth add 7C:A9:6B:01:C1:10
 onu mac-auth add 7C:A9:6B:01:A0:40
-onu mac-auth add 7C:A9:6B:84:0F:5A
 onu mac-auth add 38:94:E0:A4:22:20
 onu mac-auth add 7C:A9:6B:84:0F:72
 onu mac-auth add 7C:A9:6B:AF:07:50
@@ -373,7 +371,6 @@ exit
 !
 interface epon 0/2
 onu 1 description 351096_Aerotech
-onu 2 description 351143_Akash
 onu 3 description 351102_Bishnu
 onu 4 description 351014_EPMS
 onu 5 description 351005_TANAY
