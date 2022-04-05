@@ -544,11 +544,8 @@ interface port-channel 25
   pvid 403 
   ingress-check 
   bandwidth-limit cir 153600 
-  bandwidth-limit cir 
   bandwidth-limit pir 153600 
-  bandwidth-limit pir 
   bandwidth-limit egress 153600 
-  bandwidth-limit egress 
   broadcast-limit 
   broadcast-limit 1000 
   multicast-limit 
