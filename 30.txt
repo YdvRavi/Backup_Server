@@ -740,6 +740,9 @@ active
 aim 0/14/7 name 641161_Kokare
 permit sn string-hex HWTC-11a4d9a6 line 1 default line 1
 active
+aim 0/14/8 name 641183_rohit
+permit sn string-hex HWTC-f0e7dea5 line 1 default line 1
+active
 aim 0/15/1 name 641003_Priya_K105
 permit sn string-hex HWTC-88a190a5 line 1 default line 1
 active
