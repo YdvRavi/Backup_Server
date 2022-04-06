@@ -497,7 +497,6 @@ confirm onu mac 7c:a9:6b:3b:19:e3 onuid 5 auth-mode mac
 confirm onu mac 98:c7:a4:05:02:bd onuid 6 auth-mode mac
 confirm onu mac 7c:a9:6b:84:0f:6c onuid 7 auth-mode mac
 confirm onu mac a0:c6:ec:07:81:87 onuid 8 auth-mode mac
-confirm onu mac 7c:a9:6b:84:0f:60 onuid 9 auth-mode mac
 confirm onu mac 7c:a9:6b:af:07:a8 onuid 10 auth-mode mac
 confirm onu mac 7c:a9:6b:af:06:f8 onuid 11 auth-mode mac
 confirm onu mac 7c:a9:6b:af:07:14 onuid 12 auth-mode mac
@@ -509,7 +508,6 @@ confirm onu mac 7c:a9:6b:af:07:08 onuid 17 auth-mode mac
 confirm onu mac 7c:a9:6b:af:07:a4 onuid 18 auth-mode mac
 confirm onu mac 7c:a9:6b:84:d5:0e onuid 19 auth-mode mac
 confirm onu mac 38:94:e0:a4:0b:10 onuid 20
-confirm onu mac 7c:a9:6b:af:06:ec onuid 21 auth-mode mac
 confirm onu mac 7c:a9:6b:d6:a8:b0 onuid 22 auth-mode mac
 confirm onu mac 7c:a9:6b:d7:70:24 onuid 23 auth-mode mac
 exit
@@ -552,7 +550,6 @@ interface epon 0/3
 onu mac-auth add 7C:A9:6B:AF:07:08
 onu mac-auth add 7C:A9:6B:AF:07:14
 onu mac-auth add 7C:A9:6B:84:0F:5E
-onu mac-auth add 7C:A9:6B:84:0F:60
 onu mac-auth add 7C:A9:6B:84:0F:6C
 onu mac-auth add 38:94:E0:AB:12:2B
 onu mac-auth add 7C:A9:6B:3B:19:DD
@@ -566,7 +563,6 @@ onu mac-auth add 7C:A9:6B:84:D5:0E
 onu mac-auth add 7C:A9:6B:D7:70:24
 onu mac-auth add 38:94:E0:A4:0A:B8
 onu mac-auth add 7C:A9:6B:84:D5:2E
-onu mac-auth add 7C:A9:6B:AF:06:EC
 onu mac-auth add 7C:A9:6B:AF:06:F0
 onu mac-auth add 7C:A9:6B:AF:06:F8
 onu mac-auth add 38:94:E0:E3:39:8A
@@ -656,10 +652,6 @@ onu 7 ctc eth 1 vlan mode tag
 onu 8 description 131308_Leva
 onu 8 ctc eth 1 vlan pvid 109 pri 0
 onu 8 ctc eth 1 vlan mode tag
-onu 9 description 131441_ZAPPERS
-onu 9 ctc eth 1 loopdetect enable
-onu 9 ctc eth 1 vlan pvid 44 pri 0
-onu 9 ctc eth 1 vlan mode tag
 onu 10 description BELLATOR_131434
 onu 10 ctc eth 1 vlan pvid 147 pri 0
 onu 10 ctc eth 1 vlan mode tag
@@ -691,9 +683,6 @@ onu 18 ctc eth 1 vlan mode tag
 onu 19 description 131450_Pawandeep
 onu 19 ctc eth 1 vlan pvid 20 pri 0
 onu 19 ctc eth 1 vlan mode tag
-onu 21 description 131441_ZAPP_2nd
-onu 21 ctc eth 1 vlan pvid 44 pri 0
-onu 21 ctc eth 1 vlan mode transparent
 onu 22 description 131459_Ankur
 onu 22 ctc eth 1 vlan pvid 14 pri 0
 onu 22 ctc eth 1 vlan mode tag
