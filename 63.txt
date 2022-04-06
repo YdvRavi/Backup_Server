@@ -1,8 +1,6 @@
 ##CONFIG##
 
-## 
-2022/04/06 23:15:44   ONU Deregister           PON 0/3 ONU 1 38:94:E0:A4:58:E0 MPCP TIMEOUT.
-terminal length 0
+## terminal length 0
 VSM_OLT#80.58### 
 
 Current configuration:
