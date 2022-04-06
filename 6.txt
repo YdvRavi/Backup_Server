@@ -1,6 +1,6 @@
 ##CONFIG##
 
-## Last commit: 2022-04-06 10:56:09 UTC by deldsl
+## Last commit: 2022-04-06 11:31:32 UTC by deldsl
 version 17.4R1.16;
 system {
     host-name MILL_R_JUNOS;
@@ -1210,8 +1210,8 @@ interfaces {
             vlan-id 507;
             family inet {
                 policer {
-                    input 150_Mbps;
-                    output 150_Mbps;
+                    input 155_Mbps;
+                    output 155_Mbps;
                 }
                 address 103.242.225.57/29;
             }
