@@ -12,7 +12,6 @@ no spanning-tree 23 edge-port
 no spanning-tree 24 edge-port 
 no spanning-tree 26 edge-port 
 no spanning-tree 27 edge-port 
-no spanning-tree 28 edge-port 
 no remote-management 1 service ssh  
 vlan 1 
   name 1 
