@@ -162,6 +162,8 @@ switchport isolate
 no ip igmp snooping immediate-leave
 loopback disable
 exit
+
+2000/01/16 01:40:46   ONU Deregister           PON 0/1 ONU 28 38:94:E0:C3:A2:01 MPCP TIMEOUT.
 !
 interface gigabitethernet 0/6
 switchport mode hybrid
