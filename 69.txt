@@ -160,6 +160,9 @@ active
 aim 0/8/3 name 671010_Mahesh
 permit sn string-hex HWTC-11a1baa6 line 1 default line 1
 active
+aim 0/8/6 name 671017-arshi
+permit sn string-hex HWTC-f0e781a5 line 1 default line 1
+active
 aim 0/9/1 name 671012_chasku
 permit sn string-hex HWTC-11a1b6a6 line 1 default line 1
 active
