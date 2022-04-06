@@ -130,8 +130,8 @@ active
 aim 0/3/2 name 671003_Neeru
 permit sn string-hex HWTC-11a4d5a6 line 1 default line 1
 active
-aim 0/3/3 name 671009_Shashi
-permit sn string-hex HWTC-11a66ba6 line 1 default line 1
+aim 0/3/3 name 671009_shashi
+permit sn string-hex HWTC-11a277a6 line 1 default line 1
 active
 aim 0/4/1 name 671004_TOSHI
 permit sn string-hex HWTC-11a348a6 line 1 default line 1
