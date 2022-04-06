@@ -7,7 +7,7 @@ Building configuration...
 
 Current configuration : 106737 bytes
 !
-! Last configuration change at 16:35:05 UTC Mon Apr 4 2022
+! Last configuration change at 14:58:41 UTC Wed Apr 6 2022
 !
 version 15.5
 service timestamps debug datetime msec
@@ -229,7 +229,7 @@ interface GigabitEthernet0/0/1
  description ##MILL#R_MIKROTIK#BB_80.80##
  ip address 172.30.80.9 255.255.255.248
  no ip proxy-arp
- ip ospf 20 area 0
+ ip ospf 20 area 4
  negotiation auto
  arp timeout 60
 !
