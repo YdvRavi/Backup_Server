@@ -2,6 +2,8 @@
 
 ## terminal length 0
 AMBI_VK_OLT#83.27### 
+2022/04/06 11:39:25   ONU AUTH Success         PON 0/1 ONU 19 38:94:E0:C3:F1:F8.
+
 
 Current configuration:
 !
