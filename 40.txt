@@ -411,7 +411,6 @@ confirm onu mac 38:94:e0:be:16:99 onuid 31 auth-mode mac
 confirm onu mac 38:94:e0:be:17:80 onuid 32 auth-mode mac
 confirm onu mac 38:94:e0:d9:6c:78 onuid 33 auth-mode mac
 confirm onu mac 78:d7:52:45:e2:f4 onuid 34 auth-mode mac
-confirm onu mac 38:94:e0:be:17:6a onuid 35 auth-mode mac
 confirm onu mac 38:94:e0:c3:eb:d3 onuid 36 auth-mode mac
 confirm onu mac 14:a7:2b:0e:1c:fc onuid 37 auth-mode mac
 confirm onu mac bc:62:d2:8f:96:50 onuid 38 auth-mode mac
@@ -534,7 +533,6 @@ onu mac-auth add 38:94:E0:AB:12:6D
 onu mac-auth add 38:94:E0:B5:5E:1A
 onu mac-auth add 38:94:E0:D9:3E:1B
 onu mac-auth add 38:94:E0:C3:76:01
-onu mac-auth add 38:94:E0:BE:17:6A
 onu mac-auth add 38:94:E0:B0:74:26
 onu mac-auth add 38:94:E0:B5:5E:3B
 onu mac-auth add 38:94:E0:BE:17:80
@@ -705,7 +703,6 @@ onu 31 description 286083_BIG_INT
 onu 32 description 281084_Future
 onu 33 description 281085_Da_Mila
 onu 34 description 281083_Big
-onu 35 description 281063_Mountain
 onu 36 description 281100_Silver
 onu 37 description 281114
 onu 38 description 286018_Reliance
