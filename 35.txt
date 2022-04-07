@@ -200,6 +200,8 @@ ont-srvprofile-id 100 desc "651016_PROPERTY_1221"
 ont-srvprofile-id 100 desc "651003_Facility Office swimming pool"
  ont add 6 14 sn-auth "48575443F0E635A5" omci ont-lineprofile-id 200 
 ont-srvprofile-id 100 desc "651017_NEENU"
+ ont add 6 15 sn-auth "48575443E4D4694A" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "656013_Conscient"
 #
 [emu-config]
   <emu-config>
@@ -289,6 +291,7 @@ ont-srvprofile-id 100 desc "651017_NEENU"
  service-port 103 vlan 608 gpon 0/0/6 ont 13 gemport 1 multi-service user-vlan  608 tag-transform translate
  service-port 104 vlan 500 gpon 0/0/6 ont 13 gemport 3 multi-service user-vlan  500 tag-transform translate
  service-port 105 vlan 100 gpon 0/0/6 ont 14 gemport 5 multi-service user-vlan  100 tag-transform translate
+ service-port 106 vlan 100 gpon 0/0/6 ont 15 gemport 5 multi-service user-vlan  100 tag-transform translate
 #
 [config]
   <config>
