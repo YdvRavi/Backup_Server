@@ -421,13 +421,13 @@ confirm onu mac a0:c6:ec:07:79:23 onuid 18 auth-mode mac
 confirm onu mac a4:00:e2:6d:87:ea onuid 19 auth-mode mac
 confirm onu mac 70:19:2f:63:11:7c onuid 20 auth-mode mac
 confirm onu mac e0:67:b3:1a:f0:13 onuid 21 auth-mode mac
+confirm onu mac 7c:a9:6b:84:0f:6a onuid 22
 confirm onu mac a0:c6:ec:07:87:5f onuid 23 auth-mode mac
 confirm onu mac 38:94:e0:c2:50:68 onuid 24 auth-mode mac
 confirm onu mac 80:14:a8:00:00:00 onuid 25
 confirm onu mac 7c:a9:6b:84:d5:06 onuid 26 auth-mode mac
 confirm onu mac 38:94:e0:c2:45:00 onuid 27 auth-mode mac
 confirm onu mac 7c:a9:6b:84:d5:34 onuid 29 auth-mode mac
-confirm onu mac 7c:a9:6b:84:0f:6a onuid 30 auth-mode mac
 confirm onu mac 38:94:e0:d3:d0:3e onuid 31
 exit
 !
@@ -447,7 +447,6 @@ exit
 !
 interface epon 0/1
 onu mac-auth add 38:94:E0:B1:B7:F4
-onu mac-auth add 7C:A9:6B:84:0F:6A
 onu mac-auth add 38:94:E0:C2:45:00
 onu mac-auth add 38:94:E0:C2:46:28
 onu mac-auth add 7C:A9:6B:3B:19:F9
@@ -554,9 +553,6 @@ onu 27 ctc eth 1 vlan mode tag
 onu 29 description 151168_bal
 onu 29 ctc eth 1 vlan pvid 101 pri 0
 onu 29 ctc eth 1 vlan mode tag
-onu 30 description 151182_Vision
-onu 30 ctc eth 1 vlan pvid 101 pri 0
-onu 30 ctc eth 1 vlan mode tag
 exit
 !
 interface epon 0/3
