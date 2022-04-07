@@ -284,11 +284,11 @@ ont-srvprofile-id 100 desc "651017_NEENU"
 608 tag-transform translate
  service-port 97 vlan 500 gpon 0/0/6 ont 12 gemport 3 multi-service user-vlan 
 500 tag-transform translate
- service-port 100 vlan 400 gpon 0/0/6 ont 14 gemport 4 multi-service user-vlan  400 tag-transform translate
  service-port 101 vlan 608 gpon 0/0/6 ont 14 gemport 1 multi-service user-vlan  608 tag-transform translate
  service-port 102 vlan 500 gpon 0/0/6 ont 14 gemport 3 multi-service user-vlan  500 tag-transform translate
  service-port 103 vlan 608 gpon 0/0/6 ont 13 gemport 1 multi-service user-vlan  608 tag-transform translate
  service-port 104 vlan 500 gpon 0/0/6 ont 13 gemport 3 multi-service user-vlan  500 tag-transform translate
+ service-port 105 vlan 100 gpon 0/0/6 ont 14 gemport 5 multi-service user-vlan  100 tag-transform translate
 #
 [config]
   <config>
