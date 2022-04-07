@@ -196,6 +196,8 @@ ont-srvprofile-id 100 desc "656013_CRM_Office"
 ont-srvprofile-id 100 desc "651013_CRM_Office"
  ont add 6 12 sn-auth "48575443D6A8FD9F" omci ont-lineprofile-id 200 
 ont-srvprofile-id 100 desc "651016_PROPERTY_1221"
+ ont add 6 13 sn-auth "48575443E4C5CD4A" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "651003_Facility Office swimming pool"
  ont add 6 14 sn-auth "48575443F0E635A5" omci ont-lineprofile-id 200 
 ont-srvprofile-id 100 desc "651017_NEENU"
 #
@@ -283,6 +285,10 @@ ont-srvprofile-id 100 desc "651017_NEENU"
  service-port 97 vlan 500 gpon 0/0/6 ont 12 gemport 3 multi-service user-vlan 
 500 tag-transform translate
  service-port 100 vlan 400 gpon 0/0/6 ont 14 gemport 4 multi-service user-vlan  400 tag-transform translate
+ service-port 101 vlan 608 gpon 0/0/6 ont 14 gemport 1 multi-service user-vlan  608 tag-transform translate
+ service-port 102 vlan 500 gpon 0/0/6 ont 14 gemport 3 multi-service user-vlan  500 tag-transform translate
+ service-port 103 vlan 608 gpon 0/0/6 ont 13 gemport 1 multi-service user-vlan  608 tag-transform translate
+ service-port 104 vlan 500 gpon 0/0/6 ont 13 gemport 3 multi-service user-vlan  500 tag-transform translate
 #
 [config]
   <config>
