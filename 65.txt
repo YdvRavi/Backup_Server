@@ -349,6 +349,7 @@ confirm onu mac 38:94:e0:ac:c1:5b onuid 23
 confirm onu mac 7c:a9:6b:d6:af:3c onuid 24 auth-mode mac
 confirm onu mac cc:05:77:b9:e2:b8 onuid 25 auth-mode mac
 confirm onu mac 7c:a9:6b:d7:6a:b2 onuid 26 auth-mode mac
+confirm onu mac c0:bf:c0:44:d9:dd onuid 27
 exit
 !
 interface epon 0/4
