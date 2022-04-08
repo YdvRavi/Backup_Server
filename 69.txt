@@ -113,6 +113,12 @@ mapping 1 vlan 614 gemport 1
 mapping 2 vlan 714 gemport 2
 active
 exit
+![deploy-profile-unique]
+deploy profile unique
+aim 0/7/5
+local protocol-port-80 enable mode forward
+active
+exit
 ![deploy-profile-rule]
 deploy profile rule
 aim 0/1/1 name 671018_BHUPENDRA
