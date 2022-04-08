@@ -535,7 +535,6 @@ onu auth-mode mac
 confirm onu mac 38:94:e0:a4:0a:a0 onuid 1 auth-mode mac
 confirm onu mac a4:00:e2:82:a2:8d onuid 2 auth-mode mac
 confirm onu mac 7c:a9:6b:84:d5:2a onuid 3 auth-mode mac
-confirm onu mac 7c:a9:6b:84:0f:88 onuid 4 auth-mode mac
 confirm onu mac 7c:a9:6b:d7:6f:76 onuid 5 auth-mode mac
 confirm onu mac 7c:a9:6b:d7:6e:72 onuid 6 auth-mode mac
 confirm onu mac 7c:a9:6b:d7:6e:b4 onuid 7 auth-mode mac
@@ -594,7 +593,6 @@ onu mac-auth add 7C:A9:6B:D7:6F:9E
 exit
 !
 interface epon 0/8
-onu mac-auth add 7C:A9:6B:84:0F:88
 onu mac-auth add 54:47:E8:6F:03:B9
 onu mac-auth add 7C:A9:6B:D9:1F:50
 onu mac-auth add 38:94:E0:A4:0A:A0
@@ -716,9 +714,6 @@ onu 2 ctc eth 1 vlan mode tag
 onu 3 description 191880_SPECTRA	
 onu 3 ctc eth 1 vlan pvid 813 pri 0
 onu 3 ctc eth 1 vlan mode tag
-onu 4 description 191745_FSN
-onu 4 ctc eth 1 vlan pvid 813 pri 0
-onu 4 ctc eth 1 vlan mode tag
 onu 5 description 191891_Craftpac
 onu 5 ctc eth 1 vlan pvid 813 pri 0
 onu 5 ctc eth 1 vlan mode tag
