@@ -526,6 +526,8 @@ onu 19 description 331324_COMAX
 onu 20 description 331365_sagar
 onu 21 description 331366_FUTEK
 onu 22 description 331028_aditya
+onu 23 description 331370_H&M
+onu 24 description 331369_H&M
 onu 25 description 331371_H&M
 exit
 !
