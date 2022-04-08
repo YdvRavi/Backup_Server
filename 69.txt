@@ -136,6 +136,9 @@ active
 aim 0/2/5 name 671021_prateek
 permit sn string-hex HWTC-ace069a3 line 1 default line 1
 active
+aim 0/2/6 name 671024_manoj
+permit sn string-hex HWTC-11a0d3a6 line 1 default line 1
+active
 aim 0/3/1 name 671006_NIRAJ
 permit sn string-hex HWTC-11a7b0a6 line 1 default line 1
 active
