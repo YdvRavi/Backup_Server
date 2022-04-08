@@ -319,8 +319,8 @@ confirm onu mac 38:94:e0:b3:f6:c9 onuid 19 auth-mode mac
 confirm onu mac 38:94:e0:be:38:49 onuid 20 auth-mode mac
 confirm onu mac 38:94:e0:b3:f7:00 onuid 21 auth-mode mac
 confirm onu mac 7c:a9:6b:d9:1f:04 onuid 22 auth-mode mac
-confirm onu mac 7c:a9:6b:d9:1f:a0 onuid 23
-confirm onu mac 7c:a9:6b:d9:1f:20 onuid 24
+confirm onu mac 7c:a9:6b:d9:1f:a0 onuid 23 auth-mode mac
+confirm onu mac 7c:a9:6b:d9:1f:20 onuid 24 auth-mode mac
 confirm onu mac 7c:a9:6b:d9:1f:64 onuid 25 auth-mode mac
 exit
 !
@@ -401,6 +401,7 @@ onu mac-auth add 38:94:E0:B3:F6:C9
 onu mac-auth add 7C:A9:6B:AF:07:18
 onu mac-auth add 7C:A9:6B:D9:1F:04
 onu mac-auth add 38:94:E0:A4:21:20
+onu mac-auth add 7C:A9:6B:D9:1F:20
 onu mac-auth add 38:94:E0:A4:22:38
 onu mac-auth add 7C:A9:6B:3B:19:E9
 onu mac-auth add 38:94:E0:B0:45:2F
@@ -412,6 +413,7 @@ onu mac-auth add 38:94:E0:A4:21:A0
 onu mac-auth add 38:94:E0:A4:58:70
 onu mac-auth add 38:94:E0:AB:12:AF
 onu mac-auth add E0:67:B3:0E:34:E5
+onu mac-auth add 7C:A9:6B:D9:1F:A0
 onu mac-auth add 38:94:E0:E3:1D:8A
 onu mac-auth add 38:94:E0:B3:F7:00
 onu mac-auth add 38:94:E0:C3:A2:6F
@@ -524,6 +526,7 @@ onu 19 description 331324_COMAX
 onu 20 description 331365_sagar
 onu 21 description 331366_FUTEK
 onu 22 description 331028_aditya
+onu 25 description 331371_H&M
 exit
 !
 interface epon 0/3
