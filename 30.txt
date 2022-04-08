@@ -815,9 +815,6 @@ active
 aim 0/16/5 name 641120_ankita
 permit sn string-hex HWTC-872be4a5 line 1 default line 1
 active
-aim 0/16/6 name 661002_Facility_B5
-permit sn string-hex HWTC-616a4e9b line 1 default line 1
-active
 aim 0/16/7 name 661003_GuardRoom
 permit sn string-hex HWTC-323593a6 line 1 default line 1
 active
