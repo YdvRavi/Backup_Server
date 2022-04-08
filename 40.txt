@@ -1,8 +1,6 @@
 ##CONFIG##
 
-## 
-2000/01/17 18:00:52   ONU AUTH Success         PON 0/2 ONU 25 38:94:E0:AB:12:6D.
-terminal length 0
+## terminal length 0
 Ardee_OLT#85.61### 
 
 Current configuration:
@@ -340,7 +338,7 @@ confirm onu mac 38:94:e0:b0:68:c3 onuid 15 auth-mode mac
 confirm onu mac bc:62:d2:8f:58:90 onuid 16 auth-mode mac
 confirm onu mac 38:94:e0:d9:6f:85 onuid 17 auth-mode mac
 confirm onu mac 38:94:e0:b5:6a:01 onuid 18 auth-mode mac
-confirm onu mac 38:94:e0:b5:6b:35 onuid 19
+confirm onu mac 38:94:e0:b5:6b:35 onuid 19 auth-mode mac
 confirm onu mac 38:94:e0:be:16:36 onuid 20 auth-mode mac
 confirm onu mac 38:94:e0:b5:6b:1f onuid 21 auth-mode mac
 confirm onu mac 38:94:e0:b5:5b:e9 onuid 22 auth-mode mac
@@ -370,7 +368,7 @@ confirm onu mac 38:94:e0:a8:c2:23 onuid 46 auth-mode mac
 confirm onu mac 38:94:e0:be:12:f2 onuid 47 auth-mode mac
 confirm onu mac 38:94:e0:b5:6b:8d onuid 48 auth-mode mac
 confirm onu mac 38:94:e0:a8:c5:a9 onuid 49
-confirm onu mac 38:94:e0:c3:9f:57 onuid 51
+confirm onu mac 38:94:e0:c3:9f:57 onuid 51 auth-mode mac
 confirm onu mac 38:94:e0:d9:6f:bc onuid 53 auth-mode mac
 confirm onu mac 38:94:e0:ac:c5:7b onuid 54 auth-mode mac
 confirm onu mac 38:94:e0:cc:7d:b8 onuid 56 auth-mode mac
@@ -379,7 +377,7 @@ exit
 !
 interface epon 0/2
 onu auth-mode mac
-confirm onu mac 38:94:e0:ac:c1:3a onuid 1 auth-mode mac
+confirm onu mac 38:94:e0:ac:c1:3a onuid 1
 confirm onu mac 38:94:e0:b5:5c:0a onuid 2 auth-mode mac
 confirm onu mac 38:94:e0:b0:74:26 onuid 3 auth-mode mac
 confirm onu mac a8:ca:7b:ad:bd:9a onuid 4 auth-mode mac
@@ -387,7 +385,7 @@ confirm onu mac 38:94:e0:b5:5e:04 onuid 5 auth-mode mac
 confirm onu mac a8:ca:7b:ab:41:85 onuid 6 auth-mode mac
 confirm onu mac 38:94:e0:b5:5b:de onuid 7 auth-mode mac
 confirm onu mac 38:94:e0:c3:a1:b4 onuid 8 auth-mode mac
-confirm onu mac 38:94:e0:b5:5c:99 onuid 9 auth-mode mac
+confirm onu mac 38:94:e0:b5:5c:99 onuid 9
 confirm onu mac 38:94:e0:b5:5d:54 onuid 10 auth-mode mac
 confirm onu mac 38:94:e0:c3:f1:cc onuid 11 auth-mode mac
 confirm onu mac 38:94:e0:ab:12:6f onuid 12
@@ -409,7 +407,7 @@ confirm onu mac 78:d7:52:46:0a:5c onuid 27 auth-mode mac
 confirm onu mac d4:6a:a8:5d:fd:26 onuid 28 auth-mode mac
 confirm onu mac 38:94:e0:be:20:ff onuid 29 auth-mode mac
 confirm onu mac 38:94:e0:be:1e:b8 onuid 30 auth-mode mac
-confirm onu mac 38:94:e0:be:16:99 onuid 31
+confirm onu mac 38:94:e0:be:16:99 onuid 31 auth-mode mac
 confirm onu mac 38:94:e0:be:17:80 onuid 32 auth-mode mac
 confirm onu mac 38:94:e0:d9:6c:78 onuid 33 auth-mode mac
 confirm onu mac 78:d7:52:45:e2:f4 onuid 34 auth-mode mac
@@ -440,7 +438,7 @@ exit
 !
 interface epon 0/3
 onu auth-mode mac
-confirm onu mac e0:67:b3:1a:f0:22 onuid 1
+confirm onu mac e0:67:b3:1a:f0:22 onuid 1 auth-mode mac
 confirm onu mac 38:94:e0:c3:a0:75 onuid 3 auth-mode mac
 confirm onu mac 38:94:e0:c3:eb:02 onuid 4 auth-mode mac
 confirm onu mac 38:94:e0:be:17:3e onuid 5 auth-mode mac
