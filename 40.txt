@@ -346,6 +346,8 @@ confirm onu mac 38:94:e0:b5:5e:30 onuid 23 auth-mode mac
 confirm onu mac 38:94:e0:b5:6b:09 onuid 24 auth-mode mac
 confirm onu mac 38:94:e0:a8:c1:73 onuid 25 auth-mode mac
 confirm onu mac 38:94:e0:b5:6b:6c onuid 26 auth-mode mac
+
+2000/01/18 01:20:53   ONU Port Los             PON 0/1 ONU 9 78:D7:52:46:07:02 eth 2 eth_port_los raised event
 confirm onu mac 38:94:e0:be:38:33 onuid 27 auth-mode mac
 confirm onu mac 38:94:e0:c3:a2:01 onuid 28 auth-mode mac
 confirm onu mac 38:94:e0:be:38:07 onuid 29
