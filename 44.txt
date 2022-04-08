@@ -90,7 +90,7 @@ exit
 vlan 2,4-7,10,12-21,23-25,27-199,201-213,216-217,219-241,243-269,271-279,281-3
 00,302-304,306-326,328-334,336-347,
 exit
-vlan 350-353,355-601,603-604,606-608,613,703,706-708,801,870,999
+vlan 350-353,355-601,603-604,606-608,613,703,706-708,801,870-871,999
 exit
 ![DEVICE]
 errdisable detect cause arp
@@ -118,7 +118,7 @@ errdisable auto-recovery cause igmp
 exit
 interface ethernet 0/0/2
 description Mill-mainring-SW8720
-switchport trunk allowed vlan 2-279,281-580,582-603,606-869,871-4094
+switchport trunk allowed vlan 2-279,281-580,582-603,606-869,872-4094
 storm-control broadcast 10000
 storm-control unicast 10000
 storm-control multicast 10000
@@ -145,7 +145,7 @@ errdisable auto-recovery cause bpdu
 errdisable auto-recovery cause igmp
 exit
 interface ethernet 0/0/4
-switchport default vlan 609
+switchport default vlan 871
 storm-control broadcast 10000
 storm-control unicast 10000
 storm-control multicast 10000
@@ -407,7 +407,7 @@ errdisable auto-recovery cause igmp
 exit
 interface ethernet 0/0/21
 description ##C4#MAIN_RING#SW82.238##
-switchport trunk allowed vlan 2-216,218-326,328-869,871-998,1000-4094
+switchport trunk allowed vlan 2-216,218-326,328-869,872-998,1000-4094
 storm-control broadcast 10000
 storm-control unicast 10000
 storm-control multicast 10000
