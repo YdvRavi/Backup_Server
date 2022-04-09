@@ -2,6 +2,8 @@
 
 ## terminal length 0
 Ardee_OLT#85.61### 
+2000/01/18 15:00:55   ONU AUTH Success         PON 0/1 ONU 46 38:94:E0:A8:C2:23.
+
 
 Current configuration:
 !
