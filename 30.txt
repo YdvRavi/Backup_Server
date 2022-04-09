@@ -575,6 +575,9 @@ active
 aim 0/7/10 name 641144_ronak
 permit sn string-hex HWTC-323e01a6 line 1 default line 1
 active
+aim 0/7/11 name 641185_Guru_F104
+permit sn string-hex HWTC-11a276a6 line 1 default line 1
+active
 aim 0/8/1 name 641006_Sulagna_F1002
 permit sn string-hex HWTC-88a192a5 line 1 default line 1
 active
