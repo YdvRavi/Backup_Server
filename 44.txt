@@ -228,9 +228,8 @@ duplex full
 switchport trunk allowed vlan 3,100,201,210-211,214,216,218,220,260,262-264,26
 6,270,301,303,310,322,330-331,343,345,348-349,352-354,360,
 switchport trunk allowed vlan 400,419,500,604,606-609,706-709,803,999
-storm-control broadcast 10000
-storm-control unicast 10000
-storm-control multicast 10000
+storm-control unicast 49984
+storm-control multicast 49984
 errdisable detect cause arp
 errdisable detect cause bpdu
 errdisable detect cause igmp
@@ -245,9 +244,8 @@ duplex full
 switchport trunk allowed vlan 3,100,201,210-211,214,216,218,260,262-264,266,27
 0,301,303,310,322,330-331,343,345,348-349,352-354,360,400,
 switchport trunk allowed vlan 419,500,604,606-609,706-709,803,999
-storm-control broadcast 10000
-storm-control unicast 10000
-storm-control multicast 10000
+storm-control unicast 49984
+storm-control multicast 49984
 errdisable detect cause arp
 errdisable detect cause bpdu
 errdisable detect cause igmp
