@@ -857,6 +857,9 @@ active
 aim 0/16/16 name 661011_Gajendra
 permit sn string-hex HWTC-e4c8974a line 1 default line 1
 active
+aim 0/16/17 name 641184_Bharat
+permit sn string-hex HWTC-11a40ea6 line 1 default line 1
+active
 exit
 exit
 ![gpon-device]
