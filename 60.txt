@@ -355,7 +355,6 @@ interface port-channel 11
   loopguard 
 exit 
 interface port-channel 12  
-  inactive 
   broadcast-limit 
   broadcast-limit 500 
   multicast-limit 
@@ -452,7 +451,6 @@ interface port-channel 18
   loopguard 
 exit 
 interface port-channel 19  
-  inactive 
   ingress-check 
   broadcast-limit 
   broadcast-limit 500 
