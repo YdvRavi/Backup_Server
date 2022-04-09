@@ -307,7 +307,7 @@ interface port-channel 8
   loopguard 
 exit 
 interface port-channel 9  
-  name ##2nd 
+  name ##Valuedrive#181095#100Mb## 
   pvid 401 
   ingress-check 
   broadcast-limit 
@@ -448,7 +448,7 @@ interface port-channel 18
   loopguard 
 exit 
 interface port-channel 19  
-  name ##B-3 
+  name ##Valuedrive#181096#100Mb## 
   ingress-check 
   broadcast-limit 
   broadcast-limit 500 
