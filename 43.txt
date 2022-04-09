@@ -5,9 +5,9 @@ R_CORE1###
 ##MILL#R_CORE1###
 Building configuration...
 
-Current configuration : 106788 bytes
+Current configuration : 106778 bytes
 !
-! Last configuration change at 13:50:54 UTC Thu Apr 7 2022
+! Last configuration change at 14:15:19 UTC Sat Apr 9 2022
 !
 version 15.5
 service timestamps debug datetime msec
@@ -1285,7 +1285,6 @@ interface GigabitEthernet0/0/4.331
  ip access-group VOIP in
  ip access-group VOIP out
  ip ospf 20 area 3
- shutdown
  service-policy input 300_Mbps
  service-policy output 300_Mbps
 !
