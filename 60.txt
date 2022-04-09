@@ -310,12 +310,6 @@ interface port-channel 9
   name ##2nd 
   pvid 401 
   ingress-check 
-  bandwidth-limit cir 15360 
-  bandwidth-limit cir 
-  bandwidth-limit pir 15360 
-  bandwidth-limit pir 
-  bandwidth-limit egress 15360 
-  bandwidth-limit egress 
   broadcast-limit 
   broadcast-limit 500 
   multicast-limit 
