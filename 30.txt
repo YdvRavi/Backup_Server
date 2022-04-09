@@ -404,6 +404,9 @@ active
 aim 0/3/5 name 646020
 permit sn string-hex HWTC-e4d2054a line 1 default line 1
 active
+aim 0/3/6 name 641188_Suraj_C107
+permit sn string-hex HWTC-11a406a6 line 1 default line 1
+active
 aim 0/3/7 name 641068_Jobin
 permit sn string-hex GNXS-61200b8c line 1 default line 1
 active
