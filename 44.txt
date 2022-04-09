@@ -134,9 +134,8 @@ description "##MILL#RING_4#Grant Thornton Advisory Pvt Ltd#SW82.30##"
 switchport trunk allowed vlan 3,6,100,201,210-211,214,216,218,260,262-264,270,
 301,303,310,322,330-331,343,348,352-353,360,400,500,600-601,
 switchport trunk allowed vlan 604,606-609,706-707,803,999
-storm-control broadcast 10000
-storm-control unicast 10000
-storm-control multicast 10000
+storm-control unicast 49984
+storm-control multicast 49984
 errdisable detect cause arp
 errdisable detect cause bpdu
 errdisable detect cause igmp
