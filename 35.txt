@@ -130,6 +130,8 @@ ont-srvprofile-id 100 desc "291020_Latesh"
 ont-srvprofile-id 100 desc "291024_Deepesh"
  ont add 0 4 sn-auth "48575443872C30A5" omci ont-lineprofile-id 200 
 ont-srvprofile-id 100 desc "291030_SANDEEP"
+ ont add 0 5 sn-auth "48575443119ECBA6" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "291033_NAVEEN"
  ont add 1 0 sn-auth "48575443AC6EE59E" omci ont-lineprofile-id 200 
 ont-srvprofile-id 100 desc "291002"
  ont add 1 1 sn-auth "48575443E4BC814A" omci ont-lineprofile-id 200 
