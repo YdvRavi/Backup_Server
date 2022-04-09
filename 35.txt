@@ -294,6 +294,10 @@ ont-srvprofile-id 100 desc "656013_Conscient"
  service-port 104 vlan 500 gpon 0/0/6 ont 13 gemport 3 multi-service user-vlan  500 tag-transform translate
  service-port 105 vlan 100 gpon 0/0/6 ont 14 gemport 5 multi-service user-vlan  100 tag-transform translate
  service-port 106 vlan 100 gpon 0/0/6 ont 15 gemport 5 multi-service user-vlan  100 tag-transform translate
+ service-port 107 vlan 608 gpon 0/0/0 ont 5 gemport 1 multi-service user-vlan 
+608 tag-transform translate
+ service-port 108 vlan 500 gpon 0/0/0 ont 5 gemport 3 multi-service user-vlan 
+500 tag-transform translate
 #
 [config]
   <config>
