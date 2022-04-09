@@ -25,10 +25,10 @@ vlan 1
 exit 
 vlan 401 
   name 401 
-  normal 2,4-5,7,10,12,14-15,18-23 
-  fixed 1,3,6,8-9,11,13,16-17,24-28 
+  normal 2,4-5,7,10,12,14-15,18,20-23 
+  fixed 1,3,6,8-9,11,13,16-17,19,24-28 
   forbidden "" 
-  untagged 1,3,6,8-9,11,13,16-17,24 
+  untagged 1,3,6,8-9,11,13,16-17,19,24 
 exit 
 vlan 403 
   name 403 
@@ -449,6 +449,7 @@ interface port-channel 18
 exit 
 interface port-channel 19  
   name ##Valuedrive#181096#100Mb## 
+  pvid 401 
   ingress-check 
   broadcast-limit 
   broadcast-limit 500 

@@ -89,21 +89,21 @@ interface port-channel 9
   name "##MILL#RING_4#ALTF SPACES PRIVATE LIMITED#SW82.26##" 
   vlan-trunking 
   broadcast-limit 
-  broadcast-limit 1000 
+  broadcast-limit 10000 
   multicast-limit 
-  multicast-limit 1000 
+  multicast-limit 10000 
   dlf-limit 
-  dlf-limit 1000 
+  dlf-limit 10000 
 exit 
 interface port-channel 10  
   name ##MILL#MAIN_RING#SW87.19## 
   vlan-trunking 
   broadcast-limit 
-  broadcast-limit 1000 
+  broadcast-limit 10000 
   multicast-limit 
-  multicast-limit 1000 
+  multicast-limit 10000 
   dlf-limit 
-  dlf-limit 1000 
+  dlf-limit 10000 
 exit 
 mirror-port 5 
 mirror-port 
