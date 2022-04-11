@@ -123,7 +123,7 @@ switchport mode hybrid
 switchport hybrid vlan 1 untagged
 switchport hybrid vlan 3 tagged
 switchport hybrid vlan 5 tagged
-switchport hybrid vlan 10 tagged
+switchport hybrid vlan 9 - 11 tagged
 switchport hybrid vlan 23 tagged
 switchport hybrid vlan 230 tagged
 switchport hybrid vlan 237 - 238 tagged
@@ -201,6 +201,8 @@ switchport mode hybrid
 switchport hybrid vlan 1 untagged
 switchport hybrid vlan 712 untagged
 switchport hybrid vlan 3 tagged
+switchport hybrid vlan 9 tagged
+switchport hybrid vlan 11 tagged
 switchport hybrid vlan 23 tagged
 switchport hybrid pvid vlan 712
 mdi force
@@ -365,7 +367,7 @@ exit
 !
 interface epon 0/4
 onu auth-mode mac
-confirm onu mac 7c:a9:6b:af:06:d8 onuid 1
+confirm onu mac 7c:a9:6b:af:06:d8 onuid 1 auth-mode mac
 confirm onu mac 38:94:e0:a4:21:98 onuid 2 auth-mode mac
 confirm onu mac 38:94:e0:b0:44:95 onuid 3 auth-mode mac
 confirm onu mac 38:94:e0:b5:7c:5a onuid 4 auth-mode mac
@@ -508,6 +510,8 @@ onu 20 description 331365_sagar
 onu 21 description 331366_FUTEK
 onu 22 description 331028_aditya
 onu 23 description 331370_H&M
+onu 23 ctc eth 1 vlan pvid 9 pri 0
+onu 23 ctc eth 1 vlan mode tag
 onu 24 description 331369_H&M
 onu 24 ctc eth 1 vlan pvid 11 pri 0
 onu 24 ctc eth 1 vlan mode tag
