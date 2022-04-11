@@ -2,6 +2,8 @@
 
 85.58# terminal length 0
 OLT#Heritage#85.58# 
+2022/04/11 16:41:47   ONU Illegal Register     PON 0/8 ONU 13 7C:A9:6B:84:D5:04 Rejected by White-list authentication.
+
 
 Current configuration:
 !
@@ -826,6 +828,7 @@ exit
 !
 interface epon 0/5
 onu 1 description 231062_SAMRAT
+onu 2 description 231063_FURNITURE
 onu 3 description 231017_Manoj
 onu 4 description 231052_Mahadev
 onu 4 ctc eth 1 vlan pvid 612 pri 0
