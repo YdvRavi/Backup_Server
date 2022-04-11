@@ -26,8 +26,7 @@ vlan 3
 exit
 vlan 5
 exit
-vlan 10
-exit
+vlan 9 - 11
 vlan 23
 exit
 vlan 230
@@ -41,8 +40,16 @@ vlan 3
 description Synop
 exit
 !
+vlan 9
+description H&M
+exit
+!
 vlan 10
 description Uniqlo
+exit
+!
+vlan 11
+description H&M
 exit
 !
 vlan 230
@@ -502,6 +509,8 @@ onu 21 description 331366_FUTEK
 onu 22 description 331028_aditya
 onu 23 description 331370_H&M
 onu 24 description 331369_H&M
+onu 24 ctc eth 1 vlan pvid 11 pri 0
+onu 24 ctc eth 1 vlan mode tag
 onu 25 description 331371_H&M
 onu 26 description 331372_foodxpert
 onu 26 ctc eth 1 vlan pvid 0 pri 0
