@@ -320,7 +320,7 @@ confirm onu mac 38:94:e0:e3:1d:8a onuid 11 auth-mode mac
 confirm onu mac 38:94:e0:a4:21:a0 onuid 12 auth-mode mac
 confirm onu mac 38:94:e0:ab:12:af onuid 13 auth-mode mac
 confirm onu mac 38:94:e0:b0:45:2f onuid 14 auth-mode mac
-confirm onu mac 7c:a9:6b:af:07:18 onuid 15
+confirm onu mac 7c:a9:6b:af:07:18 onuid 15 auth-mode mac
 confirm onu mac 7c:a9:6b:3b:19:e9 onuid 16 auth-mode mac
 confirm onu mac 38:94:e0:d3:c5:52 onuid 17 auth-mode mac
 confirm onu mac 38:94:e0:d3:9b:fc onuid 18 auth-mode mac
@@ -328,10 +328,10 @@ confirm onu mac 38:94:e0:b3:f6:c9 onuid 19 auth-mode mac
 confirm onu mac 38:94:e0:be:38:49 onuid 20 auth-mode mac
 confirm onu mac 38:94:e0:b3:f7:00 onuid 21 auth-mode mac
 confirm onu mac 7c:a9:6b:d9:1f:04 onuid 22
-confirm onu mac 7c:a9:6b:d9:1f:a0 onuid 23
-confirm onu mac 7c:a9:6b:d9:1f:20 onuid 24
-confirm onu mac 7c:a9:6b:d9:1f:64 onuid 25
-confirm onu mac 7c:a9:6b:d9:1f:00 onuid 26
+confirm onu mac 7c:a9:6b:d9:1f:a0 onuid 23 auth-mode mac
+confirm onu mac 7c:a9:6b:d9:1f:20 onuid 24 auth-mode mac
+confirm onu mac 7c:a9:6b:d9:1f:64 onuid 25 auth-mode mac
+confirm onu mac 7c:a9:6b:d9:1f:00 onuid 26 auth-mode mac
 exit
 !
 interface epon 0/3
@@ -359,15 +359,15 @@ confirm onu mac a4:00:e2:84:22:63 onuid 20 auth-mode mac
 confirm onu mac 38:94:e0:be:38:49 onuid 21 auth-mode mac
 confirm onu mac a4:00:e2:8b:13:33 onuid 22 auth-mode mac
 confirm onu mac 38:94:e0:ac:c1:5b onuid 23
-confirm onu mac 7c:a9:6b:d6:af:3c onuid 24 auth-mode mac
+confirm onu mac 7c:a9:6b:d6:af:3c onuid 24
 confirm onu mac cc:05:77:b9:e2:b8 onuid 25 auth-mode mac
-confirm onu mac 7c:a9:6b:d7:6a:b2 onuid 26 auth-mode mac
+confirm onu mac 7c:a9:6b:d7:6a:b2 onuid 26
 confirm onu mac c0:bf:c0:44:d9:dd onuid 27 auth-mode mac
 exit
 !
 interface epon 0/4
 onu auth-mode mac
-confirm onu mac 7c:a9:6b:af:06:d8 onuid 1 auth-mode mac
+confirm onu mac 7c:a9:6b:af:06:d8 onuid 1
 confirm onu mac 38:94:e0:a4:21:98 onuid 2 auth-mode mac
 confirm onu mac 38:94:e0:b0:44:95 onuid 3 auth-mode mac
 confirm onu mac 38:94:e0:b5:7c:5a onuid 4 auth-mode mac
