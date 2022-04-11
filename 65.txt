@@ -531,6 +531,9 @@ onu 22 description 331028_aditya
 onu 23 description 331370_H&M
 onu 24 description 331369_H&M
 onu 25 description 331371_H&M
+onu 26 description 331372_foodxpert
+onu 26 ctc eth 1 vlan pvid 712 pri 0
+onu 26 ctc eth 1 vlan mode tag
 exit
 !
 interface epon 0/3
