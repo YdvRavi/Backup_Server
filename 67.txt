@@ -822,6 +822,8 @@ exit
 !
 interface epon 0/5
 onu 4 description 231052_Mahadev
+onu 4 ctc eth 1 vlan pvid 612 pri 0
+onu 4 ctc eth 1 vlan mode tag
 exit
 !
 interface epon 0/6
