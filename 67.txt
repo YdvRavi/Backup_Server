@@ -2,8 +2,6 @@
 
 85.58# terminal length 0
 OLT#Heritage#85.58# 
-2022/04/11 16:41:47   ONU Illegal Register     PON 0/8 ONU 13 7C:A9:6B:84:D5:04 Rejected by White-list authentication.
-
 
 Current configuration:
 !
@@ -681,17 +679,17 @@ exit
 interface epon 0/8
 onu auth-mode mac
 confirm onu mac 38:94:e0:a4:21:60 onuid 1
-confirm onu mac 38:94:e0:a4:0a:f0 onuid 2
-confirm onu mac 38:94:e0:b1:d9:4e onuid 3
+confirm onu mac 38:94:e0:a4:0a:f0 onuid 2 auth-mode mac
+confirm onu mac 38:94:e0:b1:d9:4e onuid 3 auth-mode mac
 confirm onu mac 7c:a9:6b:3b:19:d7 onuid 4 auth-mode mac
-confirm onu mac e0:67:b3:1a:f0:0a onuid 5
-confirm onu mac 38:94:e0:e3:39:82 onuid 6
-confirm onu mac 7c:a9:6b:84:0f:7a onuid 7
-confirm onu mac 7c:a9:6b:ae:cf:c4 onuid 8
-confirm onu mac 7c:a9:6b:84:0f:5c onuid 11
-confirm onu mac 7c:a9:6b:84:d5:0c onuid 12
-confirm onu mac 7c:a9:6b:84:d5:04 onuid 13
-confirm onu mac a0:c6:ec:07:81:84 onuid 14
+confirm onu mac e0:67:b3:1a:f0:0a onuid 5 auth-mode mac
+confirm onu mac 38:94:e0:e3:39:82 onuid 6 auth-mode mac
+confirm onu mac 7c:a9:6b:84:0f:7a onuid 7 auth-mode mac
+confirm onu mac 7c:a9:6b:ae:cf:c4 onuid 8 auth-mode mac
+confirm onu mac 7c:a9:6b:84:0f:5c onuid 11 auth-mode mac
+confirm onu mac 7c:a9:6b:84:d5:0c onuid 12 auth-mode mac
+confirm onu mac 7c:a9:6b:84:d5:04 onuid 13 auth-mode mac
+confirm onu mac a0:c6:ec:07:81:84 onuid 14 auth-mode mac
 exit
 !
 interface epon 0/2
@@ -746,7 +744,18 @@ onu mac-auth add 38:94:E0:D3:D0:70
 exit
 !
 interface epon 0/8
+onu mac-auth add 7C:A9:6B:84:0F:5C
+onu mac-auth add 7C:A9:6B:84:0F:7A
 onu mac-auth add 7C:A9:6B:3B:19:D7
+onu mac-auth add 38:94:E0:A4:21:60
+onu mac-auth add 7C:A9:6B:84:D5:04
+onu mac-auth add 7C:A9:6B:84:D5:0C
+onu mac-auth add E0:67:B3:1A:F0:0A
+onu mac-auth add 38:94:E0:E3:39:82
+onu mac-auth add 38:94:E0:A4:0A:F0
+onu mac-auth add A0:C6:EC:07:81:84
+onu mac-auth add 38:94:E0:B1:D9:4E
+onu mac-auth add 7C:A9:6B:AE:CF:C4
 exit
 !
 interface epon 0/1
@@ -885,9 +894,6 @@ onu 4 ctc eth 1 vlan mode tag
 onu 5 description 201074_Square
 onu 5 ctc eth 1 vlan pvid 433 pri 0
 onu 5 ctc eth 1 vlan mode tag
-onu 6 description COSMO_201077
-onu 6 ctc eth 1 vlan pvid 305 pri 0
-onu 6 ctc eth 1 vlan mode tag
 onu 7 description 201040_SAS
 onu 7 ctc eth 1 vlan pvid 305 pri 0
 onu 7 ctc eth 1 vlan mode tag
