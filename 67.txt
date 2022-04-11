@@ -607,15 +607,10 @@ snmp-server trap-source 127.0.1.1
 !
 interface epon 0/1
 onu auth-mode mac
-confirm onu mac 7c:a9:6b:01:d4:20 onuid 1
 confirm onu mac 7c:a9:6b:d7:5f:f4 onuid 3
 confirm onu mac 38:94:e0:d9:4e:7a onuid 4 auth-mode mac
-confirm onu mac 38:94:e0:a4:0a:90 onuid 5
 confirm onu mac 38:94:e0:ac:c1:5b onuid 6 auth-mode mac
-confirm onu mac a0:c6:ec:07:79:31 onuid 7
 confirm onu mac 38:94:e0:e3:39:4a onuid 9 auth-mode mac
-confirm onu mac 38:94:e0:d8:e9:b7 onuid 11
-confirm onu mac 7c:a9:6b:3b:1a:0b onuid 15
 exit
 !
 interface epon 0/2
@@ -757,24 +752,11 @@ onu mac-auth add 7C:A9:6B:AE:CF:C4
 exit
 !
 interface epon 0/1
-onu 1 description 231052_Mahadev
-onu 1 ctc eth 1 vlan pvid 612 pri 0
-onu 1 ctc eth 1 vlan mode tag
 onu 4 description 231044_Ravi
-onu 5 description 231017_Manoj
-onu 5 ctc eth 1 vlan pvid 305 pri 0
-onu 5 ctc eth 1 vlan mode tag
 onu 6 description 231073_arun
-onu 7 description 231062_SAMRAT
-onu 7 ctc eth 1 vlan pvid 612 pri 0
-onu 7 ctc eth 1 vlan mode tag
 onu 9 description 231056_Divya
 onu 9 ctc eth 1 vlan pvid 612 pri 0
 onu 9 ctc eth 1 vlan mode tag
-onu 11 description 231053_Licorne
-onu 15 description 231063_FURNITURE
-onu 15 ctc eth 1 vlan pvid 305 pri 0
-onu 15 ctc eth 1 vlan mode tag
 exit
 !
 interface epon 0/2
