@@ -2,6 +2,10 @@
 
 ## terminal length 0
 AMBI_VK_OLT#83.27### 
+2022/04/11 16:29:47   ONU AUTH Success         PON 0/1 ONU 11 38:94:E0:C2:43:78.
+
+2022/04/11 16:29:47   ONU Deregister           PON 0/2 ONU 23 7C:A9:6B:D9:1F:A0 MPCP OLT initiates DEREG.
+
 
 Current configuration:
 !
@@ -587,7 +591,6 @@ onu 27 description 331333_ANON_T305
 exit
 !
 interface epon 0/4
-onu 1 description 331320_Bluestone
 onu 2 description FRONFI_331275
 onu 3 description 331261_Titan
 onu 4 description 331323_comax
