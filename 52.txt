@@ -96,7 +96,7 @@ storm-control unicast 1500
 storm-control multicast 1500
 exit
 interface ethernet 0/0/25
-description ##C4#MAIN_RING#SW82.226#JMD_MEGA##
+shutdown
 switchport trunk allowed vlan 2-4094
 exit
 interface ethernet 0/0/26
