@@ -40,16 +40,8 @@ vlan 3
 description Synop
 exit
 !
-vlan 9
-description H&M
-exit
-!
 vlan 10
 description Uniqlo
-exit
-!
-vlan 11
-description H&M
 exit
 !
 vlan 230
@@ -327,11 +319,11 @@ confirm onu mac 38:94:e0:d3:9b:fc onuid 18 auth-mode mac
 confirm onu mac 38:94:e0:b3:f6:c9 onuid 19 auth-mode mac
 confirm onu mac 38:94:e0:be:38:49 onuid 20 auth-mode mac
 confirm onu mac 38:94:e0:b3:f7:00 onuid 21 auth-mode mac
-confirm onu mac 7c:a9:6b:d9:1f:04 onuid 22
+confirm onu mac 7c:a9:6b:d9:1f:04 onuid 22 auth-mode mac
 confirm onu mac 7c:a9:6b:d9:1f:a0 onuid 23 auth-mode mac
 confirm onu mac 7c:a9:6b:d9:1f:20 onuid 24 auth-mode mac
 confirm onu mac 7c:a9:6b:d9:1f:64 onuid 25 auth-mode mac
-confirm onu mac 7c:a9:6b:d9:1f:00 onuid 26
+confirm onu mac 7c:a9:6b:d9:1f:00 onuid 26 auth-mode mac
 exit
 !
 interface epon 0/3
@@ -367,7 +359,7 @@ exit
 !
 interface epon 0/4
 onu auth-mode mac
-confirm onu mac 7c:a9:6b:af:06:d8 onuid 1
+confirm onu mac 7c:a9:6b:af:06:d8 onuid 1 auth-mode mac
 confirm onu mac 38:94:e0:a4:21:98 onuid 2 auth-mode mac
 confirm onu mac 38:94:e0:b0:44:95 onuid 3 auth-mode mac
 confirm onu mac 38:94:e0:b5:7c:5a onuid 4 auth-mode mac
@@ -576,12 +568,6 @@ onu 20 ctc eth 2 vlan pvid 712 pri 0
 onu 20 ctc eth 2 vlan mode transparent
 onu 21 description 331364_Sanjay
 onu 22 description 331141_Damila
-onu 22 ctc eth 1 vlan pvid 0 pri 0
-onu 22 ctc eth 1 vlan mode transparent
-onu 24 description 331364_Sanjay
-onu 25 description 331361_Premium
-onu 26 description 331362_premi
-onu 27 description 331333_ANON_T305
 exit
 !
 interface epon 0/4
