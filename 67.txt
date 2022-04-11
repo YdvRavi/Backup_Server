@@ -821,6 +821,7 @@ onu 10 ctc eth 1 vlan mode tag
 exit
 !
 interface epon 0/5
+onu 4 description 231052_Mahadev
 exit
 !
 interface epon 0/6
