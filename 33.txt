@@ -525,6 +525,9 @@ active
 aim 0/2/15 name 601043
 permit sn string-hex GNXS-612005d0 line 1 default line 1
 active
+aim 0/2/16 name 601063_Amit
+permit sn string-hex HWTC-f0e430a5 line 3 default line 3
+active
 exit
 exit
 ![gpon-device]
