@@ -2,6 +2,8 @@
 
 85.58# terminal length 0
 OLT#Heritage#85.58# 
+2022/04/11 16:16:47   ONU Illegal Register     PON 0/8 ONU 11 7C:A9:6B:84:0F:5C Rejected by White-list authentication.
+
 
 Current configuration:
 !
