@@ -718,6 +718,10 @@ onu mac-auth add 38:94:E0:D8:E9:B7
 onu mac-auth add 7C:A9:6B:01:D4:20
 onu mac-auth add 38:94:E0:A4:0A:90
 onu mac-auth add A0:C6:EC:07:79:31
+onu mac-auth add 38:94:E0:E3:39:4A
+onu mac-auth add 38:94:E0:D9:4E:7A
+onu mac-auth add 38:94:E0:AC:C1:5B
+onu mac-auth add 7C:A9:6B:D7:5F:F4
 onu mac-auth add 7C:A9:6B:3B:1A:0B
 exit
 !
@@ -821,9 +825,12 @@ onu 10 ctc eth 1 vlan mode tag
 exit
 !
 interface epon 0/5
+onu 1 description 231062_SAMRAT
+onu 3 description 231017_Manoj
 onu 4 description 231052_Mahadev
 onu 4 ctc eth 1 vlan pvid 612 pri 0
 onu 4 ctc eth 1 vlan mode tag
+onu 5 description 231053_Licorne
 exit
 !
 interface epon 0/6
