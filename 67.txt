@@ -697,6 +697,7 @@ onu mac-auth add A0:C6:EC:04:CA:28
 onu mac-auth add A0:C6:EC:07:81:86
 onu mac-auth add 38:94:E0:A8:C5:9E
 onu mac-auth add E0:67:B3:1A:EF:F2
+onu mac-auth add 38:94:E0:B1:B7:E6
 exit
 !
 interface epon 0/3
