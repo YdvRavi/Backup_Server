@@ -2,8 +2,6 @@
 
 85.58# terminal length 0
 OLT#Heritage#85.58# 
-2022/04/11 16:16:47   ONU Illegal Register     PON 0/8 ONU 11 7C:A9:6B:84:0F:5C Rejected by White-list authentication.
-
 
 Current configuration:
 !
@@ -650,6 +648,11 @@ exit
 !
 interface epon 0/5
 onu auth-mode mac
+confirm onu mac a0:c6:ec:07:79:31 onuid 1 auth-mode mac
+confirm onu mac 7c:a9:6b:3b:1a:0b onuid 2 auth-mode mac
+confirm onu mac 38:94:e0:a4:0a:90 onuid 3 auth-mode mac
+confirm onu mac 7c:a9:6b:01:d4:20 onuid 4 auth-mode mac
+confirm onu mac 38:94:e0:d8:e9:b7 onuid 5 auth-mode mac
 exit
 !
 interface epon 0/6
@@ -708,6 +711,14 @@ onu mac-auth add 7C:A9:6B:84:D5:28
 onu mac-auth add 38:94:E0:B5:6B:56
 onu mac-auth add 38:94:E0:E3:19:9A
 onu mac-auth add 38:94:E0:E3:3F:92
+exit
+!
+interface epon 0/5
+onu mac-auth add 38:94:E0:D8:E9:B7
+onu mac-auth add 7C:A9:6B:01:D4:20
+onu mac-auth add 38:94:E0:A4:0A:90
+onu mac-auth add A0:C6:EC:07:79:31
+onu mac-auth add 7C:A9:6B:3B:1A:0B
 exit
 !
 interface epon 0/6
@@ -807,6 +818,9 @@ onu 10 ctc eth 1 flow_control enable
 onu 10 ctc eth 1 autoneg enable
 onu 10 ctc eth 1 vlan pvid 612 pri 0
 onu 10 ctc eth 1 vlan mode tag
+exit
+!
+interface epon 0/5
 exit
 !
 interface epon 0/6
