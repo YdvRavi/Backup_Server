@@ -898,6 +898,7 @@ onu 4 ctc eth 1 vlan mode tag
 onu 5 description 201074_Square
 onu 5 ctc eth 1 vlan pvid 433 pri 0
 onu 5 ctc eth 1 vlan mode tag
+onu 6 description 201077_COSMO
 onu 6 ctc eth 1 vlan pvid 305 pri 0
 onu 6 ctc eth 1 vlan mode tag
 onu 7 description 201040_SAS
