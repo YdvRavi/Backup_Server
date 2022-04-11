@@ -268,30 +268,30 @@ snmp-server trap-source 127.0.1.1
 !
 interface epon 0/1
 onu auth-mode mac
-confirm onu mac 38:94:e0:b1:d9:48 onuid 1 auth-mode mac
-confirm onu mac 38:94:e0:b1:b7:d6 onuid 2 auth-mode mac
-confirm onu mac 38:94:e0:b1:d9:6e onuid 3 auth-mode mac
-confirm onu mac 7c:a9:6b:84:d5:02 onuid 4 auth-mode mac
-confirm onu mac 38:94:e0:a4:0b:50 onuid 5 auth-mode mac
+confirm onu mac 38:94:e0:b1:d9:48 onuid 1
+confirm onu mac 38:94:e0:b1:b7:d6 onuid 2
+confirm onu mac 38:94:e0:b1:d9:6e onuid 3
+confirm onu mac 7c:a9:6b:84:d5:02 onuid 4
+confirm onu mac 38:94:e0:a4:0b:50 onuid 5
 confirm onu mac 38:94:e0:a4:21:10 onuid 6 auth-mode mac
-confirm onu mac e0:67:b3:1a:f0:01 onuid 7 auth-mode mac
-confirm onu mac 38:94:e0:a4:21:40 onuid 8 auth-mode mac
-confirm onu mac 38:94:e0:a4:22:30 onuid 9 auth-mode mac
-confirm onu mac 38:94:e0:a4:22:28 onuid 10 auth-mode mac
-confirm onu mac 38:94:e0:c2:43:78 onuid 11 auth-mode mac
-confirm onu mac e0:67:b3:0e:34:f5 onuid 12 auth-mode mac
-confirm onu mac 38:94:e0:b3:f6:be onuid 13 auth-mode mac
-confirm onu mac 38:94:e0:d0:4d:79 onuid 14 auth-mode mac
-confirm onu mac 38:94:e0:c3:a2:59 onuid 15 auth-mode mac
-confirm onu mac 38:94:e0:e3:13:3a onuid 16 auth-mode mac
-confirm onu mac 38:94:e0:c3:eb:0d onuid 17 auth-mode mac
+confirm onu mac e0:67:b3:1a:f0:01 onuid 7
+confirm onu mac 38:94:e0:a4:21:40 onuid 8
+confirm onu mac 38:94:e0:a4:22:30 onuid 9
+confirm onu mac 38:94:e0:a4:22:28 onuid 10
+confirm onu mac 38:94:e0:c2:43:78 onuid 11
+confirm onu mac e0:67:b3:0e:34:f5 onuid 12
+confirm onu mac 38:94:e0:b3:f6:be onuid 13
+confirm onu mac 38:94:e0:d0:4d:79 onuid 14
+confirm onu mac 38:94:e0:c3:a2:59 onuid 15
+confirm onu mac 38:94:e0:e3:13:3a onuid 16
+confirm onu mac 38:94:e0:c3:eb:0d onuid 17
 confirm onu mac 38:94:e0:ac:c5:c8 onuid 18 auth-mode mac
-confirm onu mac 38:94:e0:c3:f1:f8 onuid 19 auth-mode mac
-confirm onu mac 38:94:e0:c2:50:70 onuid 20 auth-mode mac
-confirm onu mac 7c:a9:6b:84:d5:00 onuid 22 auth-mode mac
-confirm onu mac 38:94:e0:a4:0b:60 onuid 23 auth-mode mac
-confirm onu mac 1c:20:db:9a:ed:ee onuid 24 auth-mode mac
-confirm onu mac 38:94:e0:a4:0b:a0 onuid 25 auth-mode mac
+confirm onu mac 38:94:e0:c3:f1:f8 onuid 19
+confirm onu mac 38:94:e0:c2:50:70 onuid 20
+confirm onu mac 7c:a9:6b:84:d5:00 onuid 22
+confirm onu mac 38:94:e0:a4:0b:60 onuid 23
+confirm onu mac 1c:20:db:9a:ed:ee onuid 24
+confirm onu mac 38:94:e0:a4:0b:a0 onuid 25
 confirm onu mac a0:c6:ec:04:67:7e onuid 26 auth-mode mac
 exit
 !
@@ -367,35 +367,6 @@ confirm onu mac 7c:a9:6b:3b:19:eb onuid 6 auth-mode mac
 confirm onu mac c0:bf:c0:44:d9:dd onuid 7 auth-mode mac
 exit
 !
-interface epon 0/1
-onu mac-auth add 38:94:E0:B3:F6:BE
-onu mac-auth add 38:94:E0:C3:F1:F8
-onu mac-auth add 38:94:E0:A4:21:10
-onu mac-auth add 38:94:E0:A4:22:28
-onu mac-auth add 38:94:E0:A4:22:30
-onu mac-auth add 38:94:E0:A4:0B:50
-onu mac-auth add 38:94:E0:A4:21:40
-onu mac-auth add 38:94:E0:A4:0B:60
-onu mac-auth add 38:94:E0:E3:13:3A
-onu mac-auth add 7C:A9:6B:84:D5:00
-onu mac-auth add 7C:A9:6B:84:D5:02
-onu mac-auth add 38:94:E0:A4:0B:A0
-onu mac-auth add E0:67:B3:1A:F0:01
-onu mac-auth add 38:94:E0:B5:5E:67
-onu mac-auth add 38:94:E0:C2:43:78
-onu mac-auth add 38:94:E0:C2:50:70
-onu mac-auth add E0:67:B3:0E:34:F5
-onu mac-auth add A0:C6:EC:04:67:7E
-onu mac-auth add 38:94:E0:D0:4D:79
-onu mac-auth add 38:94:E0:C3:EB:0D
-onu mac-auth add 38:94:E0:C3:A2:59
-onu mac-auth add 38:94:E0:B1:D9:48
-onu mac-auth add 1C:20:DB:9A:ED:EE
-onu mac-auth add 38:94:E0:B1:D9:6E
-onu mac-auth add 38:94:E0:AC:C5:C8
-onu mac-auth add 38:94:E0:B1:B7:D6
-exit
-!
 interface epon 0/2
 onu mac-auth add 38:94:E0:D3:9B:FC
 onu mac-auth add 38:94:E0:B3:F6:C9
@@ -403,6 +374,7 @@ onu mac-auth add 7C:A9:6B:AF:07:18
 onu mac-auth add 7C:A9:6B:D9:1F:00
 onu mac-auth add 7C:A9:6B:D9:1F:04
 onu mac-auth add 38:94:E0:A4:21:20
+onu mac-auth add 00:5F:67:38:AB:FA
 onu mac-auth add 7C:A9:6B:D9:1F:20
 onu mac-auth add 38:94:E0:A4:22:38
 onu mac-auth add 7C:A9:6B:3B:19:E9
@@ -532,8 +504,8 @@ onu 23 description 331370_H&M
 onu 24 description 331369_H&M
 onu 25 description 331371_H&M
 onu 26 description 331372_foodxpert
-onu 26 ctc eth 1 vlan pvid 712 pri 0
-onu 26 ctc eth 1 vlan mode tag
+onu 26 ctc eth 1 vlan pvid 0 pri 0
+onu 26 ctc eth 1 vlan mode transparent
 exit
 !
 interface epon 0/3
