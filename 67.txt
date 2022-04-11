@@ -843,6 +843,8 @@ onu 2 description 231063_FURNITURE
 onu 2 ctc eth 1 vlan pvid 305 pri 0
 onu 2 ctc eth 1 vlan mode tag
 onu 3 description 231017_Manoj
+onu 3 ctc eth 1 vlan pvid 305 pri 0
+onu 3 ctc eth 1 vlan mode tag
 onu 4 description 231052_Mahadev
 onu 4 ctc eth 1 vlan pvid 612 pri 0
 onu 4 ctc eth 1 vlan mode tag
