@@ -2,10 +2,6 @@
 
 ## terminal length 0
 AMBI_VK_OLT#83.27### 
-2022/04/11 16:29:47   ONU AUTH Success         PON 0/1 ONU 11 38:94:E0:C2:43:78.
-
-2022/04/11 16:29:47   ONU Deregister           PON 0/2 ONU 23 7C:A9:6B:D9:1F:A0 MPCP OLT initiates DEREG.
-
 
 Current configuration:
 !
@@ -269,7 +265,7 @@ dhcp-server interface vlan 1
 !<dhcp relay config information>
 !
 !
-loopback detect enable  
+no loopback detect
 snmp-server start
 no snmp-server community public
 no snmp-server community private
@@ -331,9 +327,9 @@ confirm onu mac 38:94:e0:d3:9b:fc onuid 18 auth-mode mac
 confirm onu mac 38:94:e0:b3:f6:c9 onuid 19 auth-mode mac
 confirm onu mac 38:94:e0:be:38:49 onuid 20 auth-mode mac
 confirm onu mac 38:94:e0:b3:f7:00 onuid 21 auth-mode mac
-confirm onu mac 7c:a9:6b:d9:1f:04 onuid 22 auth-mode mac
-confirm onu mac 7c:a9:6b:d9:1f:a0 onuid 23 auth-mode mac
-confirm onu mac 7c:a9:6b:d9:1f:20 onuid 24 auth-mode mac
+confirm onu mac 7c:a9:6b:d9:1f:04 onuid 22
+confirm onu mac 7c:a9:6b:d9:1f:a0 onuid 23
+confirm onu mac 7c:a9:6b:d9:1f:20 onuid 24
 confirm onu mac 7c:a9:6b:d9:1f:64 onuid 25 auth-mode mac
 confirm onu mac 7c:a9:6b:d9:1f:00 onuid 26 auth-mode mac
 exit
