@@ -1,8 +1,6 @@
 ##CONFIG##
 
-85.58# 
-2022/04/11 16:06:46   PON LOS                  PON 0/1 Link-Down
-terminal length 0
+85.58# terminal length 0
 OLT#Heritage#85.58# 
 
 Current configuration:
