@@ -552,8 +552,8 @@ interface port-channel 25
   loopguard 
 exit 
 interface port-channel 26  
-  name ##C4#MAIN_RING#SW82.228#VTC## 
   speed-duplex 1000-full 
+  inactive 
   vlan-trunking 
   broadcast-limit 
   broadcast-limit 1000 
