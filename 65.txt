@@ -2,6 +2,8 @@
 
 ## terminal length 0
 AMBI_VK_OLT#83.27### 
+2022/04/11 15:04:46   PON LOS Recovery         PON 0/1 Link-Up
+
 
 Current configuration:
 !
@@ -162,6 +164,8 @@ storm-control broadcast fps 512
 no storm-control multicast
 storm-control unknow fps 512
 switchport isolate
+
+2022/04/11 15:04:46   PON LOS                  PON 0/1 Link-Down
 no ip igmp snooping immediate-leave
 exit
 !
