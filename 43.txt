@@ -1364,14 +1364,14 @@ interface GigabitEthernet0/0/4.341
  service-policy output 10_Mbps
 !
 interface GigabitEthernet0/0/4.342
- description ##Arm Digital Media Pvt Ltd#111269#20MB#Mill##
+ description ##Arm Digital Media Pvt Ltd#111269#50MB#Mill##
  encapsulation dot1Q 342
  ip address 203.110.90.97 255.255.255.248
  ip access-group VOIP in
  ip access-group VOIP out
  arp timeout 5
- service-policy input 20_Mbps
- service-policy output 20_Mbps
+ service-policy input 50_Mbps
+ service-policy output 50_Mbps
 !
 interface GigabitEthernet0/0/4.343
  description ##VMD_CAD#111043#15MB##
