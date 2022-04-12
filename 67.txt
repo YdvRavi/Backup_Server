@@ -631,7 +631,6 @@ onu auth-mode mac
 confirm onu mac 38:94:e0:e3:19:9a onuid 1 auth-mode mac
 confirm onu mac a0:c6:ec:07:87:5c onuid 2
 confirm onu mac 38:94:e0:e3:1b:4a onuid 3
-confirm onu mac 38:94:e0:e3:3f:92 onuid 4 auth-mode mac
 confirm onu mac 38:94:e0:a4:0b:28 onuid 5 auth-mode mac
 confirm onu mac 7c:a9:6b:84:d5:28 onuid 6 auth-mode mac
 confirm onu mac 38:94:e0:b5:6b:56 onuid 7 auth-mode mac
@@ -703,7 +702,6 @@ onu mac-auth add 38:94:E0:A4:0B:28
 onu mac-auth add 7C:A9:6B:84:D5:28
 onu mac-auth add 38:94:E0:B5:6B:56
 onu mac-auth add 38:94:E0:E3:19:9A
-onu mac-auth add 38:94:E0:E3:3F:92
 exit
 !
 interface epon 0/5
@@ -783,9 +781,6 @@ interface epon 0/4
 onu 1 description 231036_Beer
 onu 1 ctc eth 1 vlan pvid 305 pri 0
 onu 1 ctc eth 1 vlan mode tag
-onu 4 description 231039_Inderjeet
-onu 4 ctc eth 1 vlan pvid 612 pri 0
-onu 4 ctc eth 1 vlan mode tag
 onu 5 description 231035_Ravinder
 onu 5 ctc eth 1 vlan pvid 305 pri 0
 onu 5 ctc eth 1 vlan mode tag
