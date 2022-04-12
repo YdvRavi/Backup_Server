@@ -4004,13 +4004,13 @@ interface GigabitEthernet0/1/0.1001006
  ip access-group VOIP out
 !
 interface GigabitEthernet0/1/0.1001007
- description ##Hotel Shanti Palace#321009#10Mb#Mahipalpur##
+ description ##Hotel Shanti Palace#321009#50Mb#Mahipalpur##
  encapsulation dot1Q 1001 second-dot1q 7
  ip address 203.110.88.185 255.255.255.248
  ip access-group VOIP in
  ip access-group VOIP out
- service-policy input 10_Mbps
- service-policy output 10_Mbps
+ service-policy input 50_Mbps
+ service-policy output 50_Mbps
 !
 interface GigabitEthernet0/1/0.1001008
  encapsulation dot1Q 1001 second-dot1q 8
