@@ -206,6 +206,8 @@ ont-srvprofile-id 100 desc "651017_NEENU"
 ont-srvprofile-id 100 desc "656013_Conscient"
  ont add 6 16 sn-auth "48575443F0E79DA5" omci ont-lineprofile-id 200 
 ont-srvprofile-id 100 desc "651015"
+ ont add 6 17 sn-auth "48575443F0E428A5" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "651019_Ritu"
 #
 [emu-config]
   <emu-config>
@@ -302,6 +304,8 @@ ont-srvprofile-id 100 desc "651015"
 500 tag-transform translate
  service-port 109 vlan 608 gpon 0/0/6 ont 16 gemport 1 multi-service user-vlan  608 tag-transform translate
  service-port 110 vlan 500 gpon 0/0/6 ont 16 gemport 3 multi-service user-vlan  500 tag-transform translate
+ service-port 111 vlan 500 gpon 0/0/6 ont 17 gemport 3 multi-service user-vlan  500 tag-transform translate
+ service-port 112 vlan 608 gpon 0/0/6 ont 17 gemport 1 multi-service user-vlan  608 tag-transform translate
 #
 [config]
   <config>
