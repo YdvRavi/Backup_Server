@@ -325,7 +325,7 @@ confirm onu mac 7c:a9:6b:d9:1f:a0 onuid 23 auth-mode mac
 confirm onu mac 7c:a9:6b:d9:1f:20 onuid 24 auth-mode mac
 confirm onu mac 7c:a9:6b:d9:1f:64 onuid 25 auth-mode mac
 confirm onu mac 7c:a9:6b:d9:1f:00 onuid 26 auth-mode mac
-confirm onu mac 7c:a9:6b:d9:1e:fc onuid 27
+confirm onu mac 7c:a9:6b:d9:1e:fc onuid 27 auth-mode mac
 exit
 !
 interface epon 0/3
@@ -421,6 +421,7 @@ onu mac-auth add 7C:A9:6B:D9:1F:A0
 onu mac-auth add 38:94:E0:E3:1D:8A
 onu mac-auth add 38:94:E0:B3:F7:00
 onu mac-auth add 38:94:E0:C3:A2:6F
+onu mac-auth add 7C:A9:6B:D9:1E:FC
 onu mac-auth add 38:94:E0:D3:C5:52
 onu mac-auth add 38:94:E0:B1:B7:90
 onu mac-auth add 38:94:E0:AC:C5:91
@@ -537,6 +538,7 @@ onu 24 ctc eth 1 vlan pvid 11 pri 0
 onu 24 ctc eth 1 vlan mode tag
 onu 25 description 331371_H&M
 onu 26 description 331372_Fodex
+onu 27 description 331373_VIVA
 exit
 !
 interface epon 0/3
