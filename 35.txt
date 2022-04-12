@@ -306,6 +306,7 @@ ont-srvprofile-id 100 desc "651019_Ritu"
  service-port 110 vlan 500 gpon 0/0/6 ont 16 gemport 3 multi-service user-vlan  500 tag-transform translate
  service-port 111 vlan 500 gpon 0/0/6 ont 17 gemport 3 multi-service user-vlan  500 tag-transform translate
  service-port 112 vlan 608 gpon 0/0/6 ont 17 gemport 1 multi-service user-vlan  608 tag-transform translate
+ service-port 113 vlan 100 gpon 0/0/6 ont 13 gemport 5 multi-service user-vlan  100 tag-transform translate
 #
 [config]
   <config>
