@@ -204,6 +204,8 @@ ont-srvprofile-id 100 desc "651003_Facility Office swimming pool"
 ont-srvprofile-id 100 desc "651017_NEENU"
  ont add 6 15 sn-auth "48575443E4D4694A" omci ont-lineprofile-id 200 
 ont-srvprofile-id 100 desc "656013_Conscient"
+ ont add 6 16 sn-auth "48575443F0E79DA5" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "651015"
 #
 [emu-config]
   <emu-config>
