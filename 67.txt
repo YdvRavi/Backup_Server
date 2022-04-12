@@ -646,6 +646,7 @@ confirm onu mac 7c:a9:6b:3b:1a:0b onuid 2 auth-mode mac
 confirm onu mac 38:94:e0:a4:0a:90 onuid 3 auth-mode mac
 confirm onu mac 7c:a9:6b:01:d4:20 onuid 4 auth-mode mac
 confirm onu mac 38:94:e0:d8:e9:b7 onuid 5 auth-mode mac
+confirm onu mac 38:94:e0:ac:c1:5b onuid 6 auth-mode mac
 exit
 !
 interface epon 0/6
