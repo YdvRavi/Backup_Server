@@ -286,6 +286,7 @@ errdisable auto-recovery cause igmp
 exit
 interface ethernet 0/0/13
 description ##MILL#RING_5#TargetOne#SW82.15##
+shutdown
 speed 1000
 duplex full
 switchport trunk allowed vlan 216
