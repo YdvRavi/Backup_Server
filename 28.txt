@@ -115,6 +115,7 @@ interface GigabitEthernet0/0/8
 #
 interface GigabitEthernet0/0/9
  description ##RESIDENCE#MAIN_RING#SW82.153#Suncity##
+ shutdown
  port link-type trunk
  port trunk allow-pass vlan 2 to 4094
  stp instance 0 cost 4
