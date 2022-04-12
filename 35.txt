@@ -300,6 +300,8 @@ ont-srvprofile-id 100 desc "651015"
 608 tag-transform translate
  service-port 108 vlan 500 gpon 0/0/0 ont 5 gemport 3 multi-service user-vlan 
 500 tag-transform translate
+ service-port 109 vlan 608 gpon 0/0/6 ont 16 gemport 1 multi-service user-vlan  608 tag-transform translate
+ service-port 110 vlan 500 gpon 0/0/6 ont 16 gemport 3 multi-service user-vlan  500 tag-transform translate
 #
 [config]
   <config>
