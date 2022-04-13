@@ -29,6 +29,9 @@ radius-server template default
 pki realm default
  certificate-check none
 #
+acl number 2001
+ rule 5 permit source 203.110.80.160 0.0.0.15
+#
 free-rule-template name default_free_rule
 #
 portal-access-profile name portal_access_profile
