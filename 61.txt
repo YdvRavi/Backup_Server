@@ -61,7 +61,6 @@ aaa
  local-user admin service-type telnet terminal ssh http
 #
 interface Vlanif1
- ip address 172.30.80.18 255.255.255.248
 #
 interface Vlanif2112
  ip address 172.30.80.34 255.255.255.248
