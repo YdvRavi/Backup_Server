@@ -210,6 +210,8 @@ ont-srvprofile-id 100 desc "651015"
 ont-srvprofile-id 100 desc "651019_Ritu"
  ont add 6 18 sn-auth "48575443F0E835A5" omci ont-lineprofile-id 200 
 ont-srvprofile-id 100 desc "651018_Laasya"
+ ont add 6 19 sn-auth "48575443F0E50EA5" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "651020_SUNWAYS"
 #
 [emu-config]
   <emu-config>
@@ -311,6 +313,8 @@ ont-srvprofile-id 100 desc "651018_Laasya"
  service-port 113 vlan 100 gpon 0/0/6 ont 13 gemport 5 multi-service user-vlan  100 tag-transform translate
  service-port 114 vlan 500 gpon 0/0/6 ont 18 gemport 3 multi-service user-vlan  500 tag-transform translate
  service-port 115 vlan 608 gpon 0/0/6 ont 18 gemport 1 multi-service user-vlan  608 tag-transform translate
+ service-port 116 vlan 608 gpon 0/0/6 ont 19 gemport 1 multi-service user-vlan  608 tag-transform translate
+ service-port 117 vlan 500 gpon 0/0/6 ont 19 gemport 3 multi-service user-vlan  500 tag-transform translate
 #
 [config]
   <config>
