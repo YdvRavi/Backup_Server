@@ -31,6 +31,7 @@ pki realm default
 #
 acl number 2001
  rule 5 permit source 203.110.80.160 0.0.0.15
+ rule 10 permit source 172.30.80.32 0.0.0.7
 #
 free-rule-template name default_free_rule
 #
@@ -131,6 +132,7 @@ user-interface con 0
  authentication-mode password
  set authentication password cipher $1a$~f-/<.j\QJ$q+X9K1.=fLYD~R)%H1UM<5mw,}A^"'=,b'IT,_RU$
 user-interface vty 0 2
+ acl 2001 inbound
  authentication-mode aaa
  idle-timeout 20 0
  protocol inbound telnet
