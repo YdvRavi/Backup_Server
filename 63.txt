@@ -2,6 +2,8 @@
 
 ## terminal length 0
 VSM_OLT#80.58### 
+2022/04/13 13:46:12   ONU Illegal Register     PON 0/3 ONU 5 38:94:E0:A4:21:B0 Rejected by White-list authentication.
+
 
 Current configuration:
 !
