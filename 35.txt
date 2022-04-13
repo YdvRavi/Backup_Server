@@ -315,6 +315,7 @@ ont-srvprofile-id 100 desc "651020_SUNWAYS"
  service-port 115 vlan 608 gpon 0/0/6 ont 18 gemport 1 multi-service user-vlan  608 tag-transform translate
  service-port 116 vlan 608 gpon 0/0/6 ont 19 gemport 1 multi-service user-vlan  608 tag-transform translate
  service-port 117 vlan 500 gpon 0/0/6 ont 19 gemport 3 multi-service user-vlan  500 tag-transform translate
+ service-port 118 vlan 100 gpon 0/0/6 ont 19 gemport 5 multi-service user-vlan  100 tag-transform translate
 #
 [config]
   <config>
