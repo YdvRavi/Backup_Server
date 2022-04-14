@@ -419,6 +419,9 @@ onu 2 ctc eth 1 vlan mode tag
 onu 3 description 351092_Pizzahut
 onu 4 description 351048_RABS
 onu 4 ctc eth 1 flow_control enable
+onu 5 description 351093_N_Chirag
+onu 5 ctc eth 1 vlan pvid 209 pri 0
+onu 5 ctc eth 1 vlan mode tag
 onu 6 description 351126_client
 onu 7 description 351120_SNS_Infra
 onu 8 description SUNIL_351041
