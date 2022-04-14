@@ -2,10 +2,6 @@
 
 ## terminal length 0
 AMBI_VK_OLT#83.27### 
-2022/04/15 01:09:32   ONU Dying Gasp           PON 0/1 ONU 26 A0:C6:EC:04:67:7E 
-
-2022/04/15 01:09:32   ONU Dying Gasp           PON 0/1 ONU 26 A0:C6:EC:04:67:7E 
-
 
 Current configuration:
 !
