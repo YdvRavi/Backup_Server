@@ -7,8 +7,8 @@ Building configuration...
 
 Current configuration : 39496 bytes
 !
-! Last configuration change at 15:41:33 IST Thu Apr 14 2022
-! NVRAM config last updated at 15:42:01 IST Thu Apr 14 2022
+! Last configuration change at 17:07:35 IST Thu Apr 14 2022
+! NVRAM config last updated at 17:07:42 IST Thu Apr 14 2022
 !
 version 15.3
 service timestamps debug datetime msec
@@ -382,7 +382,7 @@ interface GigabitEthernet0/0/1.206
 interface GigabitEthernet0/0/1.207
  description ##N Chirag#351093#30Mb#NTC-VK(VSM)##
  encapsulation dot1Q 207
- ip address 203.110.83.41 255.255.255.248
+ ip address 203.110.83.41 255.255.255.252
  ip access-group VOIP in
  ip access-group VOIP out
  arp timeout 60
