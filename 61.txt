@@ -92,7 +92,6 @@ interface XGigabitEthernet0/0/2
 #
 interface XGigabitEthernet0/0/3
  description ##MILL#SW_JUNOS#80.12##Link1_BSNL_SIFY_FMS44
- shutdown
  port link-type trunk
  port trunk allow-pass vlan 2 to 4094
  stp no-agreement-check
