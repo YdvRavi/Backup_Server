@@ -7,7 +7,7 @@ Building configuration...
 
 Current configuration : 106840 bytes
 !
-! Last configuration change at 14:04:07 UTC Wed Apr 13 2022
+! Last configuration change at 14:21:48 UTC Thu Apr 14 2022
 !
 version 15.5
 service timestamps debug datetime msec
@@ -1435,13 +1435,13 @@ interface GigabitEthernet0/0/4.349
  arp timeout 5
 !
 interface GigabitEthernet0/0/4.350
- description ##AZCOM Infosolution India Pvt Ltd#111218#25MB#Mill##
+ description ##AZCOM Infosolution India Pvt Ltd#111218#20MB#Mill##
  encapsulation dot1Q 350
  ip address 203.110.90.193 255.255.255.248
  ip access-group VOIP in
  ip access-group VOIP out
- service-policy input 25_Mbps
- service-policy output 25_Mbps
+ service-policy input 20_Mbps
+ service-policy output 20_Mbps
 !
 interface GigabitEthernet0/0/4.351
  description ##AZCOM Infosolution India Pvt Ltd#111219#5MB#Mill##
