@@ -5,10 +5,10 @@ R_CORE###
 ##MILL#R_CORE###
 Building configuration...
 
-Current configuration : 39506 bytes
+Current configuration : 39496 bytes
 !
-! Last configuration change at 15:40:37 IST Thu Apr 14 2022
-! NVRAM config last updated at 13:28:18 IST Sun Mar 27 2022
+! Last configuration change at 15:41:33 IST Thu Apr 14 2022
+! NVRAM config last updated at 15:42:01 IST Thu Apr 14 2022
 !
 version 15.3
 service timestamps debug datetime msec
@@ -385,7 +385,6 @@ interface GigabitEthernet0/0/1.207
  ip address 203.110.83.41 255.255.255.248
  ip access-group VOIP in
  ip access-group VOIP out
- shutdown
  arp timeout 60
  service-policy input 30_Mbps
  service-policy output 30_Mbps
