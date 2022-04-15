@@ -5,10 +5,10 @@ R_CORE###
 ##MILL#R_CORE###
 Building configuration...
 
-Current configuration : 39588 bytes
+Current configuration : 39557 bytes
 !
-! Last configuration change at 09:58:19 IST Fri Apr 15 2022
-! NVRAM config last updated at 09:58:20 IST Fri Apr 15 2022
+! Last configuration change at 14:12:05 IST Fri Apr 15 2022
+! NVRAM config last updated at 14:12:07 IST Fri Apr 15 2022
 !
 version 15.3
 service timestamps debug datetime msec
@@ -246,9 +246,9 @@ interface GigabitEthernet0/0/1.11
 !
 interface GigabitEthernet0/0/1.12
  encapsulation dot1Q 12
- ip address 203.110.85.1 255.255.255.248
  ip access-group VOIP in
  ip access-group VOIP out
+ shutdown
 !
 interface GigabitEthernet0/0/1.15
  encapsulation dot1Q 15
