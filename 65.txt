@@ -26,7 +26,7 @@ vlan 3
 exit
 vlan 5
 exit
-vlan 9 - 11
+vlan 9 - 12
 vlan 23
 exit
 vlan 230
