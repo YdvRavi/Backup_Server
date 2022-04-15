@@ -2,6 +2,8 @@
 
 ## terminal length 0
 AMBI_VK_OLT#83.27### 
+2022/04/15 16:29:43   OLT Port Updown          Uplink-port 0/6 Up
+
 
 Current configuration:
 !
