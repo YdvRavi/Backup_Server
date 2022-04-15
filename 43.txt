@@ -5,7 +5,7 @@ R_CORE1###
 ##MILL#R_CORE1###
 Building configuration...
 
-Current configuration : 106843 bytes
+Current configuration : 106625 bytes
 !
 ! Last configuration change at 14:25:43 UTC Thu Apr 14 2022
 !
@@ -349,7 +349,6 @@ interface GigabitEthernet0/0/3.21
 interface GigabitEthernet0/0/3.22
  encapsulation dot1Q 22
  ipv6 enable
- ipv6 eigrp 20
  arp timeout 5
 !
 interface GigabitEthernet0/0/3.34
@@ -3893,7 +3892,6 @@ interface GigabitEthernet0/1/0.1010
  ip ospf cost 20
  ipv6 address 2404:A200:0:2::15/126
  ipv6 enable
- ipv6 eigrp 20
 !
 interface GigabitEthernet0/1/0.1013
  encapsulation dot1Q 1013
@@ -4192,8 +4190,6 @@ router bgp 23872
  neighbor 203.110.80.196 description core1_mikrotik2
  neighbor 203.110.80.197 remote-as 23872
  neighbor 203.110.80.197 description MILL#JUNOS
- neighbor 219.65.112.141 remote-as 4755
- neighbor 219.65.112.141 description VSNL_UPLINK
  !
  address-family ipv4
   network 45.64.92.0 mask 255.255.252.0
@@ -4330,11 +4326,6 @@ ipv6 route vrf TATA_TEST 2404:A200::/48 Null0
 ipv6 route 2404:A200:5:A::/64 2404:A200:0:3::12
 ipv6 route vrf TATA_TEST 2404:A200::/32 Null0
 ipv6 route ::/0 2404:A200:0:2::1
-ipv6 router eigrp 20
- eigrp router-id 203.110.80.10
- redistribute static
- redistribute connected
-!
 !
 !
 ipv6 prefix-list VSNL_NEW_IPV6 seq 100 permit 2404:A200::/48
