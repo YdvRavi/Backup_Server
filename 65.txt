@@ -62,6 +62,7 @@ switchport mode hybrid
 switchport hybrid vlan 1 untagged
 switchport hybrid pvid vlan 1
 no shutdown 
+speed auto 
 mdi force
 storm-control broadcast fps 512
 no storm-control multicast
@@ -75,6 +76,7 @@ switchport mode hybrid
 switchport hybrid vlan 1 untagged
 switchport hybrid pvid vlan 1
 no shutdown 
+speed auto 
 mdi force
 storm-control broadcast fps 512
 no storm-control multicast
@@ -88,6 +90,7 @@ switchport mode hybrid
 switchport hybrid vlan 1 untagged
 switchport hybrid pvid vlan 1
 no shutdown 
+speed auto 
 mdi force
 storm-control broadcast fps 512
 no storm-control multicast
@@ -101,6 +104,7 @@ switchport mode hybrid
 switchport hybrid vlan 1 untagged
 switchport hybrid pvid vlan 1
 no shutdown 
+speed auto 
 mdi force
 storm-control broadcast fps 512
 no storm-control multicast
@@ -115,7 +119,7 @@ switchport mode hybrid
 switchport hybrid vlan 1 untagged
 switchport hybrid vlan 3 tagged
 switchport hybrid vlan 5 tagged
-switchport hybrid vlan 9 - 11 tagged
+switchport hybrid vlan 9 - 12 tagged
 switchport hybrid vlan 23 tagged
 switchport hybrid vlan 230 tagged
 switchport hybrid vlan 237 - 238 tagged
@@ -132,16 +136,14 @@ loopback disable
 exit
 !
 interface gigabitethernet 0/6
-switchport mode hybrid
-switchport hybrid vlan 1 untagged
-switchport hybrid vlan 12 tagged
-switchport hybrid pvid vlan 1
+switchport mode access
+switchport access vlan 12
 no shutdown 
 mdi force
 storm-control broadcast fps 512
 no storm-control multicast
 storm-control unknow fps 512
-switchport isolate
+no switchport isolate
 no ip igmp snooping immediate-leave
 exit
 !
