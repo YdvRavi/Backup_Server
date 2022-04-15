@@ -134,6 +134,7 @@ exit
 interface gigabitethernet 0/6
 switchport mode hybrid
 switchport hybrid vlan 1 untagged
+switchport hybrid vlan 12 tagged
 switchport hybrid pvid vlan 1
 no shutdown 
 mdi force
@@ -147,6 +148,7 @@ exit
 interface gigabitethernet 0/7
 switchport mode hybrid
 switchport hybrid vlan 1 untagged
+switchport hybrid vlan 12 tagged
 switchport hybrid pvid vlan 1
 no shutdown 
 mdi force
