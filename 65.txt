@@ -287,7 +287,6 @@ confirm onu mac e0:67:b3:0e:34:f5 onuid 12 auth-mode mac
 confirm onu mac 38:94:e0:b3:f6:be onuid 13 auth-mode mac
 confirm onu mac 38:94:e0:d0:4d:79 onuid 14 auth-mode mac
 confirm onu mac 38:94:e0:c3:a2:59 onuid 15 auth-mode mac
-confirm onu mac 38:94:e0:e3:13:3a onuid 16 auth-mode mac
 confirm onu mac 38:94:e0:c3:eb:0d onuid 17 auth-mode mac
 confirm onu mac 38:94:e0:ac:c5:c8 onuid 18 auth-mode mac
 confirm onu mac 38:94:e0:c3:f1:f8 onuid 19 auth-mode mac
@@ -381,7 +380,6 @@ onu mac-auth add 38:94:E0:A4:22:30
 onu mac-auth add 38:94:E0:A4:0B:50
 onu mac-auth add 38:94:E0:A4:21:40
 onu mac-auth add 38:94:E0:A4:0B:60
-onu mac-auth add 38:94:E0:E3:13:3A
 onu mac-auth add 7C:A9:6B:84:D5:00
 onu mac-auth add 7C:A9:6B:84:D5:02
 onu mac-auth add 38:94:E0:A4:0B:A0
@@ -491,7 +489,6 @@ onu 13 description 331330_West
 onu 14 description 331338_Mohan
 onu 14 ctc eth 1 phy_ctrl enable
 onu 15 description 331067_Welgrow
-onu 16 description 331342_COCO
 onu 17 description 331344_Aditya
 onu 18 description 331351_M-zone
 onu 19 ctc eth 1 vlan pvid 712 pri 0
