@@ -136,10 +136,9 @@ loopback disable
 exit
 !
 interface gigabitethernet 0/6
-switchport mode hybrid
-switchport hybrid vlan 1 untagged
-switchport hybrid vlan 712 tagged
-switchport hybrid pvid vlan 1
+switchport mode trunk
+switchport trunk vlan 712
+switchport trunk pvid vlan 1
 no shutdown 
 mdi force
 storm-control broadcast fps 512
