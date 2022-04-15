@@ -26,7 +26,7 @@ vlan 3
 exit
 vlan 5
 exit
-vlan 9 - 12
+vlan 9 - 11
 vlan 23
 exit
 vlan 230
@@ -119,7 +119,7 @@ switchport mode hybrid
 switchport hybrid vlan 1 untagged
 switchport hybrid vlan 3 tagged
 switchport hybrid vlan 5 tagged
-switchport hybrid vlan 9 - 12 tagged
+switchport hybrid vlan 9 - 11 tagged
 switchport hybrid vlan 23 tagged
 switchport hybrid vlan 230 tagged
 switchport hybrid vlan 237 - 238 tagged
@@ -136,8 +136,10 @@ loopback disable
 exit
 !
 interface gigabitethernet 0/6
-switchport mode access
-switchport access vlan 12
+switchport mode hybrid
+switchport hybrid vlan 1 untagged
+switchport hybrid vlan 712 tagged
+switchport hybrid pvid vlan 1
 no shutdown 
 mdi force
 storm-control broadcast fps 512
