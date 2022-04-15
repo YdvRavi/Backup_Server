@@ -130,7 +130,7 @@ mdi force
 storm-control broadcast fps 512
 no storm-control multicast
 storm-control unknow fps 512
-switchport isolate
+no switchport isolate
 no ip igmp snooping immediate-leave
 loopback disable
 exit
