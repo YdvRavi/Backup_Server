@@ -5,9 +5,9 @@ R_CORE1###
 ##MILL#R_CORE1###
 Building configuration...
 
-Current configuration : 106646 bytes
+Current configuration : 106740 bytes
 !
-! Last configuration change at 10:12:37 UTC Sat Apr 16 2022
+! Last configuration change at 12:21:35 UTC Sat Apr 16 2022
 !
 version 15.5
 service timestamps debug datetime msec
@@ -935,10 +935,13 @@ interface GigabitEthernet0/0/4.242
  service-policy output 20_Mbps
 !
 interface GigabitEthernet0/0/4.250
+ description ##PALTECH COOLING TOWERS#131461#15Mb##
  encapsulation dot1Q 250
+ ip address 203.110.91.221 255.255.255.252
  ip access-group VOIP in
  ip access-group VOIP out
- shutdown
+ service-policy input 15_Mbps
+ service-policy output 15_Mbps
 !
 interface GigabitEthernet0/0/4.260
  description ##ALTF SPACES PRIVATE LIMITED#111401#25Mb#Mill##
@@ -1115,7 +1118,6 @@ interface GigabitEthernet0/0/4.295
  shutdown
 !
 interface GigabitEthernet0/0/4.300
- description ##PALTECH COOLING TOWERS#111381#15Mb##
  encapsulation dot1Q 300
  ip access-group VOIP in
  ip access-group VOIP out
