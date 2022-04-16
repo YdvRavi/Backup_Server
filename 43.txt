@@ -5,9 +5,9 @@ R_CORE1###
 ##MILL#R_CORE1###
 Building configuration...
 
-Current configuration : 106810 bytes
+Current configuration : 107061 bytes
 !
-! Last configuration change at 12:21:35 UTC Sat Apr 16 2022
+! Last configuration change at 12:55:56 UTC Sat Apr 16 2022
 !
 version 15.5
 service timestamps debug datetime msec
@@ -3248,6 +3248,16 @@ interface GigabitEthernet0/0/5.193
  service-policy input 50_Mbps
  service-policy output 50_Mbps
 !
+interface GigabitEthernet0/0/5.194
+ description ##PALTECH COOLING TOWERS#131461#15Mb##
+ encapsulation dot1Q 194
+ ip address 203.110.91.221 255.255.255.252
+ ip access-group VOIP in
+ ip access-group VOIP out
+ arp timeout 5
+ service-policy input 15_Mbps
+ service-policy output 15_Mbps
+!
 interface GigabitEthernet0/0/5.200
  description ##National Collateral Management Services Ltd#131422#20Mb##
  encapsulation dot1Q 200
@@ -3325,9 +3335,9 @@ interface GigabitEthernet0/0/5.211
 !
 interface GigabitEthernet0/0/5.250
  encapsulation dot1Q 250
- ip address 203.110.91.221 255.255.255.252
  ip access-group VOIP in
  ip access-group VOIP out
+ shutdown
  arp timeout 5
  service-policy input 15_Mbps
  service-policy output 15_Mbps
