@@ -156,6 +156,9 @@ exit
 vlan 205
 exit
 !
+vlan 250
+exit
+!
 vlan 600
 exit
 !
@@ -262,6 +265,7 @@ switchport hybrid vlan 12 tagged
 switchport hybrid vlan 46 tagged
 switchport hybrid vlan 139 tagged
 switchport hybrid vlan 14 tagged
+switchport hybrid vlan 250 tagged
 switchport hybrid pvid vlan 1
 no shutdown 
 mdi force
@@ -421,6 +425,7 @@ switchport hybrid vlan 41 tagged
 switchport hybrid vlan 33 tagged
 switchport hybrid vlan 202 tagged
 switchport hybrid vlan 139 tagged
+switchport hybrid vlan 250 tagged
 switchport hybrid pvid vlan 1
 no shutdown 
 mdi force
@@ -524,6 +529,7 @@ confirm onu mac e0:67:b3:1a:ef:ec onuid 7 auth-mode mac
 confirm onu mac 7c:a9:6b:02:c9:68 onuid 8 auth-mode mac
 confirm onu mac 7c:a9:6b:af:07:28 onuid 9 auth-mode mac
 confirm onu mac 54:47:e8:6e:e1:e9 onuid 10 auth-mode mac
+confirm onu mac 7c:a9:6b:d7:6e:b4 onuid 11 auth-mode mac
 confirm onu mac 7c:a9:6b:01:ce:48 onuid 14 auth-mode mac
 confirm onu mac e0:67:b3:0e:34:f3 onuid 17 auth-mode mac
 exit
@@ -581,6 +587,7 @@ onu mac-auth add 7C:A9:6B:02:C9:68
 onu mac-auth add E0:67:B3:0E:34:F3
 onu mac-auth add A0:C6:EC:04:CA:2D
 onu mac-auth add 38:94:E0:AB:11:F4
+onu mac-auth add 7C:A9:6B:D7:6E:B4
 onu mac-auth add 54:47:E8:6E:E1:E9
 onu mac-auth add E0:67:B3:1A:EF:EC
 exit
@@ -720,6 +727,8 @@ onu 9 ctc eth 1 vlan mode tag
 onu 10 description 131393_TOSHNIWAL
 onu 10 ctc eth 1 vlan pvid 842 pri 0
 onu 10 ctc eth 1 vlan mode tag
+onu 11 ctc eth 1 vlan pvid 250 pri 0
+onu 11 ctc eth 1 vlan mode tag
 onu 14 description 131312_Vital
 onu 14 ctc eth 1 vlan pvid 42 pri 0
 onu 14 ctc eth 1 vlan mode tag
