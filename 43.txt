@@ -5,7 +5,7 @@ R_CORE1###
 ##MILL#R_CORE1###
 Building configuration...
 
-Current configuration : 107068 bytes
+Current configuration : 106964 bytes
 !
 ! Last configuration change at 17:56:21 UTC Sat Apr 16 2022
 !
@@ -1118,11 +1118,8 @@ interface GigabitEthernet0/0/4.295
 !
 interface GigabitEthernet0/0/4.300
  encapsulation dot1Q 300
- ip address 203.110.91.221 255.255.255.252
  ip access-group VOIP in
  ip access-group VOIP out
- service-policy input 15_Mbps
- service-policy output 15_Mbps
 !
 interface GigabitEthernet0/0/4.301
  description ##Vashi Electricals Pvt Ltd#131326#10Mb#Mill##
