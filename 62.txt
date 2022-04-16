@@ -143,6 +143,9 @@ vlan 147
 description Bellator_131434
 exit
 !
+vlan 194
+exit
+!
 vlan 202
 exit
 !
@@ -266,6 +269,7 @@ switchport hybrid vlan 46 tagged
 switchport hybrid vlan 139 tagged
 switchport hybrid vlan 14 tagged
 switchport hybrid vlan 250 tagged
+switchport hybrid vlan 194 tagged
 switchport hybrid pvid vlan 1
 no shutdown 
 mdi force
@@ -426,6 +430,7 @@ switchport hybrid vlan 33 tagged
 switchport hybrid vlan 202 tagged
 switchport hybrid vlan 139 tagged
 switchport hybrid vlan 250 tagged
+switchport hybrid vlan 194 tagged
 switchport hybrid pvid vlan 1
 no shutdown 
 mdi force
@@ -727,7 +732,7 @@ onu 9 ctc eth 1 vlan mode tag
 onu 10 description 131393_TOSHNIWAL
 onu 10 ctc eth 1 vlan pvid 842 pri 0
 onu 10 ctc eth 1 vlan mode tag
-onu 11 ctc eth 1 vlan pvid 250 pri 0
+onu 11 ctc eth 1 vlan pvid 194 pri 0
 onu 11 ctc eth 1 vlan mode tag
 onu 14 description 131312_Vital
 onu 14 ctc eth 1 vlan pvid 42 pri 0
