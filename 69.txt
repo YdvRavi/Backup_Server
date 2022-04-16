@@ -124,6 +124,9 @@ active
 aim 0/1/3 name 671023_Sanjay
 permit sn string-hex HWTC-11a4d2a6 line 1 default line 1
 active
+aim 0/1/4 name 671036_NEESHU
+permit sn string-hex HWTC-11a1d0a6 line 1 default line 1
+active
 aim 0/1/5 name 671029_balaji
 permit sn string-hex HWTC-11a5e2a6 line 1 default line 1
 active
