@@ -156,7 +156,7 @@ errdisable auto-recovery cause bpdu
 errdisable auto-recovery cause igmp
 exit
 interface ethernet 0/0/5
-description "##mill#ring_1#Nodwin Gaming Pvt Ltd#SW82.102##"
+description "##mill#RING_1#Nodwin Gaming Pvt Ltd#SW82.102##"
 speed 1000
 duplex full
 switchport trunk allowed vlan 3,212-213,215-216,218,240,250,261,270,281,293,31
