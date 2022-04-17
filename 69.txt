@@ -145,6 +145,9 @@ active
 aim 0/2/7 name 671034_BHAWNA_A71203
 permit sn string-hex HWTC-11a0c8a6 line 1 default line 1
 active
+aim 0/2/8 name 671035_DR_SHIKHA_A701
+permit sn string-hex HWTC-119baca6 line 1 default line 1
+active
 aim 0/3/1 name 671006_NIRAJ
 permit sn string-hex HWTC-11a7b0a6 line 1 default line 1
 active
