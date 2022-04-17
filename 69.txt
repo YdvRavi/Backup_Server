@@ -137,7 +137,7 @@ aim 0/2/2 name 671025_Sunil_A7
 permit sn string-hex HWTC-11a29da6 line 1 default line 1
 active
 aim 0/2/5 name 671021_prateek
-permit sn string-hex HWTC-ace069a3 line 1 default line 1
+permit sn string-hex HWTC-119e56a6 line 1 default line 1
 active
 aim 0/2/6 name 671024_Manoj
 permit sn string-hex HWTC-11a0d3a6 line 1 default line 1
