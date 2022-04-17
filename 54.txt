@@ -11,7 +11,7 @@ no spanning-tree 23 edge-port
 no spanning-tree 24 edge-port 
 no spanning-tree 25 edge-port 
 no spanning-tree 26 edge-port 
-no spanning-tree 27 edge-port 
+spanning-tree 27 edge-port 
 no spanning-tree 28 edge-port 
 no service-control ftp 
 no service-control ssh 
