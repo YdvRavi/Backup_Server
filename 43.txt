@@ -5,9 +5,9 @@ R_CORE1###
 ##MILL#R_CORE1###
 Building configuration...
 
-Current configuration : 107075 bytes
+Current configuration : 107167 bytes
 !
-! Last configuration change at 12:10:05 UTC Mon Apr 18 2022
+! Last configuration change at 12:13:04 UTC Mon Apr 18 2022
 !
 version 15.5
 service timestamps debug datetime msec
@@ -4216,7 +4216,9 @@ router bgp 23872
   network 203.110.80.0 mask 255.255.240.0
   network 203.110.91.10 mask 255.255.255.255 route-map blackhole_AIRTEL
   neighbor 121.240.110.161 activate
-  neighbor 121.240.110.161 prefix-list VSNL_NEW out
+  neighbor 121.240.110.161 send-community
+  neighbor 121.240.110.161 prefix-list VSNL_IZO out
+  neighbor 121.240.110.161 route-map TATA_IZO out
   neighbor 203.110.80.167 activate
   neighbor 203.110.80.193 activate
   neighbor 203.110.80.195 activate
