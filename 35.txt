@@ -268,7 +268,6 @@ ont-srvprofile-id 100 desc "651021_NAIWEDYA_F915"
  service-port 60 vlan 500 gpon 0/0/6 ont 2 gemport 2 multi-service user-vlan 500 tag-transform translate
  service-port 61 vlan 608 gpon 0/0/4 ont 6 gemport 1 multi-service user-vlan 608 tag-transform translate
  service-port 62 vlan 500 gpon 0/0/4 ont 6 gemport 3 multi-service user-vlan 500 tag-transform translate
- service-port 63 vlan 608 gpon 0/0/6 ont 3 gemport 1 multi-service user-vlan 608 tag-transform translate
  service-port 65 vlan 608 gpon 0/0/6 ont 5 gemport 1 multi-service user-vlan 608 tag-transform translate
  service-port 66 vlan 608 gpon 0/0/6 ont 6 gemport 1 multi-service user-vlan 608 tag-transform translate
  service-port 67 vlan 608 gpon 0/0/6 ont 7 gemport 1 multi-service user-vlan 608 tag-transform translate
