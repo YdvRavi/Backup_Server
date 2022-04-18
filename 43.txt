@@ -5,9 +5,9 @@ R_CORE1###
 ##MILL#R_CORE1###
 Building configuration...
 
-Current configuration : 107167 bytes
+Current configuration : 107083 bytes
 !
-! Last configuration change at 12:18:02 UTC Mon Apr 18 2022
+! Last configuration change at 12:25:16 UTC Mon Apr 18 2022
 !
 version 15.5
 service timestamps debug datetime msec
@@ -4208,6 +4208,7 @@ router bgp 23872
  !
  address-family ipv4
   network 45.64.92.0 mask 255.255.252.0
+  network 45.64.92.0 mask 255.255.255.0 route-map TATA_IZO
   network 103.129.0.0 mask 255.255.254.0
   network 103.129.0.0 mask 255.255.255.0
   network 103.129.1.0 mask 255.255.255.0
@@ -4218,7 +4219,6 @@ router bgp 23872
   neighbor 121.240.110.161 activate
   neighbor 121.240.110.161 send-community
   neighbor 121.240.110.161 prefix-list VSNL_NEW out
-  neighbor 121.240.110.161 route-map TATA_IZO out
   neighbor 203.110.80.167 activate
   neighbor 203.110.80.193 activate
   neighbor 203.110.80.195 activate
@@ -4309,8 +4309,6 @@ ip access-list extended WEB
  permit ip any any
 !
 !
-ip prefix-list VSNL_IZO seq 92 permit 45.64.92.0/24
-!
 ip prefix-list VSNL_NEW seq 83 permit 203.110.83.0/24
 ip prefix-list VSNL_NEW seq 84 permit 203.110.84.0/24
 ip prefix-list VSNL_NEW seq 85 permit 203.110.85.0/24
@@ -4350,7 +4348,6 @@ ipv6 route ::/0 2404:A200:0:2::1
 ipv6 prefix-list VSNL_NEW_IPV6 seq 100 permit 2404:A200::/48
 ipv6 prefix-list VSNL_NEW_IPV6 seq 200 permit 2404:A200::/32
 route-map TATA_IZO permit 20
- match ip address prefix-list VSNL_IZO
  set community 23872:601
 !
 route-map blackhole_AIRTEL permit 10
