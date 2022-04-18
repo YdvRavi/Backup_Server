@@ -85,7 +85,7 @@ errdisable auto-recovery cause bpdu
 errdisable auto-recovery cause igmp
 exit
 interface ethernet 0/0/5
-description "##Grant Thornton Advisory Pvt Ltd#111057#100Mb##"
+description "##Grant Thornton Advisory Pvt Ltd#111057#200Mb##"
 switchport default vlan 331
 errdisable detect cause arp
 errdisable detect cause bpdu
