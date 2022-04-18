@@ -5,9 +5,9 @@ R_CORE1###
 ##MILL#R_CORE1###
 Building configuration...
 
-Current configuration : 107136 bytes
+Current configuration : 107164 bytes
 !
-! Last configuration change at 12:45:44 UTC Mon Apr 18 2022
+! Last configuration change at 12:59:54 UTC Mon Apr 18 2022
 !
 version 15.5
 service timestamps debug datetime msec
@@ -3956,19 +3956,20 @@ interface GigabitEthernet0/1/0.949703
 interface GigabitEthernet0/1/0.949901
  description ##R SAI LOGISTICS INDIA PRIVATE LIMITED#581108#10Mb##
  encapsulation dot1Q 949 second-dot1q 901
- ip address 203.110.85.238 255.255.255.252
  ip access-group VOIP in
  ip access-group VOIP out
+ shutdown
  service-policy input 10_Mbps
  service-policy output 10_Mbps
 !
 interface GigabitEthernet0/1/0.949902
- description ##R SAI LOGISTICS INDIA PRIVATE LIMITED#581107#60Mb##
+ description ##R SAI LOGISTICS INDIA PRIVATE LIMITED#581107&5811008#70Mb##
  encapsulation dot1Q 949 second-dot1q 902
  ip address 172.30.80.57 255.255.255.248 secondary
+ ip address 203.110.85.238 255.255.255.252 secondary
  ip address 203.110.90.122 255.255.255.248
- service-policy input 60_Mbps
- service-policy output 60_Mbps
+ service-policy input 70_Mbps
+ service-policy output 70_Mbps
 !
 interface GigabitEthernet0/1/0.949903
  description ##IDENTIFYPLUS DELIVERY SERVICES PRIVATE LIMITED#581156#40Mb##
