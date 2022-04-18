@@ -5,7 +5,7 @@ R_CORE1###
 ##MILL#R_CORE1###
 Building configuration...
 
-Current configuration : 107136 bytes
+Current configuration : 107227 bytes
 !
 ! Last configuration change at 12:38:51 UTC Mon Apr 18 2022
 !
@@ -4234,6 +4234,7 @@ router bgp 23872
 ip forward-protocol nd
 !
 ip bgp-community new-format
+ip community-list 50 permit 4755:601
 ip ftp username admin
 ip ftp password 7 141317070817262D3038
 no ip http server
@@ -4353,6 +4354,9 @@ route-map TATA_IZO permit 20
 !
 route-map blackhole_AIRTEL permit 10
  set community 65299:9498
+!
+route-map TATA_IZO_IN permit 30
+ match community 50
 !
 snmp-server community deldsl RO 20
 snmp-server community public RO 20
