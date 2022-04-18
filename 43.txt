@@ -7,7 +7,7 @@ Building configuration...
 
 Current configuration : 107333 bytes
 !
-! Last configuration change at 13:09:01 UTC Mon Apr 18 2022
+! Last configuration change at 16:36:15 UTC Mon Apr 18 2022
 !
 version 15.5
 service timestamps debug datetime msec
@@ -1372,14 +1372,14 @@ interface GigabitEthernet0/0/4.342
  service-policy output 50_Mbps
 !
 interface GigabitEthernet0/0/4.343
- description ##VMD_CAD#111043#15MB##
+ description ##VMD_CAD#111043#50MB##
  encapsulation dot1Q 343
  ip address 203.110.85.217 255.255.255.252 secondary
  ip address 203.110.85.221 255.255.255.252 secondary
  ip address 203.110.85.209 255.255.255.248
  arp timeout 5
- service-policy input 15_Mbps
- service-policy output 15_Mbps
+ service-policy input 50_Mbps
+ service-policy output 50_Mbps
 !
 interface GigabitEthernet0/0/4.344
  description ##SECUREL YNKX NETWORKS#111373#30Mb#Mill##
