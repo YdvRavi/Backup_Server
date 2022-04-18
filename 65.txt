@@ -291,7 +291,6 @@ confirm onu mac 38:94:e0:c3:eb:0d onuid 17 auth-mode mac
 confirm onu mac 38:94:e0:ac:c5:c8 onuid 18 auth-mode mac
 confirm onu mac 38:94:e0:c3:f1:f8 onuid 19 auth-mode mac
 confirm onu mac 38:94:e0:c2:50:70 onuid 20 auth-mode mac
-confirm onu mac 38:94:e0:a4:21:a0 onuid 21
 confirm onu mac 7c:a9:6b:84:d5:00 onuid 22 auth-mode mac
 confirm onu mac 38:94:e0:a4:0b:60 onuid 23 auth-mode mac
 confirm onu mac 1c:20:db:9a:ed:ee onuid 24 auth-mode mac
@@ -384,7 +383,6 @@ onu mac-auth add 7C:A9:6B:84:D5:00
 onu mac-auth add 7C:A9:6B:84:D5:02
 onu mac-auth add 38:94:E0:A4:0B:A0
 onu mac-auth add E0:67:B3:1A:F0:01
-onu mac-auth add 38:94:E0:A4:21:A0
 onu mac-auth add 38:94:E0:C2:43:78
 onu mac-auth add 38:94:E0:C2:50:70
 onu mac-auth add 7C:A9:6B:D9:1F:A8
@@ -478,7 +476,7 @@ onu 6 description BRAND_BREWERY
 onu 6 ctc eth 1 vlan pvid 10 pri 0
 onu 6 ctc eth 1 vlan mode tag
 onu 7 description 331300_Only
-onu 8 description Veromoda_331299
+onu 8 description 331299_Veromoda
 onu 9 description 331301_Rhea
 onu 10 description 331305_Uniqlo
 onu 10 ctc eth 1 vlan pvid 10 pri 0
@@ -577,6 +575,7 @@ onu 20 ctc eth 2 vlan pvid 712 pri 0
 onu 20 ctc eth 2 vlan mode transparent
 onu 21 description 331364_Sanjay
 onu 22 description 331141_Damila
+onu 27 description 331333_ANON
 exit
 !
 interface epon 0/4
