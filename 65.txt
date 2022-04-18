@@ -286,8 +286,7 @@ confirm onu mac 38:94:e0:c2:43:78 onuid 11 auth-mode mac
 confirm onu mac e0:67:b3:0e:34:f5 onuid 12 auth-mode mac
 confirm onu mac 38:94:e0:b3:f6:be onuid 13 auth-mode mac
 confirm onu mac 38:94:e0:d0:4d:79 onuid 14 auth-mode mac
-confirm onu mac 38:94:e0:c3:a2:59 onuid 15 auth-mode mac
-confirm onu mac 7c:a9:6b:d9:1f:a8 onuid 16
+confirm onu mac 7c:a9:6b:d9:1f:a8 onuid 16 auth-mode mac
 confirm onu mac 38:94:e0:c3:eb:0d onuid 17 auth-mode mac
 confirm onu mac 38:94:e0:ac:c5:c8 onuid 18 auth-mode mac
 confirm onu mac 38:94:e0:c3:f1:f8 onuid 19 auth-mode mac
@@ -388,11 +387,11 @@ onu mac-auth add E0:67:B3:1A:F0:01
 onu mac-auth add 38:94:E0:A4:21:A0
 onu mac-auth add 38:94:E0:C2:43:78
 onu mac-auth add 38:94:E0:C2:50:70
+onu mac-auth add 7C:A9:6B:D9:1F:A8
 onu mac-auth add E0:67:B3:0E:34:F5
 onu mac-auth add A0:C6:EC:04:67:7E
 onu mac-auth add 38:94:E0:D0:4D:79
 onu mac-auth add 38:94:E0:C3:EB:0D
-onu mac-auth add 38:94:E0:C3:A2:59
 onu mac-auth add 38:94:E0:B1:D9:48
 onu mac-auth add 1C:20:DB:9A:ED:EE
 onu mac-auth add 38:94:E0:B1:D9:6E
@@ -489,7 +488,9 @@ onu 12 description 331318_Creamery
 onu 13 description 331330_West
 onu 14 description 331338_Mohan
 onu 14 ctc eth 1 phy_ctrl enable
-onu 15 description 331067_Welgrow
+onu 16 description 331067_Welgrow
+onu 16 ctc eth 1 vlan pvid 0 pri 0
+onu 16 ctc eth 1 vlan mode transparent
 onu 17 description 331344_Aditya
 onu 18 description 331351_M-zone
 onu 19 ctc eth 1 vlan pvid 712 pri 0
