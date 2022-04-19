@@ -465,9 +465,6 @@ active
 aim 0/1/39 name 601038_Aggya_SHOP212
 permit sn string-hex HWTC-88a181a5 line 3 default line 3
 active
-aim 0/1/40 name 601064_AGRARIAN_G88
-permit sn string-hex HWTC-11a54aa6 line 3 default line 3
-active
 aim 0/1/41 name 601030_swaatique
 permit sn string-hex GNXS-011f1a00 line 1 default line 1
 active
