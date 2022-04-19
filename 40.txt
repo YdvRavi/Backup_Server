@@ -2,6 +2,8 @@
 
 ## terminal length 0
 Ardee_OLT#85.61### 
+2000/01/29 04:56:41   ONU Illegal Register     PON 0/2 ONU 42 38:94:E0:C3:F2:3A Rejected by White-list authentication.
+
 
 Current configuration:
 !
