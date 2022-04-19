@@ -5,10 +5,10 @@ R_CORE###
 ##MILL#R_CORE###
 Building configuration...
 
-Current configuration : 39772 bytes
+Current configuration : 39730 bytes
 !
-! Last configuration change at 14:15:52 IST Sat Apr 16 2022
-! NVRAM config last updated at 14:15:56 IST Sat Apr 16 2022
+! Last configuration change at 16:40:44 IST Tue Apr 19 2022
+! NVRAM config last updated at 16:40:51 IST Tue Apr 19 2022
 !
 version 15.3
 service timestamps debug datetime msec
@@ -385,7 +385,6 @@ interface GigabitEthernet0/0/1.206
 interface GigabitEthernet0/0/1.207
  description ##N Chirag#351093#30Mb#NTC-VK(VSM)##
  encapsulation dot1Q 207
- ip address 203.110.83.41 255.255.255.252
  ip access-group VOIP in
  ip access-group VOIP out
  arp timeout 60
