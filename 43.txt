@@ -5,7 +5,7 @@ R_CORE1###
 ##MILL#R_CORE1###
 Building configuration...
 
-Current configuration : 107333 bytes
+Current configuration : 107361 bytes
 !
 ! Last configuration change at 16:36:15 UTC Mon Apr 18 2022
 !
@@ -82,6 +82,8 @@ redundancy
 !
 !
 lldp run
+!
+class-map match-all R_SAI
 !
 policy-map 10_Mbps
  class class-default
