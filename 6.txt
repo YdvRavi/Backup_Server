@@ -1,6 +1,6 @@
 ##CONFIG##
 
-## Last commit: 2022-04-18 19:26:22 UTC by deldsl
+## Last commit: 2022-04-19 09:36:14 UTC by deldsl
 version 17.4R1.16;
 system {
     host-name MILL_R_JUNOS;
@@ -483,12 +483,16 @@ interfaces {
             }
         }
         unit 414 {
-            disable;
+            description "##Infynix_Data_Services_Pvt_Ltd#10#20Mb##";
             vlan-id 414;
             family inet {
                 filter {
                     input VOIP;
                     output VOIP;
+                }
+                policer {
+                    input 20_Mbps;
+                    output 20_Mbps;
                 }
             }
         }
