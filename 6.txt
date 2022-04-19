@@ -1,6 +1,6 @@
 ##CONFIG##
 
-## Last commit: 2022-04-19 12:54:18 UTC by deldsl
+## Last commit: 2022-04-19 12:55:35 UTC by deldsl
 version 17.4R1.16;
 system {
     host-name MILL_R_JUNOS;
@@ -1143,11 +1143,6 @@ interfaces {
                 }
                 address 203.110.81.177/29;
             }
-        }
-        unit 461 {
-            description "##Infynix_Data_Services_Pvt_Ltd#XXXXXX#20Mb##";
-            vlan-id 461;
-            family inet;
         }
         unit 501 {
             disable;
