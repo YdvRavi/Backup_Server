@@ -321,6 +321,9 @@ aim 0/1/37
 active
 aim 0/1/40 name 601064_AGRARIAN_G88
 active
+aim 0/1/51
+local protocol-port-80 enable mode forward
+active
 aim 0/2/1
 active
 aim 0/2/2 name 601026_Palak
@@ -494,6 +497,9 @@ permit sn string-hex HWTC-11a358a6 line 3 default line 3
 active
 aim 0/1/50 name 601062_gurumuk
 permit sn string-hex HWTC-11a4f8a6 line 3 default line 3
+active
+aim 0/1/51 name 601065_Parul
+permit sn string-hex HWTC-11a029a6 line 1 default line 1
 active
 aim 0/2/1 name 601007_KREATIVE
 permit sn string-hex GNXS-01107f90 line 1 default line 1
