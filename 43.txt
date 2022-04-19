@@ -5,9 +5,9 @@ R_CORE1###
 ##MILL#R_CORE1###
 Building configuration...
 
-Current configuration : 107650 bytes
+Current configuration : 107860 bytes
 !
-! Last configuration change at 11:14:28 UTC Tue Apr 19 2022
+! Last configuration change at 11:33:26 UTC Tue Apr 19 2022
 !
 version 15.5
 service timestamps debug datetime msec
@@ -172,6 +172,11 @@ policy-map 15_Mbps
 policy-map 18_Mbps
  class class-default
   police 18432000 3456000 6912000 conform-action transmit  exceed-action drop 
+policy-map R_SAI_ALL
+ class R_SAI
+  police 61440000 11520000 23040000 conform-action transmit  exceed-action drop 
+ class R_SAI_10
+  police 10240000 1920000 3840000 conform-action transmit  exceed-action drop 
 policy-map 80_Mbps
  class class-default
   police 81920000 15360000 30720000 conform-action transmit  exceed-action drop 

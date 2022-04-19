@@ -26,7 +26,7 @@ errdisable auto-recovery cause igmp
 interface ethernet 0/0/1
 description ##H-One#OLT_H-ONE#87.110##
 switchport default vlan 600
-switchport hybrid tagged vlan 100,601,605
+switchport hybrid tagged vlan 100,414,601,605
 switchport hybrid untagged vlan 600
 port-security recovery
 storm-control broadcast 1000
