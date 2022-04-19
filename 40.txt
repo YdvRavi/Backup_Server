@@ -614,6 +614,7 @@ onu 30 description 281068_Thea
 onu 35 description 281022_Alliant
 onu 35 ctc eth 1 vlan pvid 401 pri 0
 onu 35 ctc eth 1 vlan mode tag
+onu 36 description 281024_Nazeer
 onu 42 description 281074_Looks
 onu 45 description 281014_Lite_Bite
 exit
