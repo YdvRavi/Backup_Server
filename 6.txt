@@ -1,6 +1,6 @@
 ##CONFIG##
 
-## Last commit: 2022-04-19 13:14:08 UTC by deldsl
+## Last commit: 2022-04-20 09:33:20 UTC by deldsl
 version 17.4R1.16;
 system {
     host-name MILL_R_JUNOS;
@@ -582,7 +582,7 @@ interfaces {
             }
         }
         unit 421 {
-            description "##Solveda_Software_India_Pvt_Ltd#111077#125MB##";
+            description "##Solveda_Software_India_Pvt_Ltd#111077#25MB##";
             vlan-id 421;
             family inet {
                 filter {
