@@ -601,6 +601,7 @@ onu mac-auth add 7C:A9:6B:D7:6E:72
 onu mac-auth add 7C:A9:6B:D7:6F:76
 onu mac-auth add A0:C6:EC:04:CA:31
 onu mac-auth add 38:94:E0:D9:6F:85
+onu mac-auth add 7C:A9:6B:D7:6E:B2
 onu mac-auth add 7C:A9:6B:D7:6E:B4
 exit
 !
