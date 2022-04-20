@@ -1,6 +1,6 @@
 ##CONFIG##
 
-## Last commit: 2022-04-20 09:33:20 UTC by deldsl
+## Last commit: 2022-04-20 09:35:55 UTC by deldsl
 version 17.4R1.16;
 system {
     host-name MILL_R_JUNOS;
@@ -635,7 +635,7 @@ interfaces {
             }
         }
         unit 425 {
-            description "##USG_Boral_Building_Products_Pvt_Ltd#151091#20MB##";
+            description "##Knauf_India_Pvt_Ltd#151091#20MB##";
             vlan-id 425;
             family inet {
                 filter {

@@ -72,7 +72,7 @@ exit
 interface ethernet 0/0/20
 exit
 interface ethernet 0/0/21
-description ##USG_BORAL#151091#20Mb##
+description ##Knauf_India_Pvt_Ltd#151091#20MB##
 speed 100
 duplex full
 switchport default vlan 425
