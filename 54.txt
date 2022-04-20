@@ -90,7 +90,7 @@ interface port-channel 6
   loopguard 
 exit 
 interface port-channel 7  
-  name "##Prota-Tech India Solutions Pvt Ltd#111107#50MB#JMD##" 
+  name "##Prota-Tech India Solutions Pvt Ltd#271009#50MB#JMD##" 
   pvid 110 
   ingress-check 
   bandwidth-limit cir 51200 
