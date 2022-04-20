@@ -536,7 +536,6 @@ confirm onu mac 38:94:e0:a4:0a:a0 onuid 1 auth-mode mac
 confirm onu mac a4:00:e2:82:a2:8d onuid 2 auth-mode mac
 confirm onu mac 7c:a9:6b:84:d5:2a onuid 3 auth-mode mac
 confirm onu mac 7c:a9:6b:d7:6f:76 onuid 5 auth-mode mac
-confirm onu mac 7c:a9:6b:d7:6e:72 onuid 6 auth-mode mac
 confirm onu mac 7c:a9:6b:d7:6e:b4 onuid 7 auth-mode mac
 confirm onu mac 7c:a9:6b:d7:6e:b2 onuid 8 auth-mode mac
 confirm onu mac a0:c6:ec:04:ca:31 onuid 9 auth-mode mac
@@ -717,9 +716,6 @@ onu 3 ctc eth 1 vlan mode tag
 onu 5 description 191891_Craftpac
 onu 5 ctc eth 1 vlan pvid 813 pri 0
 onu 5 ctc eth 1 vlan mode tag
-onu 6 description 191323_G_B
-onu 6 ctc eth 1 vlan pvid 813 pri 0
-onu 6 ctc eth 1 vlan mode tag
 onu 7 description 191188_kapoor
 onu 7 ctc eth 1 vlan pvid 813 pri 0
 onu 7 ctc eth 1 vlan mode tag

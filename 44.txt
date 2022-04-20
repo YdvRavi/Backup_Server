@@ -144,7 +144,7 @@ errdisable auto-recovery cause bpdu
 errdisable auto-recovery cause igmp
 exit
 interface ethernet 0/0/4
-switchport default vlan 871
+switchport default vlan 606
 storm-control broadcast 10000
 storm-control unicast 10000
 storm-control multicast 10000
