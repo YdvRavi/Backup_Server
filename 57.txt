@@ -466,7 +466,7 @@ interface port-channel 17
   loopguard 
 exit 
 interface port-channel 18  
-  name "##UV#Linear_Spaze Club Pvt Ltd.#SW82.57##" 
+  inactive 
   vlan-trunking 
   bandwidth-limit cir 16384 
   bandwidth-limit pir 16384 
@@ -595,6 +595,7 @@ interface port-channel 26
   dlf-limit 500 
 exit 
 interface port-channel 27  
+  name "##UV#Linear_Spaze Club Pvt Ltd.#SW82.57##" 
   vlan-trunking 
   broadcast-limit 
   broadcast-limit 100 
