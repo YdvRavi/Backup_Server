@@ -5,9 +5,9 @@ R_CORE1###
 ##MILL#R_CORE1###
 Building configuration...
 
-Current configuration : 107815 bytes
+Current configuration : 107758 bytes
 !
-! Last configuration change at 11:22:24 UTC Wed Apr 20 2022
+! Last configuration change at 11:50:23 UTC Wed Apr 20 2022
 !
 version 15.5
 service timestamps debug datetime msec
@@ -981,13 +981,13 @@ interface GigabitEthernet0/0/4.262
  service-policy output 50_Mbps
 !
 interface GigabitEthernet0/0/4.263
- description ##PALLIA TRANS LOGISTICS PVT LTD#111372#50Mb#MILL#                                                         
+ description ##PALLIA TRANS LOGISTICS PVT LTD#111372#20Mb#MILL#
  encapsulation dot1Q 263
  ip address 103.242.225.41 255.255.255.248
  ip access-group VOIP in
  ip access-group VOIP out
- service-policy input 50_Mbps
- service-policy output 50_Mbps
+ service-policy input 20_Mbps
+ service-policy output 20_Mbps
 !
 interface GigabitEthernet0/0/4.264
  description ##Prime Scholars International School#251155#20Mb##
