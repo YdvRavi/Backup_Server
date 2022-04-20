@@ -535,6 +535,7 @@ confirm onu mac 7c:a9:6b:02:c9:68 onuid 8 auth-mode mac
 confirm onu mac 7c:a9:6b:af:07:28 onuid 9 auth-mode mac
 confirm onu mac 54:47:e8:6e:e1:e9 onuid 10 auth-mode mac
 confirm onu mac 7c:a9:6b:d7:6e:b4 onuid 11 auth-mode mac
+confirm onu mac 7c:a9:6b:d9:1b:3c onuid 12 auth-mode mac
 confirm onu mac 7c:a9:6b:01:ce:48 onuid 14 auth-mode mac
 confirm onu mac e0:67:b3:0e:34:f3 onuid 17 auth-mode mac
 exit
@@ -588,6 +589,7 @@ onu mac-auth add 7C:A9:6B:3B:1A:1F
 onu mac-auth add 7C:A9:6B:AF:07:28
 onu mac-auth add A4:00:E2:73:1B:6B
 onu mac-auth add 7C:A9:6B:01:CE:48
+onu mac-auth add 7C:A9:6B:D9:1B:3C
 onu mac-auth add 7C:A9:6B:02:C9:68
 onu mac-auth add E0:67:B3:0E:34:F3
 onu mac-auth add A0:C6:EC:04:CA:2D
@@ -735,6 +737,8 @@ onu 10 ctc eth 1 vlan mode tag
 onu 11 description 131461_PALTECH
 onu 11 ctc eth 1 vlan pvid 194 pri 0
 onu 11 ctc eth 1 vlan mode tag
+onu 12 ctc eth 1 vlan pvid 194 pri 0
+onu 12 ctc eth 1 vlan mode tag
 onu 14 description 131312_Vital
 onu 14 ctc eth 1 vlan pvid 42 pri 0
 onu 14 ctc eth 1 vlan mode tag
