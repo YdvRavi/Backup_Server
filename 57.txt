@@ -134,8 +134,8 @@ vlan 109
 exit 
 vlan 120 
   name 120 
-  normal 1-17,19-27 
-  fixed 18,28 
+  normal 1-26 
+  fixed 27-28 
   forbidden "" 
   untagged "" 
 exit 
