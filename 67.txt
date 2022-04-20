@@ -1,6 +1,8 @@
 ##CONFIG##
 
-85.58# terminal length 0
+85.58# 
+2022/04/20 16:52:29   ONU Deregister           PON 0/2 ONU 2 E0:67:B3:1A:EF:F2 MPCP ONU initiates DEREG.
+terminal length 0
 OLT#Heritage#85.58# 
 
 Current configuration:
