@@ -3,6 +3,8 @@
 87.22### 
 ##Mill_OLT#87.22### terminal length 0
 ##Mill_OLT#87.22### 
+2022/04/20 15:09:06   ONU AUTH Success         PON 0/3 ONU 4 7C:A9:6B:3B:19:F5.
+
 
 Current configuration:
 !
