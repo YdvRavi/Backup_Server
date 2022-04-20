@@ -5,7 +5,7 @@ R_CORE1###
 ##MILL#R_CORE1###
 Building configuration...
 
-Current configuration : 107741 bytes
+Current configuration : 107794 bytes
 !
 ! Last configuration change at 16:27:42 UTC Wed Apr 20 2022
 !
@@ -3258,6 +3258,7 @@ interface GigabitEthernet0/0/5.193
 interface GigabitEthernet0/0/5.194
  description ##PALTECH COOLING TOWERS#131461#15Mb##
  encapsulation dot1Q 194
+ ip address 203.110.88.161 255.255.255.252 secondary
  ip address 203.110.91.221 255.255.255.252
  ip access-group VOIP in
  ip access-group VOIP out
