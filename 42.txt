@@ -5,9 +5,9 @@ R_CORE###
 ##MILL#R_CORE###
 Building configuration...
 
-Current configuration : 39772 bytes
+Current configuration : 39791 bytes
 !
-! Last configuration change at 16:44:51 IST Tue Apr 19 2022
+! Last configuration change at 11:35:11 IST Wed Apr 20 2022
 ! NVRAM config last updated at 16:40:51 IST Tue Apr 19 2022
 !
 version 15.3
@@ -465,8 +465,9 @@ interface GigabitEthernet0/0/1.216
 interface GigabitEthernet0/0/1.711
  description ##AMBI_VK#R_LAGOON#83.9#TATA_500Mb##
  encapsulation dot1Q 711
- ip address 172.30.83.10 255.255.255.248
+ ip address 203.110.80.105 255.255.255.252
  ip ospf 20 area 2
+ ip ospf cost 20
 !
 interface GigabitEthernet0/0/2
  no ip address
