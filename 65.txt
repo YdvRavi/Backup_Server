@@ -288,7 +288,6 @@ confirm onu mac 38:94:e0:b3:f6:be onuid 13 auth-mode mac
 confirm onu mac 38:94:e0:d0:4d:79 onuid 14 auth-mode mac
 confirm onu mac 7c:a9:6b:d9:1f:a8 onuid 16 auth-mode mac
 confirm onu mac 38:94:e0:c3:eb:0d onuid 17 auth-mode mac
-confirm onu mac 38:94:e0:ac:c5:c8 onuid 18 auth-mode mac
 confirm onu mac 38:94:e0:c3:f1:f8 onuid 19 auth-mode mac
 confirm onu mac 38:94:e0:c2:50:70 onuid 20 auth-mode mac
 confirm onu mac 7c:a9:6b:84:d5:00 onuid 22 auth-mode mac
@@ -393,7 +392,6 @@ onu mac-auth add 38:94:E0:C3:EB:0D
 onu mac-auth add 38:94:E0:B1:D9:48
 onu mac-auth add 1C:20:DB:9A:ED:EE
 onu mac-auth add 38:94:E0:B1:D9:6E
-onu mac-auth add 38:94:E0:AC:C5:C8
 onu mac-auth add 38:94:E0:B1:B7:D6
 exit
 !
@@ -490,7 +488,7 @@ onu 16 description 331067_Welgrow
 onu 16 ctc eth 1 vlan pvid 0 pri 0
 onu 16 ctc eth 1 vlan mode transparent
 onu 17 description 331344_Aditya
-onu 18 description 331351_M-zone
+onu 19 description 331351_M-zone
 onu 19 ctc eth 1 vlan pvid 712 pri 0
 onu 19 ctc eth 1 vlan mode tag
 onu 20 description 331356_Vision
