@@ -5,9 +5,9 @@ R_CORE1###
 ##MILL#R_CORE1###
 Building configuration...
 
-Current configuration : 107830 bytes
+Current configuration : 107827 bytes
 !
-! Last configuration change at 10:54:14 UTC Wed Apr 20 2022
+! Last configuration change at 11:01:52 UTC Wed Apr 20 2022
 !
 version 15.5
 service timestamps debug datetime msec
@@ -3101,12 +3101,12 @@ interface GigabitEthernet0/0/5.131
  service-policy output 50_Mbps
 !
 interface GigabitEthernet0/0/5.132
- description ##EASTMAN AUTO & POWER LIMITED#131373#100Mb#UV##
+ description ##EASTMAN AUTO & POWER LIMITED#131373#50Mb#UV##
  encapsulation dot1Q 132
  ip address 203.110.83.161 255.255.255.240
  arp timeout 5
- service-policy input 100_Mbps
- service-policy output 100_Mbps
+ service-policy input 50_Mbps
+ service-policy output 50_Mbps
 !
 interface GigabitEthernet0/0/5.133
  description ##Savi Infoservices India Pvt Ltd#111052#40Mb#UV##
