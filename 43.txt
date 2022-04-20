@@ -5,9 +5,9 @@ R_CORE1###
 ##MILL#R_CORE1###
 Building configuration...
 
-Current configuration : 107751 bytes
+Current configuration : 107741 bytes
 !
-! Last configuration change at 12:57:47 UTC Wed Apr 20 2022
+! Last configuration change at 13:06:36 UTC Wed Apr 20 2022
 !
 version 15.5
 service timestamps debug datetime msec
@@ -3778,7 +3778,6 @@ interface GigabitEthernet0/1/0.711
  encapsulation dot1Q 711
  ip address 203.110.87.181 255.255.255.252
  ip ospf 20 area 2
- shutdown
  arp timeout 5
 !
 interface GigabitEthernet0/1/0.841

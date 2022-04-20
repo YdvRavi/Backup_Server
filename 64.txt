@@ -537,7 +537,6 @@ confirm onu mac a4:00:e2:82:a2:8d onuid 2 auth-mode mac
 confirm onu mac 7c:a9:6b:84:d5:2a onuid 3 auth-mode mac
 confirm onu mac 7c:a9:6b:d7:6f:76 onuid 5 auth-mode mac
 confirm onu mac 7c:a9:6b:d7:6e:b4 onuid 7 auth-mode mac
-confirm onu mac 7c:a9:6b:d7:6e:b2 onuid 8 auth-mode mac
 confirm onu mac a0:c6:ec:04:ca:31 onuid 9 auth-mode mac
 confirm onu mac 38:94:e0:a4:0a:e0 onuid 10 auth-mode mac
 confirm onu mac 54:47:e8:6f:03:b9 onuid 11 auth-mode mac
@@ -602,7 +601,6 @@ onu mac-auth add 7C:A9:6B:D7:6E:72
 onu mac-auth add 7C:A9:6B:D7:6F:76
 onu mac-auth add A0:C6:EC:04:CA:31
 onu mac-auth add 38:94:E0:D9:6F:85
-onu mac-auth add 7C:A9:6B:D7:6E:B2
 onu mac-auth add 7C:A9:6B:D7:6E:B4
 exit
 !
@@ -719,9 +717,6 @@ onu 5 ctc eth 1 vlan mode tag
 onu 7 description 191188_kapoor
 onu 7 ctc eth 1 vlan pvid 813 pri 0
 onu 7 ctc eth 1 vlan mode tag
-onu 8 description 191456_Bata
-onu 8 ctc eth 1 vlan pvid 813 pri 0
-onu 8 ctc eth 1 vlan mode tag
 onu 9 description 191530_Deepika
 onu 9 ctc eth 1 vlan pvid 813 pri 0
 onu 9 ctc eth 1 vlan mode tag
