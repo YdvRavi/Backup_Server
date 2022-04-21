@@ -534,7 +534,6 @@ interface epon 0/8
 onu auth-mode mac
 confirm onu mac 7c:a9:6b:84:d5:2a onuid 3 auth-mode mac
 confirm onu mac 7c:a9:6b:d7:6f:76 onuid 5 auth-mode mac
-confirm onu mac 38:94:e0:a4:0a:e0 onuid 10 auth-mode mac
 exit
 !
 interface epon 0/1
@@ -585,7 +584,6 @@ exit
 !
 interface epon 0/8
 onu mac-auth add 7C:A9:6B:84:D5:2A
-onu mac-auth add 38:94:E0:A4:0A:E0
 onu mac-auth add 7C:A9:6B:D7:6E:72
 onu mac-auth add 7C:A9:6B:D7:6F:76
 onu mac-auth add 7C:A9:6B:D7:6E:B2
@@ -695,9 +693,6 @@ onu 3 ctc eth 1 vlan mode tag
 onu 5 description 191891_Craftpac
 onu 5 ctc eth 1 vlan pvid 813 pri 0
 onu 5 ctc eth 1 vlan mode tag
-onu 10 description 191502_Dolomite
-onu 10 ctc eth 1 vlan pvid 813 pri 0
-onu 10 ctc eth 1 vlan mode tag
 exit
 !
 debug mode 

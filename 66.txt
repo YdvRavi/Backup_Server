@@ -706,6 +706,7 @@ onu 5 ctc eth 1 vlan mode tag
 onu 6 description 111407_REINHART
 onu 6 ctc eth 1 vlan pvid 3 pri 0
 onu 6 ctc eth 1 vlan mode tag
+onu 7 description 111422_AEPC_DEMO
 onu 8 description Mayank_111409
 onu 8 ctc eth 1 vlan pvid 283 pri 0
 onu 8 ctc eth 1 vlan mode tag
