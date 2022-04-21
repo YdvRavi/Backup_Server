@@ -5,9 +5,9 @@ R_CORE1###
 ##MILL#R_CORE1###
 Building configuration...
 
-Current configuration : 107751 bytes
+Current configuration : 107892 bytes
 !
-! Last configuration change at 19:16:18 UTC Wed Apr 20 2022
+! Last configuration change at 11:11:13 UTC Thu Apr 21 2022
 !
 version 15.5
 service timestamps debug datetime msec
@@ -1034,10 +1034,14 @@ interface GigabitEthernet0/0/4.271
  service-policy output 30_Mbps
 !
 interface GigabitEthernet0/0/4.272
+ description ##Demo#Apparel AEPC##
  encapsulation dot1Q 272
+ ip address 203.110.88.245 255.255.255.252
  ip access-group VOIP in
  ip access-group VOIP out
  shutdown
+ service-policy input 100_Mbps
+ service-policy output 100_Mbps
 !
 interface GigabitEthernet0/0/4.280
  description ##Dhwani Rural#111402#100Mb#Mill##
