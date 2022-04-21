@@ -698,9 +698,6 @@ active
 aim 0/10/8 name 641147_Vishlesh_H-801
 permit sn string-hex HWTC-88a2c7a5 line 1 default line 1
 active
-aim 0/10/9 name 641153_Adarsh_G801
-permit sn string-hex HWTC-96971ba4 line 1 default line 1
-active
 aim 0/10/11 name 641158_Vineet_G804
 permit sn string-hex HWTC-11a4e7a6 line 1 default line 1
 active

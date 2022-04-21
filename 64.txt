@@ -472,6 +472,7 @@ interface epon 0/1
 onu auth-mode mac
 confirm onu mac 38:94:e0:d3:d0:36 onuid 1 auth-mode mac
 confirm onu mac 80:14:a8:86:e4:d0 onuid 2 auth-mode mac
+confirm onu mac 7c:a9:6b:d7:6f:76 onuid 3 auth-mode mac
 confirm onu mac 38:94:e0:a4:21:a8 onuid 4 auth-mode mac
 confirm onu mac 38:94:e0:a4:0b:38 onuid 6 auth-mode mac
 exit
@@ -536,6 +537,7 @@ exit
 interface epon 0/1
 onu mac-auth add 38:94:E0:A4:0B:38
 onu mac-auth add 38:94:E0:A4:21:A8
+onu mac-auth add 7C:A9:6B:D7:6F:76
 onu mac-auth add 80:14:A8:86:E4:D0
 onu mac-auth add 38:94:E0:D3:D0:36
 exit
@@ -590,6 +592,9 @@ onu 1 ctc eth 1 vlan mode tag
 onu 2 description Catrionia
 onu 2 ctc eth 1 vlan pvid 813 pri 0
 onu 2 ctc eth 1 vlan mode tag
+onu 3 description 191365_JLL
+onu 3 ctc eth 1 vlan pvid 813 pri 0
+onu 3 ctc eth 1 vlan mode tag
 onu 4 description FOC_191730
 onu 4 ctc eth 1 vlan pvid 813 pri 0
 onu 4 ctc eth 1 vlan mode tag
