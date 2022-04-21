@@ -357,7 +357,7 @@ confirm onu mac 7c:a9:6b:d6:af:3c onuid 24 auth-mode mac
 confirm onu mac cc:05:77:b9:e2:b8 onuid 25 auth-mode mac
 confirm onu mac 7c:a9:6b:d7:6a:b2 onuid 26 auth-mode mac
 confirm onu mac c0:bf:c0:44:d9:dd onuid 27 auth-mode mac
-confirm onu mac 38:94:e0:c3:a2:59 onuid 28
+confirm onu mac 38:94:e0:c3:a2:59 onuid 28 auth-mode mac
 exit
 !
 interface epon 0/4
@@ -448,6 +448,7 @@ onu mac-auth add 7C:A9:6B:D6:AF:3C
 onu mac-auth add 38:94:E0:B7:84:79
 onu mac-auth add 38:94:E0:A4:21:F0
 onu mac-auth add 38:94:E0:C2:3B:B8
+onu mac-auth add 38:94:E0:C3:A2:59
 onu mac-auth add 7C:A9:6B:D7:6A:B2
 onu mac-auth add 38:94:E0:B1:D9:58
 onu mac-auth add CC:05:77:B9:E2:B8
@@ -575,6 +576,7 @@ onu 20 ctc eth 2 vlan mode transparent
 onu 21 description 331364_Sanjay
 onu 22 description 331141_Damila
 onu 27 description 331333_ANON
+onu 28 description 331018_Hidesign
 exit
 !
 interface epon 0/4
