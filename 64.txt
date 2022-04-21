@@ -1,8 +1,6 @@
 ##CONFIG##
 
-## 
-2022/04/22 00:02:16   ONU AUTH Success         PON 0/4 ONU 9 7C:A9:6B:84:0F:62.
-terminal length 0
+## terminal length 0
 AMBI_GGN_OLT#83.99### 
 
 Current configuration:
