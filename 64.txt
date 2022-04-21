@@ -21,7 +21,7 @@ exit
 !
 vlan 1
 exit
-vlan 7 - 8
+vlan 7 - 9
 vlan 11
 exit
 vlan 15
@@ -198,7 +198,7 @@ interface gigabitethernet 0/10
 description Uplink_Sw_87.165_P21
 switchport mode hybrid
 switchport hybrid vlan 1 untagged
-switchport hybrid vlan 7 - 8 tagged
+switchport hybrid vlan 7 - 9 tagged
 switchport hybrid vlan 11 tagged
 switchport hybrid vlan 15 tagged
 switchport hybrid vlan 17 tagged
@@ -321,7 +321,7 @@ interface epon 0/2
 switchport mode hybrid
 switchport hybrid vlan 1 untagged
 switchport hybrid vlan 813 untagged
-switchport hybrid vlan 7 - 8 tagged
+switchport hybrid vlan 7 - 9 tagged
 switchport hybrid vlan 15 tagged
 switchport hybrid vlan 17 tagged
 switchport hybrid vlan 21 tagged
@@ -479,7 +479,7 @@ exit
 !
 interface epon 0/2
 onu auth-mode mac
-confirm onu mac 38:94:e0:a4:0a:e0 onuid 1
+confirm onu mac 38:94:e0:a4:0a:e0 onuid 1 auth-mode mac
 confirm onu mac 7c:a9:6b:d7:6f:e4 onuid 2 auth-mode mac
 confirm onu mac 7c:a9:6b:d7:22:e2 onuid 4 auth-mode mac
 confirm onu mac 7c:a9:6b:84:0f:62 onuid 5 auth-mode mac
@@ -553,6 +553,7 @@ onu mac-auth add 7C:A9:6B:84:D5:30
 onu mac-auth add 38:94:E0:A8:C2:0D
 onu mac-auth add 38:94:E0:AC:C6:0A
 onu mac-auth add A0:C6:EC:07:87:58
+onu mac-auth add 38:94:E0:A4:0A:E0
 onu mac-auth add 7C:A9:6B:D7:22:E2
 onu mac-auth add 38:94:E0:B1:D9:60
 onu mac-auth add A4:00:E2:6F:AE:FE
@@ -605,6 +606,9 @@ onu 6 ctc eth 1 vlan mode tag
 exit
 !
 interface epon 0/2
+onu 1 description All_In_Events
+onu 1 ctc eth 1 vlan pvid 9 pri 0
+onu 1 ctc eth 1 vlan mode tag
 onu 2 description 191897_Jenica
 onu 2 ctc eth 1 vlan pvid 813 pri 0
 onu 2 ctc eth 1 vlan mode transparent
