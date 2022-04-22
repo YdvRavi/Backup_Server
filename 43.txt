@@ -5,9 +5,9 @@ R_CORE1###
 ##MILL#R_CORE1###
 Building configuration...
 
-Current configuration : 107892 bytes
+Current configuration : 107944 bytes
 !
-! Last configuration change at 14:57:07 UTC Fri Apr 22 2022
+! Last configuration change at 15:02:30 UTC Fri Apr 22 2022
 !
 version 15.5
 service timestamps debug datetime msec
@@ -1204,6 +1204,7 @@ interface GigabitEthernet0/0/4.314
 interface GigabitEthernet0/0/4.315
  description ##Sagacious Research Pvt Ltd#111315#50Mb#Mill##
  encapsulation dot1Q 315
+ ip address 203.110.84.97 255.255.255.248 secondary
  ip address 203.110.84.121 255.255.255.248
  ip access-group VOIP in
  ip access-group VOIP out
