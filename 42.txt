@@ -5,7 +5,7 @@ R_CORE###
 ##MILL#R_CORE###
 Building configuration...
 
-Current configuration : 39791 bytes
+Current configuration : 39748 bytes
 !
 ! Last configuration change at 11:35:11 IST Wed Apr 20 2022
 ! NVRAM config last updated at 11:47:07 IST Wed Apr 20 2022
@@ -332,7 +332,6 @@ interface GigabitEthernet0/0/1.48
 interface GigabitEthernet0/0/1.49
  description ##Sagacious Research Pvt Ltd#111316#50Mb#TAT_P2P##
  encapsulation dot1Q 49
- ip address 203.110.93.241 255.255.255.248
  ip access-group VOIP in
  ip access-group VOIP out
 !
