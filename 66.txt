@@ -570,7 +570,7 @@ exit
 !
 interface epon 0/8
 onu auth-mode mac
-confirm onu mac e0:67:b3:1a:f0:2e onuid 3
+confirm onu mac e0:67:b3:1a:f0:2e onuid 3 auth-mode mac
 exit
 !
 interface epon 0/1
