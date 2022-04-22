@@ -1,8 +1,6 @@
 ##CONFIG##
 
-85.58# 
-2022/04/22 23:02:39   ONU Dying Gasp           PON 0/5 ONU 1 A0:C6:EC:07:79:31 
-terminal length 0
+85.58# terminal length 0
 OLT#Heritage#85.58# 
 
 Current configuration:
