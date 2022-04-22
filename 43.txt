@@ -7,7 +7,7 @@ Building configuration...
 
 Current configuration : 107892 bytes
 !
-! Last configuration change at 11:11:13 UTC Thu Apr 21 2022
+! Last configuration change at 11:50:35 UTC Fri Apr 22 2022
 !
 version 15.5
 service timestamps debug datetime msec
@@ -1351,11 +1351,11 @@ interface GigabitEthernet0/0/4.337
  shutdown
 !
 interface GigabitEthernet0/0/4.338
- description ##Satkar Travels Pvt Ltd#111387#15Mb#Mill##
+ description ##Satkar Travels Pvt Ltd#111387#20Mb#Mill##
  encapsulation dot1Q 338
  ip address 103.242.225.233 255.255.255.252
- service-policy input 15_Mbps
- service-policy output 15_Mbps
+ service-policy input 20_Mbps
+ service-policy output 20_Mbps
 !
 interface GigabitEthernet0/0/4.340
  description ##Apparel Export Promotion Council#111137#70MB#Mill##
