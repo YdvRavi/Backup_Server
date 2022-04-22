@@ -5,7 +5,7 @@ R_CORE1###
 ##MILL#R_CORE1###
 Building configuration...
 
-Current configuration : 107929 bytes
+Current configuration : 107996 bytes
 !
 ! Last configuration change at 15:25:00 UTC Fri Apr 22 2022
 !
@@ -1217,6 +1217,8 @@ interface GigabitEthernet0/0/4.316
  shutdown
 !
 interface GigabitEthernet0/0/4.319
+ encapsulation dot1Q 319
+ ip address 203.110.84.97 255.255.255.248
 !
 interface GigabitEthernet0/0/4.321
  description ##Quadient Solutions India Pvt Ltd#111034#10MB#Mill#
