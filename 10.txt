@@ -20,10 +20,10 @@ vlan 1
 exit 
 vlan 315 
   name 315 
-  normal 2-8 
-  fixed 1,9-10 
+  normal 3-8 
+  fixed 1-2,9-10 
   forbidden "" 
-  untagged 1 
+  untagged 1-2 
 exit 
 interface port-channel 1  
   name "##Sagacious Research Pvt Ltd#111315#50Mb##" 
@@ -44,7 +44,8 @@ interface port-channel 1
   loopguard 
 exit 
 interface port-channel 2  
-  inactive 
+  pvid 315 
+  ingress-check 
   loopguard 
 exit 
 interface port-channel 3  
