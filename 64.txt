@@ -508,7 +508,6 @@ confirm onu mac 38:94:e0:c2:4f:a8 onuid 2 auth-mode mac
 confirm onu mac 54:47:e8:6e:e2:29 onuid 3 auth-mode mac
 confirm onu mac e0:67:b3:1a:f0:25 onuid 6 auth-mode mac
 confirm onu mac 80:14:a8:86:e5:18 onuid 8 auth-mode mac
-confirm onu mac 7c:a9:6b:84:0f:62 onuid 9 auth-mode mac
 exit
 !
 interface epon 0/5
@@ -559,7 +558,6 @@ onu mac-auth add 7C:A9:6B:84:D4:FC
 exit
 !
 interface epon 0/4
-onu mac-auth add 7C:A9:6B:84:0F:62
 onu mac-auth add 80:14:A8:86:E5:18
 onu mac-auth add 54:47:E8:6E:E2:29
 onu mac-auth add A0:C6:EC:07:79:2F
@@ -654,9 +652,6 @@ onu 6 ctc eth 1 vlan mode tag
 onu 8 description facility_191246
 onu 8 ctc eth 1 vlan pvid 11 pri 0
 onu 8 ctc eth 1 vlan mode tag
-onu 9 description 191855_Premium
-onu 9 ctc eth 1 vlan pvid 813 pri 0
-onu 9 ctc eth 1 vlan mode tag
 exit
 !
 interface epon 0/7
