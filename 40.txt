@@ -2,6 +2,8 @@
 
 ## terminal length 0
 Ardee_OLT#85.61### 
+2000/01/31 19:51:51   ONU Port Los             PON 0/2 ONU 24 78:D7:52:45:F0:69 eth 1 eth_port_los clear event
+
 
 Current configuration:
 !
