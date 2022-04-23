@@ -7,7 +7,7 @@ Building configuration...
 
 Current configuration : 108356 bytes
 !
-! Last configuration change at 20:15:54 UTC Sat Apr 23 2022
+! Last configuration change at 20:35:28 UTC Sat Apr 23 2022
 !
 version 15.5
 service timestamps debug datetime msec
@@ -1355,7 +1355,7 @@ interface GigabitEthernet0/0/4.336
  service-policy output 30_Mbps
 !
 interface GigabitEthernet0/0/4.337
- description ##Farmstock Technologies#50MB#Mill##
+ description ##Farmstock Technologies#50Mb#Mill##
  encapsulation dot1Q 337
  ip address 203.110.81.73 255.255.255.252 secondary
  ip address 203.110.81.57 255.255.255.248
