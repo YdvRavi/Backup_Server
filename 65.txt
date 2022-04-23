@@ -504,6 +504,7 @@ onu 19 description 331351_M-zone
 onu 19 ctc eth 1 vlan pvid 712 pri 0
 onu 19 ctc eth 1 vlan mode tag
 onu 20 description 331356_Vision
+onu 21 description 331340_Gem
 onu 22 description 331347_Premium
 onu 23 description 331224_VENTOTA
 onu 24 description 331185_jamie
