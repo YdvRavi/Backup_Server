@@ -1,6 +1,8 @@
 ##CONFIG##
 
-## terminal length 0
+## 
+2022/04/23 08:59:51   ONU Illegal Register     PON 0/4 ONU 12 7C:A9:6B:D9:1B:3C Rejected by White-list authentication.
+terminal length 0
 UV_olt#87.139### 
 
 Current configuration:
