@@ -192,8 +192,8 @@ interface ethernet 0/0/7
 description "##MILL#RING_2#SECUREL YNKX NETWORK#SW82.21##"
 speed 1000
 duplex full
-switchport trunk allowed vlan 220,241,270,280,290,292,314,335,341,344-347,349-
-351,354,803
+switchport trunk allowed vlan 220,241,270,280,290,292,314,335,337,341,344-347,
+349-351,354,803
 storm-control broadcast 10000
 storm-control unicast 10000
 storm-control multicast 10000
@@ -208,8 +208,8 @@ interface ethernet 0/0/8
 description "##MILL#RING_2#SECUREL YNKX NETWORKS#SW82.22##"
 speed 1000
 duplex full
-switchport trunk allowed vlan 220,241,270,280,290,292,314,335,341,344-347,349-
-351,354,803
+switchport trunk allowed vlan 220,241,270,280,290,292,314,335,337,341,344-347,
+349-351,354,803
 storm-control broadcast 10000
 storm-control unicast 10000
 storm-control multicast 10000
