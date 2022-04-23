@@ -5,9 +5,9 @@ R_CORE###
 ##MILL#R_CORE###
 Building configuration...
 
-Current configuration : 39791 bytes
+Current configuration : 39822 bytes
 !
-! Last configuration change at 13:50:54 IST Fri Apr 22 2022
+! Last configuration change at 12:28:02 IST Sat Apr 23 2022
 ! NVRAM config last updated at 11:47:07 IST Wed Apr 20 2022
 !
 version 15.3
@@ -505,7 +505,7 @@ interface GigabitEthernet0/0/3.401
 interface GigabitEthernet0/0/3.403
  description ##OMG Network India Pvt Ltd#181061#OLD_DATA##
  encapsulation dot1Q 403
- shutdown
+ ip address 203.110.84.1 255.255.255.248
  service-policy input 100_Mbps
  service-policy output 100_Mbps
 !
