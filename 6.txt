@@ -1,6 +1,6 @@
 ##CONFIG##
 
-## Last commit: 2022-04-23 11:39:52 UTC by deldsl
+## Last commit: 2022-04-23 11:43:22 UTC by deldsl
 version 17.4R1.16;
 system {
     host-name MILL_R_JUNOS;
@@ -1841,7 +1841,6 @@ routing-options {
             preference 225;
         }
         route 203.125.101.225/32 next-hop 182.74.144.113;
-        route 157.240.239.174/32 next-hop 182.74.144.113;
     }
     router-id 203.110.80.197;
     autonomous-system 23872;
