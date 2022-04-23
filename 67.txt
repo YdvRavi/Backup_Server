@@ -607,7 +607,6 @@ snmp-server trap-source 127.0.1.1
 !
 interface epon 0/1
 onu auth-mode mac
-confirm onu mac 7c:a9:6b:d7:5f:f4 onuid 3
 confirm onu mac 38:94:e0:d9:4e:7a onuid 4 auth-mode mac
 confirm onu mac 38:94:e0:e3:39:4a onuid 9 auth-mode mac
 exit
@@ -623,14 +622,11 @@ interface epon 0/3
 onu auth-mode mac
 confirm onu mac 7c:a9:6b:3b:1a:1d onuid 1 auth-mode mac
 confirm onu mac 7c:a9:6b:3b:19:d9 onuid 2 auth-mode mac
-confirm onu mac 7c:a9:6b:af:07:b8 onuid 3
 exit
 !
 interface epon 0/4
 onu auth-mode mac
 confirm onu mac 38:94:e0:e3:19:9a onuid 1 auth-mode mac
-confirm onu mac a0:c6:ec:07:87:5c onuid 2
-confirm onu mac 38:94:e0:e3:1b:4a onuid 3
 confirm onu mac 38:94:e0:a4:0b:28 onuid 5 auth-mode mac
 confirm onu mac 7c:a9:6b:84:d5:28 onuid 6 auth-mode mac
 confirm onu mac 38:94:e0:b5:6b:56 onuid 7 auth-mode mac
@@ -651,7 +647,6 @@ interface epon 0/6
 onu auth-mode mac
 confirm onu mac 7c:a9:6b:d9:1b:10 onuid 1 auth-mode mac
 confirm onu mac 38:94:e0:d2:62:c0 onuid 2 auth-mode mac
-confirm onu mac 38:94:e0:a8:c5:9e onuid 4
 confirm onu mac 7c:a9:6b:af:07:48 onuid 5 auth-mode mac
 confirm onu mac a0:c6:ec:04:ca:30 onuid 6 auth-mode mac
 confirm onu mac a0:c6:ec:07:7f:42 onuid 7
@@ -660,7 +655,6 @@ exit
 !
 interface epon 0/7
 onu auth-mode mac
-confirm onu mac 54:47:e8:6f:bc:21 onuid 1 auth-mode mac
 confirm onu mac 54:47:e8:6f:bc:d1 onuid 2 auth-mode mac
 confirm onu mac 54:47:e8:6e:99:a1 onuid 3
 confirm onu mac 54:47:e8:6f:00:c1 onuid 4 auth-mode mac
@@ -723,13 +717,11 @@ onu mac-auth add 7C:A9:6B:D9:1B:10
 onu mac-auth add 7C:A9:6B:01:CE:60
 onu mac-auth add A0:C6:EC:04:CA:30
 onu mac-auth add 38:94:E0:D2:62:C0
-onu mac-auth add 38:94:E0:A8:C5:9E
 exit
 !
 interface epon 0/7
 onu mac-auth add 54:47:E8:6F:3F:01
 onu mac-auth add 54:47:E8:6F:00:C1
-onu mac-auth add 54:47:E8:6F:BC:21
 onu mac-auth add 7C:A9:6B:AF:06:DC
 onu mac-auth add EC:08:6B:BE:17:F8
 onu mac-auth add 54:47:E8:6F:BC:D1
