@@ -483,7 +483,7 @@ interface ethernet 0/0/27
 shutdown
 switchport trunk allowed vlan 6,8,18,20,107,110,120-121,130,150,160-165,170,21
 0-211,240-241,250,260-261,270,280-281,283,301-304,322,
-switchport trunk allowed vlan 330-331,341-344,346-347,350-351,354
+switchport trunk allowed vlan 330-331,337,341-344,346-347,350-351,354
 storm-control broadcast 10000
 storm-control unicast 10000
 storm-control multicast 10000
