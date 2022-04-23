@@ -560,6 +560,7 @@ exit
 interface epon 0/3
 onu mac-auth add 7C:A9:6B:AF:07:08
 onu mac-auth add 7C:A9:6B:AF:07:14
+onu mac-auth add 38:94:E0:A4:0B:10
 onu mac-auth add 7C:A9:6B:84:0F:5E
 onu mac-auth add 7C:A9:6B:84:0F:6C
 onu mac-auth add 38:94:E0:AB:12:2B
@@ -732,6 +733,8 @@ onu 9 ctc eth 1 vlan mode tag
 onu 10 description 131393_TOSHNIWAL
 onu 10 ctc eth 1 vlan pvid 842 pri 0
 onu 10 ctc eth 1 vlan mode tag
+onu 12 ctc eth 1 vlan pvid 194 pri 0
+onu 12 ctc eth 1 vlan mode tag
 onu 14 description 131312_Vital
 onu 14 ctc eth 1 vlan pvid 42 pri 0
 onu 14 ctc eth 1 vlan mode tag
