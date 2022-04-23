@@ -162,6 +162,8 @@ switchport isolate
 no ip igmp snooping immediate-leave
 loopback disable
 exit
+
+2000/02/02 01:56:58   ONU Illegal Register     PON 0/2 ONU 42 38:94:E0:C3:F2:3A Rejected by White-list authentication.
 !
 interface gigabitethernet 0/6
 switchport mode hybrid
