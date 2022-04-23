@@ -289,6 +289,7 @@ confirm onu mac 38:94:e0:d0:4d:79 onuid 14 auth-mode mac
 confirm onu mac 38:94:e0:e3:13:3a onuid 15 auth-mode mac
 confirm onu mac 7c:a9:6b:d9:1f:a8 onuid 16 auth-mode mac
 confirm onu mac 38:94:e0:c3:eb:0d onuid 17 auth-mode mac
+confirm onu mac 7c:a9:6b:d9:1b:18 onuid 18
 confirm onu mac 38:94:e0:c3:f1:f8 onuid 19 auth-mode mac
 confirm onu mac 38:94:e0:c2:50:70 onuid 20 auth-mode mac
 confirm onu mac 7c:a9:6b:84:d5:00 onuid 22 auth-mode mac
