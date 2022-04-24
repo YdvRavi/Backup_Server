@@ -5,9 +5,9 @@ R_CORE1###
 ##MILL#R_CORE1###
 Building configuration...
 
-Current configuration : 108311 bytes
+Current configuration : 108309 bytes
 !
-! Last configuration change at 20:47:41 UTC Sat Apr 23 2022
+! Last configuration change at 23:00:33 UTC Sun Apr 24 2022
 !
 version 15.5
 service timestamps debug datetime msec
@@ -3123,8 +3123,8 @@ interface GigabitEthernet0/0/5.132
  encapsulation dot1Q 132
  ip address 203.110.83.161 255.255.255.240
  arp timeout 5
- service-policy input 100_Mbps
- service-policy output 100_Mbps
+ service-policy input 50_Mbps
+ service-policy output 50_Mbps
 !
 interface GigabitEthernet0/0/5.133
  description ##Savi Infoservices India Pvt Ltd#111052#40Mb#UV##
