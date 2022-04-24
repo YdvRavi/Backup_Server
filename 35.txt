@@ -120,8 +120,6 @@ interface mcu 0/2
  port 5 ont-auto-find enable
  port 6 ont-auto-find enable
  port 7 ont-auto-find enable
- ont add 0 0 sn-auth "48575443AC717C9E" omci ont-lineprofile-id 200 
-ont-srvprofile-id 100 desc "291013"
  ont add 0 1 sn-auth "48575443ACE07FA3" omci ont-lineprofile-id 200 
 ont-srvprofile-id 100 desc "291016_Manjeet"
  ont add 0 2 sn-auth "48575443D6A4EB9F" omci ont-lineprofile-id 200 
@@ -222,7 +220,6 @@ ont-srvprofile-id 100 desc "651021_NAIWEDYA_F915"
   <bbs-config>
  service-port 0 vlan 400 gpon 0/0/1 ont 0 gemport 4 multi-service user-vlan 400 tag-transform translate
  service-port 1 vlan 500 gpon 0/0/1 ont 0 gemport 3 multi-service user-vlan 500 tag-transform translate
- service-port 4 vlan 608 gpon 0/0/0 ont 0 gemport 1 multi-service user-vlan 608 tag-transform translate
  service-port 6 vlan 608 gpon 0/0/2 ont 0 gemport 1 multi-service user-vlan 608 tag-transform translate
  service-port 7 vlan 608 gpon 0/0/1 ont 1 gemport 1 multi-service user-vlan 608 tag-transform translate
  service-port 8 vlan 500 gpon 0/0/1 ont 1 gemport 3 multi-service user-vlan 500 tag-transform translate
