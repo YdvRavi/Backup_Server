@@ -2,6 +2,8 @@
 
 85.58# terminal length 0
 OLT#Heritage#85.58# 
+2022/04/25 01:12:50   ONU AUTH Success         PON 0/5 ONU 3 38:94:E0:A4:0A:90.
+
 
 Current configuration:
 !
