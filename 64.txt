@@ -481,6 +481,7 @@ interface epon 0/2
 onu auth-mode mac
 confirm onu mac 38:94:e0:a4:0a:e0 onuid 1 auth-mode mac
 confirm onu mac 7c:a9:6b:d7:6f:e4 onuid 2 auth-mode mac
+confirm onu mac 60:08:10:15:67:7d onuid 3
 confirm onu mac 7c:a9:6b:d7:22:e2 onuid 4 auth-mode mac
 confirm onu mac 7c:a9:6b:84:0f:62 onuid 5 auth-mode mac
 confirm onu mac a4:00:e2:8d:39:68 onuid 6 auth-mode mac
