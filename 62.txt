@@ -2,8 +2,6 @@
 
 ## terminal length 0
 UV_olt#87.139### 
-2022/04/24 14:49:56   ONU Dying Gasp           PON 0/3 ONU 11 7C:A9:6B:AF:06:F8 
-
 
 Current configuration:
 !
