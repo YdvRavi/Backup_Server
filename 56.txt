@@ -6,7 +6,7 @@ BGMPR#MAIN_SW#SW87.36###
 
   Current configuration: 
 
-no spanning-tree 25 edge-port 
+spanning-tree 25 edge-port 
 no spanning-tree 26 edge-port 
 no spanning-tree 27 edge-port 
 no spanning-tree 28 edge-port 
