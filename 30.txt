@@ -431,9 +431,6 @@ active
 aim 0/3/12 name 641196_Pushpraj
 permit sn string-hex HWTC-f0e69ca5 line 1 default line 1
 active
-aim 0/3/15 name 641166_neeraj
-permit sn string-hex HWTC-11a429a6 line 1 default line 1
-active
 aim 0/4/1 name 641032
 permit sn string-hex HWTC-e51fca9f line 1 default line 1
 active
@@ -730,6 +727,9 @@ permit sn string-hex HWTC-11a0dda6 line 1 default line 1
 active
 aim 0/12/1 name 641035_Sunil_H507
 permit sn string-hex GNXS-612000ba line 1 default line 1
+active
+aim 0/12/2 name 641166_neeraj_I106
+permit sn string-hex HWTC-11a429a6 line 1 default line 1
 active
 aim 0/12/3 name 641130_prerana
 permit sn string-hex HWTC-323dcaa6 line 1 default line 1
