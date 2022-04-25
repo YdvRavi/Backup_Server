@@ -5,7 +5,7 @@ R_CORE1###
 ##MILL#R_CORE1###
 Building configuration...
 
-Current configuration : 108340 bytes
+Current configuration : 108406 bytes
 !
 ! Last configuration change at 12:28:05 UTC Mon Apr 25 2022
 !
@@ -4279,6 +4279,7 @@ ip route 103.242.225.0 255.255.255.0 Null0 254
 ip route 103.242.226.0 255.255.255.0 Null0
 ip route 103.242.227.0 255.255.255.0 Null0
 ip route 111.108.254.10 255.255.255.255 121.240.110.161 name 351075_Kumon
+ip route 157.240.39.89 255.255.255.255 121.240.110.161 name INSTA
 ip route 192.237.37.70 255.255.255.255 121.240.110.161
 ip route 203.110.80.0 255.255.240.0 Null0
 ip route 203.110.80.0 255.255.255.0 Null0
