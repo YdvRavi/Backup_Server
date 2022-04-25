@@ -5,9 +5,9 @@ R_CORE1###
 ##MILL#R_CORE1###
 Building configuration...
 
-Current configuration : 108340 bytes
+Current configuration : 108463 bytes
 !
-! Last configuration change at 13:07:17 UTC Mon Apr 25 2022
+! Last configuration change at 14:00:16 UTC Mon Apr 25 2022
 !
 version 15.5
 service timestamps debug datetime msec
@@ -4266,6 +4266,7 @@ ip bgp-community new-format
 ip community-list 1 permit 4755:601
 ip ftp password 7 141317070817262D3038
 no ip http server
+ip route 31.13.79.174 255.255.255.255 121.240.110.161 name instagram
 ip route 45.64.92.0 255.255.252.0 Null0
 ip route 45.64.92.0 255.255.255.0 Null0
 ip route 45.64.93.0 255.255.255.0 Null0
@@ -4339,6 +4340,7 @@ ip access-list extended WEB
 !
 !
 ip prefix-list VSNL_NEW seq 83 permit 203.110.83.0/24
+ip prefix-list VSNL_NEW seq 84 permit 203.110.84.0/24
 ip prefix-list VSNL_NEW seq 85 permit 203.110.85.0/24
 ip prefix-list VSNL_NEW seq 91 permit 203.110.91.0/24
 ip prefix-list VSNL_NEW seq 93 permit 203.110.93.0/24
