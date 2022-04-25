@@ -817,7 +817,7 @@ exit
 !
 interface epon 0/6
 onu 1 description 231074_Mahadev
-onu 1 ctc eth 1 vlan pvid 305 pri 0
+onu 1 ctc eth 1 vlan pvid 612 pri 0
 onu 1 ctc eth 1 vlan mode tag
 onu 5 description 231066_Prashant
 onu 5 ctc eth 1 vlan pvid 612 pri 0
