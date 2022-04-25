@@ -5,7 +5,7 @@ R_CORE1###
 ##MILL#R_CORE1###
 Building configuration...
 
-Current configuration : 108255 bytes
+Current configuration : 108320 bytes
 !
 ! Last configuration change at 11:09:54 UTC Mon Apr 25 2022
 !
@@ -4290,6 +4290,7 @@ ip route 203.110.83.0 255.255.255.0 Null0
 ip route 203.110.83.40 255.255.255.248 203.110.87.246 name easyrewards
 ip route 203.110.83.224 255.255.255.248 203.110.87.250 name OST
 ip route 203.110.84.0 255.255.255.0 Null0
+ip route 203.110.84.97 255.255.255.255 121.240.110.161 name SAGA
 ip route 203.110.85.0 255.255.255.0 Null0
 ip route 203.110.86.0 255.255.255.0 Null0
 ip route 203.110.87.0 255.255.255.0 Null0
