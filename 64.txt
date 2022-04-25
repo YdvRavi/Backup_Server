@@ -479,7 +479,6 @@ exit
 !
 interface epon 0/2
 onu auth-mode mac
-confirm onu mac 38:94:e0:a4:0a:e0 onuid 1 auth-mode mac
 confirm onu mac 7c:a9:6b:d7:6f:e4 onuid 2 auth-mode mac
 confirm onu mac 60:08:10:15:67:7d onuid 3
 confirm onu mac 7c:a9:6b:d7:22:e2 onuid 4 auth-mode mac
@@ -492,7 +491,6 @@ confirm onu mac 38:94:e0:e3:40:f2 onuid 10 auth-mode mac
 confirm onu mac 7c:a9:6b:3b:19:ef onuid 11 auth-mode mac
 confirm onu mac 7c:a9:6b:84:d4:fc onuid 12 auth-mode mac
 confirm onu mac 38:94:e0:b1:d9:60 onuid 13 auth-mode mac
-confirm onu mac 7c:a9:6b:84:d5:30 onuid 14 auth-mode mac
 confirm onu mac 38:94:e0:be:70:eb onuid 15 auth-mode mac
 confirm onu mac 7c:a9:6b:84:d5:2c onuid 17 auth-mode mac
 confirm onu mac 38:94:e0:c2:43:60 onuid 18 auth-mode mac
@@ -545,10 +543,8 @@ onu mac-auth add A4:00:E2:8D:39:68
 onu mac-auth add 7C:A9:6B:3B:19:EF
 onu mac-auth add 38:94:E0:C2:43:60
 onu mac-auth add 7C:A9:6B:84:D5:2C
-onu mac-auth add 7C:A9:6B:84:D5:30
 onu mac-auth add 38:94:E0:AC:C6:0A
 onu mac-auth add A0:C6:EC:07:87:58
-onu mac-auth add 38:94:E0:A4:0A:E0
 onu mac-auth add 7C:A9:6B:D7:22:E2
 onu mac-auth add 38:94:E0:B1:D9:60
 onu mac-auth add A4:00:E2:6F:AE:FE
@@ -597,9 +593,6 @@ onu 6 ctc eth 1 vlan mode tag
 exit
 !
 interface epon 0/2
-onu 1 description All_In_Events
-onu 1 ctc eth 1 vlan pvid 9 pri 0
-onu 1 ctc eth 1 vlan mode tag
 onu 2 description 191897_Jenica
 onu 2 ctc eth 1 vlan pvid 813 pri 0
 onu 2 ctc eth 1 vlan mode transparent
@@ -629,7 +622,6 @@ onu 12 ctc eth 1 vlan mode tag
 onu 13 description Ambi_191760
 onu 13 ctc eth 1 vlan pvid 17 pri 0
 onu 13 ctc eth 1 vlan mode tag
-onu 14 description 191102_Food
 onu 15 description 191887_BREADSLY
 onu 17 description 191823_SaajRest
 onu 18 description 191902_BON
