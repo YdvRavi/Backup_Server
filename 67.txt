@@ -808,7 +808,7 @@ onu 3 ctc eth 1 phy_ctrl enable
 onu 3 ctc eth 1 vlan pvid 305 pri 0
 onu 3 ctc eth 1 vlan mode tag
 onu 4 description 231052_Mahadev
-onu 4 ctc eth 1 phy_ctrl disable
+onu 4 ctc eth 1 phy_ctrl enable
 onu 4 ctc eth 1 vlan pvid 612 pri 0
 onu 4 ctc eth 1 vlan mode tag
 onu 5 description 231053_Licorne
