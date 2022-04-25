@@ -1,6 +1,6 @@
 ##CONFIG##
 
-## Last commit: 2022-04-25 11:23:16 UTC by deldsl
+## Last commit: 2022-04-25 11:51:43 UTC by deldsl
 version 17.4R1.16;
 system {
     host-name MILL_R_JUNOS;
@@ -1962,7 +1962,6 @@ policy-options {
                 route-filter 103.242.227.0/24 exact;
                 route-filter 203.110.90.0/24 exact;
                 route-filter 203.110.94.0/24 exact;
-                route-filter 203.110.84.0/24 exact;
             }
             then accept;
         }
