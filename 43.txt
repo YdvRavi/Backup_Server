@@ -5,9 +5,9 @@ R_CORE1###
 ##MILL#R_CORE1###
 Building configuration...
 
-Current configuration : 108394 bytes
+Current configuration : 108397 bytes
 !
-! Last configuration change at 18:20:38 UTC Mon Apr 25 2022
+! Last configuration change at 18:33:20 UTC Mon Apr 25 2022
 !
 version 15.5
 service timestamps debug datetime msec
@@ -237,7 +237,7 @@ interface GigabitEthernet0/0/0.217
 !
 interface GigabitEthernet0/0/1
  description ##MILL#R_MIKROTIK#BB_80.80##
- ip address 172.30.80.9 255.255.255.248
+ ip address 203.110.80.109 255.255.255.252
  no ip proxy-arp
  ip ospf 20 area 0
  negotiation auto
