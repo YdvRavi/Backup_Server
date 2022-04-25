@@ -5,7 +5,7 @@ R_CORE1###
 ##MILL#R_CORE1###
 Building configuration...
 
-Current configuration : 108309 bytes
+Current configuration : 108255 bytes
 !
 ! Last configuration change at 11:09:54 UTC Mon Apr 25 2022
 !
@@ -4338,7 +4338,6 @@ ip access-list extended WEB
 !
 !
 ip prefix-list VSNL_NEW seq 83 permit 203.110.83.0/24
-ip prefix-list VSNL_NEW seq 84 permit 203.110.84.0/24
 ip prefix-list VSNL_NEW seq 85 permit 203.110.85.0/24
 ip prefix-list VSNL_NEW seq 91 permit 203.110.91.0/24
 ip prefix-list VSNL_NEW seq 93 permit 203.110.93.0/24
