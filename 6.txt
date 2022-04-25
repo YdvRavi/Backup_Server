@@ -1,6 +1,6 @@
 ##CONFIG##
 
-## Last commit: 2022-04-25 15:47:26 UTC by deldsl
+## Last commit: 2022-04-25 15:53:49 UTC by deldsl
 version 17.4R1.16;
 system {
     host-name MILL_R_JUNOS;
@@ -37,9 +37,6 @@ system {
         user amar {
             uid 101;
             class super-user;
-            authentication {
-                encrypted-password "$6$SJzL6..j$3.PHqbjckDHo7.lS095wywrUvW71Z5vKLSpbeW9I6ERR.Wbg3HStPEB5UI8TN.6jZ7P10m7DDYXRhmzyTWRLL."; ## SECRET-DATA
-            }
         }
         user deldsl {
             uid 2002;
