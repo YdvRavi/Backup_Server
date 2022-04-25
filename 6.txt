@@ -1,6 +1,6 @@
 ##CONFIG##
 
-## Last commit: 2022-04-25 10:55:33 UTC by deldsl
+## Last commit: 2022-04-25 11:23:16 UTC by deldsl
 version 17.4R1.16;
 system {
     host-name MILL_R_JUNOS;
@@ -1943,8 +1943,6 @@ protocols {
         area 0.0.0.0 {
             interface xe-0/0/0:0.1110;
             interface xe-0/0/1:0.0;
-        }
-        area 0.0.0.4 {
             interface xe-0/0/1:1.0;
         }
     }
