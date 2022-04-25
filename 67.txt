@@ -669,10 +669,10 @@ confirm onu mac e0:67:b3:1a:f0:0a onuid 5 auth-mode mac
 confirm onu mac 38:94:e0:e3:39:82 onuid 6 auth-mode mac
 confirm onu mac 7c:a9:6b:84:0f:7a onuid 7 auth-mode mac
 confirm onu mac 7c:a9:6b:ae:cf:c4 onuid 8 auth-mode mac
+confirm onu mac a0:c6:ec:07:81:84 onuid 9
 confirm onu mac 7c:a9:6b:84:0f:5c onuid 11 auth-mode mac
 confirm onu mac 7c:a9:6b:84:d5:0c onuid 12 auth-mode mac
 confirm onu mac 7c:a9:6b:84:d5:04 onuid 13 auth-mode mac
-confirm onu mac a0:c6:ec:07:81:84 onuid 14
 exit
 !
 interface epon 0/2
@@ -882,10 +882,6 @@ onu 12 ctc eth 1 vlan mode tag
 onu 13 description 201081_DCSPLUS
 onu 13 ctc eth 1 vlan pvid 426 pri 0
 onu 13 ctc eth 1 vlan mode tag
-onu 14 description 201085_Magnum
-onu 14 ctc eth 1 phy_ctrl disable
-onu 14 ctc eth 1 vlan pvid 305 pri 0
-onu 14 ctc eth 1 vlan mode tag
 exit
 !
 debug mode 
