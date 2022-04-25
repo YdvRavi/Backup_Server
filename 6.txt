@@ -1,6 +1,6 @@
 ##CONFIG##
 
-## Last commit: 2022-04-25 16:02:34 UTC by deldsl
+## Last commit: 2022-04-25 16:08:40 UTC by deldsl
 version 17.4R1.16;
 system {
     host-name MILL_R_JUNOS;
@@ -11,8 +11,8 @@ system {
     }
     tacplus-server {
         192.168.10.57 {
-            secret "$9$43ai.Pfz/9pgo6Atp1I7-dw4aUjH"; ## SECRET-DATA
-            source-address 172.21.80.11;
+            secret "$9$pRmA0hreK8N-wtu7Vbw4oQF3/p0IEc"; ## SECRET-DATA
+            source-address 172.21.80.1;
         }
     }
     accounting {
@@ -21,8 +21,8 @@ system {
             tacplus {
                 server {
                     192.168.10.57 {
-                        secret "$9$zhQW3tO1IceK8QFlMW8N-ikqPz39Ap"; ## SECRET-DATA
-                        source-address 172.21.80.11;
+                        secret "$9$3k8s6u1REyvMXFnK8LXdVk.m536Ap0"; ## SECRET-DATA
+                        source-address 172.21.80.1;
                     }
                 }
             }
