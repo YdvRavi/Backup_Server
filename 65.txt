@@ -162,8 +162,6 @@ exit
 !
 interface gigabitethernet 0/8
 switchport mode hybrid
-
-2022/04/25 06:35:15   ONU Deregister           PON 0/1 ONU 25 38:94:E0:A4:0B:A0 MPCP TIMEOUT.
 switchport hybrid vlan 1 untagged
 switchport hybrid vlan 230 tagged
 switchport hybrid pvid vlan 1
