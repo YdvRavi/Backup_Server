@@ -1,11 +1,11 @@
 ##CONFIG##
 
-## Last commit: 2022-04-25 15:53:49 UTC by deldsl
+## Last commit: 2022-04-25 15:58:24 UTC by deldsl
 version 17.4R1.16;
 system {
     host-name MILL_R_JUNOS;
     management-instance;
-    authentication-order tacplus;
+    authentication-order [ tacplus password ];
     root-authentication {
         encrypted-password "$6$BNdPctVQ$Sw9ITL4D78FjSjAvxZbllN.YaWwX4ibVbNBOHBn0WUTc3ZvFMYctS21RHj16HNedkgGZ9RKEkkmWIWYMW/Ozd1"; ## SECRET-DATA
     }
@@ -13,6 +13,10 @@ system {
         203.110.80.163 {
             secret "$9$v9TW-wY2aDjqKMUHkq5TIEhyvWxNd"; ## SECRET-DATA
             timeout 3;
+            source-address 172.21.80.11;
+        }
+        192.168.10.57 {
+            secret "$9$43ai.Pfz/9pgo6Atp1I7-dw4aUjH"; ## SECRET-DATA
             source-address 172.21.80.11;
         }
     }
