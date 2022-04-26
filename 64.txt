@@ -479,6 +479,7 @@ exit
 !
 interface epon 0/2
 onu auth-mode mac
+confirm onu mac 7c:a9:6b:d7:6e:b4 onuid 1 auth-mode mac
 confirm onu mac 7c:a9:6b:d7:6f:e4 onuid 2 auth-mode mac
 confirm onu mac 60:08:10:15:67:7d onuid 3
 confirm onu mac 7c:a9:6b:d7:22:e2 onuid 4 auth-mode mac
@@ -544,6 +545,7 @@ onu mac-auth add 7C:A9:6B:84:D5:2C
 onu mac-auth add 38:94:E0:AC:C6:0A
 onu mac-auth add A0:C6:EC:07:87:58
 onu mac-auth add 7C:A9:6B:D7:22:E2
+onu mac-auth add 7C:A9:6B:D7:6E:B4
 onu mac-auth add 38:94:E0:B1:D9:60
 onu mac-auth add A4:00:E2:6F:AE:FE
 onu mac-auth add 7C:A9:6B:D7:6F:E4
@@ -589,6 +591,7 @@ onu 6 ctc eth 1 vlan mode tag
 exit
 !
 interface epon 0/2
+onu 1 description 191914_Black
 onu 2 description 191897_Jenica
 onu 2 ctc eth 1 vlan pvid 813 pri 0
 onu 2 ctc eth 1 vlan mode transparent
