@@ -582,7 +582,6 @@ onu auth-mode mac
 confirm onu mac a0:c6:ec:07:79:2e onuid 1 auth-mode mac
 confirm onu mac a0:c6:ec:04:ca:2b onuid 2 auth-mode mac
 confirm onu mac 38:94:e0:d3:d0:08 onuid 3 auth-mode mac
-confirm onu mac a0:c6:ec:07:81:85 onuid 5 auth-mode mac
 confirm onu mac e0:67:b3:1a:ef:e0 onuid 11 auth-mode mac
 confirm onu mac a0:c6:ec:07:79:2d onuid 12 auth-mode mac
 confirm onu mac 38:94:e0:a4:58:f0 onuid 18 auth-mode mac
@@ -625,7 +624,6 @@ onu mac-auth add A0:C6:EC:07:79:2D
 onu mac-auth add A0:C6:EC:07:79:2E
 onu mac-auth add A0:C6:EC:04:CA:2B
 onu mac-auth add 38:94:E0:D3:D0:08
-onu mac-auth add A0:C6:EC:07:81:85
 onu mac-auth add 38:94:E0:A4:58:F0
 onu mac-auth add E0:67:B3:1A:EF:E0
 exit
@@ -662,6 +660,9 @@ onu 3 ctc eth 1 vlan pvid 612 pri 0
 onu 3 ctc eth 1 vlan mode tag
 onu 4 ctc eth 1 vlan pvid 612 pri 0
 onu 4 ctc eth 1 vlan mode tag
+onu 7 description 221042_Synergy
+onu 7 ctc eth 1 vlan pvid 612 pri 0
+onu 7 ctc eth 1 vlan mode tag
 exit
 !
 interface epon 0/4
@@ -697,12 +698,6 @@ onu 2 ctc eth 1 vlan mode tag
 onu 3 description 221087_FLASH
 onu 3 ctc eth 1 vlan pvid 612 pri 0
 onu 3 ctc eth 1 vlan mode tag
-onu 5 description 221042_Synergy
-onu 5 ctc eth 1 flow_control enable
-onu 5 ctc eth 1 policy cir 112400 cbs 10240 ebs 10240 
-onu 5 ctc eth 1 rate_limit cir 112400 pir 10240 
-onu 5 ctc eth 1 vlan pvid 612 pri 0
-onu 5 ctc eth 1 vlan mode tag
 onu 11 description 221080_ALTF
 onu 11 ctc eth 1 vlan pvid 612 pri 0
 onu 11 ctc eth 1 vlan mode tag
