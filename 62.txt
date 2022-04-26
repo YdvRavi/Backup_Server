@@ -480,7 +480,6 @@ modify downstream pir 10240 weight 1
 exit
 !
 interface epon 0/1
-onu auth-mode mac
 confirm onu mac e0:67:b3:11:93:16 onuid 2 auth-mode mac
 confirm onu mac 38:94:e0:e3:40:ca onuid 3 auth-mode mac
 confirm onu mac 98:c7:a4:05:02:67 onuid 4 auth-mode mac
@@ -488,7 +487,6 @@ confirm onu mac 7c:a9:6b:84:d4:fe onuid 5 auth-mode mac
 exit
 !
 interface epon 0/2
-onu auth-mode mac
 confirm onu mac 7c:a9:6b:3b:19:db onuid 1 auth-mode mac
 confirm onu mac e0:67:b3:10:33:b8 onuid 2 auth-mode mac
 confirm onu mac a4:00:e2:6d:87:ea onuid 3
@@ -498,7 +496,6 @@ confirm onu mac 7c:a9:6b:84:d5:08 onuid 7 auth-mode mac
 exit
 !
 interface epon 0/3
-onu auth-mode mac
 confirm onu mac 7c:a9:6b:02:21:28 onuid 1 auth-mode mac
 confirm onu mac 38:94:e0:a4:0a:b8 onuid 2 auth-mode mac
 confirm onu mac 38:94:e0:e3:39:8a onuid 3 auth-mode mac
@@ -523,7 +520,6 @@ confirm onu mac 7c:a9:6b:d7:70:24 onuid 23 auth-mode mac
 exit
 !
 interface epon 0/4
-onu auth-mode mac
 confirm onu mac 38:94:e0:ab:11:f4 onuid 1 auth-mode mac
 confirm onu mac a0:c6:ec:04:ca:2d onuid 2 auth-mode mac
 confirm onu mac 7c:a9:6b:3b:1a:1f onuid 3 auth-mode mac
