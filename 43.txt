@@ -5,9 +5,9 @@ R_CORE1###
 ##MILL#R_CORE1###
 Building configuration...
 
-Current configuration : 108449 bytes
+Current configuration : 108448 bytes
 !
-! Last configuration change at 23:25:43 UTC Mon Apr 25 2022
+! Last configuration change at 08:26:11 UTC Tue Apr 26 2022
 !
 version 15.5
 service timestamps debug datetime msec
@@ -2748,12 +2748,12 @@ interface GigabitEthernet0/0/5.32
  service-policy output 50_Mbps
 !
 interface GigabitEthernet0/0/5.33
- description ## Appy Bajaj #131440#50Mb#UV##
+ description ##Appy Bajaj #131440#20Mb#UV##
  encapsulation dot1Q 33
  ip address 203.110.88.113 255.255.255.252
  arp timeout 5
- service-policy input 50_Mbps
- service-policy output 50_Mbps
+ service-policy input 20_Mbps
+ service-policy output 20_Mbps
 !
 interface GigabitEthernet0/0/5.34
  description ##Vyas_Maulik#131417#30Mb#UV##suspended
