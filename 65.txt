@@ -1,6 +1,8 @@
 ##CONFIG##
 
-## terminal length 0
+## 
+2022/04/26 07:50:21   ONU Deregister           PON 0/3 ONU 15 38:94:E0:A4:0A:D8 MPCP TIMEOUT.
+terminal length 0
 AMBI_VK_OLT#83.27### 
 
 Current configuration:
