@@ -1,8 +1,6 @@
 ##CONFIG##
 
-## 
-2000/02/04 15:07:08   ONU Deregister           PON 0/2 ONU 17 38:94:E0:AC:C1:92 MPCP TIMEOUT.
-terminal length 0
+## terminal length 0
 Ardee_OLT#85.61### 
 
 Current configuration:
@@ -380,7 +378,7 @@ exit
 !
 interface epon 0/2
 onu auth-mode mac
-confirm onu mac 38:94:e0:ac:c1:3a onuid 1 auth-mode mac
+confirm onu mac 38:94:e0:ac:c1:3a onuid 1
 confirm onu mac 38:94:e0:b5:5c:0a onuid 2 auth-mode mac
 confirm onu mac 38:94:e0:b0:74:26 onuid 3 auth-mode mac
 confirm onu mac a8:ca:7b:ad:bd:9a onuid 4 auth-mode mac
@@ -486,8 +484,6 @@ onu mac-auth add 38:94:E0:B5:6B:1F
 onu mac-auth add 38:94:E0:BE:17:6A
 onu mac-auth add 38:94:E0:B5:5E:30
 onu mac-auth add 38:94:E0:BE:16:78
-
-2000/02/04 15:07:08   ONU Deregister           PON 0/1 ONU 57 C0:BF:C0:43:2C:62 MPCP TIMEOUT.
 onu mac-auth add 38:94:E0:CC:7D:08
 onu mac-auth add 38:94:E0:B5:6B:35
 onu mac-auth add 38:94:E0:BE:21:78
