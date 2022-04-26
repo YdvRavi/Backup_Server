@@ -5,9 +5,9 @@ R_CORE1###
 ##MILL#R_CORE1###
 Building configuration...
 
-Current configuration : 108572 bytes
+Current configuration : 108505 bytes
 !
-! Last configuration change at 12:30:33 UTC Tue Apr 26 2022
+! Last configuration change at 16:13:45 UTC Tue Apr 26 2022
 !
 version 15.5
 service timestamps debug datetime msec
@@ -3981,7 +3981,6 @@ interface GigabitEthernet0/1/0.949703
  ip address 10.73.0.1 255.255.255.0
 !
 interface GigabitEthernet0/1/0.949901
- description ##R SAI LOGISTICS INDIA PRIVATE LIMITED#581108#10Mb##
  encapsulation dot1Q 949 second-dot1q 901
  ip access-group VOIP in
  ip access-group VOIP out
