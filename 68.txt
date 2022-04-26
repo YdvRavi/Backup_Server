@@ -561,7 +561,7 @@ confirm onu mac 38:94:e0:a4:22:00 onuid 3 auth-mode mac
 confirm onu mac 38:94:e0:e3:1c:6a onuid 4 auth-mode mac
 confirm onu mac 7c:a9:6b:84:0f:5c onuid 5
 confirm onu mac 38:94:e0:d3:d0:08 onuid 6
-confirm onu mac a0:c6:ec:07:81:85 onuid 7
+confirm onu mac a0:c6:ec:07:81:85 onuid 7 auth-mode mac
 exit
 !
 interface epon 0/4
@@ -609,6 +609,7 @@ onu mac-auth add 38:94:E0:A4:0B:00
 onu mac-auth add 38:94:E0:A4:22:00
 onu mac-auth add 38:94:E0:E3:1C:6A
 onu mac-auth add E0:67:B3:0E:34:F5
+onu mac-auth add A0:C6:EC:07:81:85
 exit
 !
 interface epon 0/4
