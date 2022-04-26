@@ -6,7 +6,7 @@ UV#MAIN_RING#SW87.131###
 
   Current configuration: 
 
-spanning-tree 18 edge-port 
+no spanning-tree 18 edge-port 
 no spanning-tree 25 edge-port 
 no spanning-tree 26 edge-port 
 no spanning-tree 27 edge-port 
