@@ -217,9 +217,6 @@ active
 aim 0/10/1 name 6710XX_Facility
 permit sn string-hex HWTC-119b74a6 line 1 default line 1
 active
-aim 0/10/2 name 671041_NITISH_C1102
-permit sn string-hex HWTC-11a180a6 line 1 default line 1
-active
 exit
 exit
 ![gpon-device]
