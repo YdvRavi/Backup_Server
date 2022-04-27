@@ -5,9 +5,9 @@ R_CORE1###
 ##MILL#R_CORE1###
 Building configuration...
 
-Current configuration : 108618 bytes
+Current configuration : 108686 bytes
 !
-! Last configuration change at 14:39:25 UTC Wed Apr 27 2022
+! Last configuration change at 18:13:19 UTC Wed Apr 27 2022
 !
 version 15.5
 service timestamps debug datetime msec
@@ -4280,6 +4280,7 @@ ip route 103.242.225.0 255.255.255.0 Null0 254
 ip route 103.242.226.0 255.255.255.0 Null0
 ip route 103.242.227.0 255.255.255.0 Null0
 ip route 111.108.254.10 255.255.255.255 121.240.110.161 name 351075_Kumon
+ip route 180.87.88.50 255.255.255.255 121.240.110.161 name tata-poc
 ip route 192.237.37.70 255.255.255.255 121.240.110.161
 ip route 203.110.80.0 255.255.240.0 Null0
 ip route 203.110.80.0 255.255.255.0 Null0
