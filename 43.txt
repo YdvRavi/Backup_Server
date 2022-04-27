@@ -5,7 +5,7 @@ R_CORE1###
 ##MILL#R_CORE1###
 Building configuration...
 
-Current configuration : 108559 bytes
+Current configuration : 108614 bytes
 !
 ! Last configuration change at 13:51:08 UTC Wed Apr 27 2022
 !
@@ -4265,6 +4265,7 @@ ip bgp-community new-format
 ip community-list 1 permit 4755:601
 ip ftp password 7 141317070817262D3038
 no ip http server
+ip route 17.0.0.0 255.0.0.0 121.240.110.161 name Apple
 ip route 35.213.138.218 255.255.255.255 121.240.110.161 name 171007
 ip route 45.64.92.0 255.255.252.0 Null0
 ip route 45.64.92.0 255.255.255.0 Null0
