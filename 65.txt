@@ -586,6 +586,9 @@ onu 20 ctc eth 2 vlan pvid 712 pri 0
 onu 20 ctc eth 2 vlan mode transparent
 onu 21 description 331364_Sanjay
 onu 22 description 331141_Damila
+onu 24 description 331364_Real
+onu 25 description 331361_Premi
+onu 26 description 331362_premi
 onu 27 description 331333_ANON
 onu 28 description 331018_Hidesign
 onu 29 description 331055_Chilli
