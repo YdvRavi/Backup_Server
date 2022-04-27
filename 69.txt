@@ -151,6 +151,9 @@ active
 aim 0/2/9 name 671040_DEEPESH_A7803
 permit sn string-hex HWTC-119b47a6 line 1 default line 1
 active
+aim 0/2/10 name 671039_DEEPAK_A7705
+permit sn string-hex HWTC-11a565a6 line 1 default line 1
+active
 aim 0/3/1 name 671006_NIRAJ
 permit sn string-hex HWTC-11a7b0a6 line 1 default line 1
 active
