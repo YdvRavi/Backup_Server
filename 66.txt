@@ -1,8 +1,6 @@
 ##CONFIG##
 
 87.22### 
-2022/04/27 18:54:34   ONU Deregister           PON 0/1 ONU 5 80:14:A8:86:E5:28 MPCP TIMEOUT.
-
 ##Mill_OLT#87.22### terminal length 0
 ##Mill_OLT#87.22### 
 
