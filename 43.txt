@@ -5,7 +5,7 @@ R_CORE1###
 ##MILL#R_CORE1###
 Building configuration...
 
-Current configuration : 108203 bytes
+Current configuration : 108104 bytes
 !
 ! Last configuration change at 17:45:41 UTC Thu Apr 28 2022
 !
@@ -1082,9 +1082,7 @@ interface GigabitEthernet0/0/4.283
  service-policy output 15_Mbps
 !
 interface GigabitEthernet0/0/4.284
- description ##The Sagar School#111010#1Mb##SUSPENDED##
  encapsulation dot1Q 284
- ip address 203.110.91.161 255.255.255.248
  shutdown
  service-policy input 1_Mbps
  service-policy output 1_Mbps
