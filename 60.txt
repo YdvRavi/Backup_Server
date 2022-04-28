@@ -247,7 +247,7 @@ interface port-channel 4
   loopguard 
 exit 
 interface port-channel 5  
-  name "##Ethicalhat Cyber Security Pvt Ltd#181050#5Mb##" 
+  inactive 
   pvid 411 
   ingress-check 
   broadcast-limit 
