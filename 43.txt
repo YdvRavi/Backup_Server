@@ -5,7 +5,7 @@ R_CORE1###
 ##MILL#R_CORE1###
 Building configuration...
 
-Current configuration : 108061 bytes
+Current configuration : 108009 bytes
 !
 ! Last configuration change at 19:33:40 UTC Thu Apr 28 2022
 !
@@ -1416,7 +1416,6 @@ interface GigabitEthernet0/0/4.344
  service-policy output 30_Mbps
 !
 interface GigabitEthernet0/0/4.345
- description ##The_Pllazio_Hotel#111297#15Mb#Demo##
  encapsulation dot1Q 345
  ip access-group VOIP in
  ip access-group VOIP out
