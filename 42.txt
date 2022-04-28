@@ -5,9 +5,9 @@ R_CORE###
 ##MILL#R_CORE###
 Building configuration...
 
-Current configuration : 40193 bytes
+Current configuration : 40239 bytes
 !
-! Last configuration change at 16:33:47 IST Thu Apr 28 2022
+! Last configuration change at 16:42:12 IST Thu Apr 28 2022
 ! NVRAM config last updated at 11:47:07 IST Wed Apr 20 2022
 !
 version 15.3
@@ -468,12 +468,13 @@ interface GigabitEthernet0/0/1.711
  encapsulation dot1Q 711
  ip address 203.110.80.105 255.255.255.252
  ip ospf 20 area 2
- ip ospf cost 20
 !
 interface GigabitEthernet0/0/1.712
  description ## Premium Lifestyle And Fashion India Private Limited#331361#100Mb##
  encapsulation dot1Q 712
  ip address 203.110.93.169 255.255.255.248
+ service-policy input 100_Mbps
+ service-policy output 100_Mbps
 !
 interface GigabitEthernet0/0/1.750
  encapsulation dot1Q 750
