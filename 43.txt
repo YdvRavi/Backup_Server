@@ -5,7 +5,7 @@ R_CORE1###
 ##MILL#R_CORE1###
 Building configuration...
 
-Current configuration : 107541 bytes
+Current configuration : 107453 bytes
 !
 ! Last configuration change at 19:46:43 UTC Thu Apr 28 2022
 !
@@ -3273,9 +3273,7 @@ interface GigabitEthernet0/0/5.200
  service-policy output 20_Mbps
 !
 interface GigabitEthernet0/0/5.201
- description ##Kunal Arora#171011#20MB#Mill##
  encapsulation dot1Q 201
- ip address 203.110.83.73 255.255.255.252
  shutdown
  arp timeout 5
  service-policy input 20_Mbps
