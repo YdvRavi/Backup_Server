@@ -5,7 +5,7 @@ R_CORE1###
 ##MILL#R_CORE1###
 Building configuration...
 
-Current configuration : 107921 bytes
+Current configuration : 107817 bytes
 !
 ! Last configuration change at 19:46:43 UTC Thu Apr 28 2022
 !
@@ -962,9 +962,7 @@ interface GigabitEthernet0/0/4.260
  service-policy output 25_Mbps
 !
 interface GigabitEthernet0/0/4.261
- description ##Radicles Softwares Pvt Ltd#111187#10MB#Mill##
  encapsulation dot1Q 261
- ip address 203.110.81.249 255.255.255.252
  ip access-group VOIP in
  ip access-group VOIP out
  shutdown
