@@ -540,7 +540,6 @@ interface epon 0/4
 onu auth-mode mac
 confirm onu mac 7c:a9:6b:01:99:f8 onuid 1 auth-mode mac
 confirm onu mac 98:c7:a4:05:02:9b onuid 2 auth-mode mac
-confirm onu mac 38:94:e0:be:37:fc onuid 3 auth-mode mac
 confirm onu mac 38:94:e0:d8:ee:a8 onuid 4 auth-mode mac
 confirm onu mac 54:47:e8:6f:bc:21 onuid 5 auth-mode mac
 confirm onu mac 7c:a9:6b:84:d5:36 onuid 6 auth-mode mac
@@ -610,7 +609,6 @@ onu mac-auth add 38:94:E0:E3:41:2A
 onu mac-auth add 7C:A9:6B:84:D5:36
 onu mac-auth add 7C:A9:6B:01:99:F8
 onu mac-auth add A0:C6:EC:07:87:5C
-onu mac-auth add 38:94:E0:BE:37:FC
 exit
 !
 interface epon 0/7
@@ -688,9 +686,6 @@ onu 1 ctc eth 1 vlan mode tag
 onu 2 description 111388_Vikram
 onu 2 ctc eth 1 vlan pvid 271 pri 0
 onu 2 ctc eth 1 vlan mode tag
-onu 3 description 111389_Mayank
-onu 3 ctc eth 1 vlan pvid 219 pri 0
-onu 3 ctc eth 1 vlan mode tag
 onu 4 description 111385_Mayank
 onu 4 pri dhcp_server 192.168.1.1 255.255.255.0 disable
 onu 4 ctc eth 1 flow_control disable

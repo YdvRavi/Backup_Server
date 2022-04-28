@@ -504,9 +504,7 @@ confirm onu mac 38:94:e0:a4:0a:b8 onuid 2 auth-mode mac
 confirm onu mac 38:94:e0:e3:39:8a onuid 3 auth-mode mac
 confirm onu mac 38:94:e0:ab:12:2b onuid 4 auth-mode mac
 confirm onu mac 7c:a9:6b:3b:19:e3 onuid 5 auth-mode mac
-confirm onu mac 98:c7:a4:05:02:bd onuid 6 auth-mode mac
 confirm onu mac 7c:a9:6b:84:0f:6c onuid 7 auth-mode mac
-confirm onu mac a0:c6:ec:07:81:87 onuid 8 auth-mode mac
 confirm onu mac 7c:a9:6b:af:07:a8 onuid 10 auth-mode mac
 confirm onu mac 7c:a9:6b:af:06:f8 onuid 11 auth-mode mac
 confirm onu mac 7c:a9:6b:84:d5:2e onuid 13 auth-mode mac
@@ -563,7 +561,6 @@ onu mac-auth add 38:94:E0:AB:12:2B
 onu mac-auth add 7C:A9:6B:3B:19:DD
 onu mac-auth add 7C:A9:6B:02:C9:68
 onu mac-auth add 7C:A9:6B:3B:19:E3
-onu mac-auth add 98:C7:A4:05:02:BD
 onu mac-auth add 7C:A9:6B:AF:07:A4
 onu mac-auth add 7C:A9:6B:AF:07:A8
 onu mac-auth add A0:C6:EC:07:79:22
@@ -573,7 +570,6 @@ onu mac-auth add 7C:A9:6B:84:D5:2E
 onu mac-auth add 7C:A9:6B:AF:06:F0
 onu mac-auth add 7C:A9:6B:AF:06:F8
 onu mac-auth add 38:94:E0:E3:39:8A
-onu mac-auth add A0:C6:EC:07:81:87
 onu mac-auth add 38:94:E0:E3:40:CA
 onu mac-auth add 7C:A9:6B:D6:A8:B0
 onu mac-auth add 7C:A9:6B:02:21:28
@@ -650,15 +646,9 @@ onu 5 description 131418_Varma
 onu 5 ctc eth 1 flow_control enable
 onu 5 ctc eth 1 vlan pvid 60 pri 0
 onu 5 ctc eth 1 vlan mode tag
-onu 6 description 131308_Leva
-onu 6 ctc eth 1 vlan pvid 109 pri 0
-onu 6 ctc eth 1 vlan mode tag
 onu 7 description 131442_family
 onu 7 ctc eth 1 vlan pvid 600 pri 0
 onu 7 ctc eth 1 vlan mode tag
-onu 8 description 131308_Leva
-onu 8 ctc eth 1 vlan pvid 109 pri 0
-onu 8 ctc eth 1 vlan mode tag
 onu 10 description BELLATOR_131434
 onu 10 ctc eth 1 vlan pvid 147 pri 0
 onu 10 ctc eth 1 vlan mode tag
