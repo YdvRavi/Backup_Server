@@ -5,7 +5,7 @@ R_CORE1###
 ##MILL#R_CORE1###
 Building configuration...
 
-Current configuration : 108516 bytes
+Current configuration : 108473 bytes
 !
 ! Last configuration change at 17:45:41 UTC Thu Apr 28 2022
 !
@@ -2640,7 +2640,6 @@ interface GigabitEthernet0/0/5.14
  service-policy output 20_Mbps
 !
 interface GigabitEthernet0/0/5.15
- description ##Black Star#131413#30Mb#UV##
  encapsulation dot1Q 15
  arp timeout 5
  service-policy input 30_Mbps
