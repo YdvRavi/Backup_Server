@@ -5,9 +5,9 @@ R_CORE1###
 ##MILL#R_CORE1###
 Building configuration...
 
-Current configuration : 106396 bytes
+Current configuration : 106231 bytes
 !
-! Last configuration change at 00:04:42 UTC Fri Apr 29 2022
+! Last configuration change at 00:12:01 UTC Fri Apr 29 2022
 !
 version 15.5
 service timestamps debug datetime msec
@@ -2970,13 +2970,9 @@ interface GigabitEthernet0/0/5.103
  service-policy output 14_Mbps
 !
 interface GigabitEthernet0/0/5.104
- description ##Suspended Easy Tax Solutions#131448#100Mb##
  encapsulation dot1Q 104
- ip address 203.110.91.201 255.255.255.248
  shutdown
  arp timeout 5
- service-policy input 100_Mbps
- service-policy output 100_Mbps
 !
 interface GigabitEthernet0/0/5.105
  description ##Jupiter Orison Pvt Ltd#131192#50Mb#UV##
