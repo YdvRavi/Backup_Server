@@ -1,6 +1,6 @@
 ##CONFIG##
 
-## Last commit: 2022-04-28 11:18:50 UTC by deldsl
+## Last commit: 2022-04-28 20:27:08 UTC by deldsl
 version 17.4R1.16;
 system {
     host-name MILL_R_JUNOS;
@@ -1659,7 +1659,6 @@ interfaces {
         }
         unit 903 {
             disable;
-            description "##CROWN_PROPBUILD_PRIVATE_LIMITED#601021#20Mb##";
             vlan-id 903;
             family inet {
                 filter {
@@ -1670,7 +1669,6 @@ interfaces {
                     input 20_Mbps;
                     output 20_Mbps;
                 }
-                address 203.110.83.217/29;
             }
         }
     }
