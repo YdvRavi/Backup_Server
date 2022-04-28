@@ -137,7 +137,7 @@ duplex full
 switchport trunk allowed vlan 2-4094
 exit
 interface ethernet 0/0/24
-description ##C4#HONE_RING#SW82.233#H_ONE##
+description ##C4#HONE_RING#SW82.244#H_ONE##
 speed 1000
 duplex full
 switchport trunk allowed vlan 2-4094
