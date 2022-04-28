@@ -394,6 +394,7 @@ errdisable auto-recovery cause igmp
 exit
 interface ethernet 0/0/9
 description "##C4#RING_2#Rajeev Anand Verma#SW85.109#P9##"
+shutdown
 speed 1000
 duplex full
 switchport trunk allowed vlan 116,271,300-301,305
