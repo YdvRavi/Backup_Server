@@ -5,7 +5,7 @@ R_CORE1###
 ##MILL#R_CORE1###
 Building configuration...
 
-Current configuration : 106895 bytes
+Current configuration : 106693 bytes
 !
 ! Last configuration change at 20:45:53 UTC Thu Apr 28 2022
 !
@@ -2601,9 +2601,7 @@ interface GigabitEthernet0/0/5.11
  service-policy output 5_Mbps
 !
 interface GigabitEthernet0/0/5.12
- description ##Suspended Easy Tax Solutions#131445#50Mb##
  encapsulation dot1Q 12
- ip address 203.110.88.209 255.255.255.248
  shutdown
  arp timeout 5
  service-policy input 50_Mbps
@@ -3297,9 +3295,7 @@ interface GigabitEthernet0/0/5.204
  service-policy output 100_Mbps
 !
 interface GigabitEthernet0/0/5.205
- description ##Suspended Easy Tax Solutions#131436#30Mb##
  encapsulation dot1Q 205
- ip address 203.110.81.105 255.255.255.248
  shutdown
  arp timeout 5
  service-policy input 30_Mbps
