@@ -509,7 +509,6 @@ confirm onu mac 7c:a9:6b:84:0f:6c onuid 7 auth-mode mac
 confirm onu mac a0:c6:ec:07:81:87 onuid 8 auth-mode mac
 confirm onu mac 7c:a9:6b:af:07:a8 onuid 10 auth-mode mac
 confirm onu mac 7c:a9:6b:af:06:f8 onuid 11 auth-mode mac
-confirm onu mac 7c:a9:6b:af:07:14 onuid 12 auth-mode mac
 confirm onu mac 7c:a9:6b:84:d5:2e onuid 13 auth-mode mac
 confirm onu mac 7c:a9:6b:84:0f:5e onuid 14 auth-mode mac
 confirm onu mac 7c:a9:6b:af:06:f0 onuid 15 auth-mode mac
@@ -559,7 +558,6 @@ exit
 !
 interface epon 0/3
 onu mac-auth add 7C:A9:6B:AF:07:08
-onu mac-auth add 7C:A9:6B:AF:07:14
 onu mac-auth add 38:94:E0:A4:0B:10
 onu mac-auth add 7C:A9:6B:84:0F:5E
 onu mac-auth add 7C:A9:6B:84:0F:6C
@@ -674,9 +672,6 @@ onu 11 ctc eth 1 loopdetect enable
 onu 11 ctc eth 1 phy_ctrl enable
 onu 11 ctc eth 1 vlan pvid 600 pri 0
 onu 11 ctc eth 1 vlan mode tag
-onu 12 description 131437_Vikas
-onu 12 ctc eth 1 vlan pvid 138 pri 0
-onu 12 ctc eth 1 vlan mode tag
 onu 13 description Appy_131454
 onu 13 ctc eth 1 vlan pvid 146 pri 0
 onu 13 ctc eth 1 vlan mode tag
