@@ -156,8 +156,6 @@ ont-srvprofile-id 100 desc "291023_Ashok_B707"
 ont-srvprofile-id 100 desc "291029_SATYENDER_B801"
  ont add 5 0 sn-auth "48575443AC6EE49E" omci ont-lineprofile-id 200 
 ont-srvprofile-id 100 desc "291008_Gurjeet_C1904"
- ont add 5 1 sn-auth "48575443E4BCB44A" omci ont-lineprofile-id 200 
-ont-srvprofile-id 100 desc "291026_Satpal"
  ont add 5 2 sn-auth "4857544391DEB69F" omci ont-lineprofile-id 200 
 ont-srvprofile-id 100 desc "291027_DARSHAN"
  ont add 5 3 sn-auth "48575443AC70529E" omci ont-lineprofile-id 200 
@@ -248,8 +246,6 @@ ont-srvprofile-id 100 desc "651021_NAIWEDYA_F915"
  service-port 43 vlan 500 gpon 0/0/0 ont 3 gemport 3 multi-service user-vlan 500 tag-transform translate
  service-port 44 vlan 608 gpon 0/0/0 ont 1 gemport 1 multi-service user-vlan 608 tag-transform translate
  service-port 45 vlan 500 gpon 0/0/0 ont 1 gemport 3 multi-service user-vlan 500 tag-transform translate
- service-port 46 vlan 608 gpon 0/0/5 ont 1 gemport 1 multi-service user-vlan 608 tag-transform translate
- service-port 48 vlan 500 gpon 0/0/5 ont 1 gemport 3 multi-service user-vlan 500 tag-transform translate
  service-port 49 vlan 608 gpon 0/0/6 ont 0 gemport 1 multi-service user-vlan 608 tag-transform translate
  service-port 50 vlan 500 gpon 0/0/6 ont 1 gemport 3 multi-service user-vlan 500 tag-transform translate
  service-port 51 vlan 608 gpon 0/0/6 ont 1 gemport 1 multi-service user-vlan 608 tag-transform translate
