@@ -5,7 +5,7 @@ R_CORE1###
 ##MILL#R_CORE1###
 Building configuration...
 
-Current configuration : 107453 bytes
+Current configuration : 107349 bytes
 !
 ! Last configuration change at 20:45:53 UTC Thu Apr 28 2022
 !
@@ -2903,9 +2903,7 @@ interface GigabitEthernet0/0/5.56
  service-policy output 50_Mbps
 !
 interface GigabitEthernet0/0/5.57
- description ##Embassy of Equatorial Guinea#121039#20MB#GBP##
  encapsulation dot1Q 57
- ip address 203.110.88.25 255.255.255.248
  ip access-group VOIP in
  ip access-group VOIP out
  shutdown
