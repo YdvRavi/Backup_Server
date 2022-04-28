@@ -349,6 +349,7 @@ errdisable auto-recovery cause igmp
 exit
 interface ethernet 0/0/28
 description ##C4#MAIN_RING#SW82.231#Heritage##
+shutdown
 speed 1000
 switchport trunk allowed vlan 2-4094
 storm-control broadcast 1000
