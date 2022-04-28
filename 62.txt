@@ -527,7 +527,6 @@ confirm onu mac 7c:a9:6b:3b:19:dd onuid 4 auth-mode mac
 confirm onu mac 80:d4:a5:7a:d2:44 onuid 5 auth-mode mac
 confirm onu mac a4:00:e2:73:1b:6b onuid 6 auth-mode mac
 confirm onu mac 7c:a9:6b:02:c9:68 onuid 8 auth-mode mac
-confirm onu mac 7c:a9:6b:af:07:28 onuid 9 auth-mode mac
 confirm onu mac 54:47:e8:6e:e1:e9 onuid 10 auth-mode mac
 confirm onu mac 7c:a9:6b:d9:1b:3c onuid 12 auth-mode mac
 confirm onu mac 7c:a9:6b:01:ce:48 onuid 14 auth-mode mac
@@ -577,7 +576,6 @@ exit
 !
 interface epon 0/4
 onu mac-auth add 7C:A9:6B:3B:1A:1F
-onu mac-auth add 7C:A9:6B:AF:07:28
 onu mac-auth add A4:00:E2:73:1B:6B
 onu mac-auth add 7C:A9:6B:01:CE:48
 onu mac-auth add 7C:A9:6B:D9:1B:3C
@@ -700,11 +698,6 @@ onu 6 ctc eth 1 vlan pvid 600 pri 0
 onu 6 ctc eth 1 vlan mode tag
 onu 8 ctc eth 1 vlan pvid 842 pri 0
 onu 8 ctc eth 1 vlan mode tag
-onu 9 description 131438_Easy
-onu 9 ctc eth 1 flow_control disable
-onu 9 ctc eth 1 loopdetect enable
-onu 9 ctc eth 1 vlan pvid 41 pri 0
-onu 9 ctc eth 1 vlan mode tag
 onu 10 description 131393_TOSHNIWAL
 onu 10 ctc eth 1 vlan pvid 842 pri 0
 onu 10 ctc eth 1 vlan mode tag
