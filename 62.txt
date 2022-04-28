@@ -484,7 +484,6 @@ onu auth-mode mac
 confirm onu mac e0:67:b3:11:93:16 onuid 2 auth-mode mac
 confirm onu mac 38:94:e0:e3:40:ca onuid 3 auth-mode mac
 confirm onu mac 98:c7:a4:05:02:67 onuid 4 auth-mode mac
-confirm onu mac 7c:a9:6b:84:d4:fe onuid 5 auth-mode mac
 exit
 !
 interface epon 0/2
@@ -537,7 +536,6 @@ onu mac-auth add E0:67:B3:11:93:16
 onu mac-auth add 7C:A9:6B:02:C9:68
 onu mac-auth add A4:00:E2:6D:87:EA
 onu mac-auth add 38:94:E0:E3:40:CA
-onu mac-auth add 7C:A9:6B:84:D4:FE
 exit
 !
 interface epon 0/2
@@ -599,9 +597,6 @@ onu 4 ctc eth 1 flow_control enable
 onu 4 ctc eth 1 loopdetect enable
 onu 4 ctc eth 1 vlan pvid 600 pri 0
 onu 4 ctc eth 1 vlan mode tag
-onu 5 description Easytax_131431
-onu 5 ctc eth 1 vlan pvid 204 pri 0
-onu 5 ctc eth 1 vlan mode tag
 exit
 !
 interface epon 0/2
