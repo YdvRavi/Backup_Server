@@ -29,10 +29,10 @@ vlan 5
 exit 
 vlan 12 
   name 12 
-  normal 1-13,15-25 
-  fixed 14,26-28 
+  normal 1-25 
+  fixed 26-28 
   forbidden "" 
-  untagged 14 
+  untagged "" 
 exit 
 vlan 13 
   name 13 
@@ -401,9 +401,7 @@ interface port-channel 13
   loopguard 
 exit 
 interface port-channel 14  
-  name ##131445_Esaytex#50Mb## 
-  pvid 12 
-  ingress-check 
+  inactive 
   bandwidth-limit cir 51200 
   bandwidth-limit cir 
   bandwidth-limit pir 51200 
