@@ -5,7 +5,7 @@ R_CORE1###
 ##MILL#R_CORE1###
 Building configuration...
 
-Current configuration : 107157 bytes
+Current configuration : 106987 bytes
 !
 ! Last configuration change at 20:45:53 UTC Thu Apr 28 2022
 !
@@ -1020,9 +1020,7 @@ interface GigabitEthernet0/0/4.270
  service-policy output 10_Mbps
 !
 interface GigabitEthernet0/0/4.271
- description ##Vikram#111388#30Mb##
  encapsulation dot1Q 271
- ip address 203.110.81.213 255.255.255.252
  ip access-group VOIP in
  ip access-group VOIP out
  shutdown
@@ -3283,9 +3281,7 @@ interface GigabitEthernet0/0/5.202
  service-policy output 100_Mbps
 !
 interface GigabitEthernet0/0/5.203
- description ##Suspended Easy Tax#131430#20Mb##
  encapsulation dot1Q 203
- ip address 203.110.85.153 255.255.255.248
  ip access-group VOIP in
  ip access-group VOIP out
  shutdown

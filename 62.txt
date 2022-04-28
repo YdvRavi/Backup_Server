@@ -511,7 +511,6 @@ confirm onu mac 7c:a9:6b:84:d5:2e onuid 13 auth-mode mac
 confirm onu mac 7c:a9:6b:84:0f:5e onuid 14 auth-mode mac
 confirm onu mac 7c:a9:6b:af:06:f0 onuid 15 auth-mode mac
 confirm onu mac 7c:a9:6b:af:07:08 onuid 17 auth-mode mac
-confirm onu mac 7c:a9:6b:af:07:a4 onuid 18 auth-mode mac
 confirm onu mac 38:94:e0:a4:0b:10 onuid 20
 confirm onu mac 7c:a9:6b:d6:a8:b0 onuid 22 auth-mode mac
 confirm onu mac 7c:a9:6b:d7:70:24 onuid 23 auth-mode mac
@@ -559,7 +558,6 @@ onu mac-auth add 38:94:E0:AB:12:2B
 onu mac-auth add 7C:A9:6B:3B:19:DD
 onu mac-auth add 7C:A9:6B:02:C9:68
 onu mac-auth add 7C:A9:6B:3B:19:E3
-onu mac-auth add 7C:A9:6B:AF:07:A4
 onu mac-auth add 7C:A9:6B:AF:07:A8
 onu mac-auth add 7C:A9:6B:D7:70:24
 onu mac-auth add 38:94:E0:A4:0A:B8
@@ -664,9 +662,6 @@ onu 14 ctc eth 1 vlan mode tag
 onu 17 description EasyTAX-B_131436
 onu 17 ctc eth 1 vlan pvid 205 pri 0
 onu 17 ctc eth 1 vlan mode tag
-onu 18 description EasyTAX-B_131430
-onu 18 ctc eth 1 vlan pvid 203 pri 0
-onu 18 ctc eth 1 vlan mode tag
 onu 22 description 131459_Ankur
 onu 22 ctc eth 1 vlan pvid 14 pri 0
 onu 22 ctc eth 1 vlan mode tag
