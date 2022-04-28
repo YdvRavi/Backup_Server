@@ -492,7 +492,6 @@ confirm onu mac 7c:a9:6b:3b:19:db onuid 1 auth-mode mac
 confirm onu mac e0:67:b3:10:33:b8 onuid 2 auth-mode mac
 confirm onu mac a4:00:e2:6d:87:ea onuid 3
 confirm onu mac a4:00:e2:8e:f5:82 onuid 4 auth-mode mac
-confirm onu mac 7c:a9:6b:84:0f:82 onuid 6 auth-mode mac
 confirm onu mac 7c:a9:6b:84:d5:08 onuid 7 auth-mode mac
 exit
 !
@@ -538,7 +537,6 @@ onu mac-auth add 38:94:E0:E3:40:CA
 exit
 !
 interface epon 0/2
-onu mac-auth add 7C:A9:6B:84:0F:82
 onu mac-auth add 7C:A9:6B:3B:19:DB
 onu mac-auth add 7C:A9:6B:84:D5:08
 onu mac-auth add E0:67:B3:10:33:B8
@@ -608,9 +606,6 @@ onu 2 ctc eth 1 vlan mode tag
 onu 4 description 131457_Sarthak
 onu 4 ctc eth 1 vlan pvid 600 pri 0
 onu 4 ctc eth 1 vlan mode tag
-onu 6 description 131444_Esaytax
-onu 6 ctc eth 1 vlan pvid 46 pri 0
-onu 6 ctc eth 1 vlan mode tag
 onu 7 description 131452_AVL
 onu 7 ctc eth 1 vlan pvid 600 pri 0
 onu 7 ctc eth 1 vlan mode tag
