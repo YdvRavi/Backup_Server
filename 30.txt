@@ -418,9 +418,6 @@ active
 aim 0/3/7 name 641068_Jobin
 permit sn string-hex GNXS-61200b8c line 1 default line 1
 active
-aim 0/3/8 name 641087_Nadeem
-permit sn string-hex GNXS-61200225 line 1 default line 1
-active
 aim 0/3/9 name 641107_suman
 permit sn string-hex HWTC-872ae0a5 line 1 default line 1
 active
