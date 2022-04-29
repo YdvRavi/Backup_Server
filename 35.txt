@@ -208,6 +208,8 @@ ont-srvprofile-id 100 desc "651018_Laasya"
 ont-srvprofile-id 100 desc "651020_SUNWAYS"
  ont add 6 20 sn-auth "48575443119DBFA6" omci ont-lineprofile-id 200 
 ont-srvprofile-id 100 desc "651021_NAIWEDYA_F915"
+ ont add 6 21 sn-auth "48575443119C4DA6" omci ont-lineprofile-id 200 
+ont-srvprofile-id 100 desc "651022_COMPANION_BG-081"
 #
 [emu-config]
   <emu-config>
