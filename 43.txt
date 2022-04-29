@@ -3944,6 +3944,7 @@ interface GigabitEthernet0/1/0.949902
  encapsulation dot1Q 949 second-dot1q 902
  ip address 172.30.80.57 255.255.255.248 secondary
  ip address 203.110.85.238 255.255.255.252 secondary
+ ip address 172.30.80.49 255.255.255.248 secondary
  ip address 203.110.90.122 255.255.255.248
  service-policy input R_SAI_ALL
  service-policy output R_SAI_ALL
@@ -3951,7 +3952,6 @@ interface GigabitEthernet0/1/0.949902
 interface GigabitEthernet0/1/0.949903
  description ##IDENTIFYPLUS DELIVERY SERVICES PRIVATE LIMITED#581156#40Mb##
  encapsulation dot1Q 949 second-dot1q 903
- ip address 172.30.80.49 255.255.255.248 secondary
  ip address 203.110.84.241 255.255.255.248
  ip access-group VOIP in
  ip access-group VOIP out
