@@ -892,6 +892,9 @@ active
 aim 0/16/17 name 641184_Bharat
 permit sn string-hex HWTC-11a40ea6 line 1 default line 1
 active
+aim 0/16/18 name 641203_Atharv
+permit sn string-hex HWTC-61200206 line 1 default line 1
+active
 exit
 exit
 ![gpon-device]
