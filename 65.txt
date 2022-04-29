@@ -515,6 +515,7 @@ onu 23 description 331224_VENTOTA
 onu 24 description 331185_jamie
 onu 25 description 331341_Dolomite
 onu 26 description 331368_Fodxpert
+onu 27 description 331110_Gangaur
 exit
 !
 interface epon 0/2
