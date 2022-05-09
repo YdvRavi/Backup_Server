@@ -157,6 +157,9 @@ active
 aim 0/2/11 name 671027_BHUMIKA
 permit sn string-hex HWTC-11a282a6 line 1 default line 1
 active
+aim 0/2/12 name 671049_SIDDHARTH_A406
+permit sn string-hex HWTC-11a587a6 line 1 default line 1
+active
 aim 0/3/1 name 671006_NIRAJ
 permit sn string-hex HWTC-11a7b0a6 line 1 default line 1
 active
