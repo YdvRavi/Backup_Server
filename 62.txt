@@ -502,8 +502,8 @@ confirm onu mac 38:94:e0:a4:0a:b8 onuid 2 auth-mode mac
 confirm onu mac 38:94:e0:e3:39:8a onuid 3 auth-mode mac
 confirm onu mac 38:94:e0:ab:12:2b onuid 4 auth-mode mac
 confirm onu mac 7c:a9:6b:3b:19:e3 onuid 5 auth-mode mac
+confirm onu mac 7c:a9:6b:af:07:a8 onuid 6
 confirm onu mac 7c:a9:6b:84:0f:6c onuid 7 auth-mode mac
-confirm onu mac 7c:a9:6b:af:07:a8 onuid 10 auth-mode mac
 confirm onu mac 7c:a9:6b:af:06:f8 onuid 11 auth-mode mac
 confirm onu mac 7c:a9:6b:84:d5:2e onuid 13 auth-mode mac
 confirm onu mac 7c:a9:6b:84:0f:5e onuid 14 auth-mode mac
@@ -552,7 +552,6 @@ onu mac-auth add 38:94:E0:AB:12:2B
 onu mac-auth add 7C:A9:6B:3B:19:DD
 onu mac-auth add 7C:A9:6B:02:C9:68
 onu mac-auth add 7C:A9:6B:3B:19:E3
-onu mac-auth add 7C:A9:6B:AF:07:A8
 onu mac-auth add 7C:A9:6B:D7:70:24
 onu mac-auth add 38:94:E0:A4:0A:B8
 onu mac-auth add 7C:A9:6B:84:D5:2E
@@ -631,9 +630,6 @@ onu 5 ctc eth 1 vlan mode tag
 onu 7 description 131442_family
 onu 7 ctc eth 1 vlan pvid 600 pri 0
 onu 7 ctc eth 1 vlan mode tag
-onu 10 description BELLATOR_131434
-onu 10 ctc eth 1 vlan pvid 147 pri 0
-onu 10 ctc eth 1 vlan mode tag
 onu 11 description 131387_Alba
 onu 11 ctc eth 1 flow_control disable
 onu 11 ctc eth 1 loopdetect enable

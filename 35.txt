@@ -190,8 +190,6 @@ ont-srvprofile-id 100 desc "651012_ADVANCE"
 ont-srvprofile-id 100 desc "656013_CRM_Office"
  ont add 6 11 sn-auth "48575443010B990C" omci ont-lineprofile-id 200 
 ont-srvprofile-id 100 desc "651013_CRM_Office"
- ont add 6 12 sn-auth "48575443D6A8FD9F" omci ont-lineprofile-id 200 
-ont-srvprofile-id 100 desc "651016_PROPERTY_1221"
  ont add 6 13 sn-auth "48575443E4C5CD4A" omci ont-lineprofile-id 200 
 ont-srvprofile-id 100 desc "651003_Facility Office swimming pool"
  ont add 6 14 sn-auth "48575443F0E635A5" omci ont-lineprofile-id 200 
@@ -284,10 +282,6 @@ ont-srvprofile-id 100 desc "651022_COMPANION_BG-081"
  service-port 93 vlan 500 gpon 0/0/5 ont 6 gemport 2 multi-service user-vlan 500 tag-transform translate
  service-port 94 vlan 608 gpon 0/0/5 ont 6 gemport 1 multi-service user-vlan 608 tag-transform translate
  service-port 95 vlan 100 gpon 0/0/5 ont 6 gemport 5 multi-service user-vlan 100 tag-transform translate
- service-port 96 vlan 608 gpon 0/0/6 ont 12 gemport 1 multi-service user-vlan 
-608 tag-transform translate
- service-port 97 vlan 500 gpon 0/0/6 ont 12 gemport 3 multi-service user-vlan 
-500 tag-transform translate
  service-port 101 vlan 608 gpon 0/0/6 ont 14 gemport 1 multi-service user-vlan  608 tag-transform translate
  service-port 102 vlan 500 gpon 0/0/6 ont 14 gemport 3 multi-service user-vlan  500 tag-transform translate
  service-port 103 vlan 608 gpon 0/0/6 ont 13 gemport 1 multi-service user-vlan  608 tag-transform translate

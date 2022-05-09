@@ -184,7 +184,7 @@ interface ethernet 0/0/9
 description "##UV#RING_3#Continuum Buying#SW82.34##"
 speed 1000
 duplex full
-switchport trunk allowed vlan 12,31-33,36,41,101,108,146,200
+switchport trunk allowed vlan 12,31-33,36,41,101,108,136,146,200
 storm-control broadcast 1000
 storm-control unicast 1500
 storm-control multicast 1500

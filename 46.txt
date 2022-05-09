@@ -50,7 +50,7 @@ exit
 interface ethernet 0/0/12
 exit
 interface ethernet 0/0/13
-description "##UV#RING_3#National Collateral#SW82.50##"
+description "##UV#RING_3#Tyke Technologies Pvt Ltd#SW82.53##"
 switchport trunk allowed vlan 2-4094
 exit
 interface ethernet 0/0/14

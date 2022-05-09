@@ -81,6 +81,9 @@ exit
 vlan 609
 description Suncity
 exit
+vlan 615
+description TATA_Lavida
+exit
 vlan 616
 description TATA_BB
 exit
@@ -108,7 +111,7 @@ errdisable auto-recovery cause igmp
 interface ethernet 0/0/1
 description ##MILL#R_CORE1##
 priority 6
-switchport trunk allowed vlan 2-603,605,609,611-615,617-700,703,706-709,803
+switchport trunk allowed vlan 2-603,605,609,611-614,617-700,703,706-709,803
 storm-control broadcast 10000
 storm-control unicast 10000
 storm-control multicast 10000
@@ -121,7 +124,7 @@ errdisable auto-recovery cause igmp
 exit
 interface ethernet 0/0/2
 description Mill-mainring-SW8720
-switchport trunk allowed vlan 2-279,281-580,582-603,606-615,617-869,872-4094
+switchport trunk allowed vlan 2-279,281-580,582-603,606-614,617-869,872-4094
 storm-control broadcast 10000
 storm-control unicast 10000
 storm-control multicast 10000
@@ -147,7 +150,7 @@ errdisable auto-recovery cause bpdu
 errdisable auto-recovery cause igmp
 exit
 interface ethernet 0/0/4
-switchport default vlan 616
+switchport default vlan 615
 storm-control broadcast 10000
 storm-control unicast 10000
 storm-control multicast 10000
@@ -407,7 +410,7 @@ errdisable auto-recovery cause igmp
 exit
 interface ethernet 0/0/21
 description ##C4#MAIN_RING#SW82.238##
-switchport trunk allowed vlan 2-216,218-326,328-869,872-998,1000-4094
+switchport trunk allowed vlan 2-216,218-326,328-614,616-869,872-998,1000-4094
 storm-control broadcast 10000
 storm-control unicast 10000
 storm-control multicast 10000
@@ -460,7 +463,7 @@ errdisable auto-recovery cause igmp
 exit
 interface ethernet 0/0/25
 description ##MILL#R_MIKROTIK#80.80##
-switchport trunk allowed vlan 401,600,605,612,870-871
+switchport trunk allowed vlan 401,600,605,612,615,870-871
 storm-control broadcast 10000
 storm-control unicast 10000
 storm-control multicast 10000

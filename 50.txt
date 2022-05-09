@@ -247,6 +247,9 @@ exit
 vlan 711
 description saphhire90
 exit
+vlan 715
+description TATA_Lavida
+exit
 vlan 800
 description LotusFacility
 exit
@@ -273,7 +276,7 @@ interface ethernet 0/0/1
 description ##mill#bharti_wan#sw87.4##
 switchport trunk allowed vlan 2-209,211-213,215-261,266-269,271-300,302-325,32
 7-399,401-524,526-580,582-603,605,610,612,614-615,617-705,
-switchport trunk allowed vlan 710,712-799,801-812,814-4094
+switchport trunk allowed vlan 710,712-714,716-799,801-812,814-4094
 no ingress filtering
 storm-control broadcast 10000
 storm-control unicast 15000
@@ -302,7 +305,7 @@ exit
 interface ethernet 0/0/3
 description ##residence#main_ring#sw82.143#mill##
 switchport trunk allowed vlan 100,210,262,264-265,301,326,400,421,500,580-581,
-601,604,606-609,611,613,706-709,711,800,813,903
+601,604,606-609,611,613,706-709,711,715,800,813,903
 no ingress filtering
 storm-control broadcast 10000
 storm-control unicast 10000
@@ -331,7 +334,7 @@ errdisable auto-recovery cause igmp
 exit
 interface ethernet 0/0/5
 description ##MILL#MAIN_RING#SW87.19##
-switchport trunk allowed vlan 2-325,327-418,420-701,703-799,801-4094
+switchport trunk allowed vlan 2-325,327-418,420-701,703-714,716-799,801-4094
 no ingress filtering
 storm-control broadcast 1000
 storm-control unicast 1500
@@ -346,7 +349,7 @@ exit
 interface ethernet 0/0/6
 description ##C4#MAIN_RING#SW82.231#Heritage##
 switchport trunk allowed vlan 2-209,211-264,266-325,327-580,582-610,612,614-61
-5,617-710,712-799,801-4094
+5,617-710,712-714,716-799,801-4094
 no ingress filtering
 storm-control broadcast 10000
 storm-control unicast 1500
@@ -363,7 +366,7 @@ description ##C4#MAIN_RING#SW82.234#AARDEE_CITY#B##
 speed 1000
 duplex full
 switchport trunk allowed vlan 2-209,211-264,266-325,327-524,526-580,582-603,60
-5-610,612,614-615,617-710,712-799,801-4094
+5-610,612,614-615,617-710,712-714,716-799,801-4094
 no ingress filtering
 storm-control broadcast 1000
 storm-control unicast 1500
@@ -380,7 +383,7 @@ description "##C4#RING_2#Rajeev Anand Verma#SW85.109#P10##"
 speed 1000
 duplex full
 switchport trunk allowed vlan 2-209,211-264,266-325,327-418,420-524,526-580,58
-2-603,605-610,612,614-615,617-710,712-799,801-4094
+2-603,605-610,612,614-615,617-710,712-714,716-799,801-4094
 no ingress filtering
 storm-control broadcast 1000
 storm-control unicast 1500
@@ -411,7 +414,7 @@ exit
 interface ethernet 0/0/10
 shutdown
 switchport trunk allowed vlan 2-209,211-264,266-325,327-418,420-524,526-580,58
-2-603,605-610,612,614-615,617-710,712-799,801-4094
+2-603,605-610,612,614-615,617-710,712-714,716-799,801-4094
 no ingress filtering
 storm-control broadcast 1000
 storm-control unicast 1500
@@ -437,7 +440,7 @@ errdisable auto-recovery cause igmp
 exit
 interface ethernet 0/0/12
 switchport trunk allowed vlan 2-209,211-264,266-325,327-418,420-524,526-580,58
-2-603,605-610,612,614-615,617-710,712-799,801-4094
+2-603,605-610,612,614-615,617-710,712-714,716-799,801-4094
 no ingress filtering
 storm-control broadcast 1000
 storm-control unicast 1500
@@ -479,7 +482,7 @@ errdisable auto-recovery cause igmp
 exit
 interface ethernet 0/0/15
 switchport trunk allowed vlan 2-209,211-264,266-325,327-418,420-580,582-603,60
-5-610,612,614-615,617-710,712-799,801-4094
+5-610,612,614-615,617-710,712-714,716-799,801-4094
 no ingress filtering
 storm-control broadcast 1000
 storm-control unicast 1500
@@ -493,7 +496,7 @@ errdisable auto-recovery cause igmp
 exit
 interface ethernet 0/0/16
 switchport trunk allowed vlan 2-209,211-264,266-325,327-418,420-580,582-603,60
-5-610,612,614-615,617-710,712-799,801-4094
+5-610,612,614-615,617-710,712-714,716-799,801-4094
 no ingress filtering
 storm-control broadcast 1000
 storm-control unicast 1500
@@ -507,7 +510,7 @@ errdisable auto-recovery cause igmp
 exit
 interface ethernet 0/0/17
 switchport trunk allowed vlan 2-209,211-264,266-325,327-418,420-580,582-603,60
-5-610,612,614-615,617-710,712-799,801-4094
+5-610,612,614-615,617-710,712-714,716-799,801-4094
 no ingress filtering
 storm-control broadcast 1000
 storm-control unicast 1500
@@ -521,7 +524,7 @@ errdisable auto-recovery cause igmp
 exit
 interface ethernet 0/0/18
 switchport trunk allowed vlan 2-209,211-264,266-325,327-418,420-580,582-603,60
-5-610,612,614-615,617-710,712-799,801-4094
+5-610,612,614-615,617-710,712-714,716-799,801-4094
 no ingress filtering
 storm-control broadcast 1000
 storm-control unicast 1500
@@ -537,7 +540,7 @@ interface ethernet 0/0/19
 speed 1000
 duplex full
 switchport trunk allowed vlan 2-209,211-264,266-325,327-580,582-603,605-610,61
-2,614-615,617-710,712-799,801-4094
+2,614-615,617-710,712-714,716-799,801-4094
 no ingress filtering
 storm-control broadcast 1000
 storm-control unicast 1500
@@ -554,7 +557,7 @@ description ##C4#MAIN_RING#SW82.237#Sunvision##
 speed 1000
 duplex full
 switchport trunk allowed vlan 2-209,211-264,266-325,327-580,582-610,612,614-61
-5,617-710,712-799,801-4094
+5,617-710,712-714,716-799,801-4094
 no ingress filtering
 storm-control broadcast 10000
 storm-control unicast 1500
@@ -571,7 +574,7 @@ description ##C4#MAIN_RING#SW82.240#JMD_MEGA##
 speed 1000
 duplex full
 switchport trunk allowed vlan 2-209,211-264,266-325,327-580,582-610,612,614-61
-5,617-710,712-799,801-4094
+5,617-710,712-714,716-799,801-4094
 no ingress filtering
 storm-control broadcast 10000
 storm-control unicast 1500
@@ -588,7 +591,7 @@ shutdown
 speed 1000
 duplex full
 switchport trunk allowed vlan 2-209,211-264,266-325,327-580,582-610,612,614-61
-5,617-710,712-799,801-4094
+5,617-710,712-714,716-799,801-4094
 no ingress filtering
 storm-control broadcast 10000
 storm-control unicast 1500
@@ -603,7 +606,7 @@ exit
 interface ethernet 0/0/23
 description ##C4#MAIN_RING#SW82.234#AARDEE_CITY##
 switchport trunk allowed vlan 2-209,211-264,266-325,327-580,582-603,605-610,61
-2,614-615,617-710,712-799,801-4094
+2,614-615,617-710,712-714,716-799,801-4094
 no ingress filtering
 storm-control broadcast 10000
 storm-control unicast 1500
@@ -631,7 +634,7 @@ errdisable auto-recovery cause igmp
 exit
 interface ethernet 0/0/25
 switchport trunk allowed vlan 2-209,211-264,266-325,327-418,420-580,582-603,60
-5-610,612,614-615,617-710,712-799,801-4094
+5-610,612,614-615,617-710,712-714,716-799,801-4094
 no ingress filtering
 storm-control broadcast 1000
 storm-control unicast 1500
@@ -646,7 +649,7 @@ exit
 interface ethernet 0/0/26
 speed 1000
 switchport trunk allowed vlan 2-209,211-264,266-325,327-418,420-580,582-603,60
-5-610,612,614-615,617-710,712-799,801-4094
+5-610,612,614-615,617-710,712-714,716-799,801-4094
 no ingress filtering
 storm-control broadcast 1000
 storm-control unicast 1500
@@ -661,7 +664,7 @@ exit
 interface ethernet 0/0/27
 description MILL_R_JUNOS
 switchport trunk allowed vlan 2-209,211-264,266-580,582-610,612,614-615,617-71
-0,712-799,801-4094
+0,712-714,716-799,801-4094
 no ingress filtering
 storm-control broadcast 1000
 storm-control unicast 1500

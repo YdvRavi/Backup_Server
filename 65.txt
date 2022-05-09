@@ -272,6 +272,7 @@ snmp-server trap-source 127.0.1.1
 !
 interface epon 0/1
 onu auth-mode mac
+confirm onu mac 7c:a9:6b:d9:1a:f0 onuid 1 auth-mode mac
 confirm onu mac 38:94:e0:b1:b7:d6 onuid 2 auth-mode mac
 confirm onu mac 38:94:e0:b1:d9:6e onuid 3 auth-mode mac
 confirm onu mac 7c:a9:6b:84:d5:02 onuid 4 auth-mode mac
@@ -299,15 +300,16 @@ confirm onu mac 38:94:e0:a4:0b:a0 onuid 25 auth-mode mac
 confirm onu mac a0:c6:ec:04:67:7e onuid 26 auth-mode mac
 confirm onu mac 7c:a9:6b:d9:1b:24 onuid 27 auth-mode mac
 confirm onu mac 7c:a9:6b:d9:1b:44 onuid 28 auth-mode mac
+confirm onu mac 38:94:e0:d3:d0:44 onuid 29 auth-mode mac
 exit
 !
 interface epon 0/2
 onu auth-mode mac
-confirm onu mac 38:94:e0:e3:13:3a onuid 1
+confirm onu mac 60:08:10:e5:f6:ee onuid 1 auth-mode mac
 confirm onu mac 38:94:e0:a4:22:38 onuid 2 auth-mode mac
 confirm onu mac 38:94:e0:ac:c1:b3 onuid 3 auth-mode mac
 confirm onu mac 38:94:e0:a4:58:70 onuid 4 auth-mode mac
-confirm onu mac 38:94:e0:b1:d3:66 onuid 5
+confirm onu mac 38:94:e0:a4:0a:f8 onuid 5 auth-mode mac
 confirm onu mac 38:94:e0:a4:21:88 onuid 6 auth-mode mac
 confirm onu mac 38:94:e0:c2:3a:30 onuid 7 auth-mode mac
 confirm onu mac 38:94:e0:c3:a2:6f onuid 8 auth-mode mac
@@ -331,6 +333,7 @@ confirm onu mac 7c:a9:6b:d9:1f:64 onuid 25 auth-mode mac
 confirm onu mac 7c:a9:6b:d9:1f:00 onuid 26 auth-mode mac
 confirm onu mac 7c:a9:6b:d9:1e:fc onuid 27 auth-mode mac
 confirm onu mac 48:8e:ef:7d:23:c6 onuid 28 auth-mode mac
+confirm onu mac 60:08:10:ad:79:86 onuid 29 auth-mode mac
 exit
 !
 interface epon 0/3
@@ -339,7 +342,7 @@ confirm onu mac 38:94:e0:a4:21:f0 onuid 1 auth-mode mac
 confirm onu mac 38:94:e0:b1:d9:66 onuid 2 auth-mode mac
 confirm onu mac 38:94:e0:b1:b7:d2 onuid 3 auth-mode mac
 confirm onu mac 38:94:e0:b1:d9:58 onuid 4 auth-mode mac
-confirm onu mac 38:94:e0:a4:22:10 onuid 5 auth-mode mac
+confirm onu mac 38:94:e0:a4:22:10 onuid 5
 confirm onu mac 38:94:e0:b5:5e:67 onuid 6 auth-mode mac
 confirm onu mac 38:94:e0:a4:0b:08 onuid 7 auth-mode mac
 confirm onu mac 38:94:e0:a4:21:90 onuid 8 auth-mode mac
@@ -357,7 +360,6 @@ confirm onu mac 38:94:e0:be:16:ba onuid 19 auth-mode mac
 confirm onu mac a4:00:e2:84:22:63 onuid 20 auth-mode mac
 confirm onu mac 38:94:e0:be:38:49 onuid 21 auth-mode mac
 confirm onu mac a4:00:e2:8b:13:33 onuid 22 auth-mode mac
-confirm onu mac 38:94:e0:ac:c1:5b onuid 23
 confirm onu mac 7c:a9:6b:d6:af:3c onuid 24 auth-mode mac
 confirm onu mac cc:05:77:b9:e2:b8 onuid 25 auth-mode mac
 confirm onu mac 7c:a9:6b:d7:6a:b2 onuid 26 auth-mode mac
@@ -374,7 +376,6 @@ confirm onu mac 38:94:e0:b0:44:95 onuid 3 auth-mode mac
 confirm onu mac 38:94:e0:b5:7c:5a onuid 4 auth-mode mac
 confirm onu mac 38:94:e0:a8:c1:e1 onuid 5 auth-mode mac
 confirm onu mac 7c:a9:6b:3b:19:eb onuid 6 auth-mode mac
-confirm onu mac 48:8e:ef:7d:23:c6 onuid 7
 exit
 !
 interface epon 0/1
@@ -402,7 +403,9 @@ onu mac-auth add E0:67:B3:0E:34:F5
 onu mac-auth add A0:C6:EC:04:67:7E
 onu mac-auth add 38:94:E0:D0:4D:79
 onu mac-auth add 38:94:E0:C3:EB:0D
+onu mac-auth add 7C:A9:6B:D9:1A:F0
 onu mac-auth add 1C:20:DB:9A:ED:EE
+onu mac-auth add 38:94:E0:D3:D0:44
 onu mac-auth add 38:94:E0:B1:D9:6E
 onu mac-auth add 38:94:E0:B1:B7:D6
 exit
@@ -410,6 +413,7 @@ exit
 interface epon 0/2
 onu mac-auth add 38:94:E0:D3:9B:FC
 onu mac-auth add 38:94:E0:B3:F6:C9
+onu mac-auth add 60:08:10:AD:79:86
 onu mac-auth add 7C:A9:6B:AF:07:18
 onu mac-auth add 7C:A9:6B:D9:1F:00
 onu mac-auth add 7C:A9:6B:D9:1F:04
@@ -430,6 +434,8 @@ onu mac-auth add E0:67:B3:0E:34:E5
 onu mac-auth add 7C:A9:6B:D9:1F:A0
 onu mac-auth add 48:8E:EF:7D:23:C6
 onu mac-auth add 38:94:E0:E3:1D:8A
+onu mac-auth add 60:08:10:E5:F6:EE
+onu mac-auth add 38:94:E0:A4:0A:F8
 onu mac-auth add 38:94:E0:B3:F7:00
 onu mac-auth add 38:94:E0:C3:A2:6F
 onu mac-auth add 7C:A9:6B:D9:1E:FC
@@ -444,7 +450,6 @@ onu mac-auth add 38:94:E0:A4:BB:F8
 onu mac-auth add C0:BF:C0:44:D9:DD
 onu mac-auth add A4:00:E2:8B:13:33
 onu mac-auth add 38:94:E0:A4:0B:08
-onu mac-auth add 38:94:E0:A4:22:10
 onu mac-auth add A4:00:E2:84:22:63
 onu mac-auth add 7C:A9:6B:D9:1F:0C
 onu mac-auth add 38:94:E0:A4:22:48
@@ -480,6 +485,7 @@ onu mac-auth add 38:94:E0:A8:C1:E1
 exit
 !
 interface epon 0/1
+onu 1 description 331226_KNG
 onu 2 description Innisfree_331287
 onu 3 description U.S.POLO_331291
 onu 4 description 331346_Premimum
@@ -516,12 +522,15 @@ onu 25 description 331341_Dolomite
 onu 26 description 331368_Fodxpert
 onu 27 description 331110_Gangaur
 onu 28 description Lifestyle_331282
+onu 29 description 331193_Lifestyle
 exit
 !
 interface epon 0/2
+onu 1 description 331332_ANON
 onu 2 description 331268_Titan
 onu 3 description ChaiThela
 onu 4 description Kram_331274
+onu 5 description Infiniti_331375
 onu 6 description Synoptics_331276
 onu 6 ctc eth 1 flow_control enable
 onu 6 ctc eth 1 phy_ctrl enable
@@ -559,6 +568,7 @@ onu 25 description 331371_H&M
 onu 26 description 331372_Fodex
 onu 27 description 331373_VIVA
 onu 28 description 331171_Alliant
+onu 29 description 331155_Aar_bee
 exit
 !
 interface epon 0/3
@@ -568,7 +578,6 @@ onu 1 ctc eth 1 vlan mode tag
 onu 2 description Lifestyle_331281
 onu 3 description 331359_VOGANOW
 onu 4 description Lifestyle_331286
-onu 5 description 331292_Chumbak
 onu 6 description 331343_Gurudev
 onu 7 description Jack_331293
 onu 8 description SSIPL_331041
@@ -602,7 +611,7 @@ onu 29 description 331055_Chilli
 exit
 !
 interface epon 0/4
-onu 1 description 3313320_Blues
+onu 1 description 331320_Blues
 onu 2 description FRONFI_331275
 onu 3 description 331261_Titan
 onu 4 description 331323_comax

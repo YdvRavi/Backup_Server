@@ -388,7 +388,7 @@ interface port-channel 14
   loopguard 
 exit 
 interface port-channel 15  
-  name "##Oanda India Pvt Ltd.#181059#10Mb##" 
+  inactive 
   pvid 405 
   ingress-check 
   bandwidth-limit cir 2048 

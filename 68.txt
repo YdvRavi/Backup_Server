@@ -583,6 +583,7 @@ onu auth-mode mac
 confirm onu mac a0:c6:ec:07:79:2e onuid 1 auth-mode mac
 confirm onu mac a0:c6:ec:04:ca:2b onuid 2 auth-mode mac
 confirm onu mac 38:94:e0:d3:d0:08 onuid 3 auth-mode mac
+confirm onu mac 7c:a9:6b:84:0f:6a onuid 4 auth-mode mac
 confirm onu mac e0:67:b3:1a:ef:e0 onuid 11 auth-mode mac
 confirm onu mac a0:c6:ec:07:79:2d onuid 12 auth-mode mac
 confirm onu mac 38:94:e0:a4:58:f0 onuid 18 auth-mode mac
@@ -621,6 +622,7 @@ onu mac-auth add 38:94:E0:A4:0A:F8
 exit
 !
 interface epon 0/6
+onu mac-auth add 7C:A9:6B:84:0F:6A
 onu mac-auth add A0:C6:EC:07:79:2D
 onu mac-auth add A0:C6:EC:07:79:2E
 onu mac-auth add A0:C6:EC:04:CA:2B
@@ -699,6 +701,9 @@ onu 2 ctc eth 1 vlan mode tag
 onu 3 description 221087_FLASH
 onu 3 ctc eth 1 vlan pvid 612 pri 0
 onu 3 ctc eth 1 vlan mode tag
+onu 4 description 221090_Score
+onu 4 ctc eth 1 vlan pvid 612 pri 0
+onu 4 ctc eth 1 vlan mode tag
 onu 11 description 221080_ALTF
 onu 11 ctc eth 1 vlan pvid 612 pri 0
 onu 11 ctc eth 1 vlan mode tag

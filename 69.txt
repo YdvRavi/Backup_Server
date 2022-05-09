@@ -154,6 +154,9 @@ active
 aim 0/2/10 name 671039_DEEPAK_A7705
 permit sn string-hex HWTC-11a565a6 line 1 default line 1
 active
+aim 0/2/11 name 671027_BHUMIKA
+permit sn string-hex HWTC-11a282a6 line 1 default line 1
+active
 aim 0/3/1 name 671006_NIRAJ
 permit sn string-hex HWTC-11a7b0a6 line 1 default line 1
 active
@@ -181,6 +184,18 @@ active
 aim 0/4/5 name 671038_INDRAJEET
 permit sn string-hex HWTC-11a3eca6 line 1 default line 1
 active
+aim 0/4/6 name 671044_GAJENDER
+permit sn string-hex HWTC-11a018a6 line 1 default line 1
+active
+aim 0/4/7 name 671043_KARAN
+permit sn string-hex HWTC-11a388a6 line 1 default line 1
+active
+aim 0/4/8 name 671050_POOJA
+permit sn string-hex HWTC-11a405a6 line 1 default line 1
+active
+aim 0/4/9 name 671048_ARCHANA
+permit sn string-hex HWTC-119fd9a6 line 1 default line 1
+active
 aim 0/5/1 name 671015_Pankaj
 permit sn string-hex HWTC-11a377a6 line 1 default line 1
 active
@@ -193,8 +208,17 @@ active
 aim 0/5/4 name 671042_SUKHVINDER
 permit sn string-hex HWTC-11a1b1a6 line 1 default line 1
 active
+aim 0/5/5 name 671051_DEEPAK
+permit sn string-hex HWTC-11a426a6 line 1 default line 1
+active
 aim 0/6/1 name 671037_RAKESH
 permit sn string-hex HWTC-119dd1a6 line 1 default line 1
+active
+aim 0/6/2 name 671046_NIRAJ
+permit sn string-hex HWTC-11a553a6 line 1 default line 1
+active
+aim 0/6/3 name 671052_AMIT_A3_006
+permit sn string-hex HWTC-11a589a6 line 1 default line 1
 active
 aim 0/7/1 name 671008_Atul
 permit sn string-hex HWTC-11a362a6 line 1 default line 1
@@ -204,6 +228,9 @@ permit sn string-hex HWTC-91de4a9f line 1 default line 1
 active
 aim 0/7/5 name 671028_abhishek
 permit sn string-hex HWTC-11a267a6 line 1 default line 1
+active
+aim 0/7/6 name 671033_MAHENDER
+permit sn string-hex HWTC-119caaa6 line 1 default line 1
 active
 aim 0/8/1 name 671005_PAWAN
 permit sn string-hex HWTC-119fd6a6 line 1 default line 1
@@ -225,6 +252,15 @@ permit sn string-hex HWTC-11a34ea6 line 1 default line 1
 active
 aim 0/9/3 name 671011_Ashok
 permit sn string-hex HWTC-11a7a9a6 line 1 default line 1
+active
+aim 0/9/4 name 671045_RAKESH
+permit sn string-hex HWTC-11a264a6 line 1 default line 1
+active
+aim 0/9/5 name 671047_ABINASH
+permit sn string-hex HWTC-11a505a6 line 1 default line 1
+active
+aim 0/9/6 name 671053_KAMLESH
+permit sn string-hex HWTC-119ee5a6 line 1 default line 1
 active
 aim 0/10/1 name 6710XX_Facility
 permit sn string-hex HWTC-119b74a6 line 1 default line 1

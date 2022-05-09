@@ -152,8 +152,6 @@ local protocol-port-80 enable mode forward
 active
 aim 0/2/4
 active
-aim 0/2/5
-active
 aim 0/2/7 name 561025_Vikas
 active
 aim 0/2/8 name 561017_Ankit_A11_1001
@@ -229,9 +227,6 @@ active
 aim 0/2/4 name 561012_Tridibesh
 permit sn string-hex GNXS-0110ed60 line 1 default line 1
 active
-aim 0/2/5 name 561015_Amit
-permit sn string-hex GNXS-0110d3d0 line 1 default line 1
-active
 aim 0/2/7 name 561025_Vikas
 permit sn string-hex GNXS-011f24c0 line 1 default line 1
 active
@@ -264,6 +259,9 @@ permit sn string-hex GNXS-011e6ac0 line 1 default line 1
 active
 aim 0/3/10 name Tower_A10
 permit sn string-hex GPON-00c39fc5 line 2 default line 2
+active
+aim 0/3/11 name 561032_Neeraj
+permit sn string-hex HWTC-11a56ca6 line 1 default line 1
 active
 aim 0/3/12 name 561014_Kush
 permit sn string-hex HWTC-88a0aaa5 line 3 default line 3
