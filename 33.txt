@@ -367,6 +367,9 @@ active
 aim 0/1/3 name PAMP_ROOM
 permit sn string-hex HWTC-8a8df59d line 4 default line 4
 active
+aim 0/1/4 name 601068_YRN_F162
+permit sn string-hex HWTC-119cc5a6 line 1 default line 1
+active
 aim 0/1/5 name LT_Room_B-1
 permit sn string-hex HWTC-94150b9c line 4 default line 4
 active
