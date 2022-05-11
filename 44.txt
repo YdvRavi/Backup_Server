@@ -434,7 +434,7 @@ errdisable auto-recovery cause bpdu
 errdisable auto-recovery cause igmp
 exit
 interface ethernet 0/0/23
-description ##MILL#RING_6#Heritage_School#SW82.13##
+description "##mill#ring_6#heritage primary school#sw82.13##"
 speed 1000
 duplex full
 switchport trunk allowed vlan 100,214,262-264,327,336,400,500,602-609,706-709
