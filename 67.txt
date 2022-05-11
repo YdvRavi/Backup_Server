@@ -2,8 +2,6 @@
 
 85.58# terminal length 0
 OLT#Heritage#85.58# 
-2022/05/11 09:59:05   ONU Deregister           PON 0/8 ONU 3 38:94:E0:B1:D9:4E MPCP TIMEOUT.
-
 
 Current configuration:
 !
