@@ -510,7 +510,6 @@ confirm onu mac 7c:a9:6b:84:0f:5e onuid 14 auth-mode mac
 confirm onu mac 7c:a9:6b:af:06:f0 onuid 15 auth-mode mac
 confirm onu mac 38:94:e0:a4:0b:10 onuid 20
 confirm onu mac 7c:a9:6b:d6:a8:b0 onuid 22 auth-mode mac
-confirm onu mac 7c:a9:6b:d7:70:24 onuid 23 auth-mode mac
 exit
 !
 interface epon 0/4
@@ -520,7 +519,6 @@ confirm onu mac a0:c6:ec:04:ca:2d onuid 2 auth-mode mac
 confirm onu mac 7c:a9:6b:3b:1a:1f onuid 3 auth-mode mac
 confirm onu mac 7c:a9:6b:3b:19:dd onuid 4 auth-mode mac
 confirm onu mac 80:d4:a5:7a:d2:44 onuid 5 auth-mode mac
-confirm onu mac a4:00:e2:73:1b:6b onuid 6 auth-mode mac
 confirm onu mac 7c:a9:6b:02:c9:68 onuid 8 auth-mode mac
 confirm onu mac 54:47:e8:6e:e1:e9 onuid 10 auth-mode mac
 confirm onu mac 7c:a9:6b:d9:1b:3c onuid 12 auth-mode mac
@@ -552,7 +550,6 @@ onu mac-auth add 38:94:E0:AB:12:2B
 onu mac-auth add 7C:A9:6B:3B:19:DD
 onu mac-auth add 7C:A9:6B:02:C9:68
 onu mac-auth add 7C:A9:6B:3B:19:E3
-onu mac-auth add 7C:A9:6B:D7:70:24
 onu mac-auth add 38:94:E0:A4:0A:B8
 onu mac-auth add 7C:A9:6B:84:D5:2E
 onu mac-auth add 7C:A9:6B:AF:06:F0
@@ -565,7 +562,6 @@ exit
 !
 interface epon 0/4
 onu mac-auth add 7C:A9:6B:3B:1A:1F
-onu mac-auth add A4:00:E2:73:1B:6B
 onu mac-auth add 7C:A9:6B:01:CE:48
 onu mac-auth add 7C:A9:6B:D9:1B:3C
 onu mac-auth add 7C:A9:6B:02:C9:68
@@ -646,9 +642,6 @@ onu 14 ctc eth 1 vlan mode tag
 onu 22 description 131459_Ankur
 onu 22 ctc eth 1 vlan pvid 14 pri 0
 onu 22 ctc eth 1 vlan mode tag
-onu 23 description 131456_Jitendra
-onu 23 ctc eth 1 vlan pvid 600 pri 0
-onu 23 ctc eth 1 vlan mode tag
 exit
 !
 interface epon 0/4
@@ -664,9 +657,6 @@ onu 4 ctc eth 1 vlan pvid 34 pri 0
 onu 4 ctc eth 1 vlan mode tag
 onu 5 ctc eth 1 vlan pvid 131 pri 0
 onu 5 ctc eth 1 vlan mode tag
-onu 6 description 131460_vatsal
-onu 6 ctc eth 1 vlan pvid 600 pri 0
-onu 6 ctc eth 1 vlan mode tag
 onu 8 ctc eth 1 vlan pvid 842 pri 0
 onu 8 ctc eth 1 vlan mode tag
 onu 10 description 131393_TOSHNIWAL
