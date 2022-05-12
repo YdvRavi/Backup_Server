@@ -508,7 +508,7 @@ spanning-tree 18 path-cost 300
 spanning-tree 23 path-cost 50 
 spanning-tree 24 path-cost 50 
 spanning-tree 26 path-cost 40 
-spanning-tree 27 path-cost 19 
+spanning-tree 28 path-cost 19 
 hostname ##C4#MAIN_RING#SW82.229#VPP## 
 timesync server 203.110.80.66 
 timesync ntp 
