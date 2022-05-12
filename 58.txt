@@ -117,7 +117,6 @@ spanning-tree 25
 spanning-tree 26 
 spanning-tree 27 
 spanning-tree 28 
-spanning-tree 28 path-cost 100 
 hostname ##c4#main_ring#sw82.237#sunvision## 
 loopguard 
 snmp-server get-community deldsl 
