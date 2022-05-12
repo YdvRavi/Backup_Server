@@ -571,6 +571,7 @@ errdisable auto-recovery cause igmp
 exit
 interface ethernet 0/0/21
 description ##C4#MAIN_RING#SW82.240#JMD_MEGA##
+shutdown
 speed 1000
 duplex full
 switchport trunk allowed vlan 2-209,211-264,266-325,327-580,582-610,612,614-61
