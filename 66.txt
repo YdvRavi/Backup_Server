@@ -1,6 +1,8 @@
 ##CONFIG##
 
 87.22### 
+2022/05/13 13:15:36   ONU AUTH Success         PON 0/2 ONU 2 38:94:E0:A4:21:78.
+
 ##Mill_OLT#87.22### terminal length 0
 ##Mill_OLT#87.22### 
 
