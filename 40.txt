@@ -2,8 +2,6 @@
 
 ## terminal length 0
 Ardee_OLT#85.61### 
-2000/02/21 17:03:19   ONU Deregister           PON 0/1 ONU 42 78:D7:52:45:EF:B3 MPCP TIMEOUT.
-
 
 Current configuration:
 !
