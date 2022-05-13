@@ -607,6 +607,9 @@ active
 aim 0/7/12 name 641201_Arijit
 permit sn string-hex HWTC-119e49a6 line 1 default line 1
 active
+aim 0/7/13 name 641211_Trishla_E707
+permit sn string-hex HWTC-ace086a3 line 1 default line 1
+active
 aim 0/8/1 name 641006_Sulagna_F1002
 permit sn string-hex HWTC-88a192a5 line 1 default line 1
 active

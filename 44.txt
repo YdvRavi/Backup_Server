@@ -450,7 +450,7 @@ errdisable auto-recovery cause igmp
 exit
 interface ethernet 0/0/24
 description ##ESSEL#SW87.18##
-switchport trunk allowed vlan 3,6,211,310-313,316,803
+switchport trunk allowed vlan 3,6,201,211,310-313,316,803
 storm-control broadcast 10000
 storm-control unicast 10000
 storm-control multicast 10000
