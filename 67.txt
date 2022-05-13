@@ -1,6 +1,8 @@
 ##CONFIG##
 
-85.58# terminal length 0
+85.58# 
+2022/05/13 16:59:16   ONU Deregister           PON 0/8 ONU 3 38:94:E0:B1:D9:4E MPCP ONU initiates DEREG.
+terminal length 0
 OLT#Heritage#85.58# 
 
 Current configuration:
@@ -663,7 +665,7 @@ interface epon 0/8
 onu auth-mode mac
 confirm onu mac 38:94:e0:a4:21:60 onuid 1 auth-mode mac
 confirm onu mac 38:94:e0:a4:0a:f0 onuid 2 auth-mode mac
-confirm onu mac 38:94:e0:b1:d9:4e onuid 3
+confirm onu mac 38:94:e0:b1:d9:4e onuid 3 auth-mode mac
 confirm onu mac 7c:a9:6b:3b:19:d7 onuid 4 auth-mode mac
 confirm onu mac e0:67:b3:1a:f0:0a onuid 5 auth-mode mac
 confirm onu mac 38:94:e0:e3:39:82 onuid 6 auth-mode mac
