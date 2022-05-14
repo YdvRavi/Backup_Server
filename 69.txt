@@ -271,6 +271,9 @@ active
 aim 0/9/7 name 671059_SHWETA_B21504
 permit sn string-hex HWTC-11a6e2a6 line 1 default line 1
 active
+aim 0/9/8 name 671055_BHUPINDER_B21102
+permit sn string-hex HWTC-11a33ca6 line 1 default line 1
+active
 aim 0/10/1 name 6710XX_Facility
 permit sn string-hex HWTC-119b74a6 line 1 default line 1
 active
