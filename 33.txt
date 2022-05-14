@@ -260,14 +260,7 @@ gemport 2 tcont 2 vlan-profile 2
 mapping 1 vlan 611 gemport 1
 mapping 2 vlan 711 gemport 2
 active
-aim 5 name WO_601021
-device type c30-423
-tcont 1 profile dba 3
-tcont 2 profile dba 2
-gemport 1 tcont 1 vlan-profile 3
-gemport 2 tcont 2 vlan-profile 2
-mapping 1 vlan 903 gemport 1
-mapping 2 vlan 711 gemport 2
+aim 5
 active
 exit
 ![deploy-profile-unique]
@@ -514,7 +507,7 @@ active
 aim 0/1/54 name 20299_Sriram_G119_2
 active
 aim 0/1/55 name 601021_CROWN_DEMO
-permit sn string-hex GNXS-011e60d0 line 5 default line 5
+permit sn string-hex GNXS-011e60d0 line 1 default line 1
 active
 aim 0/2/1 name 601007_KREATIVE
 permit sn string-hex GNXS-01107f90 line 1 default line 1
