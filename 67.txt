@@ -599,8 +599,6 @@ no loopback detect
 snmp-server start
 no snmp-server community public
 no snmp-server community private
-
-2022/05/14 14:14:21   ONU Deregister           PON 0/8 ONU 3 38:94:E0:B1:D9:4E MPCP ONU initiates DEREG.
 snmp-server community deldsl ro 
 snmp-server notify notify inform inform  inform 
 snmp-server notify notify trap trap  trap 
