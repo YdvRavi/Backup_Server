@@ -217,6 +217,9 @@ active
 aim 0/5/5 name 671051_DEEPAK
 permit sn string-hex HWTC-11a426a6 line 1 default line 1
 active
+aim 0/5/6 name 671056_SHAKTI_A4608
+permit sn string-hex HWTC-11a36ea6 line 1 default line 1
+active
 aim 0/6/1 name 671037_RAKESH
 permit sn string-hex HWTC-119dd1a6 line 1 default line 1
 active
