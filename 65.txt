@@ -301,7 +301,7 @@ confirm onu mac a0:c6:ec:04:67:7e onuid 26 auth-mode mac
 confirm onu mac 7c:a9:6b:d9:1b:24 onuid 27 auth-mode mac
 confirm onu mac 7c:a9:6b:d9:1b:44 onuid 28 auth-mode mac
 confirm onu mac 38:94:e0:d3:d0:44 onuid 29 auth-mode mac
-confirm onu mac 38:94:e0:a4:0a:e0 onuid 30
+confirm onu mac 38:94:e0:a4:0a:e0 onuid 30 auth-mode mac
 exit
 !
 interface epon 0/2
@@ -401,6 +401,7 @@ onu mac-auth add 38:94:E0:C2:43:78
 onu mac-auth add 38:94:E0:C2:50:70
 onu mac-auth add 7C:A9:6B:D9:1F:A8
 onu mac-auth add E0:67:B3:0E:34:F5
+onu mac-auth add 38:94:E0:A4:0A:E0
 onu mac-auth add A0:C6:EC:04:67:7E
 onu mac-auth add 38:94:E0:D0:4D:79
 onu mac-auth add 38:94:E0:C3:EB:0D
@@ -524,6 +525,7 @@ onu 26 description 331368_Fodxpert
 onu 27 description 331110_Gangaur
 onu 28 description Lifestyle_331282
 onu 29 description 331193_Lifestyle
+onu 30 description 331378_MALA
 exit
 !
 interface epon 0/2
