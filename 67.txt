@@ -415,8 +415,6 @@ switchport trunk vlan 295
 switchport trunk vlan 305
 switchport trunk vlan 401
 switchport trunk vlan 428 - 429
-
-2022/05/14 17:04:21   ONU Deregister           PON 0/8 ONU 3 38:94:E0:B1:D9:4E MPCP ONU initiates DEREG.
 switchport trunk vlan 452
 switchport trunk vlan 500
 switchport trunk vlan 522
@@ -665,7 +663,7 @@ interface epon 0/8
 onu auth-mode mac
 confirm onu mac 38:94:e0:a4:21:60 onuid 1 auth-mode mac
 confirm onu mac 38:94:e0:a4:0a:f0 onuid 2 auth-mode mac
-confirm onu mac 38:94:e0:b1:d9:4e onuid 3
+confirm onu mac 38:94:e0:b1:d9:4e onuid 3 auth-mode mac
 confirm onu mac 7c:a9:6b:3b:19:d7 onuid 4 auth-mode mac
 confirm onu mac e0:67:b3:1a:f0:0a onuid 5 auth-mode mac
 confirm onu mac 38:94:e0:e3:39:82 onuid 6 auth-mode mac
