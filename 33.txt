@@ -513,9 +513,6 @@ permit sn string-hex HWTC-11a350a6 line 1 default line 1
 active
 aim 0/1/54 name 20299_Sriram_G119_2
 active
-aim 0/1/55 name 601021_CROWN_DEMO
-permit sn string-hex GNXS-011e60d0 line 1 default line 1
-active
 aim 0/2/1 name 601007_KREATIVE
 permit sn string-hex GNXS-01107f90 line 1 default line 1
 active
