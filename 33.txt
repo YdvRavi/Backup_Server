@@ -260,7 +260,14 @@ gemport 2 tcont 2 vlan-profile 2
 mapping 1 vlan 611 gemport 1
 mapping 2 vlan 711 gemport 2
 active
-aim 5
+aim 5 name WO_601021
+device type c30-423
+tcont 1 profile dba 1
+tcont 2 profile dba 2
+gemport 1 tcont 1 vlan-profile 3
+gemport 2 tcont 2 vlan-profile 2
+mapping 1 vlan 903 gemport 1
+mapping 2 vlan 711 gemport 2
 active
 exit
 ![deploy-profile-unique]
