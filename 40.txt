@@ -162,8 +162,6 @@ switchport isolate
 no ip igmp snooping immediate-leave
 loopback disable
 exit
-
-2000/02/23 05:53:24   ONU Deregister           PON 0/2 ONU 37 14:A7:2B:0E:1C:FC MPCP ONU initiates DEREG.
 !
 interface gigabitethernet 0/6
 switchport mode hybrid
