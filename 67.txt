@@ -415,6 +415,8 @@ switchport trunk vlan 295
 switchport trunk vlan 305
 switchport trunk vlan 401
 switchport trunk vlan 428 - 429
+
+2022/05/14 17:04:21   ONU Deregister           PON 0/8 ONU 3 38:94:E0:B1:D9:4E MPCP ONU initiates DEREG.
 switchport trunk vlan 452
 switchport trunk vlan 500
 switchport trunk vlan 522
