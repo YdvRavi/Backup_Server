@@ -605,6 +605,8 @@ errdisable auto-recovery cause igmp
 exit
 interface ethernet 0/0/23
 description ##C4#MAIN_RING#SW82.234#AARDEE_CITY##
+speed 1000
+duplex full
 switchport trunk allowed vlan 2-209,211-264,266-325,327-580,582-603,605-610,61
 2,614-615,617-710,712-714,716-799,801-4094
 no ingress filtering
